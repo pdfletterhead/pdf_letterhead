@@ -1,0 +1,323 @@
+Tbackground pdf
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Info.plist" "background pdf/background pdf-Info.plist"
+cDataModelVersionCompile "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/background_pdf.momd" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/background_pdf.xcdatamodeld"
+cProcessPCH "/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch.pth" "background pdf/background pdf-Prefix.pch" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/main.o" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/main.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC "build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/pmpAppDelegate.o" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pmpAppDelegate.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/MacOS/background pdf" normal x86_64
+cCompileXIB "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/MainMenu.xib"
+cCpResource "background pdf/en.lproj/Credits.rtf" "build/Debug/background pdf.app/Contents/Resources/en.lproj/Credits.rtf"
+cCopyStringsFile "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj/InfoPlist.strings" "background pdf/en.lproj/InfoPlist.strings"
+cCpResource "background pdf/path4327.png" "build/Debug/background pdf.app/Contents/Resources/path4327.png"
+cCpResource "background pdf/path4351.png" "build/Debug/background pdf.app/Contents/Resources/path4351.png"
+cCpResource "background pdf/text4269.png" "build/Debug/background pdf.app/Contents/Resources/text4269.png"
+cCpResource "background pdf/icon1.icns" "build/Debug/background pdf.app/Contents/Resources/icon1.icns"
+cCpResource "background pdf/pimpmypdf.png" "build/Debug/background pdf.app/Contents/Resources/pimpmypdf.png"
+cTouch "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app"
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+c000000004F79606000000000000000EE
+t1333354592
+s238
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004F4F2B1C0000000000002470
+t1330588444
+s9328
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/background pdf-Prefix.pch
+c000000004F889344000000000000009F
+t1334350660
+s159
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/background_pdf.xcdatamodeld
+c000000004F8893440000000000000088
+t1334350660
+s136
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/Credits.rtf
+c000000004F88934400000000000001B4
+t1334350660
+s436
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/InfoPlist.strings
+c000000004F889344000000000000002D
+t1334350660
+s45
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/MainMenu.xib
+c000000004F889422000000000002FD51
+t1334350882
+s195921
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/icon1.icns
+c000000004F87EAAC0000000000039223
+t1334307500
+s234019
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/main.m
+c000000004F88934400000000000000FF
+t1334350660
+s255
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/path4327.png
+c000000004F87EAAC0000000000001123
+t1334307500
+s4387
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/path4351.png
+c000000004F87EAAC0000000000001530
+t1334307500
+s5424
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pimpmypdf.png
+c000000004F87EAAC000000000000C8BB
+t1334307500
+s51387
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pmpAppDelegate.m
+c000000004F8893440000000000001DCF
+t1334350660
+s7631
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/text4269.png
+c000000004F87EAAC0000000000000682
+t1334307500
+s1666
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Info.plist
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/MacOS/background pdf
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/background_pdf.momd
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj/Credits.rtf
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj/MainMenu.nib
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/icon1.icns
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/path4327.png
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/path4351.png
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/pimpmypdf.png
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/text4269.png
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/background pdf.LinkFileList
+c000000004F889422000000000000012A
+t1334350882
+s298
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/pmpAppDelegate.o
+t2
+s0
+
+N/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch.pth
+t2
+s0
+
+Nbackground pdf/background pdf-Info.plist
+c000000004F88934400000000000004A1
+t1334350660
+s1185
+
+CBuild AST from "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/main.m"
+r0
+
+CBuild AST from "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pmpAppDelegate.m"
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies0ce76aa2cb38b541^6d1cada2cb38b541^---0#1#0#--18"Check dependencies36"88A7FABC-DC86-4A36-B00F-C4A38EBCBB3F-
+
+CCompileC "build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/main.o" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/main.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s356043689.848995
+e356043690.030874
+r1
+xCompileC
+xbuild/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/main.o
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/main.m2d7cd9a9cb38b541^b0e707aacb38b541^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/background%20pdf/main.m0000000000000000^3216"CompileC "build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/main.o" "background pdf/main.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-generated-files.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-own-target-headers.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-all-target-headers.hmap" -iquote "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-project-headers.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/include" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/DerivedSources/x86_64" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/DerivedSources" "-F/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug" -include "/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch" -MMD -MT dependencies -MF "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/main.d" --serialize-diagnostics "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/main.dia" -c "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/main.m" -o "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/main.o"36"F75FC456-171D-46E6-900A-F61025BC2348-
+
+CCompileC "build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/pmpAppDelegate.o" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pmpAppDelegate.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s356043689.849006
+e356043690.057664
+r1
+xCompileC
+xbuild/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/pmpAppDelegate.o
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pmpAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pmpAppDelegate.mc87bd9a9cb38b541^9cc20eaacb38b541^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/background%20pdf/pmpAppDelegate.m0000000000000000^3276"CompileC "build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/pmpAppDelegate.o" "background pdf/pmpAppDelegate.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-generated-files.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-own-target-headers.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-all-target-headers.hmap" -iquote "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-project-headers.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/include" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/DerivedSources/x86_64" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/DerivedSources" "-F/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug" -include "/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch" -MMD -MT dependencies -MF "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/pmpAppDelegate.d" --serialize-diagnostics "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/pmpAppDelegate.dia" -c "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pmpAppDelegate.m" -o "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/pmpAppDelegate.o"36"DBD60A63-D3A0-48A7-808B-F5937930CE9D-
+
+CCompileXIB "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/MainMenu.xib"
+s356043690.939103
+e356043691.557423
+r1
+xCompileXIB
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/MainMenu.xib
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compiling /Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/MainMenu.xib7b86f0aacb38b541^bcb38eabcb38b541^---0#0#0#-19%DVTDocumentLocation2@119"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/background%20pdf/en.lproj/MainMenu.xib0000000000000000^688"CompileXIB "background pdf/en.lproj/MainMenu.xib"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj/MainMenu.nib" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/MainMenu.xib" --sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk36"4C4899D0-DD4F-4206-AD73-44B6C0127535-
+
+CCopyStringsFile "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj/InfoPlist.strings" "background pdf/en.lproj/InfoPlist.strings"
+s356043690.939117
+e356043690.944951
+r1
+xCopyStringsFile
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj/InfoPlist.strings
+xbackground pdf/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy background pdf/en.lproj/InfoPlist.strings6687f0aacb38b541^abeaf1aacb38b541^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/background%20pdf/en.lproj/InfoPlist.strings0000000000000000^468"CopyStringsFile "build/Debug/background pdf.app/Contents/Resources/en.lproj/InfoPlist.strings" "background pdf/en.lproj/InfoPlist.strings"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj" -- "background pdf/en.lproj/InfoPlist.strings"36"BBFD6E70-0EC7-4EF3-820E-60B68CD75909-
+
+CCpResource "background pdf/en.lproj/Credits.rtf" "build/Debug/background pdf.app/Contents/Resources/en.lproj/Credits.rtf"
+s356043690.939113
+e356043690.943754
+r1
+xCpResource
+xbackground pdf/en.lproj/Credits.rtf
+xbuild/Debug/background pdf.app/Contents/Resources/en.lproj/Credits.rtf
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Copy build/Debug/background pdf.app/Contents/Resources/en.lproj/Credits.rtf4986f0aacb38b541^dd99f1aacb38b541^---0#0#0#-19%DVTDocumentLocation2@153"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/build/Debug/background%20pdf.app/Contents/Resources/en.lproj/Credits.rtf000000000080d041^630"CpResource "background pdf/en.lproj/Credits.rtf" "build/Debug/background pdf.app/Contents/Resources/en.lproj/Credits.rtf"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/en.lproj/Credits.rtf" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/en.lproj"36"18B5D1FF-FED0-4767-A85A-B9898088B407-
+
+CCpResource "background pdf/icon1.icns" "build/Debug/background pdf.app/Contents/Resources/icon1.icns"
+s356043690.947339
+e356043690.951406
+r1
+xCpResource
+xbackground pdf/icon1.icns
+xbuild/Debug/background pdf.app/Contents/Resources/icon1.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Debug/background pdf.app/Contents/Resources/icon1.icns2498f2aacb38b541^f29af3aacb38b541^---0#0#0#-19%DVTDocumentLocation2@143"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/build/Debug/background%20pdf.app/Contents/Resources/icon1.icns000000000080d041^591"CpResource "background pdf/icon1.icns" "build/Debug/background pdf.app/Contents/Resources/icon1.icns"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/icon1.icns" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources"36"CC28F46A-9DE5-41B0-90F5-0D18F8633501-
+
+CCpResource "background pdf/path4327.png" "build/Debug/background pdf.app/Contents/Resources/path4327.png"
+s356043690.939626
+e356043690.946097
+r1
+xCpResource
+xbackground pdf/path4327.png
+xbuild/Debug/background pdf.app/Contents/Resources/path4327.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug/background pdf.app/Contents/Resources/path4327.pngb69ff0aacb38b541^f033f2aacb38b541^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/build/Debug/background%20pdf.app/Contents/Resources/path4327.png000000000080d041^597"CpResource "background pdf/path4327.png" "build/Debug/background pdf.app/Contents/Resources/path4327.png"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/path4327.png" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources"36"C361A73E-4EA6-485D-BF95-733902A35962-
+
+CCpResource "background pdf/path4351.png" "build/Debug/background pdf.app/Contents/Resources/path4351.png"
+s356043690.944975
+e356043690.947619
+r1
+xCpResource
+xbackground pdf/path4351.png
+xbuild/Debug/background pdf.app/Contents/Resources/path4351.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug/background pdf.app/Contents/Resources/path4351.png2102f2aacb38b541^9e97f2aacb38b541^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/build/Debug/background%20pdf.app/Contents/Resources/path4351.png000000000080d041^597"CpResource "background pdf/path4351.png" "build/Debug/background pdf.app/Contents/Resources/path4351.png"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/path4351.png" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources"36"1638E244-7B64-4FA0-8E06-C574C6986766-
+
+CCpResource "background pdf/pimpmypdf.png" "build/Debug/background pdf.app/Contents/Resources/pimpmypdf.png"
+s356043690.949471
+e356043690.952403
+r1
+xCpResource
+xbackground pdf/pimpmypdf.png
+xbuild/Debug/background pdf.app/Contents/Resources/pimpmypdf.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy build/Debug/background pdf.app/Contents/Resources/pimpmypdf.png2028f3aacb38b541^abd1f3aacb38b541^---0#0#0#-19%DVTDocumentLocation2@146"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/build/Debug/background%20pdf.app/Contents/Resources/pimpmypdf.png000000000080d041^600"CpResource "background pdf/pimpmypdf.png" "build/Debug/background pdf.app/Contents/Resources/pimpmypdf.png"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/pimpmypdf.png" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources"36"BE894FA3-F890-4686-A0E9-F3948E224B91-
+
+CCpResource "background pdf/text4269.png" "build/Debug/background pdf.app/Contents/Resources/text4269.png"
+s356043690.946124
+e356043690.949014
+r1
+xCpResource
+xbackground pdf/text4269.png
+xbuild/Debug/background pdf.app/Contents/Resources/text4269.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug/background pdf.app/Contents/Resources/text4269.pnge948f2aacb38b541^c6faf2aacb38b541^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/build/Debug/background%20pdf.app/Contents/Resources/text4269.png000000000080d041^597"CpResource "background pdf/text4269.png" "build/Debug/background pdf.app/Contents/Resources/text4269.png"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/text4269.png" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources"36"A37676E2-3FDB-4ECF-BB9C-8F9218AAD6F8-
+
+CDataModelVersionCompile "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/background_pdf.momd" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/background_pdf.xcdatamodeld"
+s356043682.750413
+e356043686.017680
+r1
+xDataModelVersionCompile
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/background_pdf.momd
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/background_pdf.xcdatamodeld
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection140"DataModelVersionCompile "build/Debug/background pdf.app/Contents/Resources/background_pdf.momd" "background pdf/background_pdf.xcdatamodeld"ec32c0a2cb38b541^0a8504a6cb38b541^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/background%20pdf/background_pdf.xcdatamodeld/0000000000000000^678"DataModelVersionCompile "build/Debug/background pdf.app/Contents/Resources/background_pdf.momd" "background pdf/background_pdf.xcdatamodeld"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    /Applications/Xcode.app/Contents/Developer/usr/bin/momc -XD_MOMC_SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -MOMC_PLATFORMS macosx -XD_MOMC_TARGET_VERSION=10.7 "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/background_pdf.xcdatamodeld" "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Resources/background_pdf.momd"36"0C54F145-FA03-41B0-B555-3D6926869564-
+
+CLd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/MacOS/background pdf" normal x86_64
+s356043690.064506
+e356043690.929569
+r1
+xLd
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/MacOS/background pdf
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Link /Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/MacOS/background pdf4e9810aacb38b541^f9f7edaacb38b541^---0#0#0#--922"Ld "build/Debug/background pdf.app/Contents/MacOS/background pdf" normal x86_64    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk "-L/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug" "-F/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug" -filelist "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/Objects-normal/x86_64/background pdf.LinkFileList" -mmacosx-version-min=10.7 -fobjc-arc -framework Cocoa -o "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/MacOS/background pdf"36"738D7837-EB1A-4213-ACF2-212BB1DAD4B1-
+
+CProcessInfoPlistFile "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Info.plist" "background pdf/background pdf-Info.plist"
+s356043682.682031
+e356043682.742361
+r1
+xProcessInfoPlistFile
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Info.plist
+xbackground pdf/background pdf-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Process background pdf/background pdf-Info.plistb475b0a2cb38b541^94a5bea2cb38b541^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/background%20pdf/background%20pdf-Info.plist0000000000000000^537"ProcessInfoPlistFile "build/Debug/background pdf.app/Contents/Info.plist" "background pdf/background pdf-Info.plist"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    builtin-infoPlistUtility "background pdf/background pdf-Info.plist" -genpkginfo "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app/Contents/Info.plist"36"88F81068-BE30-4B81-8983-96D997B6A691-
+
+CProcessPCH "/Users/pim/Library/Developer/Xcode/DerivedData/background_pdf-gxzrgyuhskwowaavhpouptzewmia/Index/PrecompiledHeaders/background pdf-Prefix-fnvbmttmetrsjoeiskkferqcmbpo_ast/background pdf-Prefix.pch.pth" "background pdf/background pdf-Prefix.pch" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH "/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch.pth" "background pdf/background pdf-Prefix.pch" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s356043682.750425
+e356043689.841610
+r1
+xProcessPCH
+x/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch.pth
+xbackground pdf/background pdf-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile background pdf/background pdf-Prefix.pcha54ac0a2cb38b541^7498d7a9cb38b541^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/pim/Desktop/Bureaublad%20Lapp5/PimpMyPDF/background%20pdf/background%20pdf/background%20pdf-Prefix.pch0000000000000000^3262"ProcessPCH "/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch.pth" "background pdf/background pdf-Prefix.pch" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -Wno-conversion -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-generated-files.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-own-target-headers.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-all-target-headers.hmap" -iquote "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/background pdf-project-headers.hmap" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/include" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/DerivedSources/x86_64" "-I/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/background pdf.build/Debug/background pdf.build/DerivedSources" "-F/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug" --serialize-diagnostics "/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch.dia" -c "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/background pdf/background pdf-Prefix.pch" -o "/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch.pth" -MMD -MT dependencies -MF "/var/folders/q_/p2wkrhdx4wv3k41clnfjmcfr0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/background pdf-Prefix-eaqhgehbmvdcepddmsjvmcxewjqj/background pdf-Prefix.pch.d"36"0043F8F6-4873-4ACF-9CD9-74E18D3A73A8-
+
+CTouch "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app"
+s356043691.565599
+e356043691.585990
+r1
+xTouch
+x/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Touch /Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app3be290abcb38b541^fb0296abcb38b541^---0#0#0#--225"Touch "build/Debug/background pdf.app"    cd "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf"    /usr/bin/touch -c "/Users/pim/Desktop/Bureaublad Lapp5/PimpMyPDF/background pdf/build/Debug/background pdf.app"36"8128F017-769C-4646-9CFE-51E947FBAB41-
+
