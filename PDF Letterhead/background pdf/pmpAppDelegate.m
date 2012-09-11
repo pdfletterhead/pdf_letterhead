@@ -29,7 +29,8 @@
     
     
     
-        NSPrintInfo *info = [NSPrintInfo sharedPrintInfo];
+    /*
+    NSPrintInfo *info = [NSPrintInfo sharedPrintInfo];
         [info setHorizontalPagination:NSFitPagination];
         [info setVerticalPagination:NSFitPagination];
         [info setHorizontallyCentered:NO];
@@ -45,12 +46,10 @@
         NSPrintOperation *printOp = [NSPrintOperation printOperationWithView:previewView2 printInfo:info];
         [printOp setShowsPrintPanel:YES];
         [printOp runOperation];
+     */
     
-    //[previewView2 print:sender];
+    [previewView2 print:sender];
 }
-
-
-
 
 -(void) saveAs:(NSString *)startdir :(NSString *)initname
 {
@@ -109,22 +108,7 @@
 }
 
 
-+ (void)unpackT3xFile:(NSString *)filePath
-{
-    NSLog(@"Unpacking %@",filePath);
-    //	set phpcommand to "/usr/bin/php -c" & hiddeninipath & " " & hiddenscriptpath & " " & full_path & " " & full_path_new
-    
-    NSString *expandt3xPath = [NSString stringWithFormat:@"%@/Contents/Resources/expandt3x",[[NSBundle mainBundle] bundlePath]];
-    NSLog(@"expandt3xPath: %@",expandt3xPath);
-    
-    NSString * phpExec = @"/usr/bin/php";
-    NSString * phpIniPath = [NSString stringWithFormat:@"%@/php.ini",expandt3xPath];
-    NSString * phpScriptPath = [NSString stringWithFormat:@"%@/expandt3x.php",expandt3xPath];
-    
-    NSString * newOutputPath = [filePath stringByDeletingPathExtension];
-   
-    
-}
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {

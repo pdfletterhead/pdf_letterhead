@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'background pdf' target in the 'background pdf' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
