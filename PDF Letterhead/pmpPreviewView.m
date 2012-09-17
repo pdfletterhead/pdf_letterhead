@@ -86,26 +86,30 @@
     [printInfo setVerticallyCentered:YES];
     [printInfo setHorizontallyCentered:YES];
      */
+//    [printInfo setHorizontalPagination:NSClipPagination];
+//    [printInfo setVerticalPagination:NSClipPagination];
     
-    [printInfo setRightMargin:0.0];
-    [printInfo setTopMargin:0.0];
-    [printInfo setLeftMargin:0.0];
-    [printInfo setBottomMargin:0.0];
+    //[printInfo setRightMargin:0.0];
+    //[printInfo setTopMargin:0.0];
+    //[printInfo setLeftMargin:0.0];
+    //[printInfo setBottomMargin:0.0];
     
     //[[printInfo imageablePageBounds] = NSMakeRect(0.0,0.0, 571.0, 817.0);
     [printInfo setScalingFactor:2.0];
 
-    NSDictionary *printInfoDict2 = [printInfo printSettings];
+    //NSDictionary *printInfoDict2 = [printInfo printSettings];
     
-    for (id key in printInfoDict2) {
+    /*
+     for (id key in printInfoDict2) {
         
         NSLog(@"key: %@, value: %@", key, [printInfoDict objectForKey:key]);
         
     }
+     */
     
     
     
-    NSLog(@"lets print: %@",NSStringFromRect([printInfo imageablePageBounds]));
+    //NSLog(@"lets print: %@",NSStringFromRect([printInfo imageablePageBounds]));
     
     printOp = [NSPrintOperation printOperationWithView:self printInfo:printInfo];
     //[printOp setShowPanels:NO];

@@ -24,10 +24,8 @@
 		3E7A30DA1538CB2C009E0771 /* path4327.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A30D61538CB2C009E0771 /* path4327.png */; };
 		3E7A30DB1538CB2C009E0771 /* path4351.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A30D71538CB2C009E0771 /* path4351.png */; };
 		3E7A30DC1538CB2C009E0771 /* text4269.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A30D81538CB2C009E0771 /* text4269.png */; };
-		3E7A30DD1538CB2C009E0771 /* icon1.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A30D91538CB2C009E0771 /* icon1.icns */; };
 		3E7A30DF1538CB4C009E0771 /* pimpmypdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A30DE1538CB4C009E0771 /* pimpmypdf.png */; };
 		3E7A30F01538E1DA009E0771 /* pmpDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A30EF1538E149009E0771 /* pmpDropZone.m */; };
-		3E7A30F21538E72D009E0771 /* icon1.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7A30F11538E72D009E0771 /* icon1.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,11 +55,9 @@
 		3E7A30D61538CB2C009E0771 /* path4327.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = path4327.png; sourceTree = "<group>"; };
 		3E7A30D71538CB2C009E0771 /* path4351.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = path4351.png; sourceTree = "<group>"; };
 		3E7A30D81538CB2C009E0771 /* text4269.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text4269.png; sourceTree = "<group>"; };
-		3E7A30D91538CB2C009E0771 /* icon1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon1.icns; path = "background pdf/icon1.icns"; sourceTree = "<group>"; };
 		3E7A30DE1538CB4C009E0771 /* pimpmypdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pimpmypdf.png; path = "background pdf/pimpmypdf.png"; sourceTree = "<group>"; };
 		3E7A30EE1538E149009E0771 /* pmpDropZone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pmpDropZone.h; sourceTree = "<group>"; };
 		3E7A30EF1538E149009E0771 /* pmpDropZone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pmpDropZone.m; sourceTree = "<group>"; };
-		3E7A30F11538E72D009E0771 /* icon1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon1.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				3E7A30DE1538CB4C009E0771 /* pimpmypdf.png */,
-				3E7A30D91538CB2C009E0771 /* icon1.icns */,
-				3E7A30F11538E72D009E0771 /* icon1.icns */,
 			);
 			name = Oud;
 			sourceTree = "<group>";
@@ -229,9 +223,7 @@
 				3E7A30DA1538CB2C009E0771 /* path4327.png in Resources */,
 				3E7A30DB1538CB2C009E0771 /* path4351.png in Resources */,
 				3E7A30DC1538CB2C009E0771 /* text4269.png in Resources */,
-				3E7A30DD1538CB2C009E0771 /* icon1.icns in Resources */,
 				3E7A30DF1538CB4C009E0771 /* pimpmypdf.png in Resources */,
-				3E7A30F21538E72D009E0771 /* icon1.icns in Resources */,
 				3E595CCF1538EC04007EB807 /* Record.tiff in Resources */,
 				3E595CD21538EC3D007EB807 /* Brushed Window.tiff in Resources */,
 				3E786DE7157046E100BB0FA9 /* MainView2.xib in Resources */,
