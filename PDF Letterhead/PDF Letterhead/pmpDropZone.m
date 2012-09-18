@@ -101,6 +101,8 @@
             [self setImage:zNewImage];
             NSLog(@"sourcefilepath: %@",self.sourcefilepath);
             [[NSApp delegate] setPreview];
+            
+
 
 
         } else {

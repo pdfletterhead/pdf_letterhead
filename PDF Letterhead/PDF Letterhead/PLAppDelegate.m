@@ -42,21 +42,38 @@
     // Get image.
     if([_sourcedoc getFilepath]){
         sourceimage = [_sourcedoc image];
+        
+        NSLog(@"pdf path:%@",[_sourcedoc getFilepath]);
+        PDFDocument * sourcePDF = [[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:[_sourcedoc getFilepath]]];
+        NSUInteger pagescount = [sourcePDF pageCount];
+        NSLog(@"pages: %li",pagescount);
+        
+        for (int y = 0; y < pagescount; y++) {
+            PDFPage *currentPage = [sourcePDF pageAtIndex:y];
+            NSImage *image = [[NSImage alloc] initWithData:[currentPage dataRepresentation]];
+            
+            // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
+            page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: image];
+            
+            // Insert the new page in our PDF document.
+            [_letterheadPDF insertPage: page atIndex: y];
+            
+            NSLog(@"y = %i", y);
+        }
     }
     else{
         sourceimage = NULL;
-    }
+        page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage];
+    
+        [_letterheadPDF insertPage: page atIndex: 0];
 
-	// Create our custom PDFPage subclass (pass it an image and the month it is to represent).
-	page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage];
-	
-	// Insert the new page in our PDF document.
-	[_letterheadPDF insertPage: page atIndex: 0];
-	
+    }
 	
     // Assign PDFDocument ot PDFView.
 	[_pdfView setDocument: _letterheadPDF];
-	[_pdfWindow makeFirstResponder:_pdfView];
+	
+    //to make sure to right document is printed. But we must replace the print functions
+    [_pdfWindow makeFirstResponder:_pdfView];
 }
 
 
@@ -68,7 +85,6 @@
     }
     else {
         newFileName = [NSString stringWithFormat:@"%@-BGD.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
-        
     }
     
     NSSavePanel *spanel = [NSSavePanel savePanel];

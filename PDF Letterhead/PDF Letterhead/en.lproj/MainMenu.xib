@@ -390,7 +390,7 @@
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="PDFThumbnailView" id="844345480">
 						<reference key="NSNextResponder" ref="55013988"/>
-						<int key="NSvFlags">268</int>
+						<int key="NSvFlags">274</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
 						<set class="NSMutableSet" key="NSDragTypes">
 							<string>Apple PDF pasteboard type</string>
@@ -1716,9 +1716,8 @@
 										<object class="NSTextView" id="646252686">
 											<reference key="NSNextResponder" ref="180106681"/>
 											<int key="NSvFlags">2322</int>
-											<string key="NSFrameSize">{510, 413}</string>
+											<string key="NSFrameSize">{495, 413}</string>
 											<reference key="NSSuperview" ref="180106681"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="412781231"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
 											<object class="NSTextContainer" key="NSTextContainer" id="336213577">
@@ -1736,7 +1735,7 @@
 													<nil key="NSDelegate"/>
 												</object>
 												<reference key="NSTextView" ref="646252686"/>
-												<double key="NSWidth">510</double>
+												<double key="NSWidth">495</double>
 												<int key="NSTCFlags">1</int>
 											</object>
 											<object class="NSTextViewSharedData" key="NSSharedData">
@@ -1782,9 +1781,8 @@
 											<nil key="NSDelegate"/>
 										</object>
 									</array>
-									<string key="NSFrame">{{1, 1}, {510, 413}}</string>
+									<string key="NSFrame">{{1, 1}, {495, 413}}</string>
 									<reference key="NSSuperview" ref="347724246"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="646252686"/>
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 									<reference key="NSDocView" ref="646252686"/>
@@ -1947,9 +1945,8 @@ wGw</bytes>
 								<object class="NSScroller" id="545055007">
 									<reference key="NSNextResponder" ref="347724246"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{495, 1}, {16, 413}}</string>
+									<string key="NSFrame">{{496, 1}, {15, 413}}</string>
 									<reference key="NSSuperview" ref="347724246"/>
-									<reference key="NSWindow"/>
 									<string key="NSReuseIdentifierKey">_NS:83</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<reference key="NSTarget" ref="347724246"/>
@@ -1961,7 +1958,6 @@ wGw</bytes>
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{-100, -100}, {87, 18}}</string>
 									<reference key="NSSuperview" ref="347724246"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="180106681"/>
 									<string key="NSReuseIdentifierKey">_NS:33</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -1974,7 +1970,6 @@ wGw</bytes>
 							</array>
 							<string key="NSFrame">{{-1, -1}, {512, 415}}</string>
 							<reference key="NSSuperview" ref="108933754"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="180106681"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133138</int>
@@ -1988,7 +1983,6 @@ wGw</bytes>
 					</array>
 					<string key="NSFrameSize">{510, 413}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="347724246"/>
 					<string key="NSReuseIdentifierKey">_NS:21</string>
 				</object>

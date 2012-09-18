@@ -15,27 +15,9 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
 {
 	self = [super init];
 	
-	// Retain, assign image.
 	_bgimage = [bgimage copy];
 	_frontimage = [sourceimage copy];
     
-    if(_bgimage)
-    {
-        NSLog(@"bgnot null");
-    }
-    else
-    {
-        NSLog(@"bg null");
-    }
-		
-    if(_frontimage)
-    {
-        NSLog(@"s not null");
-    }
-    else
-    {
-        NSLog(@"s null");
-    }
 	return self;
 
 }
