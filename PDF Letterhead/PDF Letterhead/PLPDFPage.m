@@ -18,7 +18,24 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
 	// Retain, assign image.
 	_bgimage = [bgimage copy];
 	_frontimage = [sourceimage copy];
+    
+    if(_bgimage)
+    {
+        NSLog(@"bgnot null");
+    }
+    else
+    {
+        NSLog(@"bg null");
+    }
 		
+    if(_frontimage)
+    {
+        NSLog(@"s not null");
+    }
+    else
+    {
+        NSLog(@"s null");
+    }
 	return self;
 
 }
@@ -58,8 +75,13 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
 	
 	// Draw.
 //	[_bgimage drawInRect: destRect fromRect: sourceRect operation: NSCompositeSourceOver fraction: 1.0];
-	[_frontimage drawInRect: destRect fromRect: sourceRect operation: NSCompositeSourceOver fraction: 1.0];
-	[_bgimage drawInRect: destRect fromRect: sourceRect operation: NSCompositeSourceOver fraction: 1.0];
+
+    [_bgimage drawInRect: destRect fromRect: sourceRect operation: NSCompositeSourceOver fraction: 1.0];
+
+    if(_frontimage){
+
+       [_frontimage drawInRect: destRect fromRect: sourceRect operation: NSCompositeSourceOver fraction: 1.0];
+    }
 
 }
 

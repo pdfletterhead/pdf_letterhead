@@ -20,6 +20,9 @@
 		3E6835F41607CC7900DDFB82 /* pmpDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F31607CC7900DDFB82 /* pmpDropZone.m */; };
 		3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F61607D22100DDFB82 /* PLPDFPage.m */; };
 		3E6836031607EE8C00DDFB82 /* pdfletterhead.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */; };
+		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
+		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
+		3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,10 @@
 		3E6835F51607D22100DDFB82 /* PLPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFPage.h; sourceTree = "<group>"; };
 		3E6835F61607D22100DDFB82 /* PLPDFPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPDFPage.m; sourceTree = "<group>"; };
 		3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = pdfletterhead.icns; path = ../pdfletterhead.icns; sourceTree = "<group>"; };
+		3EF7E6BA16089C21008EA1B1 /* white.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = white.pdf; sourceTree = "<group>"; };
+		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
+		3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFAQWindowController.h; sourceTree = "<group>"; };
+		3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFAQWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				3E6835F21607CC7900DDFB82 /* pmpDropZone.h */,
+				3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */,
+				3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */,
 				3E6835F31607CC7900DDFB82 /* pmpDropZone.m */,
 				3E6835F51607D22100DDFB82 /* PLPDFPage.h */,
 				3E6835F61607D22100DDFB82 /* PLPDFPage.m */,
@@ -116,6 +125,7 @@
 		3E6835CC1607C90400DDFB82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3EF7E6BA16089C21008EA1B1 /* white.pdf */,
 				3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */,
 				3E6835EE1607CB6C00DDFB82 /* path4327.png */,
 				3E6835EF1607CB6C00DDFB82 /* path4351.png */,
@@ -124,6 +134,7 @@
 				3E6835D11607C90400DDFB82 /* main.m */,
 				3E6835D31607C90400DDFB82 /* PDF Letterhead-Prefix.pch */,
 				3E6835D41607C90400DDFB82 /* Credits.rtf */,
+				3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -135,6 +146,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E6835E21607C90400DDFB82 /* Build configuration list for PBXNativeTarget "PDF Letterhead" */;
 			buildPhases = (
+				3EF7E6C41608A136008EA1B1 /* ShellScript */,
 				3E6835BD1607C90400DDFB82 /* Sources */,
 				3E6835BE1607C90400DDFB82 /* Frameworks */,
 				3E6835BF1607C90400DDFB82 /* Resources */,
@@ -186,10 +198,28 @@
 				3E6835F01607CB6C00DDFB82 /* path4327.png in Resources */,
 				3E6835F11607CB6C00DDFB82 /* path4351.png in Resources */,
 				3E6836031607EE8C00DDFB82 /* pdfletterhead.icns in Resources */,
+				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
+				3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EF7E6C41608A136008EA1B1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\n#bN=$((0x$bN))\nbN=$(($bN + 1))\nbN=$(printf \"%u\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E6835BD1607C90400DDFB82 /* Sources */ = {
@@ -201,6 +231,7 @@
 				3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */,
 				3E6835F41607CC7900DDFB82 /* pmpDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,
+				3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +287,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -278,7 +309,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -294,6 +325,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
 				INFOPLIST_FILE = "PDF Letterhead/PDF Letterhead-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -310,6 +342,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
 				INFOPLIST_FILE = "PDF Letterhead/PDF Letterhead-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

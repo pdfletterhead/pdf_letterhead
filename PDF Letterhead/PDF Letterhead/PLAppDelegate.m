@@ -21,10 +21,6 @@
 
 -(void) setPreview
 {
-    NSLog(@"setPreview");
-//    [previewView2 backgroundImage:[[NSImage alloc] initWithContentsOfFile:[backgrounddoc getFilepath]]];
-//    [previewView2 sourceImage:[[NSImage alloc] initWithContentsOfFile:[sourcedoc getFilepath]]];
-
 	NSImage			*bgimage;
 	NSImage			*sourceimage;
 	PLPDFPage       *page;
@@ -32,18 +28,32 @@
 	// Start with an empty PDFDocument.
 	_letterheadPDF = [[PDFDocument alloc] init];
 	
-	// Get image.
-	bgimage = [_sourcedoc image];
-	sourceimage = [_backgrounddoc image];
-	
+    if([_backgrounddoc getFilepath]){
+        bgimage = [_backgrounddoc image];
+    }
+    else{
+        bgimage = NULL;
+        NSBundle* myBundle = [NSBundle mainBundle];
+        NSString* myImagePath = [myBundle pathForResource:@"white" ofType:@"pdf"];
+        
+        bgimage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+    }
+    
+    // Get image.
+    if([_sourcedoc getFilepath]){
+        sourceimage = [_sourcedoc image];
+    }
+    else{
+        sourceimage = NULL;
+    }
+
 	// Create our custom PDFPage subclass (pass it an image and the month it is to represent).
 	page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage];
 	
 	// Insert the new page in our PDF document.
 	[_letterheadPDF insertPage: page atIndex: 0];
 	
-	// Release since the document retains.
-	//[page release];
+	
     // Assign PDFDocument ot PDFView.
 	[_pdfView setDocument: _letterheadPDF];
 	[_pdfWindow makeFirstResponder:_pdfView];
