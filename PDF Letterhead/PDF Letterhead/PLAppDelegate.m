@@ -16,7 +16,18 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+   
+    if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"] ]) {
+        
+        NSString *bgfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"];
+        NSImage * tmpImage = [[NSImage alloc] initWithContentsOfFile:bgfilename];
+        [_backgrounddoc setFilepath:bgfilename];
+        [_backgrounddoc setImage:tmpImage];
+        
+         NSLog(@"fil stored:%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"]);
+        [self setPreview];
+    }
+    
 }
 
 -(void) setPreview
@@ -30,6 +41,8 @@
 	
     if([_backgrounddoc getFilepath]){
         bgimage = [_backgrounddoc image];
+        
+        [self saveBackgroundImagePath: [_backgrounddoc getFilepath] atIndex:0];
     }
     else{
         bgimage = NULL;
@@ -127,6 +140,33 @@
     NSLog(scriptString);
     mailScript = [[NSAppleScript alloc] initWithSource:scriptString];
     [mailScript executeAndReturnError:nil];
+}
+
+
+
+
+-(void)saveBackgroundImagePath:(NSString*)filename atIndex:(NSUInteger*)index {
+
+    NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
+        
+    NSError *error = nil;
+
+    NSString * newimagepath = [NSString stringWithFormat:@"%@/letterhead01.%@",[[self applicationFilesDirectory] path],[filename pathExtension]];
+
+    if ([[NSFileManager defaultManager] copyItemAtPath:filename toPath:newimagepath error:&error])
+    {
+        NSLog(@"copy succeeded");
+        NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setValue:newimagepath forKey:@"storedBackground"];
+        [prefs synchronize];
+
+    }
+    else
+    {
+        NSLog(@"Error: %@", [error description]);
+        NSLog(@"fil org:%@",filename);
+        NSLog(@"fil org:%@",newimagepath);
+    }
 }
 
 
@@ -293,5 +333,7 @@
 
     return NSTerminateNow;
 }
+
+
 
 @end
