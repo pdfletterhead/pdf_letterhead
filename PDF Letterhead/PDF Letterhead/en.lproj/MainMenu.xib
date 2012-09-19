@@ -54,7 +54,7 @@
 				<int key="NSWindowStyleMask">4103</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{1876, 374}, {640, 586}}</string>
-				<int key="NSWTFlags">-461897728</int>
+				<int key="NSWTFlags">1685585920</int>
 				<string key="NSWindowTitle">PDF Letterhead</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSToolbar" key="NSViewClass" id="105838754">
@@ -236,7 +236,7 @@
 						<object class="NSTextField" id="931403608">
 							<reference key="NSNextResponder" ref="408218115"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{71, 246}, {83, 17}}</string>
+							<string key="NSFrame">{{64, 246}, {83, 17}}</string>
 							<reference key="NSSuperview" ref="408218115"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="556059397"/>
@@ -294,7 +294,7 @@
 								<int key="NSCellFlags2">32768</int>
 								<object class="NSCustomResource" key="NSContents">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">path4351</string>
+									<string key="NSResourceName">path4327</string>
 								</object>
 								<int key="NSAlign">0</int>
 								<int key="NSScale">0</int>
@@ -307,7 +307,7 @@
 						<object class="NSTextField" id="701224876">
 							<reference key="NSNextResponder" ref="408218115"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{59, 549}, {158, 17}}</string>
+							<string key="NSFrame">{{52, 549}, {107, 17}}</string>
 							<reference key="NSSuperview" ref="408218115"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="837820988"/>
@@ -345,7 +345,7 @@
 								<int key="NSCellFlags2">32768</int>
 								<object class="NSCustomResource" key="NSContents">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">path4327</string>
+									<string key="NSResourceName">path4351</string>
 								</object>
 								<int key="NSAlign">0</int>
 								<int key="NSScale">0</int>
@@ -3812,8 +3812,8 @@ wGw</bytes>
 						<array class="NSMutableArray" key="children">
 							<reference ref="837820988"/>
 							<reference ref="556059397"/>
-							<reference ref="701224876"/>
 							<reference ref="516804020"/>
+							<reference ref="701224876"/>
 							<reference ref="931403608"/>
 						</array>
 						<reference key="parent" ref="597159376"/>

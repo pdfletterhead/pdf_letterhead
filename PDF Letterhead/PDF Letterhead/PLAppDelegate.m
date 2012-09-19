@@ -138,7 +138,7 @@
     NSString * body = @"";
     
     NSString *scriptString= [NSString stringWithFormat:@"set theAttachment to \"%@\"\nset the new_path to POSIX file theAttachment\ntell application \"Mail\"\nset theNewMessage to make new outgoing message with properties {subject:\"%@\", content:\"%@\" & return & return, visible:true}\n tell theNewMessage\ntry\nmake new attachment with properties {file name:new_path} at after the last word of the last paragraph\nend try\nend tell\nactivate\nend tell",newFileName,subject,body];
-    NSLog(scriptString);
+//    NSLog(scriptString);
     mailScript = [[NSAppleScript alloc] initWithSource:scriptString];
     [mailScript executeAndReturnError:nil];
 }
@@ -148,12 +148,20 @@
 
 -(void)saveBackgroundImagePath:(NSString*)filename atIndex:(NSUInteger*)index {
 
+    
+    
     NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
         
     NSError *error = nil;
 
     NSString * newimagepath = [NSString stringWithFormat:@"%@/letterhead01.%@",[[self applicationFilesDirectory] path],[filename pathExtension]];
 
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath: newimagepath]) {
+       
+        [[NSFileManager defaultManager] removeItemAtPath: newimagepath error:nil];
+    }
+        
     if ([[NSFileManager defaultManager] copyItemAtPath:filename toPath:newimagepath error:&error])
     {
         NSLog(@"copy succeeded");
