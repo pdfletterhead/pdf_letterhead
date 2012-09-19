@@ -51,10 +51,10 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSWindowTemplate" id="597159376">
-				<int key="NSWindowStyleMask">7</int>
+				<int key="NSWindowStyleMask">4103</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{1876, 374}, {640, 586}}</string>
-				<int key="NSWTFlags">611845120</int>
+				<int key="NSWTFlags">-461897728</int>
 				<string key="NSWindowTitle">PDF Letterhead</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSToolbar" key="NSViewClass" id="105838754">
@@ -365,6 +365,7 @@
 							<string key="NSFrame">{{222, 20}, {398, 546}}</string>
 							<reference key="NSSuperview" ref="408218115"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSViewCanDrawConcurrently">YES</bool>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="DisplayMode">1</int>
@@ -400,6 +401,7 @@
 						<string key="NSFrameSize">{204, 515}</string>
 						<reference key="NSSuperview" ref="55013988"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<float key="ThumbSizeWidth">64</float>
 						<float key="ThumbSizeHeight">64</float>
@@ -1624,6 +1626,15 @@
 									<reference key="NSOnImage" ref="24469729"/>
 									<reference key="NSMixedImage" ref="476990178"/>
 								</object>
+								<object class="NSMenuItem" id="456597986">
+									<reference key="NSMenu" ref="835318025"/>
+									<string key="NSTitle">PDF Letterhead</string>
+									<string key="NSKeyEquiv">0</string>
+									<int key="NSKeyEquivModMask">1048576</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="24469729"/>
+									<reference key="NSMixedImage" ref="476990178"/>
+								</object>
 								<object class="NSMenuItem" id="299356726">
 									<reference key="NSMenu" ref="835318025"/>
 									<bool key="NSIsDisabled">YES</bool>
@@ -1702,7 +1713,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="108933754">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSScrollView" id="347724246">
@@ -1982,7 +1993,6 @@ wGw</bytes>
 						</object>
 					</array>
 					<string key="NSFrameSize">{510, 413}</string>
-					<reference key="NSSuperview"/>
 					<reference key="NSNextKeyView" ref="347724246"/>
 					<string key="NSReuseIdentifierKey">_NS:21</string>
 				</object>
@@ -2722,6 +2732,14 @@ wGw</bytes>
 					<int key="connectionID">756</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">showMainWindow:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="456597986"/>
+					</object>
+					<int key="connectionID">790</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">parentWindow</string>
 						<reference key="source" ref="837698875"/>
@@ -3171,6 +3189,7 @@ wGw</bytes>
 							<reference ref="625202149"/>
 							<reference ref="575023229"/>
 							<reference ref="1011231497"/>
+							<reference ref="456597986"/>
 						</array>
 						<reference key="parent" ref="713487014"/>
 					</object>
@@ -3959,6 +3978,11 @@ wGw</bytes>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">FAQWindowController</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">788</int>
+						<reference key="object" ref="456597986"/>
+						<reference key="parent" ref="835318025"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -4140,6 +4164,7 @@ wGw</bytes>
 				<string key="77.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="78.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="785.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="788.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="79.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="82.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4150,7 +4175,7 @@ wGw</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">787</int>
+			<int key="maxID">790</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4198,17 +4223,20 @@ wGw</bytes>
 				<object class="IBPartialClassDescription">
 					<string key="className">PLAppDelegate</string>
 					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">saveAs:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">saveAs:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="saveAs:">id</string>
+						<string key="showMainWindow:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="saveAs:">
 							<string key="name">saveAs:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="showMainWindow:">
+							<string key="name">showMainWindow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="backgrounddoc">pmpDropZone</string>
 						<string key="pdfView">PDFView</string>

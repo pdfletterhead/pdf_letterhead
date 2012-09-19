@@ -16,7 +16,7 @@ NSString * sourcefilepath;
 - (void)dropAreaFadeIn;
 - (void)dropAreaFadeOut;
 -(NSString *)getFilepath;
--(NSString *) setFilepath:(NSString*)path;
+-(void) setFilepath:(NSString*)path;
 
 @end
 

@@ -25,8 +25,10 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-- (IBAction)saveAs:(id)sender;
+-(IBAction)saveAs:(id)sender;
+-(IBAction)showMainWindow: (id) sender;
 -(void)setPreview;
+
 
 
 @end

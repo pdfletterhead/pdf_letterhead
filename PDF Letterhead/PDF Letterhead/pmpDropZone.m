@@ -111,7 +111,7 @@
     }
 }
 
--(NSString *) setFilepath:(NSString*)path{
+-(void) setFilepath:(NSString*)path{
      self.sourcefilepath = path;
 }
 

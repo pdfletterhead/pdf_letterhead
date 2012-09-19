@@ -17,14 +17,12 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
    
+    // If BG exists in standardUserDefaults set it
     if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"] ]) {
-        
         NSString *bgfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"];
         NSImage * tmpImage = [[NSImage alloc] initWithContentsOfFile:bgfilename];
         [_backgrounddoc setFilepath:bgfilename];
         [_backgrounddoc setImage:tmpImage];
-        
-         NSLog(@"fil stored:%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"]);
         [self setPreview];
     }
     
@@ -79,7 +77,6 @@
         page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage];
     
         [_letterheadPDF insertPage: page atIndex: 0];
-
     }
 	
     // Assign PDFDocument ot PDFView.
@@ -87,6 +84,10 @@
 	
     //to make sure to right document is printed. But we must replace the print functions
     [_pdfWindow makeFirstResponder:_pdfView];
+}
+
+- (IBAction)showMainWindow: (id) sender{
+    [_pdfWindow makeKeyAndOrderFront:self];
 }
 
 
@@ -334,6 +335,15 @@
     return NSTerminateNow;
 }
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    if (flag) {
+        return NO;
+    } else {
+        [self showMainWindow:self];
+        return YES;
+    }
+}
 
 
 @end
