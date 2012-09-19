@@ -13,7 +13,6 @@
 
 @synthesize sourcefilepath;
 
-
 - (id)initWithCoder:(NSCoder *)decoder
 {
     self = [super initWithCoder:decoder];
@@ -56,6 +55,7 @@
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
     NSPasteboard *pboard;
     NSDragOperation sourceDragMask;
+
  
     NSLog(@"drag operation entered");
     sourceDragMask = [sender draggingSourceOperationMask];
@@ -83,16 +83,23 @@
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
 {
+//    NSImageView *theDropArea = (NSImageView *)sender;
     NSPasteboard *pboard = [sender draggingPasteboard];
 
-    NSLog(@"drop now");
+    NSLog(@"drop now on %@",[self identifier]);
     [self dropAreaFadeOut];
     
     //int numberOfFiles = [files count];
 
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
     
-        NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];        
+        NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
+        
+        if([files count]>1)
+        {
+            NSLog(@"ask for folder to store");
+        }
+        
         if ([[[files objectAtIndex:0] pathExtension] isEqual:@"pdf"]){
            
             //NSString *zPath = [files lastObject];
@@ -100,16 +107,20 @@
             NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
             [self setImage:zNewImage];
             NSLog(@"sourcefilepath: %@",self.sourcefilepath);
-            [[NSApp delegate] setPreview];
-            
-
-
-
+            if([[self identifier] isEqualToString:@"sourceDropArea"]){
+                NSLog(@"not storing prefs %@",[self identifier]);
+                [[NSApp delegate] setPreviewStoreBackgroundInPrefs:NO];
+            }
+            else
+            {
+                [[NSApp delegate] setPreviewStoreBackgroundInPrefs:YES];
+            }
         } else {
             return NO;
         }
     }
 }
+
 
 -(void) setFilepath:(NSString*)path{
      self.sourcefilepath = path;

@@ -17,6 +17,15 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
    
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
+    {
+        [_coverswitch setSelectedSegment:1];
+    }
+    [self coverControlAction:self];
+    
+    [_pdfThumbView setAllowsDragging:NO];
+    [_pdfThumbView setAllowsMultipleSelection:NO];
+    
     // If BG exists in standardUserDefaults set it
     if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"] ]) {
         NSString *bgfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"];
@@ -25,22 +34,62 @@
         [_backgrounddoc setImage:tmpImage];
         [self setPreview];
     }
-    
+
+    // If Cover exists in standardUserDefaults set it
+    if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"] ]) {
+        NSString *cvrfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"];
+        NSImage * tmpcvrImage = [[NSImage alloc] initWithContentsOfFile:cvrfilename];
+        [_coverbackgrounddoc setFilepath:cvrfilename];
+        [_coverbackgrounddoc setImage:tmpcvrImage];
+        [self setPreview];
+    }
 }
 
--(void) setPreview
-{
+
+
+-(void)setPreview{
+    [self setPreviewStoreBackgroundInPrefs:NO];
+}
+
+-(void)setPreviewStoreBackgroundInPrefs:(BOOL)storeInPrefs{
 	NSImage			*bgimage;
+	NSImage			*cvrimage;
 	NSImage			*sourceimage;
 	PLPDFPage       *page;
-	
+    
+    //BOOL coverEnabled = NO;
+    if([_coverswitch selectedSegment]==1){
+        _coverEnabled = YES;
+        NSLog(@"cover = on");
+    }
+    else{
+        _coverEnabled = NO;
+ 
+    }
+    
 	// Start with an empty PDFDocument.
 	_letterheadPDF = [[PDFDocument alloc] init];
 	
+    if(_coverEnabled){
+        NSLog(@"set cover image");
+
+        if([_coverbackgrounddoc getFilepath]){
+            cvrimage = [_coverbackgrounddoc image];
+            
+            if(storeInPrefs) [self saveBackgroundImagePathInPrefs: [_coverbackgrounddoc getFilepath] atIndex:0 cover:YES];
+        }
+        else{
+            cvrimage = NULL;
+            NSBundle* myBundle = [NSBundle mainBundle];
+            NSString* myImagePath = [myBundle pathForResource:@"white" ofType:@"pdf"];
+            
+            cvrimage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+        }
+    }
+    
     if([_backgrounddoc getFilepath]){
         bgimage = [_backgrounddoc image];
-        
-        [self saveBackgroundImagePath: [_backgrounddoc getFilepath] atIndex:0];
+          if(storeInPrefs) [self saveBackgroundImagePathInPrefs: [_backgrounddoc getFilepath] atIndex:0 cover:NO];
     }
     else{
         bgimage = NULL;
@@ -60,21 +109,39 @@
         NSLog(@"pages: %li",pagescount);
         
         for (int y = 0; y < pagescount; y++) {
+            
             PDFPage *currentPage = [sourcePDF pageAtIndex:y];
             NSImage *image = [[NSImage alloc] initWithData:[currentPage dataRepresentation]];
-            
-            // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
-            page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: image];
-            
+
+            if(_coverEnabled && y==0){
+                NSLog(@"set cover as background");
+                // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
+                page = [[PLPDFPage alloc] initWithBGImage: cvrimage sourceDoc: image label:[currentPage label]];
+            }
+            else{
+                // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
+                page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: image label:[currentPage label]];
+            }
             // Insert the new page in our PDF document.
             [_letterheadPDF insertPage: page atIndex: y];
             
-            NSLog(@"y = %i", y);
+            //NSLog(@"y = %i", y);
         }
     }
     else{
         sourceimage = NULL;
-        page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage];
+
+        if(_coverEnabled){
+            NSLog(@"set cover as background");
+            // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
+            page = [[PLPDFPage alloc] initWithBGImage: cvrimage sourceDoc: sourceimage label:nil];
+        }
+        else{
+            // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
+            page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage label:nil];
+        }
+        
+        //page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage];
     
         [_letterheadPDF insertPage: page atIndex: 0];
     }
@@ -88,6 +155,27 @@
 
 - (IBAction)showMainWindow: (id) sender{
     [_pdfWindow makeKeyAndOrderFront:self];
+}
+
+- (IBAction)coverControlAction: (id) sender{
+    NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
+    
+    if([_coverswitch selectedSegment]==0){
+        NSLog(@"cover = off");
+        [prefs setBool:NO forKey:@"coverEnabled"];
+        [_coverbackgrounddoc unregisterDraggedTypes];
+        [_coverbackgrounddoc dropAreaFadeIn];
+
+    }
+    else{
+        NSLog(@"cover = on");
+        [prefs setBool:YES forKey:@"coverEnabled"];
+        [_coverbackgrounddoc registerForDraggedTypes:[NSArray arrayWithObjects:
+                                       NSColorPboardType, NSFilenamesPboardType, nil]];
+        [_coverbackgrounddoc dropAreaFadeOut];
+    }
+    //[prefs synchronize];
+    [self setPreview];
 }
 
 
@@ -146,18 +234,29 @@
 
 
 
--(void)saveBackgroundImagePath:(NSString*)filename atIndex:(NSUInteger*)index {
+
+
+-(void)saveBackgroundImagePathInPrefs:(NSString*)filename atIndex:(NSUInteger*)index cover:(BOOL)isCover {
 
     
     
     NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
         
     NSError *error = nil;
+    NSString * bgType;
+    
+    if(isCover){
+        bgType = @"Cover";
+    }
+    else {
+        bgType = @"Background";
+    }
 
-    NSString * newimagepath = [NSString stringWithFormat:@"%@/letterhead01.%@",[[self applicationFilesDirectory] path],[filename pathExtension]];
+    NSString * newimagepath = [NSString stringWithFormat:@"%@/letterhead-%@-00.%@",[[self applicationFilesDirectory] path],bgType,[filename pathExtension]];
 
     
     if ([[NSFileManager defaultManager] fileExistsAtPath: newimagepath]) {
+        NSLog(@"deleting %@:",newimagepath);
        
         [[NSFileManager defaultManager] removeItemAtPath: newimagepath error:nil];
     }
@@ -166,7 +265,7 @@
     {
         NSLog(@"copy succeeded");
         NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setValue:newimagepath forKey:@"storedBackground"];
+        [prefs setValue:newimagepath forKey:[NSString stringWithFormat:@"stored%@", bgType]];
         [prefs synchronize];
 
     }

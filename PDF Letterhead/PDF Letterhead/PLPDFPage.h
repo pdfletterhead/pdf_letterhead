@@ -12,6 +12,8 @@
 {
     NSImage		*_bgimage;
     NSImage		*_frontimage;
+    NSString	*_label;
 }
-- (id) initWithBGImage: (NSImage *) bgimage sourceDoc: (NSImage *) sourceimage;
+- (id) initWithBGImage: (NSImage *) bgimage sourceDoc: (NSImage *) sourceimage label:(NSString*) label;
+
 @end

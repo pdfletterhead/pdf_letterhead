@@ -11,25 +11,21 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
 
 @implementation PLPDFPage
 
-- (id) initWithBGImage: (NSImage *) bgimage sourceDoc: (NSImage *) sourceimage
-{
+- (id) initWithBGImage: (NSImage *) bgimage sourceDoc: (NSImage *) sourceimage label:(NSString*) label {
 	self = [super init];
 	
 	_bgimage = [bgimage copy];
 	_frontimage = [sourceimage copy];
+	_label = [label copy];
     
 	return self;
-
 }
-
-
 
 - (NSRect) boundsForBox: (PDFDisplayBox) box
 {
 	// Always return 8.5 x 11 inches (in points of course).
 //	return NSMakeRect(0.0, 0.0, 612.0, 792.0);
     return NSMakeRect(0.0, 0.0, 595, 842);
-
 }
 
 

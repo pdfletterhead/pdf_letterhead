@@ -18,7 +18,13 @@
 @property (assign) IBOutlet NSWindow *pdfWindow;
 @property (assign) IBOutlet pmpDropZone *sourcedoc;
 @property (assign) IBOutlet pmpDropZone *backgrounddoc;
+@property (assign) IBOutlet pmpDropZone *coverbackgrounddoc;
+@property (assign) IBOutlet NSSegmentedControl *coverswitch;
+@property (assign) BOOL coverEnabled;
+
 @property (assign) IBOutlet PDFView *pdfView;
+@property (assign) IBOutlet PDFThumbnailView *pdfThumbView;
+
 
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -28,6 +34,8 @@
 -(IBAction)saveAs:(id)sender;
 -(IBAction)showMainWindow: (id) sender;
 -(void)setPreview;
+-(void)setPreviewStoreBackgroundInPrefs:(BOOL)storeInPrefs;
+- (IBAction)coverControlAction: (id) sender;
 
 
 
