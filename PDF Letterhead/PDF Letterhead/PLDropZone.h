@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface pmpDropZone : NSImageView{
+@interface PLDropZone : NSImageView{
 NSString * sourcefilepath;
 }
 @property NSString *sourcefilepath;
@@ -16,6 +16,7 @@ NSString * sourcefilepath;
 - (void)dropAreaFadeIn;
 - (void)dropAreaFadeOut;
 -(NSString *)getFilepath;
+-(BOOL) setPdfFilepath:(NSString*)path;
 -(void) setFilepath:(NSString*)path;
 
 @end

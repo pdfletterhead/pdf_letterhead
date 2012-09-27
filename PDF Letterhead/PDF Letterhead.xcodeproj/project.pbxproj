@@ -15,14 +15,15 @@
 		3E6835DC1607C90400DDFB82 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835DA1607C90400DDFB82 /* MainMenu.xib */; };
 		3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */; };
 		3E6835ED1607CA8A00DDFB82 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6835EC1607CA8A00DDFB82 /* Quartz.framework */; };
-		3E6835F01607CB6C00DDFB82 /* path4327.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EE1607CB6C00DDFB82 /* path4327.png */; };
-		3E6835F11607CB6C00DDFB82 /* path4351.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EF1607CB6C00DDFB82 /* path4351.png */; };
-		3E6835F41607CC7900DDFB82 /* pmpDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F31607CC7900DDFB82 /* pmpDropZone.m */; };
+		3E6835F01607CB6C00DDFB82 /* dragContentDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */; };
+		3E6835F11607CB6C00DDFB82 /* dragLetterheadDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */; };
+		3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F31607CC7900DDFB82 /* PLDropZone.m */; };
 		3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F61607D22100DDFB82 /* PLPDFPage.m */; };
 		3E6836031607EE8C00DDFB82 /* pdfletterhead.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */; };
 		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
 		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
 		3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */; };
+		3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +42,10 @@
 		3E6835DB1607C90400DDFB82 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3E6835DE1607C90400DDFB82 /* PDF_Letterhead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PDF_Letterhead.xcdatamodel; sourceTree = "<group>"; };
 		3E6835EC1607CA8A00DDFB82 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		3E6835EE1607CB6C00DDFB82 /* path4327.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = path4327.png; sourceTree = "<group>"; };
-		3E6835EF1607CB6C00DDFB82 /* path4351.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = path4351.png; sourceTree = "<group>"; };
-		3E6835F21607CC7900DDFB82 /* pmpDropZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pmpDropZone.h; sourceTree = "<group>"; };
-		3E6835F31607CC7900DDFB82 /* pmpDropZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pmpDropZone.m; sourceTree = "<group>"; };
+		3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragContentDocument.png; sourceTree = "<group>"; };
+		3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragLetterheadDocument.png; sourceTree = "<group>"; };
+		3E6835F21607CC7900DDFB82 /* PLDropZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLDropZone.h; sourceTree = "<group>"; };
+		3E6835F31607CC7900DDFB82 /* PLDropZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLDropZone.m; sourceTree = "<group>"; };
 		3E6835F51607D22100DDFB82 /* PLPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFPage.h; sourceTree = "<group>"; };
 		3E6835F61607D22100DDFB82 /* PLPDFPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPDFPage.m; sourceTree = "<group>"; };
 		3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = pdfletterhead.icns; path = ../pdfletterhead.icns; sourceTree = "<group>"; };
@@ -52,6 +53,8 @@
 		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFAQWindowController.h; sourceTree = "<group>"; };
 		3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFAQWindowController.m; sourceTree = "<group>"; };
+		3EFB08F61615032E006063F9 /* PLPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPreviewWindow.h; sourceTree = "<group>"; };
+		3EFB08F71615032E006063F9 /* PLPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPreviewWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +112,12 @@
 			children = (
 				3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */,
 				3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */,
-				3E6835F21607CC7900DDFB82 /* pmpDropZone.h */,
-				3E6835F31607CC7900DDFB82 /* pmpDropZone.m */,
+				3EFB08F61615032E006063F9 /* PLPreviewWindow.h */,
+				3EFB08F71615032E006063F9 /* PLPreviewWindow.m */,
 				3E6835F51607D22100DDFB82 /* PLPDFPage.h */,
 				3E6835F61607D22100DDFB82 /* PLPDFPage.m */,
+				3E6835F21607CC7900DDFB82 /* PLDropZone.h */,
+				3E6835F31607CC7900DDFB82 /* PLDropZone.m */,
 				3E6835D71607C90400DDFB82 /* PLAppDelegate.h */,
 				3E6835D81607C90400DDFB82 /* PLAppDelegate.m */,
 				3E6835DA1607C90400DDFB82 /* MainMenu.xib */,
@@ -127,8 +132,8 @@
 			children = (
 				3EF7E6BA16089C21008EA1B1 /* white.pdf */,
 				3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */,
-				3E6835EE1607CB6C00DDFB82 /* path4327.png */,
-				3E6835EF1607CB6C00DDFB82 /* path4351.png */,
+				3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */,
+				3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */,
 				3E6835CD1607C90400DDFB82 /* PDF Letterhead-Info.plist */,
 				3E6835CE1607C90400DDFB82 /* InfoPlist.strings */,
 				3E6835D11607C90400DDFB82 /* main.m */,
@@ -195,8 +200,8 @@
 				3E6835D01607C90400DDFB82 /* InfoPlist.strings in Resources */,
 				3E6835D61607C90400DDFB82 /* Credits.rtf in Resources */,
 				3E6835DC1607C90400DDFB82 /* MainMenu.xib in Resources */,
-				3E6835F01607CB6C00DDFB82 /* path4327.png in Resources */,
-				3E6835F11607CB6C00DDFB82 /* path4351.png in Resources */,
+				3E6835F01607CB6C00DDFB82 /* dragContentDocument.png in Resources */,
+				3E6835F11607CB6C00DDFB82 /* dragLetterheadDocument.png in Resources */,
 				3E6836031607EE8C00DDFB82 /* pdfletterhead.icns in Resources */,
 				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
 				3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */,
@@ -229,9 +234,10 @@
 				3E6835D21607C90400DDFB82 /* main.m in Sources */,
 				3E6835D91607C90400DDFB82 /* PLAppDelegate.m in Sources */,
 				3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */,
-				3E6835F41607CC7900DDFB82 /* pmpDropZone.m in Sources */,
+				3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,
 				3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */,
+				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

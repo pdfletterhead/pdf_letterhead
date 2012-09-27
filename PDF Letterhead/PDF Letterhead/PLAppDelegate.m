@@ -16,15 +16,19 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-   
+    [self setIsSetBackground:NO];
+    [self setIsSetCover:NO];
+    [self setIsSetContent:NO];
+    [_myMainMenu setAutoenablesItems:NO];
+    
+    [_pdfThumbView setAllowsDragging:NO];
+    [_pdfThumbView setAllowsMultipleSelection:NO];
+
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
     {
         [_coverswitch setSelectedSegment:1];
     }
     [self coverControlAction:self];
-    
-    [_pdfThumbView setAllowsDragging:NO];
-    [_pdfThumbView setAllowsMultipleSelection:NO];
     
     // If BG exists in standardUserDefaults set it
     if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"] ]) {
@@ -32,51 +36,135 @@
         NSImage * tmpImage = [[NSImage alloc] initWithContentsOfFile:bgfilename];
         [_backgrounddoc setFilepath:bgfilename];
         [_backgrounddoc setImage:tmpImage];
-        [self setPreview];
+        [self setIsSetBackground:YES];
     }
 
     // If Cover exists in standardUserDefaults set it
     if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"] ]) {
+        
         NSString *cvrfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"];
         NSImage * tmpcvrImage = [[NSImage alloc] initWithContentsOfFile:cvrfilename];
         [_coverbackgrounddoc setFilepath:cvrfilename];
         [_coverbackgrounddoc setImage:tmpcvrImage];
-        [self setPreview];
+        [self setIsSetCover:YES];
+    }
+    
+    [self updatePreviewAndActionButtons];
+
+    
+    //VOORLATER
+    /*NSArray *listOfControls = [[_pdfWindow contentView] subviews];
+    for (NSInteger i=0;i<[listOfControls count];i++) {
+        NSControl * tmp = [listOfControls objectAtIndex: i];
+        NSLog(@"control id:%@",[tmp identifier]);
+    }
+     */
+    
+
+}
+
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
+{
+    NSLog(@"filename:%@",filename);
+    
+    if ([[filename pathExtension] isEqual:@"pdf"]){
+        [_sourcedoc setPdfFilepath:filename];
+//        NSImage *newImage = [[NSImage alloc] initWithContentsOfFile:filename];
+//        [_sourcedoc setImage:newImage];
+        return YES;
+    } else {
+        return NO;
     }
 }
 
 
 
--(void)setPreview{
-    [self setPreviewStoreBackgroundInPrefs:NO];
+- (IBAction)doOpenFileForCover:(id)sender {
+    [self doOpenFileForImageView:_coverbackgrounddoc];
 }
 
--(void)setPreviewStoreBackgroundInPrefs:(BOOL)storeInPrefs{
+- (IBAction)doOpenFileForBG:(id)sender {
+    [self doOpenFileForImageView:_backgrounddoc];
+}
+
+- (IBAction)doOpenFileForContentDoc:(id)sender {
+    [self doOpenFileForImageView:_sourcedoc];
+}
+
+- (IBAction)doDelForCover:(id)sender {
+    [_coverbackgrounddoc setImage:nil];
+}
+
+- (IBAction)doDelForBG:(id)sender {
+    [_backgrounddoc setImage:nil];
+}
+
+- (IBAction)doDelForContentDoc:(id)sender {
+    [_sourcedoc setImage:nil];
+}
+
+- (void)doOpenFileForImageView:(PLDropZone*)theView {
+
+    NSOpenPanel *tvarNSOpenPanelObj	= [NSOpenPanel openPanel];
+    NSInteger tvarNSInteger	= [tvarNSOpenPanelObj runModal];
+    if(tvarNSInteger == NSOKButton){
+     	NSLog(@"doOpen we have an OK button");
+    } else if(tvarNSInteger == NSCancelButton) {
+     	NSLog(@"doOpen we have a Cancel button");
+     	return;
+    } else {
+     	return;
+    }
+    
+    NSString * tvarFilename = [tvarNSOpenPanelObj filename];
+    NSLog(@"doOpen filename = %@",tvarFilename);
+
+    if ([[tvarFilename pathExtension] isEqual:@"pdf"]){
+        
+        [theView setPdfFilepath:tvarFilename];
+    } else {
+        NSLog(@"invalid filetype, no IMAGE");
+    }   
+}
+
+- (IBAction)openPreview:(id)sender {
+    
+    //PDFView * previewView = [_pdfView copy];
+    //[_previewView setDocument:_letterheadPDF];
+    //[[_previewWindow contentView] addSubview:previewView];
+    [_previewWindow makeKeyAndOrderFront:sender];
+
+}
+
+-(void)updatePreviewAndActionButtons {
+
+    //We do not have enough to set Preview
+    
+    if(![self allowSetPreview]){
+        [self enableActions: NO];
+        [_pdfView setDocument: nil];
+    }
+    else{
+        [self enableActions: YES];
+        [self updatePreview];
+    }
+}
+
+-(void)updatePreview {
+    
 	NSImage			*bgimage;
 	NSImage			*cvrimage;
 	NSImage			*sourceimage;
 	PLPDFPage       *page;
-    
-    //BOOL coverEnabled = NO;
-    if([_coverswitch selectedSegment]==1){
-        _coverEnabled = YES;
-        NSLog(@"cover = on");
-    }
-    else{
-        _coverEnabled = NO;
- 
-    }
-    
+   
 	// Start with an empty PDFDocument.
 	_letterheadPDF = [[PDFDocument alloc] init];
 	
     if(_coverEnabled){
-        NSLog(@"set cover image");
-
-        if([_coverbackgrounddoc getFilepath]){
+        //NSLog(@"set cover image");
+        
+        if(_isSetCover){
             cvrimage = [_coverbackgrounddoc image];
-            
-            if(storeInPrefs) [self saveBackgroundImagePathInPrefs: [_coverbackgrounddoc getFilepath] atIndex:0 cover:YES];
         }
         else{
             cvrimage = NULL;
@@ -87,9 +175,8 @@
         }
     }
     
-    if([_backgrounddoc getFilepath]){
+    if(_isSetBackground){
         bgimage = [_backgrounddoc image];
-          if(storeInPrefs) [self saveBackgroundImagePathInPrefs: [_backgrounddoc getFilepath] atIndex:0 cover:NO];
     }
     else{
         bgimage = NULL;
@@ -100,11 +187,35 @@
     }
     
     // Get image.
-    if([_sourcedoc getFilepath]){
+    if(_isSetContent){
         sourceimage = [_sourcedoc image];
-        
+        NSString *filePath;
         NSLog(@"pdf path:%@",[_sourcedoc getFilepath]);
-        PDFDocument * sourcePDF = [[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:[_sourcedoc getFilepath]]];
+        if(![_sourcedoc getFilepath])
+        {
+            filePath = [NSString stringWithFormat:@"%@/no_name.pdf",[[self applicationFilesDirectory] path]];
+           BOOL success;
+            //NSImage *myImage;
+            NSImageView *myView;
+            NSRect vFrame;
+            NSData *pdfData;
+            //        NSError *error = nil;
+            
+            vFrame = NSZeroRect;
+            vFrame.size = [sourceimage size];
+            myView = [[NSImageView alloc] initWithFrame:vFrame];
+            
+            [myView setImage:sourceimage];
+            
+            pdfData = [myView dataWithPDFInsideRect:vFrame];
+            
+            success = [pdfData writeToFile:filePath options:0 error:NULL];
+        }
+        else{
+            filePath = [_sourcedoc getFilepath];
+        }
+        
+        PDFDocument * sourcePDF = [[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:filePath]];
         NSUInteger pagescount = [sourcePDF pageCount];
         NSLog(@"pages: %li",pagescount);
         
@@ -112,7 +223,7 @@
             
             PDFPage *currentPage = [sourcePDF pageAtIndex:y];
             NSImage *image = [[NSImage alloc] initWithData:[currentPage dataRepresentation]];
-
+            
             if(_coverEnabled && y==0){
                 NSLog(@"set cover as background");
                 // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
@@ -124,13 +235,11 @@
             }
             // Insert the new page in our PDF document.
             [_letterheadPDF insertPage: page atIndex: y];
-            
-            //NSLog(@"y = %i", y);
         }
     }
     else{
         sourceimage = NULL;
-
+        
         if(_coverEnabled){
             NSLog(@"set cover as background");
             // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
@@ -142,15 +251,41 @@
         }
         
         //page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage];
-    
+        
         [_letterheadPDF insertPage: page atIndex: 0];
     }
 	
     // Assign PDFDocument ot PDFView.
 	[_pdfView setDocument: _letterheadPDF];
+    [_previewView setDocument:_letterheadPDF];
+
 	
     //to make sure to right document is printed. But we must replace the print functions
-    [_pdfWindow makeFirstResponder:_pdfView];
+    //[_pdfWindow makeFirstResponder:_pdfView];
+}
+
+-(BOOL)allowSetPreview{
+   
+    if(!_isSetContent)
+    {
+        return NO;
+    }
+    else{
+        //LAZY CHECKING, ONLY CONTENT DOCUMENT IS NEEDED
+        return YES;
+    }
+    
+    if(!_coverEnabled && _isSetBackground)
+    {
+        return YES;
+    }
+    
+    if(_coverEnabled && _isSetCover && _isSetBackground)
+    {
+        return YES;
+    }
+    
+    return NO;
 }
 
 - (IBAction)showMainWindow: (id) sender{
@@ -161,21 +296,24 @@
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     
     if([_coverswitch selectedSegment]==0){
-        NSLog(@"cover = off");
+        //NSLog(@"cover = off");
         [prefs setBool:NO forKey:@"coverEnabled"];
         [_coverbackgrounddoc unregisterDraggedTypes];
         [_coverbackgrounddoc dropAreaFadeIn];
-
+        [_coverbackgrounddoc setEditable:NO];
+        _coverEnabled = NO;
     }
     else{
-        NSLog(@"cover = on");
+        //NSLog(@"cover = on");
         [prefs setBool:YES forKey:@"coverEnabled"];
         [_coverbackgrounddoc registerForDraggedTypes:[NSArray arrayWithObjects:
                                        NSColorPboardType, NSFilenamesPboardType, nil]];
         [_coverbackgrounddoc dropAreaFadeOut];
+        [_coverbackgrounddoc setEditable:YES];
+        _coverEnabled = YES;
     }
-    //[prefs synchronize];
-    [self setPreview];
+    
+    [self updatePreviewAndActionButtons];
 }
 
 
@@ -186,7 +324,8 @@
         newFileName = @"new.pdf";
     }
     else {
-        newFileName = [NSString stringWithFormat:@"%@-BGD.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
+        newFileName =[_sourcedoc getFilepath];
+        //newFileName = [NSString stringWithFormat:@"%@-BGD.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
     }
     
     NSSavePanel *spanel = [NSSavePanel savePanel];
@@ -232,17 +371,57 @@
 }
 
 
+- (IBAction)savePrint: (id) sender{
+    NSPrintInfo *info = [NSPrintInfo sharedPrintInfo];
+    [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
+}
 
+- (BOOL)validateMenuItem:(NSMenuItem *)item
+{
+    if ([item action] == @selector(saveAs:) && (![self allowSetPreview])) {
+        return NO;
+    }
+    if ([item action] == @selector(saveEmail:) && (![self allowSetPreview])) {
+        return NO;
+    }
+    if ([item action] == @selector(savePrint:) && (![self allowSetPreview])) {
+        return NO;
+    }
+    if ([item action] == @selector(openPreview:) && (![self allowSetPreview])) {
+        return NO;
+    }
 
+    return YES;
+}
 
+-(void)enableActions:(BOOL)enabled {
+    if(enabled) {
+        [_mailButton1 setEnabled:YES];
+        [_mailButton2 setEnabled:YES];
+        [_saveButton1 setEnabled:YES];
+        [_saveButton2 setEnabled:YES];
+        [_printButton1 setEnabled:YES];
+        [_printButton2 setEnabled:YES];
+        [_previewButton1 setEnabled:YES];
+        [_previewButton2 setEnabled:YES];
+    }
+    else{
+        //NSLog(@"disable Buttons");
+        [_mailButton1 setEnabled:NO];
+        [_mailButton2 setEnabled:NO];
+        [_saveButton1 setEnabled:NO];
+        [_saveButton2 setEnabled:NO];
+        [_printButton1 setEnabled:NO];
+        [_printButton2 setEnabled:NO];
+        [_previewButton1 setEnabled:NO];
+        [_previewButton2 setEnabled:NO];
 
--(void)saveBackgroundImagePathInPrefs:(NSString*)filename atIndex:(NSUInteger*)index cover:(BOOL)isCover {
+    }
+}
 
+-(void)saveBackgroundImagePathInPrefs:(NSImage*)myImage atIndex:(NSUInteger*)index cover:(BOOL)isCover {
     
-    
-    NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
-        
-    NSError *error = nil;
+    NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     NSString * bgType;
     
     if(isCover){
@@ -251,34 +430,54 @@
     else {
         bgType = @"Background";
     }
-
-    NSString * newimagepath = [NSString stringWithFormat:@"%@/letterhead-%@-00.%@",[[self applicationFilesDirectory] path],bgType,[filename pathExtension]];
-
     
-    if ([[NSFileManager defaultManager] fileExistsAtPath: newimagepath]) {
-        NSLog(@"deleting %@:",newimagepath);
-       
-        [[NSFileManager defaultManager] removeItemAtPath: newimagepath error:nil];
-    }
-        
-    if ([[NSFileManager defaultManager] copyItemAtPath:filename toPath:newimagepath error:&error])
+    //IF FILENAME IS NIL WE WILL REMOVE THE STOREDIMAGE
+    if(!myImage)
     {
-        NSLog(@"copy succeeded");
-        NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
-        [prefs setValue:newimagepath forKey:[NSString stringWithFormat:@"stored%@", bgType]];
+        [prefs setValue:nil forKey:[NSString stringWithFormat:@"stored%@", bgType]];
         [prefs synchronize];
-
     }
-    else
-    {
-        NSLog(@"Error: %@", [error description]);
-        NSLog(@"fil org:%@",filename);
-        NSLog(@"fil org:%@",newimagepath);
+    else{
+
+        NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
+        NSString *filePath;
+
+        NSArray *reps = [myImage representations];
+        NSImageRep *rep = [reps objectAtIndex:0];
+        if ([rep isKindOfClass:[NSPDFImageRep class]])
+        {
+            filePath = [NSString stringWithFormat:@"%@/letterhead-%@-00.pdf",[[self applicationFilesDirectory] path],bgType];
+            BOOL success;
+             //NSImage *myImage;
+             NSImageView *myView;
+             NSRect vFrame;
+             NSData *pdfData;
+             //        NSError *error = nil;
+             
+             vFrame = NSZeroRect;
+             vFrame.size = [myImage size];
+             myView = [[NSImageView alloc] initWithFrame:vFrame];
+             
+             [myView setImage:myImage];
+            
+             pdfData = [myView dataWithPDFInsideRect:vFrame];
+            
+             success = [pdfData writeToFile:filePath options:0 error:NULL];
+        }
+        else{
+            filePath = [NSString stringWithFormat:@"%@/letterhead-%@-00.png",[[self applicationFilesDirectory] path],bgType];
+        
+            NSData *imageData = [myImage TIFFRepresentation];
+            NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
+            
+            NSData *data = [imageRep representationUsingType: NSPNGFileType properties: nil];
+            [data writeToFile: filePath atomically: NO];
+        }
+        
+        [prefs setValue:filePath forKey:[NSString stringWithFormat:@"stored%@", bgType]];
+        [prefs synchronize];
     }
 }
-
-
-
 
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.lapp5.PDF_Letterhead" in the user's Application Support directory.

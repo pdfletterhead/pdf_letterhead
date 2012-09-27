@@ -6,10 +6,10 @@
 //  Copyright 2011 Lingewoud B.V. All rights reserved.
 //
 
-#import "pmpDropZone.h"
+#import "PLDropZone.h"
 #import "PLAppDelegate.h"
 
-@implementation pmpDropZone
+@implementation PLDropZone
 
 @synthesize sourcefilepath;
 
@@ -22,11 +22,14 @@
         
         [self dropAreaFadeOut];
     }
-
+    //NSLog(@"initWithCoder");
+    //[self setAllowsCutCopyPaste:NO];
+    
     return self;
 
 }
-- (id)initWithFrame:(NSRect)frame
+
+/*- (id)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -36,8 +39,63 @@
         [self dropAreaFadeOut];
         self.sourcefilepath = @"";
     }
+    NSLog(@"initWithFrame");
     
     return self;
+}
+*/
+
+
+
+
+
+- (void)setImage:(NSImage *)newImage{
+    
+    NSBundle* myBundle = [NSBundle mainBundle];
+    if([[self identifier] isEqualToString:@"sourceDropArea"]){
+        
+        if(!newImage){
+            NSString* myImagePath = [myBundle pathForResource:@"dragContentDocument" ofType:@"png"];
+            newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+            [[NSApp delegate] setIsSetContent:NO];
+        }
+        else{
+            [[NSApp delegate] setIsSetContent:YES];
+        }
+        
+        //NSLog(@"not storing prefs %@",[self identifier]);
+        
+    }
+    else{
+        if(!newImage){
+            NSString* myImagePath = [myBundle pathForResource:@"dragLetterheadDocument" ofType:@"png"];
+            newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+
+            if([[self identifier] isEqualToString:@"bgDropArea"]){
+                [[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:NO];
+                [[NSApp delegate] setIsSetBackground:NO];
+            }
+            else{
+                [[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:YES];
+                [[NSApp delegate] setIsSetCover:NO];
+            }
+        }
+        else{
+            if([[self identifier] isEqualToString:@"bgDropArea"]){
+                [[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:NO];
+                [[NSApp delegate] setIsSetBackground:YES];
+            }
+            else{
+                [[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:YES];
+                [[NSApp delegate] setIsSetCover:YES];
+            }
+        }
+    }
+    
+    [super setImage:newImage];
+    
+    [[NSApp delegate] updatePreviewAndActionButtons];
+
 }
 
 - (void)dropAreaFadeIn
@@ -57,7 +115,7 @@
     NSDragOperation sourceDragMask;
 
  
-    NSLog(@"drag operation entered");
+    //NSLog(@"drag operation entered");
     sourceDragMask = [sender draggingSourceOperationMask];
     pboard = [sender draggingPasteboard];
     
@@ -76,7 +134,7 @@
 
 - (void) draggingExited: (id <NSDraggingInfo>) info
 {
-    NSLog(@"drag operation finished");
+    //NSLog(@"drag operation finished");
 
     [self dropAreaFadeOut];
 }
@@ -86,7 +144,7 @@
 //    NSImageView *theDropArea = (NSImageView *)sender;
     NSPasteboard *pboard = [sender draggingPasteboard];
 
-    NSLog(@"drop now on %@",[self identifier]);
+    //NSLog(@"drop now on %@",[self identifier]);
     [self dropAreaFadeOut];
     
     //int numberOfFiles = [files count];
@@ -106,19 +164,30 @@
             self.sourcefilepath = [files lastObject];
             NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
             [self setImage:zNewImage];
-            NSLog(@"sourcefilepath: %@",self.sourcefilepath);
-            if([[self identifier] isEqualToString:@"sourceDropArea"]){
-                NSLog(@"not storing prefs %@",[self identifier]);
-                [[NSApp delegate] setPreviewStoreBackgroundInPrefs:NO];
-            }
-            else
-            {
-                [[NSApp delegate] setPreviewStoreBackgroundInPrefs:YES];
-            }
+            //NSLog(@"sourcefilepath: %@",self.sourcefilepath);
+            
+            return YES;
+            
         } else {
+            NSLog(@"invalid filetype, no IMAGE");
             return NO;
         }
     }
+
+    return NO;
+}
+
+
+-(BOOL) setPdfFilepath:(NSString*)path{
+    if ([[path pathExtension] isEqual:@"pdf"]){
+        
+        self.sourcefilepath = path;
+        NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
+        [self setImage:zNewImage];
+        return YES;
+    }
+
+    return NO;
 }
 
 

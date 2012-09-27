@@ -26,7 +26,7 @@
 - (void)awakeFromNib
 {
     [_FAQView readRTFDFromFile:[[NSBundle mainBundle] pathForResource:@"FAQ" ofType:@"rtf"]];
-    NSLog(@"%@",[[NSBundle mainBundle] pathForResource:@"FAQ" ofType:@"rtf"]);
+    //NSLog(@"%@",[[NSBundle mainBundle] pathForResource:@"FAQ" ofType:@"rtf"]);
     // Initialization code here.
 
 }
@@ -39,5 +39,7 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
+
+
 
 @end
