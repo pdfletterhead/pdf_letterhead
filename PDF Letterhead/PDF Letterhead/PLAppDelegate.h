@@ -8,7 +8,8 @@
 
 #import <Quartz/Quartz.h>
 #import "PLDropZone.h"
-
+#import "OnOffSwitchControl.h"
+#import "OnOffSwitchControlCell.h"
 
 @interface PLAppDelegate : NSObject <NSApplicationDelegate>
 {
@@ -30,7 +31,15 @@
 @property (assign) IBOutlet PLDropZone *sourcedoc;
 @property (assign) IBOutlet PLDropZone *backgrounddoc;
 @property (assign) IBOutlet PLDropZone *coverbackgrounddoc;
+@property (assign) IBOutlet NSTextField *backgrounddocText;
+@property (assign) IBOutlet NSTextField *coverbackgrounddocText;
+
 @property (assign) IBOutlet NSSegmentedControl *coverswitch;
+@property (assign) IBOutlet OnOffSwitchControl *coverswitch2;
+@property (assign) NSRect cvframe;
+@property (assign) NSRect bgframe;
+@property (assign) NSRect cvTextframe;
+@property (assign) NSRect bgTextframe;
 
 @property (assign) IBOutlet NSWindow *previewWindow;
 @property (assign) IBOutlet PDFView *previewView;
@@ -49,6 +58,7 @@
 -(IBAction)savePrint: (id) sender;
 -(IBAction)showMainWindow: (id) sender;
 -(IBAction)coverControlAction: (id) sender;
+
 
 -(void)updatePreviewAndActionButtons;
 -(void)saveBackgroundImagePathInPrefs:(NSImage*)myImage atIndex:(NSUInteger*)index cover:(BOOL)isCover;

@@ -45,43 +45,63 @@
 }
 */
 
+- (BOOL)becomeFirstResponder
+{
+    NSLog(@"is am selected");
+    [[self animator] setAlphaValue:0.5];
 
+    return YES;
+}
+
+
+
+- (BOOL)resignFirstResponder
+{
+    NSLog(@"is am deselected");
+    [[self animator] setAlphaValue:1.0];
+    
+    return YES;
+}
 
 
 
 - (void)setImage:(NSImage *)newImage{
-    
+       
     NSBundle* myBundle = [NSBundle mainBundle];
+    
     if([[self identifier] isEqualToString:@"sourceDropArea"]){
         
         if(!newImage){
-            NSString* myImagePath = [myBundle pathForResource:@"dragContentDocument" ofType:@"png"];
+            NSString* myImagePath = [myBundle pathForResource:@"contentdrop" ofType:@"png"];
             newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
             [[NSApp delegate] setIsSetContent:NO];
         }
         else{
             [[NSApp delegate] setIsSetContent:YES];
         }
-        
-        //NSLog(@"not storing prefs %@",[self identifier]);
-        
     }
     else{
         if(!newImage){
-            NSString* myImagePath = [myBundle pathForResource:@"dragLetterheadDocument" ofType:@"png"];
-            newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
 
             if([[self identifier] isEqualToString:@"bgDropArea"]){
+
+                NSString* myImagePath = [myBundle pathForResource:@"bgdrop" ofType:@"png"];
+                newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+                
                 [[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:NO];
                 [[NSApp delegate] setIsSetBackground:NO];
             }
             else{
+                NSString* myImagePath = [myBundle pathForResource:@"coverdrop" ofType:@"png"];
+                newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+
                 [[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:YES];
                 [[NSApp delegate] setIsSetCover:NO];
             }
         }
         else{
             if([[self identifier] isEqualToString:@"bgDropArea"]){
+                
                 [[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:NO];
                 [[NSApp delegate] setIsSetBackground:YES];
             }
@@ -100,12 +120,12 @@
 
 - (void)dropAreaFadeIn
 {
-    [self setAlphaValue:0.2];
+    [[self animator] setAlphaValue:0.2];
 }
 
 - (void)dropAreaFadeOut
 {
-    [self setAlphaValue:1.0];
+    [[self animator ] setAlphaValue:1.0];
 
 
 }

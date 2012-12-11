@@ -14,8 +14,14 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+
+    //style main pdfview
+    [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+
+    
     [self setIsSetBackground:NO];
     [self setIsSetCover:NO];
     [self setIsSetContent:NO];
@@ -23,7 +29,12 @@
     
     [_pdfThumbView setAllowsDragging:NO];
     [_pdfThumbView setAllowsMultipleSelection:NO];
-
+    
+    _cvframe = [_coverbackgrounddoc frame];
+    _bgframe = [_backgrounddoc frame];
+    _cvTextframe = [_coverbackgrounddocText frame];
+    _bgTextframe = [_backgrounddocText frame];    
+    
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
     {
         [_coverswitch setSelectedSegment:1];
@@ -292,29 +303,61 @@
     [_pdfWindow makeKeyAndOrderFront:self];
 }
 
+
 - (IBAction)coverControlAction: (id) sender{
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     
-    if([_coverswitch selectedSegment]==0){
+    if([_coverswitch2 state]==NSOffState){
         //NSLog(@"cover = off");
         [prefs setBool:NO forKey:@"coverEnabled"];
         [_coverbackgrounddoc unregisterDraggedTypes];
-        [_coverbackgrounddoc dropAreaFadeIn];
+        [[_coverbackgrounddoc animator] setAlphaValue:0.0];
         [_coverbackgrounddoc setEditable:NO];
         _coverEnabled = NO;
+        
+        CGRect newbgframe = CGRectMake(_cvframe.origin.x+45,
+                                             _cvframe.origin.y - 5,
+                                             _bgframe.size.width +10,
+                                             (_bgframe.size.height + 5));
+
+        [[_backgrounddoc animator ]setFrame:newbgframe];
+        
+
+        [[_coverbackgrounddocText animator] setAlphaValue:0.0];
+        [[_backgrounddocText animator] setStringValue:@"Background"];
+
+        CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
+                                       _cvTextframe.origin.y,
+                                       _bgTextframe.size.width,
+                                       (_bgTextframe.size.height));
+        
+        [[_backgrounddocText animator ]setFrame:newbgTextframe];
+
+    
     }
     else{
-        //NSLog(@"cover = on");
+
+        [[_backgrounddocText animator] setStringValue:@"Following bg's"];
+
+        [[_backgrounddoc animator ]setFrame:_bgframe];
+        [[_backgrounddocText animator ]setFrame:_bgTextframe];
+
         [prefs setBool:YES forKey:@"coverEnabled"];
         [_coverbackgrounddoc registerForDraggedTypes:[NSArray arrayWithObjects:
                                        NSColorPboardType, NSFilenamesPboardType, nil]];
+
         [_coverbackgrounddoc dropAreaFadeOut];
+        [[_coverbackgrounddocText animator] setAlphaValue:1.0];
+
         [_coverbackgrounddoc setEditable:YES];
         _coverEnabled = YES;
     }
     
     [self updatePreviewAndActionButtons];
 }
+
+
+
 
 
 - (IBAction)saveAs: (id) sender
@@ -325,7 +368,6 @@
     }
     else {
         newFileName =[_sourcedoc getFilepath];
-        //newFileName = [NSString stringWithFormat:@"%@-BGD.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
     }
     
     NSSavePanel *spanel = [NSSavePanel savePanel];
@@ -420,7 +462,7 @@
 }
 
 -(void)saveBackgroundImagePathInPrefs:(NSImage*)myImage atIndex:(NSUInteger*)index cover:(BOOL)isCover {
-    
+       
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     NSString * bgType;
     
