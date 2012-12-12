@@ -55,15 +55,27 @@
         imageIsSet = NO;
     }
     
+    
+    
     if([[self identifier] isEqualToString:@"sourceDropArea"]){
         
         if(!newImage){
             NSString* myImagePath = [myBundle pathForResource:@"contentdrop" ofType:@"png"];
             newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
             [[NSApp delegate] setIsSetContent:NO];
+            
+            //set main pdfview hidden
+            [[[NSApp delegate] pdfView] setHidden:YES];
+            //[[[NSApp delegate] pdfView] setNeedsDisplay:YES];
+            //[[[NSApp delegate] pdfView] setAlphaValue:0.0];
         }
         else{
             [[NSApp delegate] setIsSetContent:YES];
+
+            //set main pdfview visible
+            [[[NSApp delegate] pdfView] setHidden:NO];
+            //[[[NSApp delegate] pdfView] setAlphaValue:1.0];
+              //setNeedsDisplay:YES];
         }
     }
     else{

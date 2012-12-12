@@ -33,16 +33,6 @@
         [newImage drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
 
     }
-
-    
-    
-    
-    
-    //[newImage drawAtPoint:NSZeroPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
-    
-    // Or stretch image to fill view
-  //  [newImage drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
-    // Drawing code here.
 }
 
 @end
