@@ -564,7 +564,7 @@
 				<string key="NSName">_NSMainMenu</string>
 			</object>
 			<object class="NSWindowTemplate" id="597159376">
-				<int key="NSWindowStyleMask">4103</int>
+				<int key="NSWindowStyleMask">4111</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{1876, 374}, {703, 648}}</string>
 				<int key="NSWTFlags">1685585920</int>
@@ -755,7 +755,7 @@
 					<array key="NSToolbarIBSelectableItems" id="0"/>
 				</object>
 				<nil key="NSUserInterfaceItemIdentifier"/>
-				<string key="NSWindowContentMinSize">{622, 540}</string>
+				<string key="NSWindowContentMinSize">{703, 648}</string>
 				<object class="NSView" key="NSWindowView" id="408218115">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -766,7 +766,7 @@
 							<array class="NSMutableArray" key="NSSubviews">
 								<object class="NSButton" id="44690721">
 									<reference key="NSNextResponder" ref="848617734"/>
-									<int key="NSvFlags">268</int>
+									<int key="NSvFlags">265</int>
 									<string key="NSFrame">{{49, 6}, {82, 32}}</string>
 									<reference key="NSSuperview" ref="848617734"/>
 									<reference key="NSWindow"/>
@@ -795,7 +795,7 @@
 								</object>
 								<object class="NSButton" id="446860746">
 									<reference key="NSNextResponder" ref="848617734"/>
-									<int key="NSvFlags">268</int>
+									<int key="NSvFlags">265</int>
 									<string key="NSFrame">{{131, 6}, {82, 32}}</string>
 									<reference key="NSSuperview" ref="848617734"/>
 									<reference key="NSWindow"/>
@@ -820,7 +820,7 @@
 								</object>
 								<object class="NSButton" id="360780029">
 									<reference key="NSNextResponder" ref="848617734"/>
-									<int key="NSvFlags">268</int>
+									<int key="NSvFlags">265</int>
 									<string key="NSFrame">{{213, 6}, {82, 32}}</string>
 									<reference key="NSSuperview" ref="848617734"/>
 									<reference key="NSWindow"/>
@@ -845,10 +845,11 @@
 								</object>
 								<object class="NSButton" id="359995920">
 									<reference key="NSNextResponder" ref="848617734"/>
-									<int key="NSvFlags">268</int>
+									<int key="NSvFlags">265</int>
 									<string key="NSFrame">{{295, 6}, {82, 32}}</string>
 									<reference key="NSSuperview" ref="848617734"/>
 									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSButtonCell" key="NSCell" id="568239122">
@@ -1145,11 +1146,11 @@
 						</object>
 						<object class="NSCustomView" id="245937361">
 							<reference key="NSNextResponder" ref="408218115"/>
-							<int key="NSvFlags">268</int>
+							<int key="NSvFlags">274</int>
 							<array class="NSMutableArray" key="NSSubviews">
 								<object class="PDFView" id="516804020">
 									<reference key="NSNextResponder" ref="245937361"/>
-									<int key="NSvFlags">12</int>
+									<int key="NSvFlags">18</int>
 									<array class="NSMutableArray" key="NSSubviews"/>
 									<set class="NSMutableSet" key="NSDragTypes">
 										<string>NSFilenamesPboardType</string>
@@ -1181,7 +1182,7 @@
 					<string key="NSReuseIdentifierKey">_NS:54</string>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
-				<string key="NSMinSize">{622, 562}</string>
+				<string key="NSMinSize">{703, 670}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
@@ -3366,13 +3367,6 @@ wGw</bytes>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="coverControlAction:">id</string>
-						<string key="doDelForBG:">id</string>
-						<string key="doDelForContentDoc:">id</string>
-						<string key="doDelForCover:">id</string>
-						<string key="doOpenFileForBG:">id</string>
-						<string key="doOpenFileForContentDoc:">id</string>
-						<string key="doOpenFileForCover:">id</string>
-						<string key="openPreview:">id</string>
 						<string key="saveAs:">id</string>
 						<string key="saveEmail:">id</string>
 						<string key="savePrint:">id</string>
@@ -3381,34 +3375,6 @@ wGw</bytes>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="coverControlAction:">
 							<string key="name">coverControlAction:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="doDelForBG:">
-							<string key="name">doDelForBG:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="doDelForContentDoc:">
-							<string key="name">doDelForContentDoc:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="doDelForCover:">
-							<string key="name">doDelForCover:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="doOpenFileForBG:">
-							<string key="name">doOpenFileForBG:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="doOpenFileForContentDoc:">
-							<string key="name">doOpenFileForContentDoc:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="doOpenFileForCover:">
-							<string key="name">doOpenFileForCover:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="openPreview:">
-							<string key="name">openPreview:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="saveAs:">
