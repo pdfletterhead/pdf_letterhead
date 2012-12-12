@@ -317,8 +317,8 @@
         
         CGRect newbgframe = CGRectMake(_cvframe.origin.x+45,
                                              _cvframe.origin.y - 5,
-                                             _bgframe.size.width +10,
-                                             (_bgframe.size.height + 5));
+                                             _bgframe.size.width +15,
+                                             (_bgframe.size.height + 15));
 
         [[_backgrounddoc animator ]setFrame:newbgframe];
         
@@ -326,7 +326,7 @@
         [[_coverbackgrounddocText animator] setAlphaValue:0.0];
         [[_backgrounddocText animator] setStringValue:@"Background"];
 
-        CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
+        CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+65,
                                        _cvTextframe.origin.y,
                                        _bgTextframe.size.width,
                                        (_bgTextframe.size.height));

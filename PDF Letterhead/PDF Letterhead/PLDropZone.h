@@ -9,7 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 @interface PLDropZone : NSImageView{
-NSString * sourcefilepath;
+    NSString * sourcefilepath;
+    BOOL imageIsSet;
 }
 @property NSString *sourcefilepath;
 

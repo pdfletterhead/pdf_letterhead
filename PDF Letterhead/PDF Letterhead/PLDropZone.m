@@ -22,28 +22,9 @@
         
         [self dropAreaFadeOut];
     }
-    //NSLog(@"initWithCoder");
-    //[self setAllowsCutCopyPaste:NO];
-    
-    return self;
-
-}
-
-/*- (id)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self registerForDraggedTypes:[NSArray arrayWithObjects:
-                                       NSColorPboardType, NSFilenamesPboardType, nil]];
-
-        [self dropAreaFadeOut];
-        self.sourcefilepath = @"";
-    }
-    NSLog(@"initWithFrame");
     
     return self;
 }
-*/
 
 - (BOOL)becomeFirstResponder
 {
@@ -53,8 +34,6 @@
     return YES;
 }
 
-
-
 - (BOOL)resignFirstResponder
 {
     NSLog(@"is am deselected");
@@ -63,11 +42,18 @@
     return YES;
 }
 
-
-
 - (void)setImage:(NSImage *)newImage{
-       
+    
     NSBundle* myBundle = [NSBundle mainBundle];
+    
+    if(newImage)
+    {
+        imageIsSet = YES;
+    }
+    else
+    {
+        imageIsSet = NO;
+    }
     
     if([[self identifier] isEqualToString:@"sourceDropArea"]){
         
@@ -111,9 +97,8 @@
             }
         }
     }
-    
     [super setImage:newImage];
-    
+        
     [[NSApp delegate] updatePreviewAndActionButtons];
 
 }
@@ -126,16 +111,12 @@
 - (void)dropAreaFadeOut
 {
     [[self animator ] setAlphaValue:1.0];
-
-
 }
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
     NSPasteboard *pboard;
     NSDragOperation sourceDragMask;
 
- 
-    //NSLog(@"drag operation entered");
     sourceDragMask = [sender draggingSourceOperationMask];
     pboard = [sender draggingPasteboard];
     
@@ -154,21 +135,15 @@
 
 - (void) draggingExited: (id <NSDraggingInfo>) info
 {
-    //NSLog(@"drag operation finished");
-
     [self dropAreaFadeOut];
 }
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
 {
-//    NSImageView *theDropArea = (NSImageView *)sender;
     NSPasteboard *pboard = [sender draggingPasteboard];
 
-    //NSLog(@"drop now on %@",[self identifier]);
     [self dropAreaFadeOut];
     
-    //int numberOfFiles = [files count];
-
     if ( [[pboard types] containsObject:NSFilenamesPboardType] ) {
     
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
@@ -180,11 +155,9 @@
         
         if ([[[files objectAtIndex:0] pathExtension] isEqual:@"pdf"]){
            
-            //NSString *zPath = [files lastObject];
             self.sourcefilepath = [files lastObject];
             NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
             [self setImage:zNewImage];
-            //NSLog(@"sourcefilepath: %@",self.sourcefilepath);
             
             return YES;
             
@@ -218,5 +191,18 @@
 -(NSString *) getFilepath{
     return self.sourcefilepath;
 }
+
+- (void)drawRect:(NSRect)frame {
+
+    if(imageIsSet)
+    {
+        NSColor * background = [NSColor colorWithDeviceRed: 255.0/255.0 green: 255.0/255.0 blue: 255.0/255.0 alpha: 1.0];
+        [background set];
+        NSRectFill([self bounds]);
+    }
+    
+    [super drawRect:frame];
+}
+
 
 @end
