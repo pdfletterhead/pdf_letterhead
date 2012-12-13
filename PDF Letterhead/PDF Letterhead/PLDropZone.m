@@ -184,15 +184,17 @@
         }
         else
         {
-            if ([ext isEqual:@"pdf"] || [ext isEqual:@"png"] || [ext isEqual:@"jpg"]){
-                
+            //NSString *loweredExtension = [[selectedFile pathExtension] lowercaseString];
+            NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
+            if ([validImageExtensions containsObject:ext])
+            {
                 self.sourcefilepath = [files lastObject];
                 NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
                 [self setImage:zNewImage];
                 
                 return YES;
-                
-            } else {
+            }
+            else {
                 NSLog(@"invalid filetype, no extension with pdf/png/jpg");
                 return NO;
             }
@@ -206,15 +208,16 @@
 
 
 -(BOOL) setPdfFilepath:(NSString*)path{
-    if ([[path pathExtension] isEqual:@"pdf"]){
+    
+    //if ([[path pathExtension] isEqual:@"pdf"]){
         
         self.sourcefilepath = path;
         NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
         [self setImage:zNewImage];
         return YES;
-    }
+    //}
 
-    return NO;
+    //return NO;
 }
 
 

@@ -20,7 +20,7 @@
 
     //style main pdfview
     [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
-
+    [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
     
     [self setIsSetBackground:NO];
     [self setIsSetCover:NO];
@@ -119,30 +119,43 @@
     NSOpenPanel *tvarNSOpenPanelObj	= [NSOpenPanel openPanel];
     NSInteger tvarNSInteger	= [tvarNSOpenPanelObj runModal];
     if(tvarNSInteger == NSOKButton){
-     	NSLog(@"doOpen we have an OK button");
-    } else if(tvarNSInteger == NSCancelButton) {
-     	NSLog(@"doOpen we have a Cancel button");
-     	return;
-    } else {
-     	return;
-    }
-    
-    NSString * tvarFilename = [tvarNSOpenPanelObj filename];
-    NSLog(@"doOpen filename = %@",tvarFilename);
 
-    if ([[tvarFilename pathExtension] isEqual:@"pdf"]){
-        
-        [theView setPdfFilepath:tvarFilename];
-    } else {
-        NSLog(@"invalid filetype, no IMAGE");
-    }   
+        NSString * tvarFilename = [tvarNSOpenPanelObj filename];
+       // NSLog(@"doOpen filename = %@",tvarFilename);
+        NSString * ext = [[tvarFilename pathExtension] lowercaseString ];
+      
+        if([[theView identifier] isEqualToString:@"sourceDropArea"])
+        {
+            if ([ext isEqual:@"pdf"]){
+                
+                [theView setPdfFilepath:tvarFilename];
+            } else {
+                NSLog(@"invalid filetype, no PDF");
+            }
+        }
+        else
+        {
+            NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
+            if ([validImageExtensions containsObject:ext])
+            {
+                NSLog(@"xxxdoOpen filename = %@",tvarFilename);
+
+                [theView setPdfFilepath:tvarFilename];
+            }
+/*            if ([[[tvarFilename pathExtension] lowercaseString ] isEqual:@"pdf"]){
+                
+                [theView setPdfFilepath:tvarFilename];
+            }*/
+            else {
+                NSLog(@"invalid filetype, no IMAGE");
+            }
+            
+        }
+    }
 }
 
 - (IBAction)openPreview:(id)sender {
     
-    //PDFView * previewView = [_pdfView copy];
-    //[_previewView setDocument:_letterheadPDF];
-    //[[_previewWindow contentView] addSubview:previewView];
     [_previewWindow makeKeyAndOrderFront:sender];
 
 }
@@ -357,36 +370,23 @@
 }
 
 
-
-
-
-- (IBAction)saveAs: (id) sender
-{
-    NSString * newFileName;
+- (IBAction)saveAs: (id) sender{
+  
+    NSString * defaultName;
     if ([_sourcedoc getFilepath] == nil) {
-        newFileName = @"new.pdf";
+        defaultName = @"Untitled.pdf";
     }
     else {
-        newFileName =[_sourcedoc getFilepath];
+        defaultName =[[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"];
     }
     
-    NSSavePanel *spanel = [NSSavePanel savePanel];
-    [spanel beginSheetForDirectory:nil
-                              file:newFileName
-                    modalForWindow:_pdfWindow
-                     modalDelegate:self
-                    didEndSelector:@selector(didEndSaveSheet:returnCode:contextInfo:)
-                       contextInfo:NULL];
-  
-	
-	// Create save panel, require PDF.
-	[spanel setRequiredFileType: @"pdf"];
-	
-	// Run save panel — write PDF document to resulting URL.
-	if ([spanel runModal] == NSFileHandlingPanelOKButton)
-		[_letterheadPDF writeToURL: [spanel URL]];
-    [_pdfWindow makeFirstResponder:_pdfView];
+    NSSavePanel *savePanel = [NSSavePanel savePanel];
+    [savePanel setNameFieldStringValue:defaultName];
 
+	if ([savePanel runModal] == NSFileHandlingPanelOKButton)
+        [_letterheadPDF writeToURL: [savePanel URL]];
+
+    [_pdfWindow makeFirstResponder:_pdfView];
 }
 
 - (IBAction)saveEmail: (id) sender
@@ -396,7 +396,7 @@
         newFileName = @"/tmp/new.pdf";
     }
     else {
-        newFileName = [NSString stringWithFormat:@"/tmp/%@-BGD.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
+        newFileName = [NSString stringWithFormat:@"/tmp/%@.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
     }
     
     NSLog(@"email");
