@@ -16,6 +16,11 @@
 		3E2770461677E464002DD3DE /* coverdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770441677E463002DD3DE /* coverdrop.png */; };
 		3E2770481677E5D5002DD3DE /* dropzonebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770471677E5D5002DD3DE /* dropzonebg.png */; };
 		3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
+		3E674463167943BA00D99390 /* AMBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674460167943BA00D99390 /* AMBackground.m */; };
+		3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674462167943BA00D99390 /* AMDarkButtonCell.m */; };
+		3E6744691679448400D99390 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744671679448400D99390 /* mail.png */; };
+		3E67446A1679448400D99390 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
+		3E67446E16794BE400D99390 /* saveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E67446D16794BE400D99390 /* saveicon.png */; };
 		3E6835C61607C90400DDFB82 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6835C51607C90400DDFB82 /* Cocoa.framework */; };
 		3E6835D01607C90400DDFB82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835CE1607C90400DDFB82 /* InfoPlist.strings */; };
 		3E6835D21607C90400DDFB82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D11607C90400DDFB82 /* main.m */; };
@@ -56,6 +61,13 @@
 		3E2770471677E5D5002DD3DE /* dropzonebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropzonebg.png; sourceTree = "<group>"; };
 		3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMainWindowView.h; sourceTree = "<group>"; };
 		3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainWindowView.m; sourceTree = "<group>"; };
+		3E67445F167943BA00D99390 /* AMBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBackground.h; sourceTree = "<group>"; };
+		3E674460167943BA00D99390 /* AMBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBackground.m; sourceTree = "<group>"; };
+		3E674461167943BA00D99390 /* AMDarkButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDarkButtonCell.h; sourceTree = "<group>"; };
+		3E674462167943BA00D99390 /* AMDarkButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDarkButtonCell.m; sourceTree = "<group>"; };
+		3E6744671679448400D99390 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		3E6744681679448400D99390 /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
+		3E67446D16794BE400D99390 /* saveicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveicon.png; sourceTree = "<group>"; };
 		3E6835C11607C90400DDFB82 /* PDF Letterhead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6835C51607C90400DDFB82 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3E6835C81607C90400DDFB82 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -121,6 +133,7 @@
 		3E27702A1677D726002DD3DE /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
+				3E674466167943C200D99390 /* BottomToolbar */,
 				3E9F2DA3167929E400486537 /* pdfviewbg.png */,
 				3E2770431677E463002DD3DE /* bgdrop.png */,
 				3E798B721677F053006F47F5 /* contentdrop.png */,
@@ -146,6 +159,20 @@
 				3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */,
 			);
 			name = MainWindow;
+			sourceTree = "<group>";
+		};
+		3E674466167943C200D99390 /* BottomToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				3E6744671679448400D99390 /* mail.png */,
+				3E67446D16794BE400D99390 /* saveicon.png */,
+				3E6744681679448400D99390 /* printer.png */,
+				3E67445F167943BA00D99390 /* AMBackground.h */,
+				3E674460167943BA00D99390 /* AMBackground.m */,
+				3E674461167943BA00D99390 /* AMDarkButtonCell.h */,
+				3E674462167943BA00D99390 /* AMDarkButtonCell.m */,
+			);
+			name = BottomToolbar;
 			sourceTree = "<group>";
 		};
 		3E6835B61607C90300DDFB82 = {
@@ -288,6 +315,9 @@
 				3E798B711677F03C006F47F5 /* contentbg.png in Resources */,
 				3E798B731677F053006F47F5 /* contentdrop.png in Resources */,
 				3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */,
+				3E6744691679448400D99390 /* mail.png in Resources */,
+				3E67446A1679448400D99390 /* printer.png in Resources */,
+				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +358,8 @@
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
 				3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */,
+				3E674463167943BA00D99390 /* AMBackground.m in Sources */,
+				3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

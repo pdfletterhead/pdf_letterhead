@@ -20,14 +20,23 @@
 @property (assign) IBOutlet PDFView *pdfView;
 @property (assign) IBOutlet PDFThumbnailView *pdfThumbView;
 @property (assign) IBOutlet NSMenu *myMainMenu;
+
 @property (assign) IBOutlet NSToolbarItem *saveButton1;
 @property (assign) IBOutlet NSMenuItem *saveButton2;
+@property (assign) IBOutlet NSButton *saveButton3;
+
 @property (assign) IBOutlet NSToolbarItem *printButton1;
 @property (assign) IBOutlet NSMenuItem *printButton2;
+@property (assign) IBOutlet NSButton *printButton3;
+
 @property (assign) IBOutlet NSToolbarItem *mailButton1;
 @property (assign) IBOutlet NSMenuItem *mailButton2;
+@property (assign) IBOutlet NSButton *mailButton3;
+
 @property (assign) IBOutlet NSToolbarItem *previewButton1;
 @property (assign) IBOutlet NSMenuItem *previewButton2;
+@property (assign) IBOutlet NSButton *previewButton3;
+
 @property (assign) IBOutlet PLDropZone *sourcedoc;
 @property (assign) IBOutlet PLDropZone *backgrounddoc;
 @property (assign) IBOutlet PLDropZone *coverbackgrounddoc;

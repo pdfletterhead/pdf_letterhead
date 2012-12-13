@@ -165,20 +165,42 @@
             NSLog(@"ask for folder to store");
         }
         
-        if ([[[files objectAtIndex:0] pathExtension] isEqual:@"pdf"]){
-           
-            self.sourcefilepath = [files lastObject];
-            NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
-            [self setImage:zNewImage];
-            
-            return YES;
-            
-        } else {
-            NSLog(@"invalid filetype, no IMAGE");
-            return NO;
+        NSString * ext = [[[files objectAtIndex:0] pathExtension] lowercaseString];
+        
+        if([[self identifier] isEqualToString:@"sourceDropArea"])
+        {
+            if ([ext isEqual:@"pdf"]){
+                
+                self.sourcefilepath = [files lastObject];
+                NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
+                [self setImage:zNewImage];
+                
+                return YES;
+                
+            } else {
+                NSLog(@"invalid filetype, no PDF");
+                return NO;
+            }   
         }
+        else
+        {
+            if ([ext isEqual:@"pdf"] || [ext isEqual:@"png"] || [ext isEqual:@"jpg"]){
+                
+                self.sourcefilepath = [files lastObject];
+                NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
+                [self setImage:zNewImage];
+                
+                return YES;
+                
+            } else {
+                NSLog(@"invalid filetype, no extension with pdf/png/jpg");
+                return NO;
+            }
+            
+        }
+        
     }
-
+    
     return NO;
 }
 

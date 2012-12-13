@@ -446,6 +446,11 @@
         [_printButton2 setEnabled:YES];
         [_previewButton1 setEnabled:YES];
         [_previewButton2 setEnabled:YES];
+
+        [_mailButton3 setEnabled:YES];
+        [_saveButton3 setEnabled:YES];
+        [_printButton3 setEnabled:YES];
+        [_previewButton3 setEnabled:YES];
     }
     else{
         //NSLog(@"disable Buttons");
@@ -458,11 +463,21 @@
         [_previewButton1 setEnabled:NO];
         [_previewButton2 setEnabled:NO];
 
+        [_mailButton3 setEnabled:NO];
+        [_saveButton3 setEnabled:NO];
+        [_printButton3 setEnabled:NO];
+        [_previewButton3 setEnabled:NO];
     }
 }
 
 -(void)saveBackgroundImagePathInPrefs:(NSImage*)myImage atIndex:(NSUInteger*)index cover:(BOOL)isCover {
-       
+    
+    BOOL isDir = NO;
+    if (! [[NSFileManager defaultManager] fileExistsAtPath:[[self applicationFilesDirectory] path] isDirectory:&isDir]) {
+        return;
+    }
+    
+    
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     NSString * bgType;
     
