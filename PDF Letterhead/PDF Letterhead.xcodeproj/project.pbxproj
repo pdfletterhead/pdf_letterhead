@@ -33,11 +33,11 @@
 		3E6835F11607CB6C00DDFB82 /* dragLetterheadDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */; };
 		3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F31607CC7900DDFB82 /* PLDropZone.m */; };
 		3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F61607D22100DDFB82 /* PLPDFPage.m */; };
-		3E6836031607EE8C00DDFB82 /* pdfletterhead.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */; };
+		3E6836031607EE8C00DDFB82 /* pdfletterheadIOS.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */; };
 		3E798B711677F03C006F47F5 /* contentbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E798B701677F03B006F47F5 /* contentbg.png */; };
 		3E798B731677F053006F47F5 /* contentdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E798B721677F053006F47F5 /* contentdrop.png */; };
 		3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E798B751677F336006F47F5 /* PLPDFBgView.m */; };
-		3E7BC9D4162459EE0092BF5E /* test.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7BC9D3162459EE0092BF5E /* test.icns */; };
+		3E7BC9D4162459EE0092BF5E /* pdfletterheadMac.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */; };
 		3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9F2DA3167929E400486537 /* pdfviewbg.png */; };
 		3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */; };
 		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
@@ -89,12 +89,12 @@
 		3E6835F31607CC7900DDFB82 /* PLDropZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLDropZone.m; sourceTree = "<group>"; };
 		3E6835F51607D22100DDFB82 /* PLPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFPage.h; sourceTree = "<group>"; };
 		3E6835F61607D22100DDFB82 /* PLPDFPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPDFPage.m; sourceTree = "<group>"; };
-		3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = pdfletterhead.icns; path = ../pdfletterhead.icns; sourceTree = "<group>"; };
+		3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = pdfletterheadIOS.icns; path = ../pdfletterheadIOS.icns; sourceTree = "<group>"; };
 		3E798B701677F03B006F47F5 /* contentbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contentbg.png; sourceTree = "<group>"; };
 		3E798B721677F053006F47F5 /* contentdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contentdrop.png; sourceTree = "<group>"; };
 		3E798B741677F336006F47F5 /* PLPDFBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFBgView.h; sourceTree = "<group>"; };
 		3E798B751677F336006F47F5 /* PLPDFBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPDFBgView.m; sourceTree = "<group>"; };
-		3E7BC9D3162459EE0092BF5E /* test.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = test.icns; sourceTree = "<group>"; };
+		3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = pdfletterheadMac.icns; path = ../pdfletterheadMac.icns; sourceTree = "<group>"; };
 		3E9F2DA3167929E400486537 /* pdfviewbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdfviewbg.png; sourceTree = "<group>"; };
 		3E9F2DA91679378E00486537 /* PLPDFBgAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFBgAreaView.h; sourceTree = "<group>"; };
 		3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPDFBgAreaView.m; sourceTree = "<group>"; };
@@ -133,16 +133,6 @@
 		3E27702A1677D726002DD3DE /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
-				3E674466167943C200D99390 /* BottomToolbar */,
-				3E9F2DA3167929E400486537 /* pdfviewbg.png */,
-				3E2770431677E463002DD3DE /* bgdrop.png */,
-				3E798B721677F053006F47F5 /* contentdrop.png */,
-				3E798B701677F03B006F47F5 /* contentbg.png */,
-				3E2770471677E5D5002DD3DE /* dropzonebg.png */,
-				3E2770441677E463002DD3DE /* coverdrop.png */,
-				3E27703B1677DCA5002DD3DE /* bottomtoolbar.png */,
-				3E6835DA1607C90400DDFB82 /* MainMenu.xib */,
-				3E0C8E9516768EF200DE6E94 /* onoffswitch */,
 				3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */,
 				3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */,
 				3E6835F51607D22100DDFB82 /* PLPDFPage.h */,
@@ -159,6 +149,38 @@
 				3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */,
 			);
 			name = MainWindow;
+			sourceTree = "<group>";
+		};
+		3E3FC58D167A9F7B0006D91B /* FAQWindow */ = {
+			isa = PBXGroup;
+			children = (
+				3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */,
+				3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */,
+			);
+			name = FAQWindow;
+			sourceTree = "<group>";
+		};
+		3E3FC58E167A9F870006D91B /* PreviewWindow */ = {
+			isa = PBXGroup;
+			children = (
+				3EFB08F61615032E006063F9 /* PLPreviewWindow.h */,
+				3EFB08F71615032E006063F9 /* PLPreviewWindow.m */,
+			);
+			name = PreviewWindow;
+			sourceTree = "<group>";
+		};
+		3E3FC58F167A9FC70006D91B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3E9F2DA3167929E400486537 /* pdfviewbg.png */,
+				3E2770431677E463002DD3DE /* bgdrop.png */,
+				3E798B721677F053006F47F5 /* contentdrop.png */,
+				3E798B701677F03B006F47F5 /* contentbg.png */,
+				3E2770471677E5D5002DD3DE /* dropzonebg.png */,
+				3E2770441677E463002DD3DE /* coverdrop.png */,
+				3E27703B1677DCA5002DD3DE /* bottomtoolbar.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		3E674466167943C200D99390 /* BottomToolbar */ = {
@@ -178,7 +200,6 @@
 		3E6835B61607C90300DDFB82 = {
 			isa = PBXGroup;
 			children = (
-				3E7BC9D3162459EE0092BF5E /* test.icns */,
 				3E6835CB1607C90400DDFB82 /* PDF Letterhead */,
 				3E6835C41607C90400DDFB82 /* Frameworks */,
 				3E6835C21607C90400DDFB82 /* Products */,
@@ -216,14 +237,15 @@
 		3E6835CB1607C90400DDFB82 /* PDF Letterhead */ = {
 			isa = PBXGroup;
 			children = (
-				3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */,
-				3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */,
+				3E0C8E9516768EF200DE6E94 /* onoffswitch */,
+				3E3FC58F167A9FC70006D91B /* images */,
+				3E674466167943C200D99390 /* BottomToolbar */,
+				3E3FC58D167A9F7B0006D91B /* FAQWindow */,
 				3E27702A1677D726002DD3DE /* MainWindow */,
-				3EFB08F61615032E006063F9 /* PLPreviewWindow.h */,
-				3EFB08F71615032E006063F9 /* PLPreviewWindow.m */,
+				3E3FC58E167A9F870006D91B /* PreviewWindow */,
 				3E6835D71607C90400DDFB82 /* PLAppDelegate.h */,
 				3E6835D81607C90400DDFB82 /* PLAppDelegate.m */,
-				3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */,
+				3E6835DA1607C90400DDFB82 /* MainMenu.xib */,
 				3E6835CC1607C90400DDFB82 /* Supporting Files */,
 			);
 			path = "PDF Letterhead";
@@ -232,8 +254,10 @@
 		3E6835CC1607C90400DDFB82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */,
 				3EF7E6BA16089C21008EA1B1 /* white.pdf */,
-				3E6836021607EE8C00DDFB82 /* pdfletterhead.icns */,
+				3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */,
+				3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */,
 				3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */,
 				3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */,
 				3E6835CD1607C90400DDFB82 /* PDF Letterhead-Info.plist */,
@@ -304,10 +328,10 @@
 				3E6835DC1607C90400DDFB82 /* MainMenu.xib in Resources */,
 				3E6835F01607CB6C00DDFB82 /* dragContentDocument.png in Resources */,
 				3E6835F11607CB6C00DDFB82 /* dragLetterheadDocument.png in Resources */,
-				3E6836031607EE8C00DDFB82 /* pdfletterhead.icns in Resources */,
+				3E6836031607EE8C00DDFB82 /* pdfletterheadIOS.icns in Resources */,
 				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
 				3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */,
-				3E7BC9D4162459EE0092BF5E /* test.icns in Resources */,
+				3E7BC9D4162459EE0092BF5E /* pdfletterheadMac.icns in Resources */,
 				3E27703C1677DCA5002DD3DE /* bottomtoolbar.png in Resources */,
 				3E2770451677E464002DD3DE /* bgdrop.png in Resources */,
 				3E2770461677E464002DD3DE /* coverdrop.png in Resources */,

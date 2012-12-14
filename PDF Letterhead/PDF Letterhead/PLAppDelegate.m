@@ -61,34 +61,17 @@
     }
     
     [self updatePreviewAndActionButtons];
-
-    
-    //VOORLATER
-    /*NSArray *listOfControls = [[_pdfWindow contentView] subviews];
-    for (NSInteger i=0;i<[listOfControls count];i++) {
-        NSControl * tmp = [listOfControls objectAtIndex: i];
-        NSLog(@"control id:%@",[tmp identifier]);
-    }
-     */
-    
-
 }
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
-    NSLog(@"filename:%@",filename);
-    
-    if ([[filename pathExtension] isEqual:@"pdf"]){
+    if ([[[filename pathExtension] lowercaseString] isEqual:@"pdf"]){
         [_sourcedoc setPdfFilepath:filename];
-//        NSImage *newImage = [[NSImage alloc] initWithContentsOfFile:filename];
-//        [_sourcedoc setImage:newImage];
         return YES;
     } else {
         return NO;
     }
 }
-
-
 
 - (IBAction)doOpenFileForCover:(id)sender {
     [self doOpenFileForImageView:_coverbackgrounddoc];
@@ -121,7 +104,6 @@
     if(tvarNSInteger == NSOKButton){
 
         NSString * tvarFilename = [tvarNSOpenPanelObj filename];
-       // NSLog(@"doOpen filename = %@",tvarFilename);
         NSString * ext = [[tvarFilename pathExtension] lowercaseString ];
       
         if([[theView identifier] isEqualToString:@"sourceDropArea"])
@@ -138,14 +120,8 @@
             NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
             if ([validImageExtensions containsObject:ext])
             {
-                NSLog(@"xxxdoOpen filename = %@",tvarFilename);
-
                 [theView setPdfFilepath:tvarFilename];
             }
-/*            if ([[[tvarFilename pathExtension] lowercaseString ] isEqual:@"pdf"]){
-                
-                [theView setPdfFilepath:tvarFilename];
-            }*/
             else {
                 NSLog(@"invalid filetype, no IMAGE");
             }
@@ -185,7 +161,6 @@
 	_letterheadPDF = [[PDFDocument alloc] init];
 	
     if(_coverEnabled){
-        //NSLog(@"set cover image");
         
         if(_isSetCover){
             cvrimage = [_coverbackgrounddoc image];
@@ -265,7 +240,7 @@
         sourceimage = NULL;
         
         if(_coverEnabled){
-            NSLog(@"set cover as background");
+            //NSLog(@"set cover as background");
             // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
             page = [[PLPDFPage alloc] initWithBGImage: cvrimage sourceDoc: sourceimage label:nil];
         }
@@ -274,18 +249,12 @@
             page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage label:nil];
         }
         
-        //page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage];
-        
         [_letterheadPDF insertPage: page atIndex: 0];
     }
 	
     // Assign PDFDocument ot PDFView.
 	[_pdfView setDocument: _letterheadPDF];
     [_previewView setDocument:_letterheadPDF];
-
-	
-    //to make sure to right document is printed. But we must replace the print functions
-    //[_pdfWindow makeFirstResponder:_pdfView];
 }
 
 -(BOOL)allowSetPreview{
@@ -321,7 +290,6 @@
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     
     if([_coverswitch2 state]==NSOffState){
-        //NSLog(@"cover = off");
         [prefs setBool:NO forKey:@"coverEnabled"];
         [_coverbackgrounddoc unregisterDraggedTypes];
         [[_coverbackgrounddoc animator] setAlphaValue:0.0];
@@ -407,7 +375,6 @@
     NSString * body = @"";
     
     NSString *scriptString= [NSString stringWithFormat:@"set theAttachment to \"%@\"\nset the new_path to POSIX file theAttachment\ntell application \"Mail\"\nset theNewMessage to make new outgoing message with properties {subject:\"%@\", content:\"%@\" & return & return, visible:true}\n tell theNewMessage\ntry\nmake new attachment with properties {file name:new_path} at after the last word of the last paragraph\nend try\nend tell\nactivate\nend tell",newFileName,subject,body];
-//    NSLog(scriptString);
     mailScript = [[NSAppleScript alloc] initWithSource:scriptString];
     [mailScript executeAndReturnError:nil];
 }
@@ -505,11 +472,9 @@
         {
             filePath = [NSString stringWithFormat:@"%@/letterhead-%@-00.pdf",[[self applicationFilesDirectory] path],bgType];
             BOOL success;
-             //NSImage *myImage;
              NSImageView *myView;
              NSRect vFrame;
              NSData *pdfData;
-             //        NSError *error = nil;
              
              vFrame = NSZeroRect;
              vFrame.size = [myImage size];
