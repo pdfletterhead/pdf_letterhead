@@ -13,11 +13,18 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
-
+@synthesize quickStartWindow = _quickStartWindow;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 
+    _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
+    {
+        [self doOpenQuickStart];
+    }
+
+    
     //style main pdfview
     [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
     [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
@@ -134,6 +141,14 @@
     
     [_previewWindow makeKeyAndOrderFront:sender];
 
+}
+
+- (IBAction)openQuickStart:(id)sender {
+    [self doOpenQuickStart];
+}
+
+-(void)doOpenQuickStart{
+    [_quickStartWindow showWindow:self];
 }
 
 -(void)updatePreviewAndActionButtons {

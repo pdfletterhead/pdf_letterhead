@@ -15,6 +15,11 @@
 		3E2770451677E464002DD3DE /* bgdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770431677E463002DD3DE /* bgdrop.png */; };
 		3E2770461677E464002DD3DE /* coverdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770441677E463002DD3DE /* coverdrop.png */; };
 		3E2770481677E5D5002DD3DE /* dropzonebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770471677E5D5002DD3DE /* dropzonebg.png */; };
+		3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */; };
+		3E2AFF0716A5F8B3006D2CB0 /* PLQuickStart1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0516A5F8B3006D2CB0 /* PLQuickStart1.xib */; };
+		3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0816A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png */; };
+		3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */; };
+		3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
 		3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
 		3E674463167943BA00D99390 /* AMBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674460167943BA00D99390 /* AMBackground.m */; };
 		3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674462167943BA00D99390 /* AMDarkButtonCell.m */; };
@@ -59,6 +64,12 @@
 		3E2770431677E463002DD3DE /* bgdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgdrop.png; sourceTree = "<group>"; };
 		3E2770441677E463002DD3DE /* coverdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverdrop.png; sourceTree = "<group>"; };
 		3E2770471677E5D5002DD3DE /* dropzonebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropzonebg.png; sourceTree = "<group>"; };
+		3E2AFF0316A5F8B3006D2CB0 /* PLQuickStart1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLQuickStart1.h; path = "PDF Letterhead/PLQuickStart1.h"; sourceTree = "<group>"; };
+		3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLQuickStart1.m; path = "PDF Letterhead/PLQuickStart1.m"; sourceTree = "<group>"; };
+		3E2AFF0516A5F8B3006D2CB0 /* PLQuickStart1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PLQuickStart1.xib; path = "PDF Letterhead/PLQuickStart1.xib"; sourceTree = "<group>"; };
+		3E2AFF0816A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PDF-letterhead-QuickStart-1.png"; sourceTree = "<group>"; };
+		3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quickstarttitle.png; sourceTree = "<group>"; };
+		3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Schermafbeelding 2013-01-15 om 22.15.47.png"; sourceTree = "<group>"; };
 		3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMainWindowView.h; sourceTree = "<group>"; };
 		3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainWindowView.m; sourceTree = "<group>"; };
 		3E67445F167943BA00D99390 /* AMBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBackground.h; sourceTree = "<group>"; };
@@ -151,6 +162,20 @@
 			name = MainWindow;
 			sourceTree = "<group>";
 		};
+		3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */ = {
+			isa = PBXGroup;
+			children = (
+				3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */,
+				3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */,
+				3E2AFF0816A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png */,
+				3E2AFF0316A5F8B3006D2CB0 /* PLQuickStart1.h */,
+				3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */,
+				3E2AFF0516A5F8B3006D2CB0 /* PLQuickStart1.xib */,
+			);
+			name = QuickStart;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		3E3FC58D167A9F7B0006D91B /* FAQWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +262,7 @@
 		3E6835CB1607C90400DDFB82 /* PDF Letterhead */ = {
 			isa = PBXGroup;
 			children = (
+				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
 				3E0C8E9516768EF200DE6E94 /* onoffswitch */,
 				3E3FC58F167A9FC70006D91B /* images */,
 				3E674466167943C200D99390 /* BottomToolbar */,
@@ -342,6 +368,10 @@
 				3E6744691679448400D99390 /* mail.png in Resources */,
 				3E67446A1679448400D99390 /* printer.png in Resources */,
 				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
+				3E2AFF0716A5F8B3006D2CB0 /* PLQuickStart1.xib in Resources */,
+				3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */,
+				3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */,
+				3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +414,7 @@
 				3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */,
 				3E674463167943BA00D99390 /* AMBackground.m in Sources */,
 				3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */,
+				3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

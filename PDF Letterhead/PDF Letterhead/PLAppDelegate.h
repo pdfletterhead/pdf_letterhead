@@ -10,6 +10,8 @@
 #import "PLDropZone.h"
 #import "OnOffSwitchControl.h"
 #import "OnOffSwitchControlCell.h"
+#import "PLQuickStart1.h"
+
 
 @interface PLAppDelegate : NSObject <NSApplicationDelegate>
 {
@@ -45,6 +47,8 @@
 
 @property (assign) IBOutlet NSSegmentedControl *coverswitch;
 @property (assign) IBOutlet OnOffSwitchControl *coverswitch2;
+
+
 @property (assign) NSRect cvframe;
 @property (assign) NSRect bgframe;
 @property (assign) NSRect cvTextframe;
@@ -58,6 +62,8 @@
 @property (assign) BOOL isSetBackground;
 @property (assign) BOOL isSetContent;
 
+@property (readonly, retain) PLQuickStart1 *quickStartWindow;
+
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -67,6 +73,7 @@
 -(IBAction)savePrint: (id) sender;
 -(IBAction)showMainWindow: (id) sender;
 -(IBAction)coverControlAction: (id) sender;
+-(IBAction)openQuickStart:(id)sender;
 
 
 -(void)updatePreviewAndActionButtons;
