@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>99C7E7AF-605C-4DE5-9631-4175F108A469</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PDF Letterhead</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>942CF25DA3344CC94AFB5AACCF1EB4203BAAA33A</key>
+		<string>gitlab.lingewoud.net:pdf_letterhead.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PDF Letterhead/PDF Letterhead.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>942CF25DA3344CC94AFB5AACCF1EB4203BAAA33A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>gitlab.lingewoud.net:pdf_letterhead.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>942CF25DA3344CC94AFB5AACCF1EB4203BAAA33A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>942CF25DA3344CC94AFB5AACCF1EB4203BAAA33A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>pdf_letterhead</string>
+		</dict>
+	</array>
+</dict>
+</plist>
