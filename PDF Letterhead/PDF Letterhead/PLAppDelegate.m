@@ -17,13 +17,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-
+    
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
     {
         [self doOpenQuickStart];
     }
-
+    
     
     //style main pdfview
     [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
@@ -40,7 +40,7 @@
     _cvframe = [_coverbackgrounddoc frame];
     _bgframe = [_backgrounddoc frame];
     _cvTextframe = [_coverbackgrounddocText frame];
-    _bgTextframe = [_backgrounddocText frame];    
+    _bgTextframe = [_backgrounddocText frame];
     
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
     {
@@ -56,7 +56,7 @@
         [_backgrounddoc setImage:tmpImage];
         [self setIsSetBackground:YES];
     }
-
+    
     // If Cover exists in standardUserDefaults set it
     if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"] ]) {
         
@@ -75,7 +75,13 @@
     if ([[[filename pathExtension] lowercaseString] isEqual:@"pdf"]){
         [_sourcedoc setPdfFilepath:filename];
         return YES;
-    } else {
+    }
+    else if ([[[filename pathExtension] lowercaseString] isEqual:@"md"])
+    {
+        [self doConvertMarkdown:filename];
+        return YES;
+    }
+    else {
         return NO;
     }
 }
@@ -89,6 +95,10 @@
 }
 
 - (IBAction)doOpenFileForContentDoc:(id)sender {
+    
+    
+    
+    
     [self doOpenFileForImageView:_sourcedoc];
 }
 
@@ -104,21 +114,228 @@
     [_sourcedoc setImage:nil];
 }
 
+-(void)doConvertMarkdown:(NSString*)file {
+
+    
+    //[_sourcedoc setPdfFilepath:filename];
+    //Convert to pdf
+    
+    NSTask * mmdProc = [[NSTask alloc] init];
+    
+    NSPipe * out = [NSPipe pipe];
+    [mmdProc setStandardOutput:out];
+    
+    //[mmdProc setCurrentDirectoryPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
+    [mmdProc setLaunchPath: [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
+    [mmdProc setArguments: [NSArray arrayWithObjects: [NSString stringWithFormat:@"%@",file],nil]];
+    
+    [mmdProc launch];
+    [mmdProc waitUntilExit];
+    
+    NSString * cssFileName = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/marked-custom.css"];
+    
+    NSFileHandle * read = [out fileHandleForReading];
+    NSData * dataRead = [read readDataToEndOfFile];
+    NSString * stringRead = [[NSString alloc] initWithData:dataRead encoding:NSUTF8StringEncoding];
+    
+    NSString* cssTag = [NSString stringWithFormat:@"<link rel=\"stylesheet\" type=\"text/css\" href=\"file://%@\">\n</head>",cssFileName];
+    NSString* newString = [stringRead stringByReplacingOccurrencesOfString:@"</head>" withString:cssTag];
+    NSLog(@"output: %@", newString);
+    
+    BOOL status = [newString writeToFile:@"/tmp/temp.html" atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    if(status)
+    {
+        /*CaptureManager *manager = [[CaptureManager alloc] initWithURL:[NSURL URLWithString:@"file:///tmp/temp.html"] outputPath:@"/tmp/temp.pdf"];
+         [manager setDelegate:self];
+         [manager setPaginate:YES];
+         _orientation = NSPortraitOrientation;
+         
+         [manager setPrintingOrientation:_orientation];
+         NSMutableDictionary *headerAndFooterJavaScriptDict = [NSMutableDictionary dictionaryWithCapacity:4];
+         if (_headerLeftJs)
+         [headerAndFooterJavaScriptDict setObject:@"" forKey:@"headerLeft"];
+         if (_headerRightJs)
+         [headerAndFooterJavaScriptDict setObject:@"" forKey:@"headerRight"];
+         if (_footerLeftJs)
+         [headerAndFooterJavaScriptDict setObject:@"" forKey:@"footerLeft"];
+         if (_footerRightJs)
+         [headerAndFooterJavaScriptDict setObject:@"" forKey:@"footerRight"];
+         [manager setPrintingHeaderAndFooterJavaScript:headerAndFooterJavaScriptDict];
+         [manager startCapture];
+         */
+        
+        NSTask * pdfProc = [[NSTask alloc] init];
+        
+        NSPipe * out = [NSPipe pipe];
+        [pdfProc setStandardOutput:out];
+        
+        //[mmdProc setCurrentDirectoryPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
+        [pdfProc setLaunchPath: [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/WebKitTool"]];
+        [pdfProc setArguments: [NSArray arrayWithObjects: @"-p",
+                                @"--margin-top", @"120",
+                                @"--margin-bottom", @"120",
+                                @"--margin-left", @"50",
+                                @"--margin-right", @"50",
+                                @"file:///tmp/temp.html",
+                                @"/tmp/temp.pdf",nil]];
+        
+        [pdfProc launch];
+        [pdfProc waitUntilExit];
+        NSLog(@"I was here");
+        [_sourcedoc setPdfFilepath:@"/tmp/temp.pdf"];
+
+//        [theView setPdfFilepath:@"/tmp/temp.pdf"];
+    }
+    else{
+        NSLog(@"Could not convert Markdown file");
+    }
+
+    
+}
+
 - (void)doOpenFileForImageView:(PLDropZone*)theView {
+    
+    //BOOL cancelOperation;
+    
+    NSOpenPanel *openPanel = [[NSOpenPanel alloc] init];
+    [openPanel setCanChooseFiles:YES];
+    [openPanel setCanChooseDirectories:NO];
+    [openPanel setAllowsMultipleSelection:NO];
+    
+    if ([openPanel runModal] == NSOKButton)
+    {
+        NSString *tvarFilename = [[openPanel URL] path];
+        NSString *ext = [[tvarFilename pathExtension] lowercaseString ];
 
-    NSOpenPanel *tvarNSOpenPanelObj	= [NSOpenPanel openPanel];
-    NSInteger tvarNSInteger	= [tvarNSOpenPanelObj runModal];
-    if(tvarNSInteger == NSOKButton){
-
-        NSString * tvarFilename = [tvarNSOpenPanelObj filename];
-        NSString * ext = [[tvarFilename pathExtension] lowercaseString ];
-      
         if([[theView identifier] isEqualToString:@"sourceDropArea"])
         {
             if ([ext isEqual:@"pdf"]){
                 
                 [theView setPdfFilepath:tvarFilename];
-            } else {
+            }
+            else if ([ext isEqual:@"md"]){
+                
+                [self doConvertMarkdown:tvarFilename];
+            }
+            else {
+                NSLog(@"invalid filetype, no PDF");
+            }
+        }
+        else
+        {
+            NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
+            if ([validImageExtensions containsObject:ext])
+            {
+                [theView setPdfFilepath:tvarFilename];
+            }
+            else {
+                NSLog(@"invalid filetype, no IMAGE");
+            }
+            
+        }
+    
+    
+    }
+    else
+    {
+        NSLog(@"what to do when no file was given?");
+        //cancelOperation = YES;
+    }
+
+    
+    /*
+    NSOpenPanel *tvarNSOpenPanelObj	= [NSOpenPanel openPanel];
+    NSInteger tvarNSInteger	= [tvarNSOpenPanelObj runModal];
+    if(tvarNSInteger == NSOKButton){
+        
+        
+        
+        
+        NSString * tvarFilename = [tvarNSOpenPanelObj filename];
+        NSString * ext = [[tvarFilename pathExtension] lowercaseString ];
+        
+        if([[theView identifier] isEqualToString:@"sourceDropArea"])
+        {
+            if ([ext isEqual:@"pdf"]){
+                
+                [theView setPdfFilepath:tvarFilename];
+            }
+            else if ([ext isEqual:@"md"]){
+                
+                //[_sourcedoc setPdfFilepath:filename];
+                //Convert to pdf
+                
+                NSTask * mmdProc = [[NSTask alloc] init];
+                
+                NSPipe * out = [NSPipe pipe];
+                [mmdProc setStandardOutput:out];
+                
+                //[mmdProc setCurrentDirectoryPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
+                [mmdProc setLaunchPath: [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
+                [mmdProc setArguments: [NSArray arrayWithObjects: [NSString stringWithFormat:@"%@",tvarFilename],nil]];
+                
+                [mmdProc launch];
+                [mmdProc waitUntilExit];
+                
+                NSString * cssFileName = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/marked-custom.css"];
+                
+                NSFileHandle * read = [out fileHandleForReading];
+                NSData * dataRead = [read readDataToEndOfFile];
+                NSString * stringRead = [[NSString alloc] initWithData:dataRead encoding:NSUTF8StringEncoding];
+                
+                NSString* cssTag = [NSString stringWithFormat:@"<link rel=\"stylesheet\" type=\"text/css\" href=\"file://%@\">\n</head>",cssFileName];
+                NSString* newString = [stringRead stringByReplacingOccurrencesOfString:@"</head>" withString:cssTag];
+                //NSLog(@"output: %@", newString);
+                
+                BOOL status = [newString writeToFile:@"/tmp/temp.html" atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                if(status)
+                {
+                    CaptureManager *manager = [[CaptureManager alloc] initWithURL:[NSURL URLWithString:@"file:///tmp/temp.html"] outputPath:@"/tmp/temp.pdf"];
+                     [manager setDelegate:self];
+                     [manager setPaginate:YES];
+                     _orientation = NSPortraitOrientation;
+                     
+                     [manager setPrintingOrientation:_orientation];
+                     NSMutableDictionary *headerAndFooterJavaScriptDict = [NSMutableDictionary dictionaryWithCapacity:4];
+                     if (_headerLeftJs)
+                     [headerAndFooterJavaScriptDict setObject:@"" forKey:@"headerLeft"];
+                     if (_headerRightJs)
+                     [headerAndFooterJavaScriptDict setObject:@"" forKey:@"headerRight"];
+                     if (_footerLeftJs)
+                     [headerAndFooterJavaScriptDict setObject:@"" forKey:@"footerLeft"];
+                     if (_footerRightJs)
+                     [headerAndFooterJavaScriptDict setObject:@"" forKey:@"footerRight"];
+                     [manager setPrintingHeaderAndFooterJavaScript:headerAndFooterJavaScriptDict];
+                     [manager startCapture];
+     
+                    
+                    NSTask * pdfProc = [[NSTask alloc] init];
+                    
+                    NSPipe * out = [NSPipe pipe];
+                    [pdfProc setStandardOutput:out];
+                    
+                    //[mmdProc setCurrentDirectoryPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
+                    [pdfProc setLaunchPath: [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/WebKitTool"]];
+                    [pdfProc setArguments: [NSArray arrayWithObjects: @"-p",
+                                            @"--margin-top", @"70",
+                                            @"--margin-bottom", @"70",
+                                            @"--margin-left", @"30",
+                                            @"--margin-right", @"30",
+                                            @"file:///tmp/temp.html",
+                                            @"/tmp/temp.pdf",nil]];
+                    
+                    [pdfProc launch];
+                    [pdfProc waitUntilExit];
+                    NSLog(@"I was here");
+                    [theView setPdfFilepath:@"/tmp/temp.pdf"];
+                }
+                else{
+                    NSLog(@"Could not convert Markdown file");
+                }
+                
+                
+            }
+            else {
                 NSLog(@"invalid filetype, no PDF");
             }
         }
@@ -135,12 +352,19 @@
             
         }
     }
+    */
+}
+
+- (void)captureManager:(CaptureManager *)manager didFailWithError:(NSError *)error
+{
+	//_exitCode = EXIT_FAILURE;
+    NSLog(@"error:%@",[error localizedDescription]);
 }
 
 - (IBAction)openPreview:(id)sender {
     
     [_previewWindow makeKeyAndOrderFront:sender];
-
+    
 }
 
 - (IBAction)openQuickStart:(id)sender {
@@ -152,7 +376,7 @@
 }
 
 -(void)updatePreviewAndActionButtons {
-
+    
     //We do not have enough to set Preview
     
     if(![self allowSetPreview]){
@@ -171,7 +395,7 @@
 	NSImage			*cvrimage;
 	NSImage			*sourceimage;
 	PLPDFPage       *page;
-   
+    
 	// Start with an empty PDFDocument.
 	_letterheadPDF = [[PDFDocument alloc] init];
 	
@@ -208,7 +432,7 @@
         if(![_sourcedoc getFilepath])
         {
             filePath = [NSString stringWithFormat:@"%@/no_name.pdf",[[self applicationFilesDirectory] path]];
-           BOOL success;
+            BOOL success;
             //NSImage *myImage;
             NSImageView *myView;
             NSRect vFrame;
@@ -273,7 +497,7 @@
 }
 
 -(BOOL)allowSetPreview{
-   
+    
     if(!_isSetContent)
     {
         return NO;
@@ -312,39 +536,39 @@
         _coverEnabled = NO;
         
         CGRect newbgframe = CGRectMake(_cvframe.origin.x+45,
-                                             _cvframe.origin.y - 5,
-                                             _bgframe.size.width +15,
-                                             (_bgframe.size.height + 15));
-
+                                       _cvframe.origin.y - 5,
+                                       _bgframe.size.width +15,
+                                       (_bgframe.size.height + 15));
+        
         [[_backgrounddoc animator ]setFrame:newbgframe];
         
-
+        
         [[_coverbackgrounddocText animator] setAlphaValue:0.0];
         [[_backgrounddocText animator] setStringValue:@"Background"];
-
+        
         CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+65,
-                                       _cvTextframe.origin.y,
-                                       _bgTextframe.size.width,
-                                       (_bgTextframe.size.height));
+                                           _cvTextframe.origin.y,
+                                           _bgTextframe.size.width,
+                                           (_bgTextframe.size.height));
         
         [[_backgrounddocText animator ]setFrame:newbgTextframe];
-
-    
+        
+        
     }
     else{
-
+        
         [[_backgrounddocText animator] setStringValue:@"Following bg's"];
-
+        
         [[_backgrounddoc animator ]setFrame:_bgframe];
         [[_backgrounddocText animator ]setFrame:_bgTextframe];
-
+        
         [prefs setBool:YES forKey:@"coverEnabled"];
         [_coverbackgrounddoc registerForDraggedTypes:[NSArray arrayWithObjects:
-                                       NSColorPboardType, NSFilenamesPboardType, nil]];
-
+                                                      NSColorPboardType, NSFilenamesPboardType, nil]];
+        
         [_coverbackgrounddoc dropAreaFadeOut];
         [[_coverbackgrounddocText animator] setAlphaValue:1.0];
-
+        
         [_coverbackgrounddoc setEditable:YES];
         _coverEnabled = YES;
     }
@@ -354,7 +578,7 @@
 
 
 - (IBAction)saveAs: (id) sender{
-  
+    
     NSString * defaultName;
     if ([_sourcedoc getFilepath] == nil) {
         defaultName = @"Untitled.pdf";
@@ -365,10 +589,10 @@
     
     NSSavePanel *savePanel = [NSSavePanel savePanel];
     [savePanel setNameFieldStringValue:defaultName];
-
+    
 	if ([savePanel runModal] == NSFileHandlingPanelOKButton)
         [_letterheadPDF writeToURL: [savePanel URL]];
-
+    
     [_pdfWindow makeFirstResponder:_pdfView];
 }
 
@@ -414,7 +638,7 @@
     if ([item action] == @selector(openPreview:) && (![self allowSetPreview])) {
         return NO;
     }
-
+    
     return YES;
 }
 
@@ -428,7 +652,7 @@
         [_printButton2 setEnabled:YES];
         [_previewButton1 setEnabled:YES];
         [_previewButton2 setEnabled:YES];
-
+        
         [_mailButton3 setEnabled:YES];
         [_saveButton3 setEnabled:YES];
         [_printButton3 setEnabled:YES];
@@ -444,7 +668,7 @@
         [_printButton2 setEnabled:NO];
         [_previewButton1 setEnabled:NO];
         [_previewButton2 setEnabled:NO];
-
+        
         [_mailButton3 setEnabled:NO];
         [_saveButton3 setEnabled:NO];
         [_printButton3 setEnabled:NO];
@@ -477,33 +701,33 @@
         [prefs synchronize];
     }
     else{
-
+        
         NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
         NSString *filePath;
-
+        
         NSArray *reps = [myImage representations];
         NSImageRep *rep = [reps objectAtIndex:0];
         if ([rep isKindOfClass:[NSPDFImageRep class]])
         {
             filePath = [NSString stringWithFormat:@"%@/letterhead-%@-00.pdf",[[self applicationFilesDirectory] path],bgType];
             BOOL success;
-             NSImageView *myView;
-             NSRect vFrame;
-             NSData *pdfData;
-             
-             vFrame = NSZeroRect;
-             vFrame.size = [myImage size];
-             myView = [[NSImageView alloc] initWithFrame:vFrame];
-             
-             [myView setImage:myImage];
+            NSImageView *myView;
+            NSRect vFrame;
+            NSData *pdfData;
             
-             pdfData = [myView dataWithPDFInsideRect:vFrame];
+            vFrame = NSZeroRect;
+            vFrame.size = [myImage size];
+            myView = [[NSImageView alloc] initWithFrame:vFrame];
             
-             success = [pdfData writeToFile:filePath options:0 error:NULL];
+            [myView setImage:myImage];
+            
+            pdfData = [myView dataWithPDFInsideRect:vFrame];
+            
+            success = [pdfData writeToFile:filePath options:0 error:NULL];
         }
         else{
             filePath = [NSString stringWithFormat:@"%@/letterhead-%@-00.png",[[self applicationFilesDirectory] path],bgType];
-        
+            
             NSData *imageData = [myImage TIFFRepresentation];
             NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
             
@@ -590,7 +814,7 @@
     return _persistentStoreCoordinator;
 }
 
-// Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) 
+// Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
 - (NSManagedObjectContext *)managedObjectContext
 {
     if (_managedObjectContext) {
@@ -608,7 +832,7 @@
     }
     _managedObjectContext = [[NSManagedObjectContext alloc] init];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-
+    
     return _managedObjectContext;
 }
 
@@ -651,13 +875,13 @@
     
     NSError *error = nil;
     if (![[self managedObjectContext] save:&error]) {
-
-        // Customize this code block to include application-specific recovery steps.              
+        
+        // Customize this code block to include application-specific recovery steps.
         BOOL result = [sender presentError:error];
         if (result) {
             return NSTerminateCancel;
         }
-
+        
         NSString *question = NSLocalizedString(@"Could not save changes while quitting. Quit anyway?", @"Quit without saves error question message");
         NSString *info = NSLocalizedString(@"Quitting now will lose any changes you have made since the last successful save", @"Quit without saves error question info");
         NSString *quitButton = NSLocalizedString(@"Quit anyway", @"Quit anyway button title");
@@ -667,14 +891,14 @@
         [alert setInformativeText:info];
         [alert addButtonWithTitle:quitButton];
         [alert addButtonWithTitle:cancelButton];
-
+        
         NSInteger answer = [alert runModal];
         
         if (answer == NSAlertAlternateReturn) {
             return NSTerminateCancel;
         }
     }
-
+    
     return NSTerminateNow;
 }
 

@@ -21,6 +21,11 @@
 		3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */; };
 		3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
 		3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
+		3E51687A1859125D007E2F3C /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5168791859125D007E2F3C /* multimarkdown */; };
+		3E51687F18591347007E2F3C /* marked-custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E51687E18591347007E2F3C /* marked-custom.css */; };
+		3E51688218591DE5007E2F3C /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E51688118591DE5007E2F3C /* CaptureManager.m */; };
+		3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
+		3E51688818592976007E2F3C /* WebKitTool in Resources */ = {isa = PBXBuildFile; fileRef = 3E51688718592976007E2F3C /* WebKitTool */; };
 		3E674463167943BA00D99390 /* AMBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674460167943BA00D99390 /* AMBackground.m */; };
 		3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674462167943BA00D99390 /* AMDarkButtonCell.m */; };
 		3E6744691679448400D99390 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744671679448400D99390 /* mail.png */; };
@@ -45,6 +50,7 @@
 		3E7BC9D4162459EE0092BF5E /* pdfletterheadMac.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */; };
 		3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9F2DA3167929E400486537 /* pdfviewbg.png */; };
 		3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */; };
+		3EAF7FED1AB23D9300C4EFB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF7FEC1AB23D9300C4EFB1 /* Images.xcassets */; };
 		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
 		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
 		3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */; };
@@ -72,6 +78,12 @@
 		3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Schermafbeelding 2013-01-15 om 22.15.47.png"; sourceTree = "<group>"; };
 		3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMainWindowView.h; sourceTree = "<group>"; };
 		3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainWindowView.m; sourceTree = "<group>"; };
+		3E5168791859125D007E2F3C /* multimarkdown */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = multimarkdown; sourceTree = "<group>"; };
+		3E51687E18591347007E2F3C /* marked-custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "marked-custom.css"; sourceTree = "<group>"; };
+		3E51688018591DE5007E2F3C /* CaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureManager.h; sourceTree = "<group>"; };
+		3E51688118591DE5007E2F3C /* CaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureManager.m; sourceTree = "<group>"; };
+		3E51688318591F4B007E2F3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3E51688718592976007E2F3C /* WebKitTool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = WebKitTool; sourceTree = "<group>"; };
 		3E67445F167943BA00D99390 /* AMBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBackground.h; sourceTree = "<group>"; };
 		3E674460167943BA00D99390 /* AMBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBackground.m; sourceTree = "<group>"; };
 		3E674461167943BA00D99390 /* AMDarkButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDarkButtonCell.h; sourceTree = "<group>"; };
@@ -109,6 +121,8 @@
 		3E9F2DA3167929E400486537 /* pdfviewbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdfviewbg.png; sourceTree = "<group>"; };
 		3E9F2DA91679378E00486537 /* PLPDFBgAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFBgAreaView.h; sourceTree = "<group>"; };
 		3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPDFBgAreaView.m; sourceTree = "<group>"; };
+		3EAF7FEC1AB23D9300C4EFB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PDF Letterhead.entitlements"; sourceTree = "<group>"; };
 		3EF7E6BA16089C21008EA1B1 /* white.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = white.pdf; sourceTree = "<group>"; };
 		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFAQWindowController.h; sourceTree = "<group>"; };
@@ -122,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */,
 				3E6835ED1607CA8A00DDFB82 /* Quartz.framework in Frameworks */,
 				3E6835C61607C90400DDFB82 /* Cocoa.framework in Frameworks */,
 			);
@@ -208,6 +223,18 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		3E51687B1859126F007E2F3C /* markdown */ = {
+			isa = PBXGroup;
+			children = (
+				3E51688018591DE5007E2F3C /* CaptureManager.h */,
+				3E51688118591DE5007E2F3C /* CaptureManager.m */,
+				3E51687E18591347007E2F3C /* marked-custom.css */,
+				3E51688718592976007E2F3C /* WebKitTool */,
+				3E5168791859125D007E2F3C /* multimarkdown */,
+			);
+			name = markdown;
+			sourceTree = "<group>";
+		};
 		3E674466167943C200D99390 /* BottomToolbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +269,7 @@
 		3E6835C41607C90400DDFB82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E51688318591F4B007E2F3C /* WebKit.framework */,
 				3E6835EC1607CA8A00DDFB82 /* Quartz.framework */,
 				3E6835C51607C90400DDFB82 /* Cocoa.framework */,
 				3E6835C71607C90400DDFB82 /* Other Frameworks */,
@@ -262,6 +290,8 @@
 		3E6835CB1607C90400DDFB82 /* PDF Letterhead */ = {
 			isa = PBXGroup;
 			children = (
+				3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */,
+				3E51687B1859126F007E2F3C /* markdown */,
 				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
 				3E0C8E9516768EF200DE6E94 /* onoffswitch */,
 				3E674466167943C200D99390 /* BottomToolbar */,
@@ -271,6 +301,7 @@
 				3E6835D71607C90400DDFB82 /* PLAppDelegate.h */,
 				3E6835D81607C90400DDFB82 /* PLAppDelegate.m */,
 				3E6835DA1607C90400DDFB82 /* MainMenu.xib */,
+				3EAF7FEC1AB23D9300C4EFB1 /* Images.xcassets */,
 				3E6835CC1607C90400DDFB82 /* Supporting Files */,
 			);
 			path = "PDF Letterhead";
@@ -324,8 +355,18 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PL;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Pim Snel";
+				TargetAttributes = {
+					3E6835C01607C90400DDFB82 = {
+						DevelopmentTeam = 3WQRKDPTP8;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 3E6835BB1607C90300DDFB82 /* Build configuration list for PBXProject "PDF Letterhead" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -358,6 +399,7 @@
 				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
 				3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */,
 				3E7BC9D4162459EE0092BF5E /* pdfletterheadMac.icns in Resources */,
+				3EAF7FED1AB23D9300C4EFB1 /* Images.xcassets in Resources */,
 				3E27703C1677DCA5002DD3DE /* bottomtoolbar.png in Resources */,
 				3E2770451677E464002DD3DE /* bgdrop.png in Resources */,
 				3E2770461677E464002DD3DE /* coverdrop.png in Resources */,
@@ -367,10 +409,13 @@
 				3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */,
 				3E6744691679448400D99390 /* mail.png in Resources */,
 				3E67446A1679448400D99390 /* printer.png in Resources */,
+				3E51688818592976007E2F3C /* WebKitTool in Resources */,
 				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
+				3E51687A1859125D007E2F3C /* multimarkdown in Resources */,
 				3E2AFF0716A5F8B3006D2CB0 /* PLQuickStart1.xib in Resources */,
 				3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */,
 				3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */,
+				3E51687F18591347007E2F3C /* marked-custom.css in Resources */,
 				3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +449,7 @@
 				3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,
 				3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */,
+				3E51688218591DE5007E2F3C /* CaptureManager.m in Sources */,
 				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
 				3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */,
@@ -452,7 +498,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -480,7 +525,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -500,6 +544,8 @@
 		3E6835E31607C90400DDFB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,6 +563,8 @@
 		3E6835E41607C90400DDFB82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

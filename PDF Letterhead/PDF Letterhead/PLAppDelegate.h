@@ -11,10 +11,20 @@
 #import "OnOffSwitchControl.h"
 #import "OnOffSwitchControlCell.h"
 #import "PLQuickStart1.h"
+#import "CaptureManager.h"
 
 
-@interface PLAppDelegate : NSObject <NSApplicationDelegate>
+
+@interface PLAppDelegate : NSObject <NSApplicationDelegate, CaptureManagerDelegate>
 {
+    float _browserWidth;
+	NSPrintingOrientation _orientation;
+	NSString *_headerLeftJs;
+	NSString *_headerRightJs;
+	NSString *_footerLeftJs;
+	NSString *_footerRightJs;
+    BOOL _paginate;
+    
 	PDFDocument				*_letterheadPDF;
 }
 

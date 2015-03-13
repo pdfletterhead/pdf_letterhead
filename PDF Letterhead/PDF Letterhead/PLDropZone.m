@@ -6,8 +6,8 @@
 //  Copyright 2011 Lingewoud B.V. All rights reserved.
 //
 
-#import "PLDropZone.h"
 #import "PLAppDelegate.h"
+#import "PLDropZone.h"
 
 @implementation PLDropZone
 
@@ -62,18 +62,18 @@
         if(!newImage){
             NSString* myImagePath = [myBundle pathForResource:@"contentdrop" ofType:@"png"];
             newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
-            [[NSApp delegate] setIsSetContent:NO];
+            [(PLAppDelegate *)[NSApp delegate] setIsSetContent:NO];
             
             //set main pdfview hidden
-            [[[NSApp delegate] pdfView] setHidden:YES];
+            [[(PLAppDelegate *)[NSApp delegate] pdfView] setHidden:YES];
             //[[[NSApp delegate] pdfView] setNeedsDisplay:YES];
             //[[[NSApp delegate] pdfView] setAlphaValue:0.0];
         }
         else{
-            [[NSApp delegate] setIsSetContent:YES];
+            [(PLAppDelegate *)[NSApp delegate] setIsSetContent:YES];
 
             //set main pdfview visible
-            [[[NSApp delegate] pdfView] setHidden:NO];
+            [[(PLAppDelegate *)[NSApp delegate] pdfView] setHidden:NO];
             //[[[NSApp delegate] pdfView] setAlphaValue:1.0];
               //setNeedsDisplay:YES];
         }
@@ -86,32 +86,32 @@
                 NSString* myImagePath = [myBundle pathForResource:@"bgdrop" ofType:@"png"];
                 newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
                 
-                [[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:NO];
-                [[NSApp delegate] setIsSetBackground:NO];
+                [(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:NO];
+                [(PLAppDelegate *)[NSApp delegate] setIsSetBackground:NO];
             }
             else{
                 NSString* myImagePath = [myBundle pathForResource:@"coverdrop" ofType:@"png"];
                 newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
 
-                [[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:YES];
-                [[NSApp delegate] setIsSetCover:NO];
+                [(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:YES];
+                [(PLAppDelegate *)[NSApp delegate] setIsSetCover:NO];
             }
         }
         else{
             if([[self identifier] isEqualToString:@"bgDropArea"]){
                 
-                [[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:NO];
-                [[NSApp delegate] setIsSetBackground:YES];
+                [(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:NO];
+                [(PLAppDelegate *)[NSApp delegate] setIsSetBackground:YES];
             }
             else{
-                [[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:YES];
-                [[NSApp delegate] setIsSetCover:YES];
+                [(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:YES];
+                [(PLAppDelegate *)[NSApp delegate] setIsSetCover:YES];
             }
         }
     }
     [super setImage:newImage];
         
-    [[NSApp delegate] updatePreviewAndActionButtons];
+    [(PLAppDelegate *)[NSApp delegate] updatePreviewAndActionButtons];
 
 }
 

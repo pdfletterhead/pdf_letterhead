@@ -31,7 +31,7 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
 //    return NSMakeRect(0.0, 0.0, 842, 595);
 
     NSSize mainPDFSize = [_frontimage size];
-    NSLog(@"main doc size: w=%f h=%f",mainPDFSize.width, mainPDFSize.height);
+    //NSLog(@"main doc size: w=%f h=%f",mainPDFSize.width, mainPDFSize.height);
     return NSMakeRect(0.0, 0.0, mainPDFSize.width, mainPDFSize.height);
 
 }
