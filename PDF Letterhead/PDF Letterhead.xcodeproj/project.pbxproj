@@ -21,11 +21,9 @@
 		3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */; };
 		3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
 		3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
-		3E51687A1859125D007E2F3C /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5168791859125D007E2F3C /* multimarkdown */; };
 		3E51687F18591347007E2F3C /* marked-custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E51687E18591347007E2F3C /* marked-custom.css */; };
 		3E51688218591DE5007E2F3C /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E51688118591DE5007E2F3C /* CaptureManager.m */; };
 		3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
-		3E51688818592976007E2F3C /* WebKitTool in Resources */ = {isa = PBXBuildFile; fileRef = 3E51688718592976007E2F3C /* WebKitTool */; };
 		3E674463167943BA00D99390 /* AMBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674460167943BA00D99390 /* AMBackground.m */; };
 		3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674462167943BA00D99390 /* AMDarkButtonCell.m */; };
 		3E6744691679448400D99390 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744671679448400D99390 /* mail.png */; };
@@ -55,6 +53,9 @@
 		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
 		3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */; };
 		3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
+		793A80F71AE7D2A4009B793D /* WebKitTool in Resources */ = {isa = PBXBuildFile; fileRef = 3E51688718592976007E2F3C /* WebKitTool */; };
+		793A80F81AE7D2A7009B793D /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5168791859125D007E2F3C /* multimarkdown */; };
+		793A80FC1AE7DEC3009B793D /* entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 793A80FB1AE7DEC3009B793D /* entitlements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFAQWindowController.m; sourceTree = "<group>"; };
 		3EFB08F61615032E006063F9 /* PLPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPreviewWindow.h; sourceTree = "<group>"; };
 		3EFB08F71615032E006063F9 /* PLPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPreviewWindow.m; sourceTree = "<group>"; };
+		793A80FB1AE7DEC3009B793D /* entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				3E51687E18591347007E2F3C /* marked-custom.css */,
 				3E51688718592976007E2F3C /* WebKitTool */,
 				3E5168791859125D007E2F3C /* multimarkdown */,
+				793A80FB1AE7DEC3009B793D /* entitlements.plist */,
 			);
 			name = markdown;
 			sourceTree = "<group>";
@@ -362,7 +365,7 @@
 						DevelopmentTeam = 3WQRKDPTP8;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -408,14 +411,15 @@
 				3E798B731677F053006F47F5 /* contentdrop.png in Resources */,
 				3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */,
 				3E6744691679448400D99390 /* mail.png in Resources */,
+				793A80F71AE7D2A4009B793D /* WebKitTool in Resources */,
 				3E67446A1679448400D99390 /* printer.png in Resources */,
-				3E51688818592976007E2F3C /* WebKitTool in Resources */,
+				793A80FC1AE7DEC3009B793D /* entitlements.plist in Resources */,
 				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
-				3E51687A1859125D007E2F3C /* multimarkdown in Resources */,
 				3E2AFF0716A5F8B3006D2CB0 /* PLQuickStart1.xib in Resources */,
 				3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */,
 				3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */,
 				3E51687F18591347007E2F3C /* marked-custom.css in Resources */,
+				793A80F81AE7D2A7009B793D /* multimarkdown in Resources */,
 				3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,8 +548,10 @@
 		3E6835E31607C90400DDFB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = "PDF Letterhead/PDF Letterhead.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,6 +562,7 @@
 				INFOPLIST_FILE = "PDF Letterhead/PDF Letterhead-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -563,8 +570,10 @@
 		3E6835E41607C90400DDFB82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = "PDF Letterhead/PDF Letterhead.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,6 +584,7 @@
 				INFOPLIST_FILE = "PDF Letterhead/PDF Letterhead-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
