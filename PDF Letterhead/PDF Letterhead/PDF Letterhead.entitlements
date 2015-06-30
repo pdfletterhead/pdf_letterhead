@@ -10,9 +10,12 @@
 	<true/>
 	<key>com.apple.security.print</key>
 	<true/>
-    <key>com.apple.security.temporary-exception.apple-events</key>
-    <string>com.apple.mail</string>
-    <key>com.apple.security.temporary-exception.files.absolute-path.read-write</key>
-    <string></string>
+    <key>com.apple.security.scripting-targets</key>
+    <dict>
+        <key>com.apple.mail</key>
+        <array>
+            <string>com.apple.mail.compose</string>
+        </array>
+    </dict>
 </dict>
 </plist>
