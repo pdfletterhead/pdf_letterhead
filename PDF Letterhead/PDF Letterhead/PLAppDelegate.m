@@ -25,6 +25,14 @@
     }
     
     
+    
+    //Temp folder creation
+    NSError *tmpFileCreateError;
+    _tmpDirectoryURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:[[NSProcessInfo processInfo] globallyUniqueString]] isDirectory:YES];
+    [[NSFileManager defaultManager] createDirectoryAtURL:_tmpDirectoryURL withIntermediateDirectories:YES attributes:nil error:&tmpFileCreateError];
+    
+    
+    
     //style main pdfview
     [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
     [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
@@ -142,27 +150,13 @@
     NSString* newString = [stringRead stringByReplacingOccurrencesOfString:@"</head>" withString:cssTag];
     NSLog(@"output: %@", newString);
     
-    BOOL status = [newString writeToFile:@"/tmp/temp.html" atomically:YES encoding:NSUTF8StringEncoding error:nil];
+
+    NSURL *htmlFileURL = [_tmpDirectoryURL URLByAppendingPathComponent:@"temp.html"];
+    NSString  *pdfFilePath = [[_tmpDirectoryURL path] stringByAppendingPathComponent: @"temp.pdf" ];
+    
+    BOOL status = [newString writeToURL:htmlFileURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
     if(status)
     {
-        /*CaptureManager *manager = [[CaptureManager alloc] initWithURL:[NSURL URLWithString:@"file:///tmp/temp.html"] outputPath:@"/tmp/temp.pdf"];
-         [manager setDelegate:self];
-         [manager setPaginate:YES];
-         _orientation = NSPortraitOrientation;
-         
-         [manager setPrintingOrientation:_orientation];
-         NSMutableDictionary *headerAndFooterJavaScriptDict = [NSMutableDictionary dictionaryWithCapacity:4];
-         if (_headerLeftJs)
-         [headerAndFooterJavaScriptDict setObject:@"" forKey:@"headerLeft"];
-         if (_headerRightJs)
-         [headerAndFooterJavaScriptDict setObject:@"" forKey:@"headerRight"];
-         if (_footerLeftJs)
-         [headerAndFooterJavaScriptDict setObject:@"" forKey:@"footerLeft"];
-         if (_footerRightJs)
-         [headerAndFooterJavaScriptDict setObject:@"" forKey:@"footerRight"];
-         [manager setPrintingHeaderAndFooterJavaScript:headerAndFooterJavaScriptDict];
-         [manager startCapture];
-         */
         
         NSTask * pdfProc = [[NSTask alloc] init];
         
@@ -176,15 +170,13 @@
                                 @"--margin-bottom", @"120",
                                 @"--margin-left", @"50",
                                 @"--margin-right", @"50",
-                                @"file:///tmp/temp.html",
-                                @"/tmp/temp.pdf",nil]];
+                                htmlFileURL,
+                                pdfFilePath,nil]];
         
         [pdfProc launch];
         [pdfProc waitUntilExit];
         NSLog(@"I was here");
-        [_sourcedoc setPdfFilepath:@"/tmp/temp.pdf"];
-
-//        [theView setPdfFilepath:@"/tmp/temp.pdf"];
+        [_sourcedoc setPdfFilepath:pdfFilePath];
     }
     else{
         NSLog(@"Could not convert Markdown file");
@@ -231,128 +223,13 @@
             else {
                 NSLog(@"invalid filetype, no IMAGE");
             }
-            
         }
-    
-    
     }
     else
     {
         NSLog(@"what to do when no file was given?");
         //cancelOperation = YES;
     }
-
-    
-    /*
-    NSOpenPanel *tvarNSOpenPanelObj	= [NSOpenPanel openPanel];
-    NSInteger tvarNSInteger	= [tvarNSOpenPanelObj runModal];
-    if(tvarNSInteger == NSOKButton){
-        
-        
-        
-        
-        NSString * tvarFilename = [tvarNSOpenPanelObj filename];
-        NSString * ext = [[tvarFilename pathExtension] lowercaseString ];
-        
-        if([[theView identifier] isEqualToString:@"sourceDropArea"])
-        {
-            if ([ext isEqual:@"pdf"]){
-                
-                [theView setPdfFilepath:tvarFilename];
-            }
-            else if ([ext isEqual:@"md"]){
-                
-                //[_sourcedoc setPdfFilepath:filename];
-                //Convert to pdf
-                
-                NSTask * mmdProc = [[NSTask alloc] init];
-                
-                NSPipe * out = [NSPipe pipe];
-                [mmdProc setStandardOutput:out];
-                
-                //[mmdProc setCurrentDirectoryPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
-                [mmdProc setLaunchPath: [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
-                [mmdProc setArguments: [NSArray arrayWithObjects: [NSString stringWithFormat:@"%@",tvarFilename],nil]];
-                
-                [mmdProc launch];
-                [mmdProc waitUntilExit];
-                
-                NSString * cssFileName = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/marked-custom.css"];
-                
-                NSFileHandle * read = [out fileHandleForReading];
-                NSData * dataRead = [read readDataToEndOfFile];
-                NSString * stringRead = [[NSString alloc] initWithData:dataRead encoding:NSUTF8StringEncoding];
-                
-                NSString* cssTag = [NSString stringWithFormat:@"<link rel=\"stylesheet\" type=\"text/css\" href=\"file://%@\">\n</head>",cssFileName];
-                NSString* newString = [stringRead stringByReplacingOccurrencesOfString:@"</head>" withString:cssTag];
-                //NSLog(@"output: %@", newString);
-                
-                BOOL status = [newString writeToFile:@"/tmp/temp.html" atomically:YES encoding:NSUTF8StringEncoding error:nil];
-                if(status)
-                {
-                    CaptureManager *manager = [[CaptureManager alloc] initWithURL:[NSURL URLWithString:@"file:///tmp/temp.html"] outputPath:@"/tmp/temp.pdf"];
-                     [manager setDelegate:self];
-                     [manager setPaginate:YES];
-                     _orientation = NSPortraitOrientation;
-                     
-                     [manager setPrintingOrientation:_orientation];
-                     NSMutableDictionary *headerAndFooterJavaScriptDict = [NSMutableDictionary dictionaryWithCapacity:4];
-                     if (_headerLeftJs)
-                     [headerAndFooterJavaScriptDict setObject:@"" forKey:@"headerLeft"];
-                     if (_headerRightJs)
-                     [headerAndFooterJavaScriptDict setObject:@"" forKey:@"headerRight"];
-                     if (_footerLeftJs)
-                     [headerAndFooterJavaScriptDict setObject:@"" forKey:@"footerLeft"];
-                     if (_footerRightJs)
-                     [headerAndFooterJavaScriptDict setObject:@"" forKey:@"footerRight"];
-                     [manager setPrintingHeaderAndFooterJavaScript:headerAndFooterJavaScriptDict];
-                     [manager startCapture];
-     
-                    
-                    NSTask * pdfProc = [[NSTask alloc] init];
-                    
-                    NSPipe * out = [NSPipe pipe];
-                    [pdfProc setStandardOutput:out];
-                    
-                    //[mmdProc setCurrentDirectoryPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
-                    [pdfProc setLaunchPath: [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/WebKitTool"]];
-                    [pdfProc setArguments: [NSArray arrayWithObjects: @"-p",
-                                            @"--margin-top", @"70",
-                                            @"--margin-bottom", @"70",
-                                            @"--margin-left", @"30",
-                                            @"--margin-right", @"30",
-                                            @"file:///tmp/temp.html",
-                                            @"/tmp/temp.pdf",nil]];
-                    
-                    [pdfProc launch];
-                    [pdfProc waitUntilExit];
-                    NSLog(@"I was here");
-                    [theView setPdfFilepath:@"/tmp/temp.pdf"];
-                }
-                else{
-                    NSLog(@"Could not convert Markdown file");
-                }
-                
-                
-            }
-            else {
-                NSLog(@"invalid filetype, no PDF");
-            }
-        }
-        else
-        {
-            NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
-            if ([validImageExtensions containsObject:ext])
-            {
-                [theView setPdfFilepath:tvarFilename];
-            }
-            else {
-                NSLog(@"invalid filetype, no IMAGE");
-            }
-            
-        }
-    }
-    */
 }
 
 - (void)captureManager:(CaptureManager *)manager didFailWithError:(NSError *)error
@@ -598,15 +475,20 @@
 
 - (IBAction)saveEmail: (id) sender
 {
+    
+
     NSString * newFileName;
     if ([_sourcedoc getFilepath] == nil) {
-        newFileName = @"/tmp/new.pdf";
+        newFileName = [[_tmpDirectoryURL path] stringByAppendingPathComponent: @"new.pdf" ];
     }
     else {
-        newFileName = [NSString stringWithFormat:@"/tmp/%@.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
+
+        NSString *tmpName =[NSString stringWithFormat:@"%@.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
+        newFileName = [ [_tmpDirectoryURL path] stringByAppendingPathComponent:tmpName];
     }
-    
-    NSLog(@"email");
+
+   
+    NSLog(@"email: %@", newFileName);
     NSAppleScript *mailScript;
     NSURL * tmpFileUrl = [NSURL fileURLWithPath:newFileName isDirectory:NO];
 	[_letterheadPDF writeToURL:tmpFileUrl];

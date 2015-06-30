@@ -58,6 +58,7 @@
 @property (assign) IBOutlet NSSegmentedControl *coverswitch;
 @property (assign) IBOutlet OnOffSwitchControl *coverswitch2;
 
+@property (readonly, retain) NSURL *tmpDirectoryURL;
 
 @property (assign) NSRect cvframe;
 @property (assign) NSRect bgframe;
