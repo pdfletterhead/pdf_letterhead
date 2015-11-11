@@ -26,10 +26,12 @@
     BOOL _paginate;
     
 	PDFDocument				*_letterheadPDF;
+//    PDFView                 *_pdfView;
+
 }
 
 @property (assign) IBOutlet NSWindow *pdfWindow;
-@property (assign) IBOutlet PDFView *pdfView;
+//@property (assign) IBOutlet PDFView *pdfView;
 @property (assign) IBOutlet PDFThumbnailView *pdfThumbView;
 @property (assign) IBOutlet NSMenu *myMainMenu;
 
@@ -67,6 +69,7 @@
 
 @property (assign) IBOutlet NSWindow *previewWindow;
 @property (assign) IBOutlet PDFView *previewView;
+@property (assign) IBOutlet NSView *pdfOuterView;
 
 @property (assign) BOOL coverEnabled;
 @property (assign) BOOL isSetCover;

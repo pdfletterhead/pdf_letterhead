@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E0514601BF36AA1006FA54B /* PLFAQWindowController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E05145F1BF36AA1006FA54B /* PLFAQWindowController2.swift */; };
+		3E0514621BF379BA006FA54B /* PLPDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0514611BF379BA006FA54B /* PLPDFView.swift */; };
 		3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */; };
 		3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9216768EEC00DE6E94 /* OnOffSwitchControl.m */; };
 		3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		3E05145E1BF36AA1006FA54B /* PDF Letterhead-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDF Letterhead-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E05145F1BF36AA1006FA54B /* PLFAQWindowController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PLFAQWindowController2.swift; sourceTree = "<group>"; };
+		3E0514611BF379BA006FA54B /* PLPDFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PLPDFView.swift; sourceTree = "<group>"; };
 		3E0C8E8F16768EEB00DE6E94 /* OnOffSwitchControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControlCell.h; sourceTree = "<group>"; };
 		3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControlCell.m; sourceTree = "<group>"; };
 		3E0C8E9116768EEC00DE6E94 /* OnOffSwitchControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControl.h; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				3EFB08F61615032E006063F9 /* PLPreviewWindow.h */,
 				3EFB08F71615032E006063F9 /* PLPreviewWindow.m */,
+				3E0514611BF379BA006FA54B /* PLPDFView.swift */,
 			);
 			name = PreviewWindow;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 			files = (
 				3E6835D21607C90400DDFB82 /* main.m in Sources */,
 				3E6835D91607C90400DDFB82 /* PLAppDelegate.m in Sources */,
+				3E0514621BF379BA006FA54B /* PLPDFView.swift in Sources */,
 				3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */,
 				3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,

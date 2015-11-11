@@ -31,8 +31,8 @@
                 <outlet property="mailButton1" destination="584" id="808"/>
                 <outlet property="mailButton2" destination="812" id="814"/>
                 <outlet property="mailButton3" destination="897" id="1008"/>
+                <outlet property="pdfOuterView" destination="SIz-ol-d1z" id="JOL-at-Yym"/>
                 <outlet property="pdfThumbView" destination="730" id="804"/>
-                <outlet property="pdfView" destination="989" id="990"/>
                 <outlet property="pdfWindow" destination="587" id="752"/>
                 <outlet property="previewButton1" destination="857" id="887"/>
                 <outlet property="previewButton3" destination="993" id="1006"/>
@@ -505,13 +505,15 @@
                             <customView id="988" customClass="PLPDFBgAreaView">
                                 <rect key="frame" x="20" y="0.0" width="412" height="582"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <customView id="SIz-ol-d1z">
+                                        <rect key="frame" x="0.0" y="0.0" width="412" height="582"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <animations/>
+                                    </customView>
+                                </subviews>
                                 <animations/>
                             </customView>
-                            <pdfView hidden="YES" autoresizesSubviews="NO" wantsLayer="YES" canDrawConcurrently="YES" autoScales="YES" id="989">
-                                <rect key="frame" x="11" y="0.0" width="430" height="582"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <animations/>
-                            </pdfView>
                         </subviews>
                         <animations/>
                     </customView>
@@ -717,6 +719,12 @@
                 <animations/>
             </view>
         </window>
+        <pdfView hidden="YES" autoresizesSubviews="NO" wantsLayer="YES" canDrawConcurrently="YES" scaleFactor="0.49193548387096775" autoScales="YES" id="989" customClass="DPPDFView" customModule="PDF_Letterhead" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="192"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <animations/>
+            <point key="canvasLocation" x="731" y="-67"/>
+        </pdfView>
     </objects>
     <resources>
         <image name="NSAdvanced" width="32" height="32"/>

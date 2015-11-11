@@ -23,8 +23,7 @@
     {
         [self doOpenQuickStart];
     }
-    
-    
+     
     
     //Temp folder creation
     NSError *tmpFileCreateError;
@@ -32,9 +31,8 @@
     [[NSFileManager defaultManager] createDirectoryAtURL:_tmpDirectoryURL withIntermediateDirectories:YES attributes:nil error:&tmpFileCreateError];
     
     
-    
     //style main pdfview
-    [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+ 
     [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
     
     [self setIsSetBackground:NO];
@@ -255,14 +253,29 @@
 -(void)updatePreviewAndActionButtons {
     
     //We do not have enough to set Preview
-    
+
     if(![self allowSetPreview]){
         [self enableActions: NO];
-        [_pdfView setDocument: nil];
+        
+        //[_pdfView setDocument: nil];
+        
     }
     else{
+
         [self enableActions: YES];
         [self updatePreview];
+
+        PDFView *pdfView = [[PDFView alloc] init];
+        
+        [pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+        [pdfView setDocument: _letterheadPDF];
+
+        CGRect winRect = _pdfOuterView.bounds;
+        
+        [_pdfOuterView addSubview:pdfView];
+        pdfView.frame = winRect ;
+        pdfView.autoScales = YES ;
+     
     }
 }
 
@@ -273,8 +286,16 @@
 	NSImage			*sourceimage;
 	PLPDFPage       *page;
     
-	// Start with an empty PDFDocument.
-	_letterheadPDF = [[PDFDocument alloc] init];
+
+    // Start with an empty PDFDocument.
+    
+    if (!_letterheadPDF) {
+        _letterheadPDF = [[PDFDocument alloc] init];
+    }
+    else{
+     return;
+    }
+
 	
     if(_coverEnabled){
         
@@ -369,8 +390,8 @@
     }
 	
     // Assign PDFDocument ot PDFView.
-	[_pdfView setDocument: _letterheadPDF];
-    [_previewView setDocument:_letterheadPDF];
+	//[_pdfView setDocument: _letterheadPDF];
+    //[_previewView setDocument:_letterheadPDF];
 }
 
 -(BOOL)allowSetPreview{
@@ -470,7 +491,7 @@
 	if ([savePanel runModal] == NSFileHandlingPanelOKButton)
         [_letterheadPDF writeToURL: [savePanel URL]];
     
-    [_pdfWindow makeFirstResponder:_pdfView];
+//    [_pdfWindow makeFirstResponder:_pdfView];
 }
 
 - (IBAction)saveEmail: (id) sender
@@ -503,7 +524,7 @@
 
 - (IBAction)savePrint: (id) sender{
     NSPrintInfo *info = [NSPrintInfo sharedPrintInfo];
-    [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
+//    [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)item

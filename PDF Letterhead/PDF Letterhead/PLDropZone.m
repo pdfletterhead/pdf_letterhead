@@ -65,7 +65,8 @@
             [(PLAppDelegate *)[NSApp delegate] setIsSetContent:NO];
             
             //set main pdfview hidden
-            [[(PLAppDelegate *)[NSApp delegate] pdfView] setHidden:YES];
+//            [[(PLAppDelegate *)[NSApp delegate] pdfView] setHidden:YES];
+            [[(PLAppDelegate *)[NSApp delegate] pdfOuterView] setHidden:YES];
             //[[[NSApp delegate] pdfView] setNeedsDisplay:YES];
             //[[[NSApp delegate] pdfView] setAlphaValue:0.0];
         }
@@ -73,7 +74,8 @@
             [(PLAppDelegate *)[NSApp delegate] setIsSetContent:YES];
 
             //set main pdfview visible
-            [[(PLAppDelegate *)[NSApp delegate] pdfView] setHidden:NO];
+//            [[(PLAppDelegate *)[NSApp delegate] pdfView] setHidden:NO];
+              [[(PLAppDelegate *)[NSApp delegate] pdfOuterView] setHidden:NO];
             //[[[NSApp delegate] pdfView] setAlphaValue:1.0];
               //setNeedsDisplay:YES];
         }
