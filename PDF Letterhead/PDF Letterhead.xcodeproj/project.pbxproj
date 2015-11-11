@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0514601BF36AA1006FA54B /* PLFAQWindowController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E05145F1BF36AA1006FA54B /* PLFAQWindowController2.swift */; };
 		3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */; };
 		3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9216768EEC00DE6E94 /* OnOffSwitchControl.m */; };
 		3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
@@ -51,7 +52,6 @@
 		3EAF7FED1AB23D9300C4EFB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF7FEC1AB23D9300C4EFB1 /* Images.xcassets */; };
 		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
 		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
-		3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */; };
 		3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
 		793A80F71AE7D2A4009B793D /* WebKitTool in Resources */ = {isa = PBXBuildFile; fileRef = 3E51688718592976007E2F3C /* WebKitTool */; };
 		793A80F81AE7D2A7009B793D /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5168791859125D007E2F3C /* multimarkdown */; };
@@ -59,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E05145E1BF36AA1006FA54B /* PDF Letterhead-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDF Letterhead-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E05145F1BF36AA1006FA54B /* PLFAQWindowController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PLFAQWindowController2.swift; sourceTree = "<group>"; };
 		3E0C8E8F16768EEB00DE6E94 /* OnOffSwitchControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControlCell.h; sourceTree = "<group>"; };
 		3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControlCell.m; sourceTree = "<group>"; };
 		3E0C8E9116768EEC00DE6E94 /* OnOffSwitchControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControl.h; sourceTree = "<group>"; };
@@ -126,8 +128,6 @@
 		3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PDF Letterhead.entitlements"; sourceTree = "<group>"; };
 		3EF7E6BA16089C21008EA1B1 /* white.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = white.pdf; sourceTree = "<group>"; };
 		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
-		3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFAQWindowController.h; sourceTree = "<group>"; };
-		3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFAQWindowController.m; sourceTree = "<group>"; };
 		3EFB08F61615032E006063F9 /* PLPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPreviewWindow.h; sourceTree = "<group>"; };
 		3EFB08F71615032E006063F9 /* PLPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPreviewWindow.m; sourceTree = "<group>"; };
 		793A80FB1AE7DEC3009B793D /* entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 		3E3FC58D167A9F7B0006D91B /* FAQWindow */ = {
 			isa = PBXGroup;
 			children = (
-				3EF7E6CB1608ABE7008EA1B1 /* PLFAQWindowController.h */,
-				3EF7E6CC1608ABE8008EA1B1 /* PLFAQWindowController.m */,
+				3E05145F1BF36AA1006FA54B /* PLFAQWindowController2.swift */,
+				3E05145E1BF36AA1006FA54B /* PDF Letterhead-Bridging-Header.h */,
 			);
 			name = FAQWindow;
 			sourceTree = "<group>";
@@ -358,6 +358,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PL;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Pim Snel";
 				TargetAttributes = {
@@ -452,7 +453,6 @@
 				3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */,
 				3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,
-				3EF7E6CD1608ABE8008EA1B1 /* PLFAQWindowController.m in Sources */,
 				3E51688218591DE5007E2F3C /* CaptureManager.m in Sources */,
 				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
@@ -460,6 +460,7 @@
 				3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */,
 				3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */,
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
+				3E0514601BF36AA1006FA54B /* PLFAQWindowController2.swift in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
 				3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */,
 				3E674463167943BA00D99390 /* AMBackground.m in Sources */,
@@ -549,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "PDF Letterhead/PDF Letterhead.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
@@ -560,9 +562,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
 				INFOPLIST_FILE = "PDF Letterhead/PDF Letterhead-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PDF Letterhead/PDF Letterhead-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -571,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "PDF Letterhead/PDF Letterhead.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
@@ -582,9 +588,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
 				INFOPLIST_FILE = "PDF Letterhead/PDF Letterhead-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PDF Letterhead/PDF Letterhead-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
