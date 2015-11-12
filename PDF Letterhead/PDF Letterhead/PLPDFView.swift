@@ -10,5 +10,5 @@ import Foundation
 import Quartz
 
 
-class DPPDFView: PDFView {
+class PLPDFView: PDFView {
 }

@@ -175,7 +175,7 @@
                 
                 self.sourcefilepath = [files lastObject];
                 NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
-                [self setImage:zNewImage];
+                //[self setImage:zNewImage];
                 
                 return YES;
                 
@@ -192,7 +192,7 @@
             {
                 self.sourcefilepath = [files lastObject];
                 NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
-                [self setImage:zNewImage];
+                //[self setImage:zNewImage];
                 
                 return YES;
             }

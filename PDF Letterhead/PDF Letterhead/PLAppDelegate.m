@@ -17,6 +17,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    _setView = false;
     
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
@@ -257,46 +258,54 @@
     if(![self allowSetPreview]){
         [self enableActions: NO];
         
-        //[_pdfView setDocument: nil];
-        
     }
     else{
-
+        
         [self enableActions: YES];
-        [self updatePreview];
-
+        PDFDocument *letterhead = [self createDocument];
+            
         PDFView *pdfView = [[PDFView alloc] init];
         
-        [pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
-        [pdfView setDocument: _letterheadPDF];
-
-        CGRect winRect = _pdfOuterView.bounds;
-        
-        [_pdfOuterView addSubview:pdfView];
-        pdfView.frame = winRect ;
-        pdfView.autoScales = YES ;
+        if (!_setView) {
+            
+            
+            [pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+            [pdfView setDocument: letterhead];
+            
+            CGRect winRect = _pdfOuterView.bounds;
+            
+            [_pdfOuterView addSubview:pdfView];
+            
+            pdfView.frame = winRect ;
+            pdfView.autoScales = YES;
+            _setView = true;
+            
+        } else {
+            
+            //pdfView = nil;
+            _setView = false;
+            NSLog(@"dit is de wegflikker comment");
+            
+            [self updatePreviewAndActionButtons];
+            
+            
+        }
      
     }
 }
 
--(void)updatePreview {
+-(PDFDocument*)createDocument {
     
 	NSImage			*bgimage;
 	NSImage			*cvrimage;
 	NSImage			*sourceimage;
 	PLPDFPage       *page;
     
+    PDFDocument *letterheadPDF = [[PDFDocument alloc] init];
 
     // Start with an empty PDFDocument.
     
-    if (!_letterheadPDF) {
-        _letterheadPDF = [[PDFDocument alloc] init];
-    }
-    else{
-     return;
-    }
-
-	
+    
     if(_coverEnabled){
         
         if(_isSetCover){
@@ -370,7 +379,7 @@
                 page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: image label:[currentPage label]];
             }
             // Insert the new page in our PDF document.
-            [_letterheadPDF insertPage: page atIndex: y];
+            [letterheadPDF insertPage: page atIndex: y];
         }
     }
     else{
@@ -386,12 +395,10 @@
             page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage label:nil];
         }
         
-        [_letterheadPDF insertPage: page atIndex: 0];
+        [letterheadPDF insertPage: page atIndex: 0];
     }
 	
-    // Assign PDFDocument ot PDFView.
-	//[_pdfView setDocument: _letterheadPDF];
-    //[_previewView setDocument:_letterheadPDF];
+    return letterheadPDF;
 }
 
 -(BOOL)allowSetPreview{
@@ -488,11 +495,11 @@
     NSSavePanel *savePanel = [NSSavePanel savePanel];
     [savePanel setNameFieldStringValue:defaultName];
     
-	if ([savePanel runModal] == NSFileHandlingPanelOKButton)
-        [_letterheadPDF writeToURL: [savePanel URL]];
-    
-//    [_pdfWindow makeFirstResponder:_pdfView];
-}
+//	if ([savePanel runModal] == NSFileHandlingPanelOKButton)
+//        //[_letterheadPDF writeToURL: [savePanel URL]];
+//    
+////    [_pdfWindow makeFirstResponder:_pdfView];
+    }
 
 - (IBAction)saveEmail: (id) sender
 {
@@ -512,7 +519,7 @@
     NSLog(@"email: %@", newFileName);
     NSAppleScript *mailScript;
     NSURL * tmpFileUrl = [NSURL fileURLWithPath:newFileName isDirectory:NO];
-	[_letterheadPDF writeToURL:tmpFileUrl];
+	//[_letterheadPDF writeToURL:tmpFileUrl];
     NSString * subject = @"My PDF";
     NSString * body = @"";
     
