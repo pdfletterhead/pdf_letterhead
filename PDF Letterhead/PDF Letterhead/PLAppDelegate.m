@@ -271,6 +271,7 @@
             
             [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
             [_pdfView setDocument: _letterheadPDF];
+            [_previewView setDocument: _letterheadPDF];
             
             CGRect winRect = _pdfOuterView.bounds;
             
@@ -278,16 +279,14 @@
             
             _pdfView.frame = winRect ;
             _pdfView.autoScales = YES;
+            [_pdfView setAutoresizingMask: NSViewHeightSizable|NSViewWidthSizable|NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin|NSViewMaxYMargin];
             _setView = true;
             
         } else {
             
-            //pdfView = nil;
+            //Weird workaround to make PDFView work
             _setView = false;
-            NSLog(@"dit is de wegflikker comment");
-            
             [self updatePreviewAndActionButtons];
-            
             
         }
      
