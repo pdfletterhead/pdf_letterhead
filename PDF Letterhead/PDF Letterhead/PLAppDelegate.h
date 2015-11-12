@@ -23,8 +23,12 @@
 	NSString *_headerRightJs;
 	NSString *_footerLeftJs;
 	NSString *_footerRightJs;
+
     BOOL _paginate;
     BOOL _setView;
+    
+    PDFView                 *_pdfView;
+    PDFDocument				*_letterheadPDF;
 }
 
 @property (assign) IBOutlet NSWindow *pdfWindow;

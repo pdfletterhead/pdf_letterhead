@@ -262,22 +262,22 @@
     else{
         
         [self enableActions: YES];
-        PDFDocument *letterhead = [self createDocument];
+        [self createDocument];
             
-        PDFView *pdfView = [[PDFView alloc] init];
+        _pdfView = [[PDFView alloc] init];
         
         if (!_setView) {
             
             
-            [pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
-            [pdfView setDocument: letterhead];
+            [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+            [_pdfView setDocument: _letterheadPDF];
             
             CGRect winRect = _pdfOuterView.bounds;
             
-            [_pdfOuterView addSubview:pdfView];
+            [_pdfOuterView addSubview:_pdfView];
             
-            pdfView.frame = winRect ;
-            pdfView.autoScales = YES;
+            _pdfView.frame = winRect ;
+            _pdfView.autoScales = YES;
             _setView = true;
             
         } else {
@@ -294,17 +294,15 @@
     }
 }
 
--(PDFDocument*)createDocument {
+-(void)createDocument {
     
 	NSImage			*bgimage;
 	NSImage			*cvrimage;
 	NSImage			*sourceimage;
 	PLPDFPage       *page;
     
-    PDFDocument *letterheadPDF = [[PDFDocument alloc] init];
-
     // Start with an empty PDFDocument.
-    
+    _letterheadPDF = [[PDFDocument alloc] init];
     
     if(_coverEnabled){
         
@@ -379,7 +377,7 @@
                 page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: image label:[currentPage label]];
             }
             // Insert the new page in our PDF document.
-            [letterheadPDF insertPage: page atIndex: y];
+            [_letterheadPDF insertPage: page atIndex: y];
         }
     }
     else{
@@ -395,10 +393,9 @@
             page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage label:nil];
         }
         
-        [letterheadPDF insertPage: page atIndex: 0];
+        [_letterheadPDF insertPage: page atIndex: 0];
     }
 	
-    return letterheadPDF;
 }
 
 -(BOOL)allowSetPreview{
@@ -495,10 +492,9 @@
     NSSavePanel *savePanel = [NSSavePanel savePanel];
     [savePanel setNameFieldStringValue:defaultName];
     
-//	if ([savePanel runModal] == NSFileHandlingPanelOKButton)
-//        //[_letterheadPDF writeToURL: [savePanel URL]];
-//    
-////    [_pdfWindow makeFirstResponder:_pdfView];
+	if ([savePanel runModal] == NSFileHandlingPanelOKButton)
+        [_letterheadPDF writeToURL: [savePanel URL]];
+    
     }
 
 - (IBAction)saveEmail: (id) sender
@@ -519,7 +515,7 @@
     NSLog(@"email: %@", newFileName);
     NSAppleScript *mailScript;
     NSURL * tmpFileUrl = [NSURL fileURLWithPath:newFileName isDirectory:NO];
-	//[_letterheadPDF writeToURL:tmpFileUrl];
+	[_letterheadPDF writeToURL:tmpFileUrl];
     NSString * subject = @"My PDF";
     NSString * body = @"";
     
@@ -531,7 +527,7 @@
 
 - (IBAction)savePrint: (id) sender{
     NSPrintInfo *info = [NSPrintInfo sharedPrintInfo];
-//    [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
+    [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)item
