@@ -15,45 +15,49 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3E6835C01607C90400DDFB82"
-               BuildableName = "PDF Letterhead.app"
-               BlueprintName = "PDF Letterhead"
+               BuildableName = "PDF Letterhead Lite.app"
+               BlueprintName = "PDF Letterhead Lite"
                ReferencedContainer = "container:PDF Letterhead.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E6835C01607C90400DDFB82"
-            BuildableName = "PDF Letterhead.app"
-            BlueprintName = "PDF Letterhead"
+            BuildableName = "PDF Letterhead Lite.app"
+            BlueprintName = "PDF Letterhead Lite"
             ReferencedContainer = "container:PDF Letterhead.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E6835C01607C90400DDFB82"
-            BuildableName = "PDF Letterhead.app"
-            BlueprintName = "PDF Letterhead"
+            BuildableName = "PDF Letterhead Lite.app"
+            BlueprintName = "PDF Letterhead Lite"
             ReferencedContainer = "container:PDF Letterhead.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,17 +65,18 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3E6835C01607C90400DDFB82"
-            BuildableName = "PDF Letterhead.app"
-            BlueprintName = "PDF Letterhead"
+            BuildableName = "PDF Letterhead Lite.app"
+            BlueprintName = "PDF Letterhead Lite"
             ReferencedContainer = "container:PDF Letterhead.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

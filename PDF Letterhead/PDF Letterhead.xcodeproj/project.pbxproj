@@ -56,6 +56,55 @@
 		793A80F71AE7D2A4009B793D /* WebKitTool in Resources */ = {isa = PBXBuildFile; fileRef = 3E51688718592976007E2F3C /* WebKitTool */; };
 		793A80F81AE7D2A7009B793D /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5168791859125D007E2F3C /* multimarkdown */; };
 		793A80FC1AE7DEC3009B793D /* entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 793A80FB1AE7DEC3009B793D /* entitlements.plist */; };
+		79726ECF1C16ED6E003B85D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D11607C90400DDFB82 /* main.m */; };
+		79726ED01C16ED6E003B85D2 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D81607C90400DDFB82 /* PLAppDelegate.m */; };
+		79726ED11C16ED6E003B85D2 /* PDF_Letterhead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */; };
+		79726ED21C16ED6E003B85D2 /* PLDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F31607CC7900DDFB82 /* PLDropZone.m */; };
+		79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F61607D22100DDFB82 /* PLPDFPage.m */; };
+		79726ED41C16ED6E003B85D2 /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E51688118591DE5007E2F3C /* CaptureManager.m */; };
+		79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
+		79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
+		79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */; };
+		79726ED81C16ED6E003B85D2 /* OnOffSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9216768EEC00DE6E94 /* OnOffSwitchControl.m */; };
+		79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
+		79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
+		79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E798B751677F336006F47F5 /* PLPDFBgView.m */; };
+		79726EDC1C16ED6E003B85D2 /* PLPDFBgAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */; };
+		79726EDD1C16ED6E003B85D2 /* AMBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674460167943BA00D99390 /* AMBackground.m */; };
+		79726EDE1C16ED6E003B85D2 /* AMDarkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674462167943BA00D99390 /* AMDarkButtonCell.m */; };
+		79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */; };
+		79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9850B61BF4E29900D7ABAB /* PLFAQWindowController.m */; };
+		79726EE21C16ED6E003B85D2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
+		79726EE31C16ED6E003B85D2 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6835EC1607CA8A00DDFB82 /* Quartz.framework */; };
+		79726EE41C16ED6E003B85D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6835C51607C90400DDFB82 /* Cocoa.framework */; };
+		79726EE61C16ED6E003B85D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835CE1607C90400DDFB82 /* InfoPlist.strings */; };
+		79726EE71C16ED6E003B85D2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835D41607C90400DDFB82 /* Credits.rtf */; };
+		79726EE81C16ED6E003B85D2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835DA1607C90400DDFB82 /* MainMenu.xib */; };
+		79726EE91C16ED6E003B85D2 /* dragContentDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */; };
+		79726EEA1C16ED6E003B85D2 /* dragLetterheadDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */; };
+		79726EEB1C16ED6E003B85D2 /* pdfletterheadIOS.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */; };
+		79726EEC1C16ED6E003B85D2 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
+		79726EED1C16ED6E003B85D2 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
+		79726EEE1C16ED6E003B85D2 /* pdfletterheadMac.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */; };
+		79726EEF1C16ED6E003B85D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF7FEC1AB23D9300C4EFB1 /* Images.xcassets */; };
+		79726EF01C16ED6E003B85D2 /* bottomtoolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E27703B1677DCA5002DD3DE /* bottomtoolbar.png */; };
+		79726EF11C16ED6E003B85D2 /* bgdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770431677E463002DD3DE /* bgdrop.png */; };
+		79726EF21C16ED6E003B85D2 /* coverdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770441677E463002DD3DE /* coverdrop.png */; };
+		79726EF31C16ED6E003B85D2 /* dropzonebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770471677E5D5002DD3DE /* dropzonebg.png */; };
+		79726EF41C16ED6E003B85D2 /* contentbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E798B701677F03B006F47F5 /* contentbg.png */; };
+		79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E798B721677F053006F47F5 /* contentdrop.png */; };
+		79726EF61C16ED6E003B85D2 /* pdfviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9F2DA3167929E400486537 /* pdfviewbg.png */; };
+		79726EF71C16ED6E003B85D2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744671679448400D99390 /* mail.png */; };
+		79726EF81C16ED6E003B85D2 /* WebKitTool in Resources */ = {isa = PBXBuildFile; fileRef = 3E51688718592976007E2F3C /* WebKitTool */; };
+		79726EF91C16ED6E003B85D2 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
+		79726EFA1C16ED6E003B85D2 /* entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 793A80FB1AE7DEC3009B793D /* entitlements.plist */; };
+		79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E67446D16794BE400D99390 /* saveicon.png */; };
+		79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0516A5F8B3006D2CB0 /* PLQuickStart1.xib */; };
+		79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0816A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png */; };
+		79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */; };
+		79726EFF1C16ED6E003B85D2 /* marked-custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E51687E18591347007E2F3C /* marked-custom.css */; };
+		79726F001C16ED6E003B85D2 /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5168791859125D007E2F3C /* multimarkdown */; };
+		79726F011C16ED6E003B85D2 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,12 +141,12 @@
 		3E6744671679448400D99390 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		3E6744681679448400D99390 /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
 		3E67446D16794BE400D99390 /* saveicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveicon.png; sourceTree = "<group>"; };
-		3E6835C11607C90400DDFB82 /* PDF Letterhead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6835C11607C90400DDFB82 /* PDF Letterhead Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6835C51607C90400DDFB82 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3E6835C81607C90400DDFB82 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3E6835C91607C90400DDFB82 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3E6835CA1607C90400DDFB82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3E6835CD1607C90400DDFB82 /* PDF Letterhead-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDF Letterhead-Info.plist"; sourceTree = "<group>"; };
+		3E6835CD1607C90400DDFB82 /* PDF Letterhead Lite.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PDF Letterhead Lite.plist"; sourceTree = "<group>"; };
 		3E6835CF1607C90400DDFB82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E6835D11607C90400DDFB82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3E6835D31607C90400DDFB82 /* PDF Letterhead-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PDF Letterhead-Prefix.pch"; sourceTree = "<group>"; };
@@ -131,6 +180,8 @@
 		3EFB08F61615032E006063F9 /* PLPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPreviewWindow.h; sourceTree = "<group>"; };
 		3EFB08F71615032E006063F9 /* PLPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPreviewWindow.m; sourceTree = "<group>"; };
 		793A80FB1AE7DEC3009B793D /* entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
+		79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +192,16 @@
 				3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */,
 				3E6835ED1607CA8A00DDFB82 /* Quartz.framework in Frameworks */,
 				3E6835C61607C90400DDFB82 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79726EE11C16ED6E003B85D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79726EE21C16ED6E003B85D2 /* WebKit.framework in Frameworks */,
+				79726EE31C16ED6E003B85D2 /* Quartz.framework in Frameworks */,
+				79726EE41C16ED6E003B85D2 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +325,8 @@
 		3E6835C21607C90400DDFB82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E6835C11607C90400DDFB82 /* PDF Letterhead.app */,
+				3E6835C11607C90400DDFB82 /* PDF Letterhead Lite.app */,
+				79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -320,7 +382,8 @@
 				3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */,
 				3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */,
 				3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */,
-				3E6835CD1607C90400DDFB82 /* PDF Letterhead-Info.plist */,
+				3E6835CD1607C90400DDFB82 /* PDF Letterhead Lite.plist */,
+				79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */,
 				3E6835CE1607C90400DDFB82 /* InfoPlist.strings */,
 				3E6835D11607C90400DDFB82 /* main.m */,
 				3E6835D31607C90400DDFB82 /* PDF Letterhead-Prefix.pch */,
@@ -333,9 +396,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E6835C01607C90400DDFB82 /* PDF Letterhead */ = {
+		3E6835C01607C90400DDFB82 /* PDF Letterhead Lite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E6835E21607C90400DDFB82 /* Build configuration list for PBXNativeTarget "PDF Letterhead" */;
+			buildConfigurationList = 3E6835E21607C90400DDFB82 /* Build configuration list for PBXNativeTarget "PDF Letterhead Lite" */;
 			buildPhases = (
 				3EF7E6C41608A136008EA1B1 /* ShellScript */,
 				3E6835BD1607C90400DDFB82 /* Sources */,
@@ -346,9 +409,27 @@
 			);
 			dependencies = (
 			);
-			name = "PDF Letterhead";
+			name = "PDF Letterhead Lite";
 			productName = "PDF Letterhead";
-			productReference = 3E6835C11607C90400DDFB82 /* PDF Letterhead.app */;
+			productReference = 3E6835C11607C90400DDFB82 /* PDF Letterhead Lite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79726ECC1C16ED6E003B85D2 /* PDF Letterhead Pro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79726F021C16ED6E003B85D2 /* Build configuration list for PBXNativeTarget "PDF Letterhead Pro" */;
+			buildPhases = (
+				79726ECD1C16ED6E003B85D2 /* ShellScript */,
+				79726ECE1C16ED6E003B85D2 /* Sources */,
+				79726EE11C16ED6E003B85D2 /* Frameworks */,
+				79726EE51C16ED6E003B85D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PDF Letterhead Pro";
+			productName = "PDF Letterhead";
+			productReference = 79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -384,7 +465,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E6835C01607C90400DDFB82 /* PDF Letterhead */,
+				3E6835C01607C90400DDFB82 /* PDF Letterhead Lite */,
+				79726ECC1C16ED6E003B85D2 /* PDF Letterhead Pro */,
 			);
 		};
 /* End PBXProject section */
@@ -425,10 +507,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79726EE51C16ED6E003B85D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79726EE61C16ED6E003B85D2 /* InfoPlist.strings in Resources */,
+				79726EE71C16ED6E003B85D2 /* Credits.rtf in Resources */,
+				79726EE81C16ED6E003B85D2 /* MainMenu.xib in Resources */,
+				79726EE91C16ED6E003B85D2 /* dragContentDocument.png in Resources */,
+				79726EEA1C16ED6E003B85D2 /* dragLetterheadDocument.png in Resources */,
+				79726EEB1C16ED6E003B85D2 /* pdfletterheadIOS.icns in Resources */,
+				79726EEC1C16ED6E003B85D2 /* white.pdf in Resources */,
+				79726EED1C16ED6E003B85D2 /* FAQ.rtf in Resources */,
+				79726EEE1C16ED6E003B85D2 /* pdfletterheadMac.icns in Resources */,
+				79726EEF1C16ED6E003B85D2 /* Images.xcassets in Resources */,
+				79726EF01C16ED6E003B85D2 /* bottomtoolbar.png in Resources */,
+				79726EF11C16ED6E003B85D2 /* bgdrop.png in Resources */,
+				79726EF21C16ED6E003B85D2 /* coverdrop.png in Resources */,
+				79726EF31C16ED6E003B85D2 /* dropzonebg.png in Resources */,
+				79726EF41C16ED6E003B85D2 /* contentbg.png in Resources */,
+				79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */,
+				79726EF61C16ED6E003B85D2 /* pdfviewbg.png in Resources */,
+				79726EF71C16ED6E003B85D2 /* mail.png in Resources */,
+				79726EF81C16ED6E003B85D2 /* WebKitTool in Resources */,
+				79726EF91C16ED6E003B85D2 /* printer.png in Resources */,
+				79726EFA1C16ED6E003B85D2 /* entitlements.plist in Resources */,
+				79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */,
+				79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */,
+				79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */,
+				79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */,
+				79726EFF1C16ED6E003B85D2 /* marked-custom.css in Resources */,
+				79726F001C16ED6E003B85D2 /* multimarkdown in Resources */,
+				79726F011C16ED6E003B85D2 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		3EF7E6C41608A136008EA1B1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\n#bN=$((0x$bN))\nbN=$(($bN + 1))\nbN=$(printf \"%u\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
+		};
+		79726ECD1C16ED6E003B85D2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,6 +596,31 @@
 				3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */,
 				3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */,
 				3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79726ECE1C16ED6E003B85D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79726ECF1C16ED6E003B85D2 /* main.m in Sources */,
+				79726ED01C16ED6E003B85D2 /* PLAppDelegate.m in Sources */,
+				79726ED11C16ED6E003B85D2 /* PDF_Letterhead.xcdatamodeld in Sources */,
+				79726ED21C16ED6E003B85D2 /* PLDropZone.m in Sources */,
+				79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */,
+				79726ED41C16ED6E003B85D2 /* CaptureManager.m in Sources */,
+				79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */,
+				79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */,
+				79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */,
+				79726ED81C16ED6E003B85D2 /* OnOffSwitchControl.m in Sources */,
+				79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */,
+				79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */,
+				79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */,
+				79726EDC1C16ED6E003B85D2 /* PLPDFBgAreaView.m in Sources */,
+				79726EDD1C16ED6E003B85D2 /* AMBackground.m in Sources */,
+				79726EDE1C16ED6E003B85D2 /* AMDarkButtonCell.m in Sources */,
+				79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */,
+				79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +716,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
-				INFOPLIST_FILE = "PDF Letterhead/PDF Letterhead-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead/PDF Letterhead Lite.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -587,7 +742,58 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
-				INFOPLIST_FILE = "PDF Letterhead/PDF Letterhead-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead/PDF Letterhead Lite.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PDF Letterhead/PDF Letterhead-Bridging-Header.h";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		79726F031C16ED6E003B85D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "PDF Letterhead/PDF Letterhead.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead Pro.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PDF Letterhead/PDF Letterhead-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		79726F041C16ED6E003B85D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "PDF Letterhead/PDF Letterhead.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead Pro.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -609,11 +815,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E6835E21607C90400DDFB82 /* Build configuration list for PBXNativeTarget "PDF Letterhead" */ = {
+		3E6835E21607C90400DDFB82 /* Build configuration list for PBXNativeTarget "PDF Letterhead Lite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E6835E31607C90400DDFB82 /* Debug */,
 				3E6835E41607C90400DDFB82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79726F021C16ED6E003B85D2 /* Build configuration list for PBXNativeTarget "PDF Letterhead Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79726F031C16ED6E003B85D2 /* Debug */,
+				79726F041C16ED6E003B85D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
