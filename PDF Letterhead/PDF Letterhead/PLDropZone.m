@@ -174,7 +174,7 @@
             if ([ext isEqual:@"pdf"]){
                 
                 self.sourcefilepath = [files lastObject];
-                NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
+                //NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
                 //[self setImage:zNewImage];
                 
                 return YES;
@@ -191,7 +191,7 @@
             if ([validImageExtensions containsObject:ext])
             {
                 self.sourcefilepath = [files lastObject];
-                NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
+                //NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
                 //[self setImage:zNewImage];
                 
                 return YES;

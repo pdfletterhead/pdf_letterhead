@@ -21,8 +21,6 @@
 		3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */; };
 		3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
 		3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
-		3E51687F18591347007E2F3C /* marked-custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E51687E18591347007E2F3C /* marked-custom.css */; };
-		3E51688218591DE5007E2F3C /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E51688118591DE5007E2F3C /* CaptureManager.m */; };
 		3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
 		3E674463167943BA00D99390 /* AMBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674460167943BA00D99390 /* AMBackground.m */; };
 		3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674462167943BA00D99390 /* AMDarkButtonCell.m */; };
@@ -53,15 +51,11 @@
 		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
 		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
 		3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
-		793A80F71AE7D2A4009B793D /* WebKitTool in Resources */ = {isa = PBXBuildFile; fileRef = 3E51688718592976007E2F3C /* WebKitTool */; };
-		793A80F81AE7D2A7009B793D /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5168791859125D007E2F3C /* multimarkdown */; };
-		793A80FC1AE7DEC3009B793D /* entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 793A80FB1AE7DEC3009B793D /* entitlements.plist */; };
 		79726ECF1C16ED6E003B85D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D11607C90400DDFB82 /* main.m */; };
 		79726ED01C16ED6E003B85D2 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D81607C90400DDFB82 /* PLAppDelegate.m */; };
 		79726ED11C16ED6E003B85D2 /* PDF_Letterhead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */; };
 		79726ED21C16ED6E003B85D2 /* PLDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F31607CC7900DDFB82 /* PLDropZone.m */; };
 		79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F61607D22100DDFB82 /* PLPDFPage.m */; };
-		79726ED41C16ED6E003B85D2 /* CaptureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E51688118591DE5007E2F3C /* CaptureManager.m */; };
 		79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
 		79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
 		79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */; };
@@ -95,15 +89,11 @@
 		79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E798B721677F053006F47F5 /* contentdrop.png */; };
 		79726EF61C16ED6E003B85D2 /* pdfviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9F2DA3167929E400486537 /* pdfviewbg.png */; };
 		79726EF71C16ED6E003B85D2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744671679448400D99390 /* mail.png */; };
-		79726EF81C16ED6E003B85D2 /* WebKitTool in Resources */ = {isa = PBXBuildFile; fileRef = 3E51688718592976007E2F3C /* WebKitTool */; };
 		79726EF91C16ED6E003B85D2 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
-		79726EFA1C16ED6E003B85D2 /* entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 793A80FB1AE7DEC3009B793D /* entitlements.plist */; };
 		79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E67446D16794BE400D99390 /* saveicon.png */; };
 		79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0516A5F8B3006D2CB0 /* PLQuickStart1.xib */; };
 		79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0816A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png */; };
 		79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */; };
-		79726EFF1C16ED6E003B85D2 /* marked-custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E51687E18591347007E2F3C /* marked-custom.css */; };
-		79726F001C16ED6E003B85D2 /* multimarkdown in Resources */ = {isa = PBXBuildFile; fileRef = 3E5168791859125D007E2F3C /* multimarkdown */; };
 		79726F011C16ED6E003B85D2 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
 /* End PBXBuildFile section */
 
@@ -128,12 +118,7 @@
 		3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Schermafbeelding 2013-01-15 om 22.15.47.png"; sourceTree = "<group>"; };
 		3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMainWindowView.h; sourceTree = "<group>"; };
 		3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainWindowView.m; sourceTree = "<group>"; };
-		3E5168791859125D007E2F3C /* multimarkdown */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = multimarkdown; sourceTree = "<group>"; };
-		3E51687E18591347007E2F3C /* marked-custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "marked-custom.css"; sourceTree = "<group>"; };
-		3E51688018591DE5007E2F3C /* CaptureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureManager.h; sourceTree = "<group>"; };
-		3E51688118591DE5007E2F3C /* CaptureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureManager.m; sourceTree = "<group>"; };
 		3E51688318591F4B007E2F3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		3E51688718592976007E2F3C /* WebKitTool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = WebKitTool; sourceTree = "<group>"; };
 		3E67445F167943BA00D99390 /* AMBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBackground.h; sourceTree = "<group>"; };
 		3E674460167943BA00D99390 /* AMBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBackground.m; sourceTree = "<group>"; };
 		3E674461167943BA00D99390 /* AMDarkButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDarkButtonCell.h; sourceTree = "<group>"; };
@@ -179,7 +164,6 @@
 		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		3EFB08F61615032E006063F9 /* PLPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPreviewWindow.h; sourceTree = "<group>"; };
 		3EFB08F71615032E006063F9 /* PLPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPreviewWindow.m; sourceTree = "<group>"; };
-		793A80FB1AE7DEC3009B793D /* entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
 		79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -286,19 +270,6 @@
 			name = images;
 			sourceTree = "<group>";
 		};
-		3E51687B1859126F007E2F3C /* markdown */ = {
-			isa = PBXGroup;
-			children = (
-				3E51688018591DE5007E2F3C /* CaptureManager.h */,
-				3E51688118591DE5007E2F3C /* CaptureManager.m */,
-				3E51687E18591347007E2F3C /* marked-custom.css */,
-				3E51688718592976007E2F3C /* WebKitTool */,
-				3E5168791859125D007E2F3C /* multimarkdown */,
-				793A80FB1AE7DEC3009B793D /* entitlements.plist */,
-			);
-			name = markdown;
-			sourceTree = "<group>";
-		};
 		3E674466167943C200D99390 /* BottomToolbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */,
-				3E51687B1859126F007E2F3C /* markdown */,
 				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
 				3E0C8E9516768EF200DE6E94 /* onoffswitch */,
 				3E674466167943C200D99390 /* BottomToolbar */,
@@ -440,7 +410,7 @@
 			attributes = {
 				CLASSPREFIX = PL;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Pim Snel";
 				TargetAttributes = {
 					3E6835C01607C90400DDFB82 = {
@@ -494,15 +464,11 @@
 				3E798B731677F053006F47F5 /* contentdrop.png in Resources */,
 				3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */,
 				3E6744691679448400D99390 /* mail.png in Resources */,
-				793A80F71AE7D2A4009B793D /* WebKitTool in Resources */,
 				3E67446A1679448400D99390 /* printer.png in Resources */,
-				793A80FC1AE7DEC3009B793D /* entitlements.plist in Resources */,
 				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
 				3E2AFF0716A5F8B3006D2CB0 /* PLQuickStart1.xib in Resources */,
 				3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */,
 				3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */,
-				3E51687F18591347007E2F3C /* marked-custom.css in Resources */,
-				793A80F81AE7D2A7009B793D /* multimarkdown in Resources */,
 				3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,15 +495,11 @@
 				79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */,
 				79726EF61C16ED6E003B85D2 /* pdfviewbg.png in Resources */,
 				79726EF71C16ED6E003B85D2 /* mail.png in Resources */,
-				79726EF81C16ED6E003B85D2 /* WebKitTool in Resources */,
 				79726EF91C16ED6E003B85D2 /* printer.png in Resources */,
-				79726EFA1C16ED6E003B85D2 /* entitlements.plist in Resources */,
 				79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */,
 				79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */,
 				79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */,
 				79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */,
-				79726EFF1C16ED6E003B85D2 /* marked-custom.css in Resources */,
-				79726F001C16ED6E003B85D2 /* multimarkdown in Resources */,
 				79726F011C16ED6E003B85D2 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,7 +545,6 @@
 				3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */,
 				3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,
-				3E51688218591DE5007E2F3C /* CaptureManager.m in Sources */,
 				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
 				3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */,
@@ -608,7 +569,6 @@
 				79726ED11C16ED6E003B85D2 /* PDF_Letterhead.xcdatamodeld in Sources */,
 				79726ED21C16ED6E003B85D2 /* PLDropZone.m in Sources */,
 				79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */,
-				79726ED41C16ED6E003B85D2 /* CaptureManager.m in Sources */,
 				79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */,
 				79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */,
 				79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */,
@@ -662,6 +622,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -719,6 +680,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead/PDF Letterhead Lite.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lingewoud.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PDF Letterhead/PDF Letterhead-Bridging-Header.h";
@@ -742,9 +704,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "LITE=1";
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead/PDF Letterhead Lite.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lingewoud.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PDF Letterhead/PDF Letterhead-Bridging-Header.h";
@@ -770,6 +734,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead Pro.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lingewoud.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PDF Letterhead/PDF Letterhead-Bridging-Header.h";
@@ -793,9 +758,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "PRO=1";
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead Pro.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lingewoud.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PDF Letterhead/PDF Letterhead-Bridging-Header.h";

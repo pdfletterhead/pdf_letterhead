@@ -11,11 +11,8 @@
 #import "OnOffSwitchControl.h"
 #import "OnOffSwitchControlCell.h"
 #import "PLQuickStart1.h"
-#import "CaptureManager.h"
 
-
-
-@interface PLAppDelegate : NSObject <NSApplicationDelegate, CaptureManagerDelegate>
+@interface PLAppDelegate : NSObject <NSApplicationDelegate>
 {
     float _browserWidth;
 	NSPrintingOrientation _orientation;
@@ -32,7 +29,6 @@
 }
 
 @property (assign) IBOutlet NSWindow *pdfWindow;
-//@property (assign) IBOutlet PDFView *pdfView;
 @property (assign) IBOutlet PDFThumbnailView *pdfThumbView;
 @property (assign) IBOutlet NSMenu *myMainMenu;
 
@@ -51,6 +47,8 @@
 @property (assign) IBOutlet NSToolbarItem *previewButton1;
 @property (assign) IBOutlet NSMenuItem *previewButton2;
 @property (assign) IBOutlet NSButton *previewButton3;
+
+@property (assign) IBOutlet NSButton *manageProfilesButton;
 
 @property (assign) IBOutlet PLDropZone *sourcedoc;
 @property (assign) IBOutlet PLDropZone *backgrounddoc;

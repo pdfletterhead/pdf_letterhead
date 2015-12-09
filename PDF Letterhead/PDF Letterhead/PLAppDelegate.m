@@ -34,7 +34,7 @@
     
     //style main pdfview
  
-    [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+    //[_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 255.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
     
     [self setIsSetBackground:NO];
     [self setIsSetCover:NO];
@@ -56,23 +56,25 @@
     [self coverControlAction:self];
     
     // If BG exists in standardUserDefaults set it
-    if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"] ]) {
-        NSString *bgfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"];
-        NSImage * tmpImage = [[NSImage alloc] initWithContentsOfFile:bgfilename];
-        [_backgrounddoc setFilepath:bgfilename];
-        [_backgrounddoc setImage:tmpImage];
-        [self setIsSetBackground:YES];
-    }
-    
-    // If Cover exists in standardUserDefaults set it
-    if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"] ]) {
-        
-        NSString *cvrfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"];
-        NSImage * tmpcvrImage = [[NSImage alloc] initWithContentsOfFile:cvrfilename];
-        [_coverbackgrounddoc setFilepath:cvrfilename];
-        [_coverbackgrounddoc setImage:tmpcvrImage];
-        [self setIsSetCover:YES];
-    }
+    //FIXME pro version
+//    if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"] ]) {
+//        NSString *bgfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"];
+//        NSImage * tmpImage = [[NSImage alloc] initWithContentsOfFile:bgfilename];
+//        [_backgrounddoc setFilepath:bgfilename];
+//        [_backgrounddoc setImage:tmpImage];
+//        [self setIsSetBackground:YES];
+//    }
+//    
+//    // If Cover exists in standardUserDefaults set it
+//    //FIXME
+//    if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"] ]) {
+//        
+//        NSString *cvrfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"];
+//        NSImage * tmpcvrImage = [[NSImage alloc] initWithContentsOfFile:cvrfilename];
+//        [_coverbackgrounddoc setFilepath:cvrfilename];
+//        [_coverbackgrounddoc setImage:tmpcvrImage];
+//        [self setIsSetCover:YES];
+//    }
     
     [self updatePreviewAndActionButtons];
 }
@@ -81,11 +83,6 @@
 {
     if ([[[filename pathExtension] lowercaseString] isEqual:@"pdf"]){
         [_sourcedoc setPdfFilepath:filename];
-        return YES;
-    }
-    else if ([[[filename pathExtension] lowercaseString] isEqual:@"md"])
-    {
-        [self doConvertMarkdown:filename];
         return YES;
     }
     else {
@@ -102,10 +99,6 @@
 }
 
 - (IBAction)doOpenFileForContentDoc:(id)sender {
-    
-    
-    
-    
     [self doOpenFileForImageView:_sourcedoc];
 }
 
@@ -119,69 +112,6 @@
 
 - (IBAction)doDelForContentDoc:(id)sender {
     [_sourcedoc setImage:nil];
-}
-
--(void)doConvertMarkdown:(NSString*)file {
-
-    
-    //[_sourcedoc setPdfFilepath:filename];
-    //Convert to pdf
-    
-    NSTask * mmdProc = [[NSTask alloc] init];
-    
-    NSPipe * out = [NSPipe pipe];
-    [mmdProc setStandardOutput:out];
-    
-    //[mmdProc setCurrentDirectoryPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
-    [mmdProc setLaunchPath: [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
-    [mmdProc setArguments: [NSArray arrayWithObjects: [NSString stringWithFormat:@"%@",file],nil]];
-    
-    [mmdProc launch];
-    [mmdProc waitUntilExit];
-    
-    NSString * cssFileName = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/marked-custom.css"];
-    
-    NSFileHandle * read = [out fileHandleForReading];
-    NSData * dataRead = [read readDataToEndOfFile];
-    NSString * stringRead = [[NSString alloc] initWithData:dataRead encoding:NSUTF8StringEncoding];
-    
-    NSString* cssTag = [NSString stringWithFormat:@"<link rel=\"stylesheet\" type=\"text/css\" href=\"file://%@\">\n</head>",cssFileName];
-    NSString* newString = [stringRead stringByReplacingOccurrencesOfString:@"</head>" withString:cssTag];
-    NSLog(@"output: %@", newString);
-    
-
-    NSURL *htmlFileURL = [_tmpDirectoryURL URLByAppendingPathComponent:@"temp.html"];
-    NSString  *pdfFilePath = [[_tmpDirectoryURL path] stringByAppendingPathComponent: @"temp.pdf" ];
-    
-    BOOL status = [newString writeToURL:htmlFileURL atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    if(status)
-    {
-        
-        NSTask * pdfProc = [[NSTask alloc] init];
-        
-        NSPipe * out = [NSPipe pipe];
-        [pdfProc setStandardOutput:out];
-        
-        //[mmdProc setCurrentDirectoryPath:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/multimarkdown"]];
-        [pdfProc setLaunchPath: [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/WebKitTool"]];
-        [pdfProc setArguments: [NSArray arrayWithObjects: @"-p",
-                                @"--margin-top", @"120",
-                                @"--margin-bottom", @"120",
-                                @"--margin-left", @"50",
-                                @"--margin-right", @"50",
-                                htmlFileURL,
-                                pdfFilePath,nil]];
-        
-        [pdfProc launch];
-        [pdfProc waitUntilExit];
-        NSLog(@"I was here");
-        [_sourcedoc setPdfFilepath:pdfFilePath];
-    }
-    else{
-        NSLog(@"Could not convert Markdown file");
-    }
-
-    
 }
 
 - (void)doOpenFileForImageView:(PLDropZone*)theView {
@@ -203,10 +133,6 @@
             if ([ext isEqual:@"pdf"]){
                 
                 [theView setPdfFilepath:tvarFilename];
-            }
-            else if ([ext isEqual:@"md"]){
-                
-                [self doConvertMarkdown:tvarFilename];
             }
             else {
                 NSLog(@"invalid filetype, no PDF");
@@ -231,12 +157,6 @@
     }
 }
 
-- (void)captureManager:(CaptureManager *)manager didFailWithError:(NSError *)error
-{
-	//_exitCode = EXIT_FAILURE;
-    NSLog(@"error:%@",[error localizedDescription]);
-}
-
 - (IBAction)openPreview:(id)sender {
     
     [_previewWindow makeKeyAndOrderFront:sender];
@@ -247,14 +167,21 @@
     [self doOpenQuickStart];
 }
 
+- (IBAction)openProfiles:(id)sender {
+    [self doOpenProfiles];
+}
+
 -(void)doOpenQuickStart{
     [_quickStartWindow showWindow:self];
+}
+
+-(void)doOpenProfiles{
+    //[_profilesWindow showWindow:self];
 }
 
 -(void)updatePreviewAndActionButtons {
     
     //We do not have enough to set Preview
-
     if(![self allowSetPreview]){
         [self enableActions: NO];
         
@@ -269,7 +196,7 @@
         if (!_setView) {
             
             
-            [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+            //[_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
             [_pdfView setDocument: _letterheadPDF];
             [_previewView setDocument: _letterheadPDF];
             
@@ -283,7 +210,6 @@
             _setView = true;
             
         } else {
-            
             //Weird workaround to make PDFView work
             _setView = false;
             [self updatePreviewAndActionButtons];
@@ -555,14 +481,17 @@
         [_saveButton2 setEnabled:YES];
         [_printButton1 setEnabled:YES];
         [_printButton2 setEnabled:YES];
+        
+        #ifdef PRO
         [_previewButton1 setEnabled:YES];
         [_previewButton2 setEnabled:YES];
+        [_previewButton3 setEnabled:YES];
+        #endif
         
         [_mailButton3 setEnabled:YES];
         [_saveButton3 setEnabled:YES];
         [_printButton3 setEnabled:YES];
-        [_previewButton3 setEnabled:YES];
-    }
+            }
     else{
         //NSLog(@"disable Buttons");
         [_mailButton1 setEnabled:NO];
@@ -607,7 +536,7 @@
     }
     else{
         
-        NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
+        //NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
         NSString *filePath;
         
         NSArray *reps = [myImage representations];
