@@ -7,6 +7,12 @@
 //
 #import "PLAppDelegate.h"
 #import "PLPDFPage.h"
+#import "PLProfileImage.h"
+#include "PLProfileWindowController.h"
+
+@interface  PLAppDelegate()
+@property (nonatomic,strong) IBOutlet PLProfileWindowController *ProfileWindowController;
+@end
 
 @implementation PLAppDelegate
 
@@ -14,11 +20,14 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize quickStartWindow = _quickStartWindow;
+@synthesize profileWindowController = _profileWindowController;
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     _setView = false;
     
+    _profileWindowController = [[PLProfileWindowController alloc] initWithWindowNibName:@"PLProfileWindowController"];
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
     {
@@ -167,16 +176,16 @@
     [self doOpenQuickStart];
 }
 
-- (IBAction)openProfiles:(id)sender {
-    [self doOpenProfiles];
-}
-
 -(void)doOpenQuickStart{
     [_quickStartWindow showWindow:self];
 }
 
+- (IBAction)openProfiles:(id)sender {
+    [self doOpenProfiles];
+}
+
 -(void)doOpenProfiles{
-    //[_profilesWindow showWindow:self];
+    [_profileWindowController showWindow:self];
 }
 
 -(void)updatePreviewAndActionButtons {

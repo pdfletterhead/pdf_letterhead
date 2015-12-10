@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
-        <plugIn identifier="com.apple.pdfkit.ibplugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.pdfkit.ibplugin" version="9531"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="Wu4-ar-50j"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="420" customClass="NSFontManager"/>
@@ -16,7 +20,7 @@
                 <outlet property="window" destination="760" id="786"/>
             </connections>
         </customObject>
-        <customObject id="494" customClass="PLAppDelegate">
+        <customObject id="494" userLabel="Delegate" customClass="PLAppDelegate">
             <connections>
                 <outlet property="_pdfWindow" destination="587" id="729"/>
                 <outlet property="backgrounddoc" destination="929" id="932"/>
@@ -27,7 +31,6 @@
                 <outlet property="mailButton1" destination="584" id="808"/>
                 <outlet property="mailButton2" destination="812" id="814"/>
                 <outlet property="mailButton3" destination="897" id="1008"/>
-                <outlet property="manageProfilesButton" destination="gzR-si-dsq" id="XmR-wT-ph8"/>
                 <outlet property="pdfOuterView" destination="SIz-ol-d1z" id="JOL-at-Yym"/>
                 <outlet property="pdfWindow" destination="587" id="752"/>
                 <outlet property="previewButton1" destination="857" id="887"/>
@@ -321,7 +324,6 @@
                             <button verticalHuggingPriority="750" id="897">
                                 <rect key="frame" x="260" y="11" width="82" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" title="  E-mail" bezelStyle="smallSquare" image="mail" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="898" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -333,7 +335,6 @@
                             <button verticalHuggingPriority="750" id="991">
                                 <rect key="frame" x="170" y="11" width="82" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" title="  Save" bezelStyle="smallSquare" image="saveicon" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="992" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -345,7 +346,6 @@
                             <button verticalHuggingPriority="750" id="993">
                                 <rect key="frame" x="66" y="11" width="95" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" title="  Preview" bezelStyle="smallSquare" image="NSQuickLookTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="994" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -357,7 +357,6 @@
                             <button verticalHuggingPriority="750" id="995">
                                 <rect key="frame" x="350" y="11" width="82" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" title="  Print" bezelStyle="smallSquare" image="printer" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="996" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -367,7 +366,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                     </customView>
                     <customView id="939" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
                         <rect key="frame" x="20" y="382" width="214" height="246"/>
@@ -376,7 +374,6 @@
                             <imageView identifier="coverDropArea" focusRingType="none" tag="1" id="791" customClass="PLDropZone">
                                 <rect key="frame" x="21" y="75" width="72" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="coverdrop" id="792"/>
                                 <connections>
                                     <outlet property="menu" destination="824" id="831"/>
@@ -385,7 +382,6 @@
                             <textField verticalHuggingPriority="750" id="795">
                                 <rect key="frame" x="17" y="218" width="150" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cover page?" id="796">
                                     <font key="font" size="12" name="HelveticaNeue"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -395,7 +391,6 @@
                             <textField verticalHuggingPriority="750" id="946">
                                 <rect key="frame" x="18" y="39" width="92" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cover background" id="947">
                                     <font key="font" size="9" name="HelveticaNeue"/>
                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -405,7 +400,6 @@
                             <textField verticalHuggingPriority="750" id="948">
                                 <rect key="frame" x="125" y="39" width="72" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Following bg's" id="949">
                                     <font key="font" size="9" name="HelveticaNeue"/>
                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -415,7 +409,6 @@
                             <imageView identifier="bgDropArea" focusRingType="none" tag="1" id="929" customClass="PLDropZone">
                                 <rect key="frame" x="118" y="71" width="76" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="bgdrop" id="930"/>
                                 <connections>
                                     <outlet property="menu" destination="834" id="931"/>
@@ -424,7 +417,6 @@
                             <button id="933" customClass="OnOffSwitchControl">
                                 <rect key="frame" x="96" y="213" width="61" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="934" customClass="OnOffSwitchControlCell">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -436,7 +428,6 @@
                             <textField verticalHuggingPriority="750" id="1010">
                                 <rect key="frame" x="14" y="8" width="186" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop background image here" id="1011">
                                     <font key="font" size="13" name="HelveticaNeue-Bold"/>
                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -444,7 +435,6 @@
                                 </textFieldCell>
                             </textField>
                         </subviews>
-                        <animations/>
                     </customView>
                     <customView identifier="sourceContainer" id="982" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
                         <rect key="frame" x="20" y="20" width="214" height="297"/>
@@ -453,7 +443,6 @@
                             <textField verticalHuggingPriority="750" id="983">
                                 <rect key="frame" x="33" y="11" width="149" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop content PDF Here" id="984">
                                     <font key="font" size="13" name="HelveticaNeue-Bold"/>
                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -463,14 +452,12 @@
                             <imageView identifier="sourceDropArea" focusRingType="none" tag="2" id="561" customClass="PLDropZone">
                                 <rect key="frame" x="21" y="55" width="172" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="contentdrop" id="566"/>
                                 <connections>
                                     <outlet property="menu" destination="839" id="849"/>
                                 </connections>
                             </imageView>
                         </subviews>
-                        <animations/>
                     </customView>
                     <customView id="985" customClass="PLPDFBgView">
                         <rect key="frame" x="251" y="46" width="452" height="602"/>
@@ -483,30 +470,25 @@
                                     <customView canDrawConcurrently="YES" id="SIz-ol-d1z">
                                         <rect key="frame" x="-10" y="-14" width="432" height="589"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <animations/>
                                     </customView>
                                 </subviews>
-                                <animations/>
                             </customView>
                         </subviews>
-                        <animations/>
                     </customView>
                     <button verticalHuggingPriority="750" id="gzR-si-dsq">
                         <rect key="frame" x="19" y="344" width="161" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <animations/>
                         <buttonCell key="cell" type="push" title="Manage letterheads" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gQt-Oc-knV">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="openProfiles:" target="-1" id="08R-BJ-WPr"/>
+                            <action selector="openProfiles:" target="494" id="s7m-P7-qn3"/>
                         </connections>
                     </button>
                 </subviews>
-                <animations/>
             </view>
-            <point key="canvasLocation" x="486.5" y="1127"/>
+            <point key="canvasLocation" x="619.5" y="1006"/>
         </window>
         <window title="PDF Letterhead FAQ" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="760" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
@@ -521,40 +503,34 @@
                         <rect key="frame" x="-1" y="-1" width="512" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" id="HPJ-Mw-BeV">
-                            <rect key="frame" x="1" y="1" width="510" height="413"/>
+                            <rect key="frame" x="1" y="1" width="495" height="413"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="763" userLabel="PLfaqwindow">
                                     <rect key="frame" x="0.0" y="0.0" width="510" height="413"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="495" height="413"/>
-                                    <size key="maxSize" width="513" height="10000000"/>
+                                    <size key="maxSize" width="525" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <size key="minSize" width="495" height="413"/>
-                                    <size key="maxSize" width="513" height="10000000"/>
+                                    <size key="maxSize" width="525" height="10000000"/>
                                 </textView>
                             </subviews>
-                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
-                        <animations/>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="764">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
-                            <animations/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="765">
                             <rect key="frame" x="496" y="1" width="15" height="413"/>
                             <autoresizingMask key="autoresizingMask"/>
-                            <animations/>
                         </scroller>
                     </scrollView>
                 </subviews>
-                <animations/>
             </view>
-            <point key="canvasLocation" x="1201" y="1016.5"/>
+            <point key="canvasLocation" x="910" y="412.5"/>
         </window>
         <menu id="824" userLabel="Menu cover">
             <items>
@@ -622,7 +598,6 @@
                     <pdfView autoresizesSubviews="NO" wantsLayer="YES" id="861">
                         <rect key="frame" x="0.0" y="0.0" width="633" height="662"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                     </pdfView>
                     <customView id="1012" customClass="PLBottomToolbarView">
                         <rect key="frame" x="0.0" y="660" width="633" height="46"/>
@@ -631,7 +606,6 @@
                             <button verticalHuggingPriority="750" id="866">
                                 <rect key="frame" x="19" y="11" width="91" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" title=" Zoom out" bezelStyle="smallSquare" image="NSRevealFreestandingTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="867" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -643,7 +617,6 @@
                             <button verticalHuggingPriority="750" id="863">
                                 <rect key="frame" x="116" y="11" width="88" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" title="  Zoom in" bezelStyle="smallSquare" image="NSRevealFreestandingTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="864" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -655,7 +628,6 @@
                             <button verticalHuggingPriority="750" id="1013">
                                 <rect key="frame" x="228" y="11" width="82" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" title="  Print" bezelStyle="smallSquare" image="printer" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1020" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -667,7 +639,6 @@
                             <button verticalHuggingPriority="750" id="872">
                                 <rect key="frame" x="548" y="11" width="75" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" title="  Close" bezelStyle="smallSquare" image="NSStopProgressTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="873" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -677,13 +648,74 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                     </customView>
                 </subviews>
-                <animations/>
             </view>
-            <point key="canvasLocation" x="507.5" y="392"/>
+            <point key="canvasLocation" x="987.5" y="418"/>
         </window>
+        <menuItem title="File" id="UtU-yO-fEo">
+            <modifierMask key="keyEquivalentModifierMask"/>
+            <menu key="submenu" title="File" id="S1d-7N-Q9T">
+                <items>
+                    <menuItem title="New" keyEquivalent="n" id="z0A-R0-TgA">
+                        <connections>
+                            <action selector="newDocument:" target="-1" id="aG4-0h-ntw"/>
+                        </connections>
+                    </menuItem>
+                    <menuItem title="Open…" keyEquivalent="o" id="j5d-Gm-tAG">
+                        <connections>
+                            <action selector="openDocument:" target="-1" id="Ujk-y0-Apd"/>
+                        </connections>
+                    </menuItem>
+                    <menuItem title="Open Recent" id="C9w-eh-zvf">
+                        <modifierMask key="keyEquivalentModifierMask"/>
+                        <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="qOg-Gn-PXa">
+                            <items>
+                                <menuItem title="Clear Menu" id="FSL-SR-H26">
+                                    <connections>
+                                        <action selector="clearRecentDocuments:" target="-1" id="esH-cS-DJy"/>
+                                    </connections>
+                                </menuItem>
+                            </items>
+                        </menu>
+                    </menuItem>
+                    <menuItem isSeparatorItem="YES" id="lpn-lc-vMn"/>
+                    <menuItem title="Close" keyEquivalent="w" id="84b-B1-5Gy">
+                        <connections>
+                            <action selector="performClose:" target="-1" id="Je4-ZX-xH2"/>
+                        </connections>
+                    </menuItem>
+                    <menuItem title="Save" keyEquivalent="s" id="8bD-1m-F3x">
+                        <connections>
+                            <action selector="saveDocument:" target="-1" id="PPo-2I-Ljs"/>
+                        </connections>
+                    </menuItem>
+                    <menuItem title="Save As…" keyEquivalent="S" id="23A-ih-I7Y">
+                        <connections>
+                            <action selector="saveDocumentAs:" target="-1" id="hkv-CR-Cca"/>
+                        </connections>
+                    </menuItem>
+                    <menuItem title="Revert to Saved" id="N9a-YU-ynI">
+                        <modifierMask key="keyEquivalentModifierMask"/>
+                        <connections>
+                            <action selector="revertDocumentToSaved:" target="-1" id="003-mH-Zf7"/>
+                        </connections>
+                    </menuItem>
+                    <menuItem isSeparatorItem="YES" id="LKJ-PP-CqC"/>
+                    <menuItem title="Page Setup…" keyEquivalent="P" id="RRU-Dk-fck">
+                        <connections>
+                            <action selector="runPageLayout:" target="-1" id="n2y-Dh-f0z"/>
+                        </connections>
+                    </menuItem>
+                    <menuItem title="Print…" keyEquivalent="p" id="1fw-3m-0eR">
+                        <connections>
+                            <action selector="print:" target="-1" id="oej-00-Oq4"/>
+                        </connections>
+                    </menuItem>
+                </items>
+            </menu>
+        </menuItem>
+        <collectionViewItem id="IHX-8O-ZdP"/>
     </objects>
     <resources>
         <image name="NSAdvanced" width="32" height="32"/>

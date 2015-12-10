@@ -11,6 +11,7 @@
 #import "OnOffSwitchControl.h"
 #import "OnOffSwitchControlCell.h"
 #import "PLQuickStart1.h"
+#import "PLProfileWindowController.h"
 
 @interface PLAppDelegate : NSObject <NSApplicationDelegate>
 {
@@ -76,6 +77,10 @@
 @property (assign) BOOL isSetContent;
 
 @property (readonly, retain) PLQuickStart1 *quickStartWindow;
+@property (readonly, retain) PLProfileWindowController *profileWindowController;
+
+
+
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -87,6 +92,7 @@
 -(IBAction)showMainWindow: (id) sender;
 -(IBAction)coverControlAction: (id) sender;
 -(IBAction)openQuickStart:(id)sender;
+-(IBAction)openProfiles:(id)sender;
 
 
 -(void)updatePreviewAndActionButtons;
