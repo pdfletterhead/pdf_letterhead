@@ -7,6 +7,14 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PLProfileWindowController">
             <connections>
+                <outlet property="backgroundImage" destination="W42-q6-j2N" id="YsU-tW-ifl"/>
+                <outlet property="coverImage" destination="t6C-LF-Rww" id="Byp-o0-YR6"/>
+                <outlet property="delBackground" destination="8e9-mJ-ffD" id="tBr-ug-Fjt"/>
+                <outlet property="delCover" destination="TeH-Mw-ycX" id="mkN-4E-aQh"/>
+                <outlet property="openBackground" destination="4Y7-Zp-QBS" id="FPh-RL-UIC"/>
+                <outlet property="openCover" destination="wPD-Ne-QFs" id="I2m-Aa-3lB"/>
+                <outlet property="profileTableView" destination="KTc-Sg-QfI" id="QbI-11-Jg8"/>
+                <outlet property="viewTitle" destination="Voj-jm-fLm" id="kD6-od-dX0"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="ChW-mk-4CO"/>
             </connections>
         </customObject>
@@ -15,21 +23,23 @@
         <window title="Profiles" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="461" width="634" height="274"/>
+            <rect key="contentRect" x="196" y="461" width="535" height="335"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="535" height="335"/>
+            <value key="maxSize" type="size" width="535" height="335"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="634" height="274"/>
+                <rect key="frame" x="0.0" y="0.0" width="535" height="335"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView autohidesScrollers="YES" horizontalLineScroll="34" horizontalPageScroll="10" verticalLineScroll="34" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="Udq-cO-Wjl">
-                        <rect key="frame" x="20" y="20" width="199" height="240"/>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="Udq-cO-Wjl">
+                        <rect key="frame" x="20" y="47" width="199" height="274"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" id="Vbd-Ue-orJ">
-                            <rect key="frame" x="1" y="1" width="197" height="238"/>
+                            <rect key="frame" x="1" y="1" width="197" height="272"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="32" rowSizeStyle="automatic" viewBased="YES" id="KTc-Sg-QfI">
-                                    <rect key="frame" x="0.0" y="0.0" width="197" height="238"/>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="KTc-Sg-QfI">
+                                    <rect key="frame" x="0.0" y="0.0" width="197" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -92,15 +102,128 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t6C-LF-Rww">
+                        <rect key="frame" x="224" y="47" width="146" height="197"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" imageFrameStyle="groove" id="jc4-up-EU8"/>
+                        <connections>
+                            <outlet property="menu" destination="WZ2-43-pFp" id="qMq-eC-6VL"/>
+                        </connections>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W42-q6-j2N">
+                        <rect key="frame" x="372" y="47" width="146" height="197"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" imageFrameStyle="groove" id="uG7-j5-7tH"/>
+                        <connections>
+                            <outlet property="menu" destination="F3R-cb-Q2v" id="vNx-wW-Aii"/>
+                        </connections>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="htH-Zn-ocx">
+                        <rect key="frame" x="225" y="246" width="116" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cover background" id="qKG-La-OSu">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="abo-HO-DH0">
+                        <rect key="frame" x="373" y="246" width="77" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Background" id="FYm-Zi-5Pd">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="XIw-VY-xid">
+                        <rect key="frame" x="225" y="304" width="292" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Titel:" id="fgS-nI-XWs">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="Voj-jm-fLm">
+                        <rect key="frame" x="227" y="274" width="288" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bW8-8K-QiF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="updateTitle:" target="-2" id="BMh-FT-uBN"/>
+                        </connections>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="J81-Ai-wtZ">
+                        <rect key="frame" x="20" y="19" width="24" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QHP-l6-nHp">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="addProfile:" target="-2" id="Pq5-lg-Wnn"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="DJR-f1-EdF">
+                        <rect key="frame" x="50" y="19" width="24" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5z2-kN-GvE">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="removeProfile:" target="-2" id="8wl-ou-RvS"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="TLd-Mn-0ze"/>
             </connections>
-            <point key="canvasLocation" x="631" y="486"/>
+            <point key="canvasLocation" x="581.5" y="516.5"/>
         </window>
+        <menu autoenablesItems="NO" id="WZ2-43-pFp" userLabel="Menu cover">
+            <items>
+                <menuItem title="Open Image" enabled="NO" id="wPD-Ne-QFs">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="doAddCover:" target="-2" id="7R1-m7-Xl0"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Delete Image" enabled="NO" id="TeH-Mw-ycX">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="doDelCover:" target="-2" id="sjo-kD-yuU"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="261.5" y="842.5"/>
+        </menu>
+        <menu autoenablesItems="NO" id="F3R-cb-Q2v" userLabel="Menu bg">
+            <items>
+                <menuItem title="Open Image" enabled="NO" id="4Y7-Zp-QBS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="doAddBg:" target="-2" id="It5-Jd-LVW"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Delete Image" enabled="NO" id="8e9-mJ-ffD">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="doDelBg:" target="-2" id="FC6-3S-7mO"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="532.5" y="851.5"/>
+        </menu>
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
 </document>

@@ -11,5 +11,6 @@
 @interface PLProfileWindowController : NSWindowController
 
 @property (strong) NSMutableArray *profiles;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

@@ -11,6 +11,14 @@
 #import "PLProfileImage.h"
 
 @interface PLProfileWindowController ()
+@property (unsafe_unretained) IBOutlet NSTextField *viewTitle;
+@property (unsafe_unretained) IBOutlet NSTableView *profileTableView;
+@property (unsafe_unretained) IBOutlet NSImageView *coverImage;
+@property (unsafe_unretained) IBOutlet NSImageView *backgroundImage;
+@property (unsafe_unretained) IBOutlet NSMenuItem *openCover;
+@property (unsafe_unretained) IBOutlet NSMenuItem *delCover;
+@property (unsafe_unretained) IBOutlet NSMenuItem *openBackground;
+@property (unsafe_unretained) IBOutlet NSMenuItem *delBackground;
 
 @end
 
@@ -58,8 +66,159 @@
     return cellView;
 }
 
+-(PLProfileImage*)selectedProfile {
+    NSInteger selectedRow = [self.profileTableView selectedRow];
+    if ( selectedRow >= 0 && self.profiles.count > selectedRow ) {
+        PLProfileImage *selectedProfile = [self.profiles objectAtIndex:selectedRow];
+        return selectedProfile;
+    }
+    return nil;
+}
+
+-(void)setDetailInfo:(PLProfileImage*)doc {
+    NSString *title = @"";
+    NSImage  *backgroundImage = nil;
+    NSImage  *coverImage = nil;
+    
+    if (doc != nil ) {
+        title = doc.data.title;
+        backgroundImage = doc.backgroundImage;
+        coverImage = doc.coverImage;
+    }
+    [self.coverImage setImage:coverImage];
+    [self.backgroundImage setImage:backgroundImage];
+    [self.viewTitle setStringValue:title];
+}
+
+-(void)tableViewSelectionDidChange:(NSNotification *)aNotification {
+    PLProfileImage *selectedProfile = [self selectedProfile];
+    [self setDetailInfo:selectedProfile];
+    
+    // Enable/Disable buttons based on selection
+    BOOL buttonsEnabled = (selectedProfile!=nil);
+    [self.viewTitle setEnabled:buttonsEnabled];
+    [self.openCover setEnabled:buttonsEnabled];
+    [self.delCover setEnabled:buttonsEnabled];
+    [self.openBackground setEnabled:buttonsEnabled];
+    [self.delBackground setEnabled:buttonsEnabled];
+    
+}
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return [self.profiles count];
 }
+
+- (IBAction)updateTitle:(id)sender {
+    PLProfileImage *selectedProfile = [self selectedProfile];
+    if (selectedProfile) {
+        selectedProfile.data.title = [self.viewTitle stringValue];
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:[self.profiles indexOfObject:selectedProfile]];
+        NSIndexSet *columnSet = [NSIndexSet indexSetWithIndex:0];
+        [self.profileTableView reloadDataForRowIndexes:indexSet columnIndexes:columnSet];
+    }
+}
+
+- (IBAction)addProfile:(id)sender {
+    PLProfileImage *newProfile = [[PLProfileImage alloc] initWithTitle:@"New Profile" coverImage:nil backgroundImage:nil];
+    
+    [self.profiles addObject:newProfile];
+    NSInteger newRowIndex = self.profiles.count - 1;
+    
+    [self.profileTableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:newRowIndex] withAnimation:NSTableViewAnimationEffectFade];
+    [self.profileTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:newRowIndex] byExtendingSelection:NO];
+    [self.profileTableView scrollRowToVisible:newRowIndex];
+}
+
+- (IBAction)removeProfile:(id)sender {
+    PLProfileImage *selectedProfile = [self selectedProfile];
+    if (selectedProfile) {
+        [self.profiles removeObject:selectedProfile];
+        [self.profileTableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.profileTableView.selectedRow] withAnimation:NSTableViewAnimationEffectFade];
+        [self setDetailInfo:nil];
+    }
+}
+
+- (IBAction)doAddCover:(id)sender {
+    [self openExistingDocument :self.coverImage :@"cover"];
+}
+
+- (IBAction)doDelCover:(id)sender {
+    [self delExistingDocument:self.coverImage :@"cover"];
+}
+
+- (IBAction)doAddBg:(id)sender {
+    [self openExistingDocument:self.backgroundImage :@"background"];
+}
+
+- (IBAction)doDelBg:(id)sender {
+    [self delExistingDocument:self.backgroundImage :@"background"];
+}
+
+- (void)openExistingDocument:(NSImageView*)sender :(NSString*)cover {
+    NSOpenPanel* openPanel = [NSOpenPanel openPanel];
+    [openPanel setCanChooseFiles:YES];
+    [openPanel setCanChooseDirectories:NO];
+    [openPanel setAllowsMultipleSelection:NO];
+    
+    // This method displays the panel and returns immediately.
+    // The completion handler is called when the user selects an
+    // item or cancels the panel.
+    
+    [openPanel beginWithCompletionHandler:^(NSInteger result){
+        if (result == NSFileHandlingPanelOKButton) {
+            NSString *file = [[openPanel URL] path];
+            NSString *ext = [[file pathExtension] lowercaseString ];
+            
+            NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
+            if ([validImageExtensions containsObject:ext])  {
+                NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:file];
+                [sender setImage:zNewImage];
+                
+                PLProfileImage *selectedProfile = [self selectedProfile];
+                if (selectedProfile) {
+                    
+                    if ([cover isEqual: @"cover"]) {
+                        NSLog(@"Name == %@", cover);
+                        selectedProfile.coverImage = zNewImage;
+                    } else {
+                        NSLog(@"Name == %@", cover);
+                        selectedProfile.backgroundImage = zNewImage;
+                        //update table view for small icon
+                        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:[self.profiles indexOfObject:selectedProfile]];
+                        NSIndexSet *columnSet = [NSIndexSet indexSetWithIndex:0];
+                        [self.profileTableView reloadDataForRowIndexes:indexSet columnIndexes:columnSet];
+                    }
+                }
+            }
+            else {
+                NSLog(@"invalid filetype, no IMAGE");
+            }
+        }
+    }];
+
+}
+
+- (void)delExistingDocument:(NSImageView*)sender :(NSString*)cover {
+    [sender setImage:nil];
+    
+    PLProfileImage *selectedProfile = [self selectedProfile];
+    if (selectedProfile) {
+        
+        if ([cover isEqual: @"cover"]) {
+            NSLog(@"Name == %@", cover);
+            selectedProfile.coverImage = nil;
+        } else {
+            NSLog(@"Name == %@", cover);
+            selectedProfile.backgroundImage = nil;
+            //update table view for small icon
+            NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:[self.profiles indexOfObject:selectedProfile]];
+            NSIndexSet *columnSet = [NSIndexSet indexSetWithIndex:0];
+            [self.profileTableView reloadDataForRowIndexes:indexSet columnIndexes:columnSet];
+        }
+    }
+
+}
+
+
 
 @end
