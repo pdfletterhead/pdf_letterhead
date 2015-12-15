@@ -7,8 +7,7 @@
 //
 
 #import "PLProfileWindowController.h"
-#import "PLProfile.h"
-#import "PLProfileImage.h"
+#import "Profile.h"
 
 @interface PLProfileWindowController ()
 @property (unsafe_unretained) IBOutlet NSTextField *viewTitle;
@@ -28,7 +27,6 @@
 {
     self = [super initWithWindow:window];
     if (self) {
-        // Initialization code here.
     }
     
     return self;
@@ -36,125 +34,35 @@
 
 - (void)windowDidLoad
 {
-    [super windowDidLoad];
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-
-    // Setup sample data
-    PLProfileImage *profile1 = [[PLProfileImage alloc] initWithTitle:@"Profiel numero 1" coverImage:[NSImage imageNamed:@"Metallic_shield_bug444.jpg"] backgroundImage:[NSImage imageNamed:@"download.jpeg"]];
-    PLProfileImage *profile2 = [[PLProfileImage alloc] initWithTitle:@"Profiel numero 2" coverImage:[NSImage imageNamed:@"download.jpeg"] backgroundImage:[NSImage imageNamed:@"Metallic_shield_bug444.jpg"]];
-    _profiles = [NSMutableArray arrayWithObjects:profile1, profile2, nil];
-    
-    //self.ProfileWindowController.profiles = profiles;
-    
+    [super windowDidLoad];        
 }
 
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    
-    // Get a new ViewCell
-    NSTableCellView *cellView = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
-    
-    // Since this is a single-column table view, this would not be necessary.
-    // But it's a good practice to do it in order by remember it when a table is multicolumn.
-    if( [tableColumn.identifier isEqualToString:@"MainColumn"] )
-    {
-        PLProfileImage *profile = [_profiles objectAtIndex:row];
-        cellView.imageView.image = profile.backgroundImage;
-        cellView.textField.stringValue = profile.data.title;
-        return cellView;
-    }
-    
-    return cellView;
-}
-
--(PLProfileImage*)selectedProfile {
-    NSInteger selectedRow = [self.profileTableView selectedRow];
-    if ( selectedRow >= 0 && self.profiles.count > selectedRow ) {
-        PLProfileImage *selectedProfile = [self.profiles objectAtIndex:selectedRow];
-        return selectedProfile;
-    }
-    return nil;
-}
-
--(void)setDetailInfo:(PLProfileImage*)doc {
-    NSString *title = @"";
-    NSImage  *backgroundImage = nil;
-    NSImage  *coverImage = nil;
-    
-    if (doc != nil ) {
-        title = doc.data.title;
-        backgroundImage = doc.backgroundImage;
-        coverImage = doc.coverImage;
-    }
-    [self.coverImage setImage:coverImage];
-    [self.backgroundImage setImage:backgroundImage];
-    [self.viewTitle setStringValue:title];
-}
-
--(void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    PLProfileImage *selectedProfile = [self selectedProfile];
-    [self setDetailInfo:selectedProfile];
-    
-    // Enable/Disable buttons based on selection
-    BOOL buttonsEnabled = (selectedProfile!=nil);
-    [self.viewTitle setEnabled:buttonsEnabled];
-    [self.openCover setEnabled:buttonsEnabled];
-    [self.delCover setEnabled:buttonsEnabled];
-    [self.openBackground setEnabled:buttonsEnabled];
-    [self.delBackground setEnabled:buttonsEnabled];
-    
-}
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [self.profiles count];
-}
-
-- (IBAction)updateTitle:(id)sender {
-    PLProfileImage *selectedProfile = [self selectedProfile];
-    if (selectedProfile) {
-        selectedProfile.data.title = [self.viewTitle stringValue];
-        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:[self.profiles indexOfObject:selectedProfile]];
-        NSIndexSet *columnSet = [NSIndexSet indexSetWithIndex:0];
-        [self.profileTableView reloadDataForRowIndexes:indexSet columnIndexes:columnSet];
+-(Profile*)getCurrentProfile {
+    if ([[self.profileArrayController selectedObjects] count] > 0) {
+        return [[self.profileArrayController selectedObjects] objectAtIndex:0];
+    } else {
+        return nil;
     }
 }
 
-- (IBAction)addProfile:(id)sender {
-    PLProfileImage *newProfile = [[PLProfileImage alloc] initWithTitle:@"New Profile" coverImage:nil backgroundImage:nil];
-    
-    [self.profiles addObject:newProfile];
-    NSInteger newRowIndex = self.profiles.count - 1;
-    
-    [self.profileTableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:newRowIndex] withAnimation:NSTableViewAnimationEffectFade];
-    [self.profileTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:newRowIndex] byExtendingSelection:NO];
-    [self.profileTableView scrollRowToVisible:newRowIndex];
-}
-
-- (IBAction)removeProfile:(id)sender {
-    PLProfileImage *selectedProfile = [self selectedProfile];
-    if (selectedProfile) {
-        [self.profiles removeObject:selectedProfile];
-        [self.profileTableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.profileTableView.selectedRow] withAnimation:NSTableViewAnimationEffectFade];
-        [self setDetailInfo:nil];
-    }
-}
 
 - (IBAction)doAddCover:(id)sender {
-    [self openExistingDocument :self.coverImage :@"cover"];
+    [self openExistingDocument :@"cover"];
 }
 
 - (IBAction)doDelCover:(id)sender {
-    [self delExistingDocument:self.coverImage :@"cover"];
+    [self delExistingDocument :@"cover"];
 }
 
 - (IBAction)doAddBg:(id)sender {
-    [self openExistingDocument:self.backgroundImage :@"background"];
+    [self openExistingDocument :@"background"];
 }
 
 - (IBAction)doDelBg:(id)sender {
-    [self delExistingDocument:self.backgroundImage :@"background"];
+    [self delExistingDocument :@"background"];
 }
 
-- (void)openExistingDocument:(NSImageView*)sender :(NSString*)cover {
+- (void)openExistingDocument :(NSString*)cover {
     NSOpenPanel* openPanel = [NSOpenPanel openPanel];
     [openPanel setCanChooseFiles:YES];
     [openPanel setCanChooseDirectories:NO];
@@ -172,21 +80,10 @@
             NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
             if ([validImageExtensions containsObject:ext])  {
                 NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:file];
-                [sender setImage:zNewImage];
-                
-                PLProfileImage *selectedProfile = [self selectedProfile];
-                if (selectedProfile) {
-                    
-                    if ([cover isEqual: @"cover"]) {
-                        NSLog(@"Name == %@", cover);
-                        selectedProfile.coverImage = zNewImage;
-                    } else {
-                        NSLog(@"Name == %@", cover);
-                        selectedProfile.backgroundImage = zNewImage;
-                        //update table view for small icon
-                        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:[self.profiles indexOfObject:selectedProfile]];
-                        NSIndexSet *columnSet = [NSIndexSet indexSetWithIndex:0];
-                        [self.profileTableView reloadDataForRowIndexes:indexSet columnIndexes:columnSet];
+                if ([self makeOrFindAppSupportDirectory]) {
+                    Profile *profile = [self getCurrentProfile];
+                    if (profile) {
+                        [self saveImage:zNewImage :profile :cover];
                     }
                 }
             }
@@ -198,25 +95,68 @@
 
 }
 
-- (void)delExistingDocument:(NSImageView*)sender :(NSString*)cover {
-    [sender setImage:nil];
-    
-    PLProfileImage *selectedProfile = [self selectedProfile];
-    if (selectedProfile) {
+- (void)delExistingDocument:(NSString*)cover {
+    Profile *profile = [self getCurrentProfile];
+    [self removeImage:profile :cover];
+}
+
+// Create a unique string for the images
+-(NSString *)createUniqueString {
+    CFUUIDRef theUUID = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
+    return (__bridge NSString *)string;
+}
+
+-(void)removeImage:(Profile*)profile :(NSString*)cover {
+    if ([cover isEqual:@"cover"]) {
+        profile.coverImagePath = nil;
         
-        if ([cover isEqual: @"cover"]) {
-            NSLog(@"Name == %@", cover);
-            selectedProfile.coverImage = nil;
+    } else {
+        profile.bgImagePath = nil;
+    }
+}
+
+-(BOOL)saveImage:(NSImage*)image :(Profile*)profile :(NSString*)cover {
+    // 1. Get an NSBitmapImageRep from the image passed in
+    [image lockFocus];
+    NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithFocusedViewRect:NSMakeRect(0.0, 0.0, [image size].width, [image size].height)];
+    [image unlockFocus];
+    
+    // 2. Create URL to where image will be saved
+    NSURL *pathToImage = [self.pathToAppSupport URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[self createUniqueString]]];
+    NSData *data = [imgRep representationUsingType: NSPNGFileType properties: nil];
+    
+    // 3. Write image to disk, set path in Bug
+    if ([data writeToURL:pathToImage atomically:NO]) {
+        
+        if ([cover isEqual:@"cover"]) {
+            profile.coverImagePath = [pathToImage absoluteString];
+
         } else {
-            NSLog(@"Name == %@", cover);
-            selectedProfile.backgroundImage = nil;
-            //update table view for small icon
-            NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:[self.profiles indexOfObject:selectedProfile]];
-            NSIndexSet *columnSet = [NSIndexSet indexSetWithIndex:0];
-            [self.profileTableView reloadDataForRowIndexes:indexSet columnIndexes:columnSet];
+            profile.bgImagePath = [pathToImage absoluteString];
+        }
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+-(BOOL)makeOrFindAppSupportDirectory {
+    BOOL isDir;
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:[self.pathToAppSupport absoluteString] isDirectory:&isDir] && isDir) {
+        return YES;
+    } else {
+        NSError *error = nil;
+        [manager createDirectoryAtURL:self.pathToAppSupport withIntermediateDirectories:YES attributes:nil error:&error];
+        if (!error) {
+            return YES;
+        } else {
+            NSLog(@"Error creating directory");
+            return NO;
         }
     }
-
 }
 
 

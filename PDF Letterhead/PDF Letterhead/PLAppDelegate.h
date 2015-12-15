@@ -77,7 +77,7 @@
 @property (assign) BOOL isSetContent;
 
 @property (readonly, retain) PLQuickStart1 *quickStartWindow;
-@property (readonly, retain) PLProfileWindowController *profileWindowController;
+//@property (readonly, retain) PLProfileWindowController *profileWindowController;
 
 
 

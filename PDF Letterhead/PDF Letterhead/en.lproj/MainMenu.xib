@@ -488,7 +488,7 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="619.5" y="1006"/>
+            <point key="canvasLocation" x="781.5" y="743"/>
         </window>
         <window title="PDF Letterhead FAQ" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="760" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>

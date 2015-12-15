@@ -50,17 +50,13 @@
 		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
 		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
 		3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
-		79159E171C1ED36D00E71BD8 /* profiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79159E151C1ED36D00E71BD8 /* profiles.xcdatamodeld */; };
-		79159E181C1ED36D00E71BD8 /* profiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79159E151C1ED36D00E71BD8 /* profiles.xcdatamodeld */; };
-		79159E1D1C1ED45700E71BD8 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 79159E1A1C1ED45700E71BD8 /* Profile+CoreDataProperties.m */; };
-		79159E1E1C1ED45700E71BD8 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 79159E1A1C1ED45700E71BD8 /* Profile+CoreDataProperties.m */; };
-		79159E1F1C1ED45700E71BD8 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 79159E1C1C1ED45700E71BD8 /* Profile.m */; };
-		79159E201C1ED45700E71BD8 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 79159E1C1C1ED45700E71BD8 /* Profile.m */; };
+		79377F9C1C1F03E500901220 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377F991C1F03E500901220 /* Profile+CoreDataProperties.m */; };
+		79377F9D1C1F03E500901220 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377F991C1F03E500901220 /* Profile+CoreDataProperties.m */; };
+		79377F9E1C1F03E500901220 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377F9B1C1F03E500901220 /* Profile.m */; };
+		79377F9F1C1F03E500901220 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377F9B1C1F03E500901220 /* Profile.m */; };
+		79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377FA11C1F0D5600901220 /* PLImageTransformer.m */; };
+		79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377FA11C1F0D5600901220 /* PLImageTransformer.m */; };
 		79470B931C19766B009C37AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835DA1607C90400DDFB82 /* MainMenu.xib */; };
-		79470B961C198230009C37AA /* PLProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 79470B951C198230009C37AA /* PLProfile.m */; };
-		79470B971C198230009C37AA /* PLProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 79470B951C198230009C37AA /* PLProfile.m */; };
-		79470B9A1C1983A1009C37AA /* PLProfileImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 79470B991C1983A1009C37AA /* PLProfileImage.m */; };
-		79470B9B1C1983A1009C37AA /* PLProfileImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 79470B991C1983A1009C37AA /* PLProfileImage.m */; };
 		79470B9F1C19928F009C37AA /* Metallic_shield_bug444.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79470B9D1C19928F009C37AA /* Metallic_shield_bug444.jpg */; };
 		79470BA01C19928F009C37AA /* Metallic_shield_bug444.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79470B9D1C19928F009C37AA /* Metallic_shield_bug444.jpg */; };
 		79470BA11C19928F009C37AA /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 79470B9E1C19928F009C37AA /* download.jpeg */; };
@@ -182,15 +178,12 @@
 		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		3EFB08F61615032E006063F9 /* PLPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPreviewWindow.h; sourceTree = "<group>"; };
 		3EFB08F71615032E006063F9 /* PLPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPreviewWindow.m; sourceTree = "<group>"; };
-		79159E161C1ED36D00E71BD8 /* profiles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = profiles.xcdatamodel; sourceTree = "<group>"; };
-		79159E191C1ED45700E71BD8 /* Profile+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Profile+CoreDataProperties.h"; sourceTree = "<group>"; };
-		79159E1A1C1ED45700E71BD8 /* Profile+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Profile+CoreDataProperties.m"; sourceTree = "<group>"; };
-		79159E1B1C1ED45700E71BD8 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
-		79159E1C1C1ED45700E71BD8 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
-		79470B941C198230009C37AA /* PLProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfile.h; sourceTree = "<group>"; };
-		79470B951C198230009C37AA /* PLProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLProfile.m; sourceTree = "<group>"; };
-		79470B981C1983A1009C37AA /* PLProfileImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileImage.h; sourceTree = "<group>"; };
-		79470B991C1983A1009C37AA /* PLProfileImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLProfileImage.m; sourceTree = "<group>"; };
+		79377F981C1F03E500901220 /* Profile+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Profile+CoreDataProperties.h"; sourceTree = "<group>"; };
+		79377F991C1F03E500901220 /* Profile+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Profile+CoreDataProperties.m"; sourceTree = "<group>"; };
+		79377F9A1C1F03E500901220 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		79377F9B1C1F03E500901220 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		79377FA01C1F0D5600901220 /* PLImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLImageTransformer.h; sourceTree = "<group>"; };
+		79377FA11C1F0D5600901220 /* PLImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLImageTransformer.m; sourceTree = "<group>"; };
 		79470B9D1C19928F009C37AA /* Metallic_shield_bug444.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Metallic_shield_bug444.jpg; sourceTree = "<group>"; };
 		79470B9E1C19928F009C37AA /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
 		79470BAA1C19AE68009C37AA /* PLProfileWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileWindowController.h; sourceTree = "<group>"; };
@@ -319,10 +312,6 @@
 		3E6835B61607C90300DDFB82 = {
 			isa = PBXGroup;
 			children = (
-				79159E191C1ED45700E71BD8 /* Profile+CoreDataProperties.h */,
-				79159E1A1C1ED45700E71BD8 /* Profile+CoreDataProperties.m */,
-				79159E1B1C1ED45700E71BD8 /* Profile.h */,
-				79159E1C1C1ED45700E71BD8 /* Profile.m */,
 				3E6835CB1607C90400DDFB82 /* PDF Letterhead */,
 				3E6835C41607C90400DDFB82 /* Frameworks */,
 				3E6835C21607C90400DDFB82 /* Products */,
@@ -376,7 +365,6 @@
 				3E6835DA1607C90400DDFB82 /* MainMenu.xib */,
 				3EAF7FEC1AB23D9300C4EFB1 /* Images.xcassets */,
 				3E6835CC1607C90400DDFB82 /* Supporting Files */,
-				79159E151C1ED36D00E71BD8 /* profiles.xcdatamodeld */,
 			);
 			path = "PDF Letterhead";
 			sourceTree = "<group>";
@@ -414,13 +402,15 @@
 		79B9AC8A1C18851900B260F6 /* ProfilesWindow */ = {
 			isa = PBXGroup;
 			children = (
-				79470B941C198230009C37AA /* PLProfile.h */,
-				79470B951C198230009C37AA /* PLProfile.m */,
-				79470B981C1983A1009C37AA /* PLProfileImage.h */,
-				79470B991C1983A1009C37AA /* PLProfileImage.m */,
+				79377F981C1F03E500901220 /* Profile+CoreDataProperties.h */,
+				79377F991C1F03E500901220 /* Profile+CoreDataProperties.m */,
+				79377F9A1C1F03E500901220 /* Profile.h */,
+				79377F9B1C1F03E500901220 /* Profile.m */,
 				79470BAA1C19AE68009C37AA /* PLProfileWindowController.h */,
 				79470BAB1C19AE68009C37AA /* PLProfileWindowController.m */,
 				79470BAC1C19AE68009C37AA /* PLProfileWindowController.xib */,
+				79377FA01C1F0D5600901220 /* PLImageTransformer.h */,
+				79377FA11C1F0D5600901220 /* PLImageTransformer.m */,
 			);
 			name = ProfilesWindow;
 			sourceTree = "<group>";
@@ -611,17 +601,15 @@
 				3E6835D21607C90400DDFB82 /* main.m in Sources */,
 				3E6835D91607C90400DDFB82 /* PLAppDelegate.m in Sources */,
 				3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */,
-				79159E171C1ED36D00E71BD8 /* profiles.xcdatamodeld in Sources */,
 				3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,
 				79470BAD1C19AE68009C37AA /* PLProfileWindowController.m in Sources */,
-				79159E1D1C1ED45700E71BD8 /* Profile+CoreDataProperties.m in Sources */,
 				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
+				79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */,
 				3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */,
 				3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */,
-				79470B961C198230009C37AA /* PLProfile.m in Sources */,
-				79159E1F1C1ED45700E71BD8 /* Profile.m in Sources */,
+				79377F9E1C1F03E500901220 /* Profile.m in Sources */,
 				3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */,
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
@@ -630,7 +618,7 @@
 				3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */,
 				3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */,
 				3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */,
-				79470B9A1C1983A1009C37AA /* PLProfileImage.m in Sources */,
+				79377F9C1C1F03E500901220 /* Profile+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,17 +629,15 @@
 				79726ECF1C16ED6E003B85D2 /* main.m in Sources */,
 				79726ED01C16ED6E003B85D2 /* PLAppDelegate.m in Sources */,
 				79726ED11C16ED6E003B85D2 /* PDF_Letterhead.xcdatamodeld in Sources */,
-				79159E181C1ED36D00E71BD8 /* profiles.xcdatamodeld in Sources */,
 				79726ED21C16ED6E003B85D2 /* PLDropZone.m in Sources */,
 				79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */,
 				79470BAE1C19AE68009C37AA /* PLProfileWindowController.m in Sources */,
-				79159E1E1C1ED45700E71BD8 /* Profile+CoreDataProperties.m in Sources */,
 				79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */,
 				79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */,
+				79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */,
 				79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */,
 				79726ED81C16ED6E003B85D2 /* OnOffSwitchControl.m in Sources */,
-				79470B971C198230009C37AA /* PLProfile.m in Sources */,
-				79159E201C1ED45700E71BD8 /* Profile.m in Sources */,
+				79377F9F1C1F03E500901220 /* Profile.m in Sources */,
 				79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */,
 				79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */,
 				79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */,
@@ -660,7 +646,7 @@
 				79726EDE1C16ED6E003B85D2 /* AMDarkButtonCell.m in Sources */,
 				79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */,
 				79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */,
-				79470B9B1C1983A1009C37AA /* PLProfileImage.m in Sources */,
+				79377F9D1C1F03E500901220 /* Profile+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -890,16 +876,6 @@
 			);
 			currentVersion = 3E6835DE1607C90400DDFB82 /* PDF_Letterhead.xcdatamodel */;
 			path = PDF_Letterhead.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		79159E151C1ED36D00E71BD8 /* profiles.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				79159E161C1ED36D00E71BD8 /* profiles.xcdatamodel */,
-			);
-			currentVersion = 79159E161C1ED36D00E71BD8 /* profiles.xcdatamodel */;
-			path = profiles.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

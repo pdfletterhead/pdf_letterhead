@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Profile (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSString *bgImagePath;
 @property (nullable, nonatomic, retain) NSString *coverImagePath;
-@property (nullable, nonatomic, retain) NSString *backgroundImagePath;
 
 @end
 

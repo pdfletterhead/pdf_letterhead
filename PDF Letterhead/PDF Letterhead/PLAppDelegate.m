@@ -7,11 +7,10 @@
 //
 #import "PLAppDelegate.h"
 #import "PLPDFPage.h"
-#import "PLProfileImage.h"
 #include "PLProfileWindowController.h"
 
 @interface  PLAppDelegate()
-@property (nonatomic,strong) IBOutlet PLProfileWindowController *ProfileWindowController;
+@property (nonatomic,strong) IBOutlet PLProfileWindowController *profileWindowController;
 @end
 
 @implementation PLAppDelegate
@@ -26,24 +25,22 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     _setView = false;
-    
+
     _profileWindowController = [[PLProfileWindowController alloc] initWithWindowNibName:@"PLProfileWindowController"];
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
+    
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
     {
         [self doOpenQuickStart];
     }
-     
     
     //Temp folder creation
     NSError *tmpFileCreateError;
     _tmpDirectoryURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:[[NSProcessInfo processInfo] globallyUniqueString]] isDirectory:YES];
     [[NSFileManager defaultManager] createDirectoryAtURL:_tmpDirectoryURL withIntermediateDirectories:YES attributes:nil error:&tmpFileCreateError];
     
-    
     //style main pdfview
- 
-    //[_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 255.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+    [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 255.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
     
     [self setIsSetBackground:NO];
     [self setIsSetCover:NO];
@@ -85,7 +82,11 @@
 //        [self setIsSetCover:YES];
 //    }
     
+    self.profileWindowController.pathToAppSupport = [self applicationFilesDirectory];
+    self.profileWindowController.managedObjectContext = [self managedObjectContext];
+
     [self updatePreviewAndActionButtons];
+    
 }
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename

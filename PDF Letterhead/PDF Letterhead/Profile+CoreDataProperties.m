@@ -14,7 +14,7 @@
 @implementation Profile (CoreDataProperties)
 
 @dynamic name;
+@dynamic bgImagePath;
 @dynamic coverImagePath;
-@dynamic backgroundImagePath;
 
 @end

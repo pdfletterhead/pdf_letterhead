@@ -12,5 +12,7 @@
 
 @property (strong) NSMutableArray *profiles;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong) IBOutlet NSArrayController *profileArrayController;
+@property (strong, nonatomic) NSURL *pathToAppSupport;
 
 @end

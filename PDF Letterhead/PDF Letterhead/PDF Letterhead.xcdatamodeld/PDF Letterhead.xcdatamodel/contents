@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="Profiel" representedClassName="Profile" syncable="YES">
+        <attribute name="backgroundImagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coverImagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Profiel" positionX="-13554" positionY="-4698" width="128" height="88"/>
+    </elements>
+</model>
