@@ -88,25 +88,25 @@
                 NSString* myImagePath = [myBundle pathForResource:@"bgdrop" ofType:@"png"];
                 newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
                 
-                [(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:NO];
+                //[(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:NO];
                 [(PLAppDelegate *)[NSApp delegate] setIsSetBackground:NO];
             }
             else{
                 NSString* myImagePath = [myBundle pathForResource:@"coverdrop" ofType:@"png"];
                 newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
 
-                [(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:YES];
+                //[(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:YES];
                 [(PLAppDelegate *)[NSApp delegate] setIsSetCover:NO];
             }
         }
         else{
             if([[self identifier] isEqualToString:@"bgDropArea"]){
                 
-                [(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:NO];
+                //[(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:NO];
                 [(PLAppDelegate *)[NSApp delegate] setIsSetBackground:YES];
             }
             else{
-                [(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:YES];
+                //[(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:YES];
                 [(PLAppDelegate *)[NSApp delegate] setIsSetCover:YES];
             }
         }
@@ -211,15 +211,25 @@
 
 -(BOOL) setPdfFilepath:(NSString*)path{
     
-    //if ([[path pathExtension] isEqual:@"pdf"]){
-        
-        self.sourcefilepath = path;
-        NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
-        [self setImage:zNewImage];
+    if (path == nil) {
+        [self setImage:nil];
         return YES;
-    //}
+    }
+    
+    NSLog(@"test: %@", path);
+    NSMutableString *str = [[NSMutableString alloc] initWithString:path];
+    NSString *word = @"file://";
+    if ([str rangeOfString:word].location == NSNotFound) {
+        [str insertString:word atIndex:0];
+    }
+    NSURL *data = [NSURL URLWithString:str];
 
-    //return NO;
+    NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
+    NSLog(@"image: %@", zNewImage);
+    
+    [self setImage:zNewImage];
+    return YES;
+
 }
 
 

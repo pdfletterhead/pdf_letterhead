@@ -10,10 +10,6 @@
 #import "Profile.h"
 
 @interface PLProfileWindowController ()
-@property (unsafe_unretained) IBOutlet NSTextField *viewTitle;
-@property (unsafe_unretained) IBOutlet NSTableView *profileTableView;
-@property (unsafe_unretained) IBOutlet NSImageView *coverImage;
-@property (unsafe_unretained) IBOutlet NSImageView *backgroundImage;
 @property (unsafe_unretained) IBOutlet NSMenuItem *openCover;
 @property (unsafe_unretained) IBOutlet NSMenuItem *delCover;
 @property (unsafe_unretained) IBOutlet NSMenuItem *openBackground;

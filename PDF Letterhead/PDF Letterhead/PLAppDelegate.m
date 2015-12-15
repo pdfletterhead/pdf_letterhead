@@ -7,10 +7,14 @@
 //
 #import "PLAppDelegate.h"
 #import "PLPDFPage.h"
+#import "Profile.h"
 #include "PLProfileWindowController.h"
 
 @interface  PLAppDelegate()
 @property (nonatomic,strong) IBOutlet PLProfileWindowController *profileWindowController;
+@property (unsafe_unretained) IBOutlet NSView *drawerView;
+@property (unsafe_unretained) IBOutlet NSTableView *drawerTableView;
+@property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
 @end
 
 @implementation PLAppDelegate
@@ -60,28 +64,8 @@
         [_coverswitch setSelectedSegment:1];
     }
     [self coverControlAction:self];
-    
-    // If BG exists in standardUserDefaults set it
-    //FIXME pro version
-//    if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"] ]) {
-//        NSString *bgfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedBackground"];
-//        NSImage * tmpImage = [[NSImage alloc] initWithContentsOfFile:bgfilename];
-//        [_backgrounddoc setFilepath:bgfilename];
-//        [_backgrounddoc setImage:tmpImage];
-//        [self setIsSetBackground:YES];
-//    }
-//    
-//    // If Cover exists in standardUserDefaults set it
-//    //FIXME
-//    if ([[NSFileManager defaultManager] fileExistsAtPath: [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"] ]) {
-//        
-//        NSString *cvrfilename= [[NSUserDefaults standardUserDefaults] stringForKey:@"storedCover"];
-//        NSImage * tmpcvrImage = [[NSImage alloc] initWithContentsOfFile:cvrfilename];
-//        [_coverbackgrounddoc setFilepath:cvrfilename];
-//        [_coverbackgrounddoc setImage:tmpcvrImage];
-//        [self setIsSetCover:YES];
-//    }
-    
+      
+    //Managed Object Context for ProfileViewController
     self.profileWindowController.pathToAppSupport = [self applicationFilesDirectory];
     self.profileWindowController.managedObjectContext = [self managedObjectContext];
 
@@ -136,6 +120,7 @@
     if ([openPanel runModal] == NSOKButton)
     {
         NSString *tvarFilename = [[openPanel URL] path];
+        NSLog(@"file: %@", tvarFilename);
         NSString *ext = [[tvarFilename pathExtension] lowercaseString ];
 
         if([[theView identifier] isEqualToString:@"sourceDropArea"])
@@ -465,6 +450,23 @@
     [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
 }
 
+- (IBAction)selectProfile:(id)sender {
+    Profile *profile = self.getCurrentProfile;
+    
+    [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
+    [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
+    
+}
+
+-(Profile*)getCurrentProfile {
+    if ([[self.pArrayController selectedObjects] count] > 0) {
+        return [[self.pArrayController selectedObjects] objectAtIndex:0];
+    } else {
+        return nil;
+    }
+}
+
+
 - (BOOL)validateMenuItem:(NSMenuItem *)item
 {
     if ([item action] == @selector(saveAs:) && (![self allowSetPreview])) {
@@ -491,17 +493,14 @@
         [_saveButton2 setEnabled:YES];
         [_printButton1 setEnabled:YES];
         [_printButton2 setEnabled:YES];
-        
-        #ifdef PRO
         [_previewButton1 setEnabled:YES];
         [_previewButton2 setEnabled:YES];
         [_previewButton3 setEnabled:YES];
-        #endif
-        
+      
         [_mailButton3 setEnabled:YES];
         [_saveButton3 setEnabled:YES];
         [_printButton3 setEnabled:YES];
-            }
+    }
     else{
         //NSLog(@"disable Buttons");
         [_mailButton1 setEnabled:NO];
@@ -517,70 +516,6 @@
         [_saveButton3 setEnabled:NO];
         [_printButton3 setEnabled:NO];
         [_previewButton3 setEnabled:NO];
-    }
-}
-
--(void)saveBackgroundImagePathInPrefs:(NSImage*)myImage atIndex:(NSUInteger*)index cover:(BOOL)isCover {
-    
-    BOOL isDir = NO;
-    if (! [[NSFileManager defaultManager] fileExistsAtPath:[[self applicationFilesDirectory] path] isDirectory:&isDir]) {
-        return;
-    }
-    
-    
-    NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
-    NSString * bgType;
-    
-    if(isCover){
-        bgType = @"Cover";
-    }
-    else {
-        bgType = @"Background";
-    }
-    
-    //IF FILENAME IS NIL WE WILL REMOVE THE STOREDIMAGE
-    if(!myImage)
-    {
-        [prefs setValue:nil forKey:[NSString stringWithFormat:@"stored%@", bgType]];
-        [prefs synchronize];
-    }
-    else{
-        
-        //NSPersistentStoreCoordinator * myPersistentStoreCoordinator = [self persistentStoreCoordinator];
-        NSString *filePath;
-        
-        NSArray *reps = [myImage representations];
-        NSImageRep *rep = [reps objectAtIndex:0];
-        if ([rep isKindOfClass:[NSPDFImageRep class]])
-        {
-            filePath = [NSString stringWithFormat:@"%@/letterhead-%@-00.pdf",[[self applicationFilesDirectory] path],bgType];
-            BOOL success;
-            NSImageView *myView;
-            NSRect vFrame;
-            NSData *pdfData;
-            
-            vFrame = NSZeroRect;
-            vFrame.size = [myImage size];
-            myView = [[NSImageView alloc] initWithFrame:vFrame];
-            
-            [myView setImage:myImage];
-            
-            pdfData = [myView dataWithPDFInsideRect:vFrame];
-            
-            success = [pdfData writeToFile:filePath options:0 error:NULL];
-        }
-        else{
-            filePath = [NSString stringWithFormat:@"%@/letterhead-%@-00.png",[[self applicationFilesDirectory] path],bgType];
-            
-            NSData *imageData = [myImage TIFFRepresentation];
-            NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
-            
-            NSData *data = [imageRep representationUsingType: NSPNGFileType properties: nil];
-            [data writeToFile: filePath atomically: NO];
-        }
-        
-        [prefs setValue:filePath forKey:[NSString stringWithFormat:@"stored%@", bgType]];
-        [prefs synchronize];
     }
 }
 

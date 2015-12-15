@@ -85,6 +85,8 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSArrayController *profileArrayController;
+
 
 -(IBAction)saveAs:(id)sender;
 -(IBAction)saveEmail: (id) sender;
@@ -94,8 +96,6 @@
 -(IBAction)openQuickStart:(id)sender;
 -(IBAction)openProfiles:(id)sender;
 
-
 -(void)updatePreviewAndActionButtons;
--(void)saveBackgroundImagePathInPrefs:(NSImage*)myImage atIndex:(NSUInteger*)index cover:(BOOL)isCover;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Profile.h"
 
 @interface PLProfileWindowController : NSWindowController
 
@@ -14,5 +15,7 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong) IBOutlet NSArrayController *profileArrayController;
 @property (strong, nonatomic) NSURL *pathToAppSupport;
+
+-(Profile*)getCurrentProfile;
 
 @end
