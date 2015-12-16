@@ -11,7 +11,7 @@
                 <outlet property="delCover" destination="TeH-Mw-ycX" id="mkN-4E-aQh"/>
                 <outlet property="openBackground" destination="4Y7-Zp-QBS" id="FPh-RL-UIC"/>
                 <outlet property="openCover" destination="wPD-Ne-QFs" id="I2m-Aa-3lB"/>
-                <outlet property="profileArrayController" destination="OLs-HF-FhP" id="esR-GH-Jlh"/>
+                <outlet property="profileArrayController" destination="OLs-HF-FhP" id="aC8-R2-5dJ"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="ChW-mk-4CO"/>
             </connections>
         </customObject>
@@ -96,7 +96,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="add:" target="OLs-HF-FhP" id="fCi-s0-Y2n"/>
+                            <action selector="addNewProfile:" target="-2" id="wMY-UI-kPG"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="DJR-f1-EdF">

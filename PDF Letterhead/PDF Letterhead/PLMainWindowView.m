@@ -23,8 +23,7 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    background = [NSColor colorWithDeviceRed: 225.0/255.0 green: 229.0/255.0 blue: 234.0/255.0 alpha: 1.0];
-
+    background = [NSColor colorWithDeviceRed: 240.0/255.0 green: 242.0/255.0 blue: 246.0/255.0 alpha: 1.0];
     [background set];
     NSRectFill([self bounds]);
 }

@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NSURL *pathToAppSupport;
 
 -(Profile*)getCurrentProfile;
+-(NSString*)saveImage:(NSImage*)image :(Profile*)profile :(NSString*)cover;
 
 @end

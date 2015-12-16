@@ -24,7 +24,7 @@
 {
     
         //background = [NSColor colorWithCalibratedRed:(74/255.0) green:(74/255.0) blue:(74/255.0) alpha:1.0f];
-        NSColor * background = [NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0];
+        NSColor * background = [NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0];
         
         [background set];
         NSRectFill([self bounds]);

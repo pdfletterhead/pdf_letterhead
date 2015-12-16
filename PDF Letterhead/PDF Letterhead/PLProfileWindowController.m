@@ -96,6 +96,12 @@
     [self removeImage:profile :cover];
 }
 
+- (IBAction)addNewProfile:(id)sender {
+    Profile* newProfile = [NSEntityDescription insertNewObjectForEntityForName:@"Profile" inManagedObjectContext:self.managedObjectContext];
+    newProfile.name = @"New Letterhead";
+    newProfile.uid = [self createUniqueString];
+}
+
 // Create a unique string for the images
 -(NSString *)createUniqueString {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
@@ -113,7 +119,7 @@
     }
 }
 
--(BOOL)saveImage:(NSImage*)image :(Profile*)profile :(NSString*)cover {
+-(NSString*)saveImage:(NSImage*)image :(Profile*)profile :(NSString*)cover {
     // 1. Get an NSBitmapImageRep from the image passed in
     [image lockFocus];
     NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithFocusedViewRect:NSMakeRect(0.0, 0.0, [image size].width, [image size].height)];
@@ -122,19 +128,22 @@
     // 2. Create URL to where image will be saved
     NSURL *pathToImage = [self.pathToAppSupport URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[self createUniqueString]]];
     NSData *data = [imgRep representationUsingType: NSPNGFileType properties: nil];
+    NSString *returnVar;
     
     // 3. Write image to disk, set path in Bug
     if ([data writeToURL:pathToImage atomically:NO]) {
         
         if ([cover isEqual:@"cover"]) {
             profile.coverImagePath = [pathToImage absoluteString];
+            returnVar = profile.coverImagePath;
 
         } else {
             profile.bgImagePath = [pathToImage absoluteString];
+            returnVar = profile.bgImagePath;
         }
-        return YES;
+        return returnVar;
     } else {
-        return NO;
+        return @"";
     }
 }
 

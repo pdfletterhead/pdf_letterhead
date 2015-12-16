@@ -20,11 +20,7 @@
     return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
-{
-    NSBundle* myBundle = [NSBundle mainBundle];
-    NSImage *newImage = [[NSImage alloc] initWithContentsOfFile: [myBundle pathForResource:@"pdfviewbg" ofType:@"png"]];
-    [newImage drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+- (void)drawRect:(NSRect)dirtyRect {
 }
 
 @end

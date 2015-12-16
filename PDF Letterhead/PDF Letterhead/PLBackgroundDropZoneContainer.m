@@ -14,25 +14,21 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code here.
+        self.layer = _layer;   // strangely necessary
+        self.wantsLayer = YES;
+        self.layer.masksToBounds = YES;
+        self.layer.cornerRadius = 25.0;
+        
+        CALayer *viewLayer = [CALayer layer];
+       [viewLayer setBackgroundColor:CGColorCreateGenericRGB(225.0, 229.0, 234.0, 1.0)]; //wtf is dit voor rare kleur?
+       [self setLayer:viewLayer];
     }
     
     return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
-{
-    NSBundle* myBundle = [NSBundle mainBundle];
-    if([[self identifier] isEqualToString:@"sourceContainer"]){
-        NSImage *newImage = [[NSImage alloc] initWithContentsOfFile: [myBundle pathForResource:@"contentbg" ofType:@"png"]];
-        [newImage drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+- (void)drawRect:(NSRect)dirtyRect  {
 
-    }
-    else{
-        NSImage *newImage = [[NSImage alloc] initWithContentsOfFile: [myBundle pathForResource:@"dropzonebg" ofType:@"png"]];
-        [newImage drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
-
-    }
 }
 
 @end

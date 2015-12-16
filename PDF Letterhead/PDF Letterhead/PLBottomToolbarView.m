@@ -9,6 +9,7 @@
 #import "PLBottomToolbarView.h"
 
 @implementation PLBottomToolbarView
+@synthesize background;
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -19,34 +20,13 @@
     
     return self;
 }
-- (BOOL)isFlipped
-{
-    return YES;
-}
 
-/*
-- (void)setImage:(NSImage *)newImage
-{
- //   [newImage retain];
-  //  [image release];
-    image = newImage;
+
+- (void)drawRect:(NSRect)rect   {
+    background = [NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0];
+    [background set];
+    NSRectFill([self bounds]);
     
-    [image setFlipped:YES];
-    [self setNeedsDisplay:YES];
-}
- */
-
-- (void)drawRect:(NSRect)rect
-{
-    NSBundle* myBundle = [NSBundle mainBundle];
-
-
-    NSImage *newImage = [[NSImage alloc] initWithContentsOfFile: [myBundle pathForResource:@"bottomtoolbar" ofType:@"png"]];
-
-    //[newImage drawAtPoint:NSZeroPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
-    
-    // Or stretch image to fill view
-    [newImage drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
 }
 
 

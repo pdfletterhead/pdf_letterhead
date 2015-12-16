@@ -50,10 +50,10 @@
 		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
 		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
 		3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
-		79377F9C1C1F03E500901220 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377F991C1F03E500901220 /* Profile+CoreDataProperties.m */; };
-		79377F9D1C1F03E500901220 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377F991C1F03E500901220 /* Profile+CoreDataProperties.m */; };
-		79377F9E1C1F03E500901220 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377F9B1C1F03E500901220 /* Profile.m */; };
-		79377F9F1C1F03E500901220 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377F9B1C1F03E500901220 /* Profile.m */; };
+		7910E6BC1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6B91C206CAC00398823 /* Profile+CoreDataProperties.m */; };
+		7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6B91C206CAC00398823 /* Profile+CoreDataProperties.m */; };
+		7910E6BE1C206CAC00398823 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6BB1C206CAC00398823 /* Profile.m */; };
+		7910E6BF1C206CAC00398823 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6BB1C206CAC00398823 /* Profile.m */; };
 		79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377FA11C1F0D5600901220 /* PLImageTransformer.m */; };
 		79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377FA11C1F0D5600901220 /* PLImageTransformer.m */; };
 		79470B931C19766B009C37AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835DA1607C90400DDFB82 /* MainMenu.xib */; };
@@ -178,10 +178,12 @@
 		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		3EFB08F61615032E006063F9 /* PLPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPreviewWindow.h; sourceTree = "<group>"; };
 		3EFB08F71615032E006063F9 /* PLPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPreviewWindow.m; sourceTree = "<group>"; };
-		79377F981C1F03E500901220 /* Profile+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Profile+CoreDataProperties.h"; sourceTree = "<group>"; };
-		79377F991C1F03E500901220 /* Profile+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Profile+CoreDataProperties.m"; sourceTree = "<group>"; };
-		79377F9A1C1F03E500901220 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
-		79377F9B1C1F03E500901220 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		7910E6A71C206AC900398823 /* PDF_Letterhead 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PDF_Letterhead 2.xcdatamodel"; sourceTree = "<group>"; };
+		7910E6B81C206CAC00398823 /* Profile+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Profile+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7910E6B91C206CAC00398823 /* Profile+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Profile+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7910E6BA1C206CAC00398823 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		7910E6BB1C206CAC00398823 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		7910E6C41C21922300398823 /* PDF_Letterhead 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PDF_Letterhead 3.xcdatamodel"; sourceTree = "<group>"; };
 		79377FA01C1F0D5600901220 /* PLImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLImageTransformer.h; sourceTree = "<group>"; };
 		79377FA11C1F0D5600901220 /* PLImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLImageTransformer.m; sourceTree = "<group>"; };
 		79470B9D1C19928F009C37AA /* Metallic_shield_bug444.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Metallic_shield_bug444.jpg; sourceTree = "<group>"; };
@@ -402,10 +404,10 @@
 		79B9AC8A1C18851900B260F6 /* ProfilesWindow */ = {
 			isa = PBXGroup;
 			children = (
-				79377F981C1F03E500901220 /* Profile+CoreDataProperties.h */,
-				79377F991C1F03E500901220 /* Profile+CoreDataProperties.m */,
-				79377F9A1C1F03E500901220 /* Profile.h */,
-				79377F9B1C1F03E500901220 /* Profile.m */,
+				7910E6B81C206CAC00398823 /* Profile+CoreDataProperties.h */,
+				7910E6B91C206CAC00398823 /* Profile+CoreDataProperties.m */,
+				7910E6BA1C206CAC00398823 /* Profile.h */,
+				7910E6BB1C206CAC00398823 /* Profile.m */,
 				79470BAA1C19AE68009C37AA /* PLProfileWindowController.h */,
 				79470BAB1C19AE68009C37AA /* PLProfileWindowController.m */,
 				79470BAC1C19AE68009C37AA /* PLProfileWindowController.xib */,
@@ -609,7 +611,8 @@
 				79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */,
 				3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */,
 				3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */,
-				79377F9E1C1F03E500901220 /* Profile.m in Sources */,
+				7910E6BC1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
+				7910E6BE1C206CAC00398823 /* Profile.m in Sources */,
 				3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */,
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
@@ -618,7 +621,6 @@
 				3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */,
 				3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */,
 				3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */,
-				79377F9C1C1F03E500901220 /* Profile+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +639,8 @@
 				79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */,
 				79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */,
 				79726ED81C16ED6E003B85D2 /* OnOffSwitchControl.m in Sources */,
-				79377F9F1C1F03E500901220 /* Profile.m in Sources */,
+				7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
+				7910E6BF1C206CAC00398823 /* Profile.m in Sources */,
 				79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */,
 				79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */,
 				79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */,
@@ -646,7 +649,6 @@
 				79726EDE1C16ED6E003B85D2 /* AMDarkButtonCell.m in Sources */,
 				79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */,
 				79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */,
-				79377F9D1C1F03E500901220 /* Profile+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,9 +874,11 @@
 		3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				7910E6C41C21922300398823 /* PDF_Letterhead 3.xcdatamodel */,
+				7910E6A71C206AC900398823 /* PDF_Letterhead 2.xcdatamodel */,
 				3E6835DE1607C90400DDFB82 /* PDF_Letterhead.xcdatamodel */,
 			);
-			currentVersion = 3E6835DE1607C90400DDFB82 /* PDF_Letterhead.xcdatamodel */;
+			currentVersion = 7910E6C41C21922300398823 /* PDF_Letterhead 3.xcdatamodel */;
 			path = PDF_Letterhead.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

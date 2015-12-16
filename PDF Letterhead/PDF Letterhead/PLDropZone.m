@@ -28,7 +28,7 @@
 
 - (BOOL)becomeFirstResponder
 {
-    NSLog(@"is am selected");
+    //NSLog(@"is am selected");
     [[self animator] setAlphaValue:0.5];
 
     return YES;
@@ -36,7 +36,7 @@
 
 - (BOOL)resignFirstResponder
 {
-    NSLog(@"is am deselected");
+    //NSLog(@"is am deselected");
     [[self animator] setAlphaValue:1.0];
     
     return YES;
@@ -88,25 +88,21 @@
                 NSString* myImagePath = [myBundle pathForResource:@"bgdrop" ofType:@"png"];
                 newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
                 
-                //[(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:NO];
                 [(PLAppDelegate *)[NSApp delegate] setIsSetBackground:NO];
             }
             else{
                 NSString* myImagePath = [myBundle pathForResource:@"coverdrop" ofType:@"png"];
                 newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
 
-                //[(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: nil atIndex:0 cover:YES];
                 [(PLAppDelegate *)[NSApp delegate] setIsSetCover:NO];
             }
         }
         else{
             if([[self identifier] isEqualToString:@"bgDropArea"]){
                 
-                //[(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:NO];
                 [(PLAppDelegate *)[NSApp delegate] setIsSetBackground:YES];
             }
             else{
-                //[(PLAppDelegate *)[NSApp delegate] saveBackgroundImagePathInPrefs: newImage atIndex:0 cover:YES];
                 [(PLAppDelegate *)[NSApp delegate] setIsSetCover:YES];
             }
         }
@@ -216,7 +212,6 @@
         return YES;
     }
     
-    NSLog(@"test: %@", path);
     NSMutableString *str = [[NSMutableString alloc] initWithString:path];
     NSString *word = @"file://";
     if ([str rangeOfString:word].location == NSNotFound) {
@@ -225,7 +220,6 @@
     NSURL *data = [NSURL URLWithString:str];
 
     NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
-    NSLog(@"image: %@", zNewImage);
     
     [self setImage:zNewImage];
     return YES;

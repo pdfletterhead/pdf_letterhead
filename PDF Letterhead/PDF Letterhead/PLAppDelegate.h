@@ -95,6 +95,7 @@
 -(IBAction)coverControlAction: (id) sender;
 -(IBAction)openQuickStart:(id)sender;
 -(IBAction)openProfiles:(id)sender;
+-(IBAction)selectProfile:(id)sender;
 
 -(void)updatePreviewAndActionButtons;
 

@@ -15,6 +15,7 @@
 @property (unsafe_unretained) IBOutlet NSView *drawerView;
 @property (unsafe_unretained) IBOutlet NSTableView *drawerTableView;
 @property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
+@property (unsafe_unretained) IBOutlet NSView *drawerContentView;
 @end
 
 @implementation PLAppDelegate
@@ -28,6 +29,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+
     _setView = false;
 
     _profileWindowController = [[PLProfileWindowController alloc] initWithWindowNibName:@"PLProfileWindowController"];
@@ -44,7 +46,7 @@
     [[NSFileManager defaultManager] createDirectoryAtURL:_tmpDirectoryURL withIntermediateDirectories:YES attributes:nil error:&tmpFileCreateError];
     
     //style main pdfview
-    [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 255.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+    [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
     
     [self setIsSetBackground:NO];
     [self setIsSetCover:NO];
@@ -64,7 +66,10 @@
         [_coverswitch setSelectedSegment:1];
     }
     [self coverControlAction:self];
-      
+  
+    //TODO load most recently used profile
+    [self selectProfile:nil];
+    
     //Managed Object Context for ProfileViewController
     self.profileWindowController.pathToAppSupport = [self applicationFilesDirectory];
     self.profileWindowController.managedObjectContext = [self managedObjectContext];
@@ -191,7 +196,7 @@
         if (!_setView) {
             
             
-            //[_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+            [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
             [_pdfView setDocument: _letterheadPDF];
             [_previewView setDocument: _letterheadPDF];
             
@@ -450,12 +455,59 @@
     [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
 }
 
+- (IBAction)saveNewProfile:(id)sender {
+    Profile* newProfile = [NSEntityDescription insertNewObjectForEntityForName:@"Profile" inManagedObjectContext:self.managedObjectContext];
+    newProfile.name = [self inputAlert:@"Enter a name for the new letterhead" defaultValue:@"New Letterhead"];
+    newProfile.bgImagePath = [[self profileWindowController] saveImage:[[self backgrounddoc] image] :newProfile :@"background"];
+    newProfile.coverImagePath = [[self profileWindowController] saveImage:[[self coverbackgrounddoc] image] :newProfile :@"cover"];
+}
+
+- (NSString *)inputAlert: (NSString *)prompt defaultValue: (NSString *)defaultValue {
+    NSAlert *alert = [NSAlert alertWithMessageText: prompt
+                                     defaultButton:@"OK"
+                                   alternateButton:@"Cancel"
+                                       otherButton:nil
+                         informativeTextWithFormat:@""];
+    
+    NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+    [input setStringValue:defaultValue];
+    [alert setAccessoryView:input];
+    NSInteger button = [alert runModal];
+    if (button == NSAlertDefaultReturn) {
+        [input validateEditing];
+        return [input stringValue];
+    } else if (button == NSAlertAlternateReturn) {
+        return nil;
+    } else {
+        return nil;
+    }
+}
+
+
 - (IBAction)selectProfile:(id)sender {
-    Profile *profile = self.getCurrentProfile;
+    
+    //save moc intermittently
+    [self saveManagedObjectContext];
+    
+    Profile *profile = [self getCurrentProfile];
+    
+    if (sender == nil && profile == nil) {
+        //set previous profile
+        NSURL *url = [[NSUserDefaults standardUserDefaults] URLForKey:@"recentProfile"];
+        if (url) {
+            NSManagedObjectID *objID = [[[self managedObjectContext] persistentStoreCoordinator] managedObjectIDForURIRepresentation:url];
+            profile = [[self managedObjectContext] objectWithID:objID];
+        }
+    }
+    
+    NSManagedObjectID *objID = profile.objectID;
+    NSURL *recentProfile = [objID URIRepresentation];
+    
+    [[NSUserDefaults standardUserDefaults] setURL:recentProfile forKey:@"recentProfile"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
     [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
-    
 }
 
 -(Profile*)getCurrentProfile {
@@ -518,7 +570,6 @@
         [_previewButton3 setEnabled:NO];
     }
 }
-
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.lapp5.PDF_Letterhead" in the user's Application Support directory.
 - (NSURL *)applicationFilesDirectory
@@ -679,6 +730,13 @@
     }
     
     return NSTerminateNow;
+}
+
+- (void) saveManagedObjectContext {
+    NSError *error = nil;
+    if (![[self managedObjectContext] save:&error]) {
+        NSLog(@"Could not save Managed Object Context");
+    }
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag

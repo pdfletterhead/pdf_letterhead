@@ -28,6 +28,7 @@
                 <outlet property="coverbackgrounddoc" destination="791" id="797"/>
                 <outlet property="coverbackgrounddocText" destination="946" id="986"/>
                 <outlet property="coverswitch2" destination="933" id="935"/>
+                <outlet property="drawerContentView" destination="vW8-G5-9Eg" id="OA1-i8-iNJ"/>
                 <outlet property="drawerTableView" destination="B4b-FP-yhW" id="aqw-Ao-qCa"/>
                 <outlet property="drawerView" destination="vW8-G5-9Eg" id="MBF-RC-ULH"/>
                 <outlet property="mailButton1" destination="584" id="808"/>
@@ -102,7 +103,7 @@
             </defaultToolbarItems>
             <point key="canvasLocation" x="461" y="1668"/>
         </toolbar>
-        <arrayController mode="entity" entityName="Profile" automaticallyPreparesContent="YES" id="J24-2q-b8a" userLabel="ProfileArrayControler">
+        <arrayController mode="entity" entityName="Profile" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="J24-2q-b8a" userLabel="ProfileArrayControler">
             <connections>
                 <binding destination="494" name="managedObjectContext" keyPath="managedObjectContext" id="PGg-IE-adh"/>
             </connections>
@@ -377,46 +378,38 @@
                         </subviews>
                     </customView>
                     <customView id="939" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
-                        <rect key="frame" x="20" y="382" width="214" height="246"/>
+                        <rect key="frame" x="20" y="348" width="214" height="280"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <imageView identifier="coverDropArea" focusRingType="none" tag="1" id="791" customClass="PLDropZone">
-                                <rect key="frame" x="21" y="75" width="72" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="coverdrop" id="792"/>
-                                <connections>
-                                    <outlet property="menu" destination="824" id="831"/>
-                                </connections>
-                            </imageView>
                             <textField verticalHuggingPriority="750" id="795">
-                                <rect key="frame" x="17" y="218" width="150" height="17"/>
+                                <rect key="frame" x="20" y="248" width="150" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cover page?" id="796">
-                                    <font key="font" size="12" name="HelveticaNeue"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <font key="font" metaFont="system" size="12"/>
+                                    <color key="textColor" red="0.29393028846153846" green="0.29393028846153846" blue="0.29393028846153846" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" id="946">
-                                <rect key="frame" x="18" y="39" width="92" height="17"/>
+                                <rect key="frame" x="20" y="99" width="80" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cover background" id="947">
-                                    <font key="font" size="9" name="HelveticaNeue"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Cover" id="947">
+                                    <font key="font" metaFont="systemMedium" size="10"/>
                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" id="948">
-                                <rect key="frame" x="125" y="39" width="72" height="17"/>
+                                <rect key="frame" x="120" y="99" width="80" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Following bg's" id="949">
-                                    <font key="font" size="9" name="HelveticaNeue"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Following" id="949">
+                                    <font key="font" metaFont="systemMedium" size="10"/>
                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <imageView identifier="bgDropArea" focusRingType="none" tag="1" id="929" customClass="PLDropZone">
-                                <rect key="frame" x="118" y="71" width="76" height="106"/>
+                                <rect key="frame" x="120" y="124" width="80" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="bgdrop" id="930"/>
                                 <connections>
@@ -424,7 +417,7 @@
                                 </connections>
                             </imageView>
                             <button id="933" customClass="OnOffSwitchControl">
-                                <rect key="frame" x="96" y="213" width="61" height="21"/>
+                                <rect key="frame" x="120" y="249" width="60" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="934" customClass="OnOffSwitchControlCell">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -434,19 +427,52 @@
                                     <action selector="coverControlAction:" target="494" id="938"/>
                                 </connections>
                             </button>
+                            <imageView identifier="coverDropArea" focusRingType="none" tag="1" id="791" customClass="PLDropZone">
+                                <rect key="frame" x="20" y="124" width="80" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="coverdrop" id="792"/>
+                                <connections>
+                                    <outlet property="menu" destination="824" id="831"/>
+                                </connections>
+                            </imageView>
+                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="LGH-1e-jAu">
+                                <rect key="frame" x="0.0" y="236" width="214" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="hZ6-nf-SGY">
+                                <rect key="frame" x="0.0" y="52" width="214" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <button verticalHuggingPriority="750" id="hCV-Br-bYD">
+                                <rect key="frame" x="10" y="13" width="194" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Save as new profile" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HAM-W3-yLC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveNewProfile:" target="494" id="lUd-Jd-TKE"/>
+                                </connections>
+                            </button>
                             <textField verticalHuggingPriority="750" id="1010">
-                                <rect key="frame" x="14" y="8" width="186" height="26"/>
+                                <rect key="frame" x="12" y="65" width="191" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop background image here" id="1011">
-                                    <font key="font" size="13" name="HelveticaNeue-Bold"/>
-                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" metaFont="systemLight" size="14"/>
+                                    <color key="textColor" red="0.37520032051282048" green="0.37520032051282048" blue="0.37520032051282048" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                     </customView>
                     <customView identifier="sourceContainer" id="982" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
-                        <rect key="frame" x="20" y="20" width="214" height="297"/>
+                        <rect key="frame" x="20" y="20" width="214" height="277"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" id="983">
@@ -459,7 +485,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView identifier="sourceDropArea" focusRingType="none" tag="2" id="561" customClass="PLDropZone">
-                                <rect key="frame" x="21" y="55" width="172" height="222"/>
+                                <rect key="frame" x="21" y="55" width="172" height="202"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="contentdrop" id="566"/>
                                 <connections>
@@ -485,7 +511,7 @@
                         </subviews>
                     </customView>
                     <button verticalHuggingPriority="750" id="gzR-si-dsq">
-                        <rect key="frame" x="14" y="344" width="129" height="32"/>
+                        <rect key="frame" x="14" y="305" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Choose profile" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gQt-Oc-knV">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -724,22 +750,22 @@
                 </items>
             </menu>
         </menuItem>
-        <customView id="vW8-G5-9Eg" userLabel="Drawer Content View">
+        <customView canDrawConcurrently="YES" id="vW8-G5-9Eg" userLabel="Drawer Content View">
             <rect key="frame" x="0.0" y="0.0" width="240" height="500"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="77" horizontalPageScroll="10" verticalLineScroll="77" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="NVI-e9-41I">
-                    <rect key="frame" x="0.0" y="36" width="240" height="464"/>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="77" horizontalPageScroll="10" verticalLineScroll="77" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="NVI-e9-41I">
+                    <rect key="frame" x="0.0" y="55" width="240" height="387"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <clipView key="contentView" id="MT0-90-23d">
-                        <rect key="frame" x="1" y="1" width="238" height="462"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="MT0-90-23d">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="387"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="75" id="B4b-FP-yhW">
-                                <rect key="frame" x="0.0" y="0.0" width="238" height="462"/>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="75" id="B4b-FP-yhW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="387"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
-                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
                                     <tableColumn width="74" minWidth="40" maxWidth="1000" id="tBw-1M-OXI">
@@ -758,7 +784,7 @@
                                             </binding>
                                         </connections>
                                     </tableColumn>
-                                    <tableColumn width="158" minWidth="40" maxWidth="1000" id="yNo-y5-prl">
+                                    <tableColumn width="160" minWidth="40" maxWidth="1000" id="yNo-y5-prl">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -767,7 +793,7 @@
                                         <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="CAN-GM-Ahq">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                         </textFieldCell>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <connections>
@@ -780,7 +806,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="4PN-6q-0Ad">
                         <rect key="frame" x="1" y="119" width="223" height="15"/>
@@ -802,8 +828,17 @@
                         <action selector="openProfiles:" target="494" id="8QA-I7-vfZ"/>
                     </connections>
                 </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X7M-no-WSH">
+                    <rect key="frame" x="18" y="463" width="198" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Choose a profile" id="4xL-qD-hOz">
+                        <font key="font" metaFont="systemBold" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
-            <point key="canvasLocation" x="254" y="679.5"/>
+            <point key="canvasLocation" x="254" y="679"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="7zO-5e-Zo9"/>
     </objects>

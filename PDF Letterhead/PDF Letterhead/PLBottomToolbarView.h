@@ -9,5 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface PLBottomToolbarView : NSView
+{
+    NSColor *background;
+}
+@property(retain) NSColor *background;
 
 @end
