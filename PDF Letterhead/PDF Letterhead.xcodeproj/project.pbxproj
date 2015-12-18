@@ -109,6 +109,12 @@
 		79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0816A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png */; };
 		79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */; };
 		79726F011C16ED6E003B85D2 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
+		79C3781D1C243E6A003DE151 /* PLProfileEditWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */; };
+		79EEDAA41C22CEC000DE767E /* PLProfileEditWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */; };
+		79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
+		79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
+		79EEDAAF1C22F4EB00DE767E /* PLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAAE1C22F4EB00DE767E /* PLButton.m */; };
+		79EEDAB01C22F4EB00DE767E /* PLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAAE1C22F4EB00DE767E /* PLButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -193,6 +199,11 @@
 		79470BAC1C19AE68009C37AA /* PLProfileWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLProfileWindowController.xib; sourceTree = "<group>"; };
 		79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
+		79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLProfileEditWindow.xib; sourceTree = "<group>"; };
+		79EEDAA51C22CF0C00DE767E /* PLProfileEditWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileEditWindow.h; sourceTree = "<group>"; };
+		79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLProfileEditWindow.m; sourceTree = "<group>"; };
+		79EEDAAD1C22F4EB00DE767E /* PLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLButton.h; sourceTree = "<group>"; };
+		79EEDAAE1C22F4EB00DE767E /* PLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +258,8 @@
 				3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */,
 				3E2770381677DC2D002DD3DE /* PLBottomToolbarView.h */,
 				3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */,
+				79EEDAAD1C22F4EB00DE767E /* PLButton.h */,
+				79EEDAAE1C22F4EB00DE767E /* PLButton.m */,
 			);
 			name = MainWindow;
 			sourceTree = "<group>";
@@ -413,6 +426,9 @@
 				79470BAC1C19AE68009C37AA /* PLProfileWindowController.xib */,
 				79377FA01C1F0D5600901220 /* PLImageTransformer.h */,
 				79377FA11C1F0D5600901220 /* PLImageTransformer.m */,
+				79EEDAA51C22CF0C00DE767E /* PLProfileEditWindow.h */,
+				79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */,
+				79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */,
 			);
 			name = ProfilesWindow;
 			sourceTree = "<group>";
@@ -523,6 +539,7 @@
 				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
 				3E2AFF0716A5F8B3006D2CB0 /* PLQuickStart1.xib in Resources */,
 				3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */,
+				79EEDAA41C22CEC000DE767E /* PLProfileEditWindow.xib in Resources */,
 				3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */,
 				79470BA11C19928F009C37AA /* download.jpeg in Resources */,
 				3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
@@ -557,6 +574,7 @@
 				79726EF91C16ED6E003B85D2 /* printer.png in Resources */,
 				79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */,
 				79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */,
+				79C3781D1C243E6A003DE151 /* PLProfileEditWindow.xib in Resources */,
 				79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */,
 				79470BA21C19928F009C37AA /* download.jpeg in Resources */,
 				79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */,
@@ -613,6 +631,7 @@
 				3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */,
 				7910E6BC1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
 				7910E6BE1C206CAC00398823 /* Profile.m in Sources */,
+				79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */,
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
@@ -621,6 +640,7 @@
 				3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */,
 				3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */,
 				3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */,
+				79EEDAAF1C22F4EB00DE767E /* PLButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +661,7 @@
 				79726ED81C16ED6E003B85D2 /* OnOffSwitchControl.m in Sources */,
 				7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
 				7910E6BF1C206CAC00398823 /* Profile.m in Sources */,
+				79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */,
 				79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */,
 				79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */,
@@ -649,6 +670,7 @@
 				79726EDE1C16ED6E003B85D2 /* AMDarkButtonCell.m in Sources */,
 				79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */,
 				79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */,
+				79EEDAB01C22F4EB00DE767E /* PLButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

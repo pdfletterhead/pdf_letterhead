@@ -77,10 +77,6 @@
 @property (assign) BOOL isSetContent;
 
 @property (readonly, retain) PLQuickStart1 *quickStartWindow;
-//@property (readonly, retain) PLProfileWindowController *profileWindowController;
-
-
-
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -96,6 +92,7 @@
 -(IBAction)openQuickStart:(id)sender;
 -(IBAction)openProfiles:(id)sender;
 -(IBAction)selectProfile:(id)sender;
+-(IBAction)editSelectedProfile:(id)sender;
 
 -(void)updatePreviewAndActionButtons;
 

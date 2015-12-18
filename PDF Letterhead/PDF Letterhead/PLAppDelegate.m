@@ -9,11 +9,13 @@
 #import "PLPDFPage.h"
 #import "Profile.h"
 #include "PLProfileWindowController.h"
+#include "PLProfileEditWindow.h"
 
 @interface  PLAppDelegate()
 @property (nonatomic,strong) IBOutlet PLProfileWindowController *profileWindowController;
+@property (nonatomic,strong) IBOutlet PLProfileEditWindow *profileEditWindow;
 @property (unsafe_unretained) IBOutlet NSView *drawerView;
-@property (unsafe_unretained) IBOutlet NSTableView *drawerTableView;
+@property (strong) IBOutlet NSTableView *drawerTableView;
 @property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
 @property (unsafe_unretained) IBOutlet NSView *drawerContentView;
 @end
@@ -25,6 +27,7 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize quickStartWindow = _quickStartWindow;
 @synthesize profileWindowController = _profileWindowController;
+@synthesize profileEditWindow = _profileEditWindow;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -33,6 +36,7 @@
     _setView = false;
 
     _profileWindowController = [[PLProfileWindowController alloc] initWithWindowNibName:@"PLProfileWindowController"];
+    _profileEditWindow = [[PLProfileEditWindow alloc] initWithWindowNibName:@"PLProfileEditWindow"];
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
     
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
@@ -71,8 +75,7 @@
     [self selectProfile:nil];
     
     //Managed Object Context for ProfileViewController
-    self.profileWindowController.pathToAppSupport = [self applicationFilesDirectory];
-    self.profileWindowController.managedObjectContext = [self managedObjectContext];
+    self.profileEditWindow.managedObjectContext = [self managedObjectContext];
 
     [self updatePreviewAndActionButtons];
     
@@ -177,6 +180,11 @@
 
 -(void)doOpenProfiles{
     [_profileWindowController showWindow:self];
+}
+
+-(void)doOpenEditor :(Profile *)profile {
+    _profileEditWindow.loadedProfile = profile;
+    [_profileEditWindow showWindow:self];
 }
 
 -(void)updatePreviewAndActionButtons {
@@ -458,8 +466,8 @@
 - (IBAction)saveNewProfile:(id)sender {
     Profile* newProfile = [NSEntityDescription insertNewObjectForEntityForName:@"Profile" inManagedObjectContext:self.managedObjectContext];
     newProfile.name = [self inputAlert:@"Enter a name for the new letterhead" defaultValue:@"New Letterhead"];
-    newProfile.bgImagePath = [[self profileWindowController] saveImage:[[self backgrounddoc] image] :newProfile :@"background"];
-    newProfile.coverImagePath = [[self profileWindowController] saveImage:[[self coverbackgrounddoc] image] :newProfile :@"cover"];
+    newProfile.bgImagePath = [[self profileEditWindow] saveImage:[[self backgrounddoc] image] :newProfile :@"background"];
+    newProfile.coverImagePath = [[self profileEditWindow] saveImage:[[self coverbackgrounddoc] image] :newProfile :@"cover"];
 }
 
 - (NSString *)inputAlert: (NSString *)prompt defaultValue: (NSString *)defaultValue {
@@ -570,6 +578,15 @@
         [_previewButton3 setEnabled:NO];
     }
 }
+
+- (IBAction)editSelectedProfile:(id)sender {
+    NSButton *button = (NSButton *)sender;
+    NSInteger *row = [[self drawerTableView] rowForView:button];
+    Profile *profile = [[[self pArrayController] arrangedObjects ] objectAtIndex:row];
+    
+    [self doOpenEditor:profile];
+}
+
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.lapp5.PDF_Letterhead" in the user's Application Support directory.
 - (NSURL *)applicationFilesDirectory

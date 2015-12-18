@@ -10,6 +10,8 @@
 
 @implementation PLBackgroundDropZoneContainer
 
+@synthesize background;
+
 - (id)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
@@ -17,18 +19,19 @@
         self.layer = _layer;   // strangely necessary
         self.wantsLayer = YES;
         self.layer.masksToBounds = YES;
-        self.layer.cornerRadius = 25.0;
-        
-        CALayer *viewLayer = [CALayer layer];
-       [viewLayer setBackgroundColor:CGColorCreateGenericRGB(225.0, 229.0, 234.0, 1.0)]; //wtf is dit voor rare kleur?
-       [self setLayer:viewLayer];
+        self.layer.cornerRadius = 10.0;
     }
     
     return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect  {
-
+- (void)drawRect:(NSRect)dirtyRect
+{
+    background = [NSColor colorWithDeviceRed: 229.0/255.0 green: 232.0/255.0 blue: 236.0/255.0 alpha: 1.0];
+    
+    [background set];
+    NSRectFill([self bounds]);
 }
+
 
 @end

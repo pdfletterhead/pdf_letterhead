@@ -9,5 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface PLBackgroundDropZoneContainer : NSView
+{
+    NSColor *background;
+}
+@property(retain) NSColor *background;
 
 @end
