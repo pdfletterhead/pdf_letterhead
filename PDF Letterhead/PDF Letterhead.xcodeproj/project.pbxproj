@@ -44,6 +44,8 @@
 		3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E798B751677F336006F47F5 /* PLPDFBgView.m */; };
 		3E7BC9D4162459EE0092BF5E /* pdfletterheadMac.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */; };
 		3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9850B61BF4E29900D7ABAB /* PLFAQWindowController.m */; };
+		3E9B90041C3AD9B9003D86E0 /* ITSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */; };
+		3E9B90051C3AD9B9003D86E0 /* ITSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */; };
 		3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9F2DA3167929E400486537 /* pdfviewbg.png */; };
 		3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */; };
 		3EAF7FED1AB23D9300C4EFB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF7FEC1AB23D9300C4EFB1 /* Images.xcassets */; };
@@ -175,6 +177,8 @@
 		3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = pdfletterheadMac.icns; path = ../pdfletterheadMac.icns; sourceTree = "<group>"; };
 		3E9850B51BF4E29900D7ABAB /* PLFAQWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFAQWindowController.h; sourceTree = "<group>"; };
 		3E9850B61BF4E29900D7ABAB /* PLFAQWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFAQWindowController.m; sourceTree = "<group>"; };
+		3E9B90021C3AD9B9003D86E0 /* ITSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSwitch.h; sourceTree = "<group>"; };
+		3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSwitch.m; sourceTree = "<group>"; };
 		3E9F2DA3167929E400486537 /* pdfviewbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdfviewbg.png; sourceTree = "<group>"; };
 		3E9F2DA91679378E00486537 /* PLPDFBgAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFBgAreaView.h; sourceTree = "<group>"; };
 		3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPDFBgAreaView.m; sourceTree = "<group>"; };
@@ -366,6 +370,7 @@
 		3E6835CB1607C90400DDFB82 /* PDF Letterhead */ = {
 			isa = PBXGroup;
 			children = (
+				3E9B90061C3AD9C2003D86E0 /* ITSwitch */,
 				79470B9C1C19914E009C37AA /* Sample Images */,
 				3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */,
 				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
@@ -403,6 +408,15 @@
 				3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E9B90061C3AD9C2003D86E0 /* ITSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				3E9B90021C3AD9B9003D86E0 /* ITSwitch.h */,
+				3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */,
+			);
+			name = ITSwitch;
 			sourceTree = "<group>";
 		};
 		79470B9C1C19914E009C37AA /* Sample Images */ = {
@@ -630,6 +644,7 @@
 				3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */,
 				3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */,
 				7910E6BC1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
+				3E9B90041C3AD9B9003D86E0 /* ITSwitch.m in Sources */,
 				7910E6BE1C206CAC00398823 /* Profile.m in Sources */,
 				79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */,
@@ -660,6 +675,7 @@
 				79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */,
 				79726ED81C16ED6E003B85D2 /* OnOffSwitchControl.m in Sources */,
 				7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
+				3E9B90051C3AD9B9003D86E0 /* ITSwitch.m in Sources */,
 				7910E6BF1C206CAC00398823 /* Profile.m in Sources */,
 				79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */,
@@ -726,7 +742,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -747,7 +763,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -769,7 +785,7 @@
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead/PDF Letterhead Lite.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lingewoud.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -797,7 +813,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "LITE=1";
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead/PDF Letterhead Lite.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lingewoud.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -823,7 +839,7 @@
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead Pro.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lingewoud.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -851,7 +867,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "PRO=1";
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead Pro.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lingewoud.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

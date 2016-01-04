@@ -76,7 +76,9 @@
     [self updatePreviewAndActionButtons];
     
     [self setupProfileDrawer];
+    [self setupColorSwitch];
 }
+
 
 
 
@@ -172,6 +174,25 @@
 -(void)doOpenQuickStart{
     [_quickStartWindow showWindow:self];
 }
+
+- (void)setupColorSwitch {
+    unsigned colorCode = 0;
+    unsigned char redByte, greenByte, blueByte;
+    
+    NSScanner* scanner = [NSScanner scannerWithString:@"318bd2"];
+    (void) [scanner scanHexInt:&colorCode]; // ignore error
+    
+    redByte = (unsigned char)(colorCode >> 16);
+    greenByte = (unsigned char)(colorCode >> 8);
+    blueByte = (unsigned char)(colorCode); // masks off high bits
+    
+    NSColor* blueColor = [NSColor colorWithCalibratedRed:(CGFloat)redByte / 0xff
+                                                    green:(CGFloat)greenByte / 0xff
+                                                     blue:(CGFloat)blueByte / 0xff
+                                                    alpha:1.0];
+    [_coverswitch3 setTintColor: blueColor];
+}
+
 
 - (void)setupProfileDrawer {
     
@@ -454,7 +475,8 @@ void RunAfterDelay(NSTimeInterval delay, BasicBlock block)
 - (IBAction)coverControlAction: (id) sender{
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     
-    if([_coverswitch2 state]==NSOffState){
+//    if([_coverswitch2 state]==NSOffState){
+    if([_coverswitch3 checked]==NO){
         [prefs setBool:NO forKey:@"coverEnabled"];
         [_coverbackgrounddoc unregisterDraggedTypes];
         [[_coverbackgrounddoc animator] setAlphaValue:0.0];

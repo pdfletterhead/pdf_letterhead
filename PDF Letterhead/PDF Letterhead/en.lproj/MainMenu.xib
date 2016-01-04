@@ -27,7 +27,7 @@
                 <outlet property="backgrounddocText" destination="948" id="987"/>
                 <outlet property="coverbackgrounddoc" destination="791" id="797"/>
                 <outlet property="coverbackgrounddocText" destination="946" id="986"/>
-                <outlet property="coverswitch2" destination="933" id="935"/>
+                <outlet property="coverswitch3" destination="32v-Qf-gBP" id="2Vz-TQ-zPM"/>
                 <outlet property="drawerContentView" destination="vW8-G5-9Eg" id="OA1-i8-iNJ"/>
                 <outlet property="drawerTableView" destination="uE2-5U-Fka" id="5BH-vf-Rdg"/>
                 <outlet property="drawerView" destination="vW8-G5-9Eg" id="MBF-RC-ULH"/>
@@ -371,9 +371,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" id="795">
-                                <rect key="frame" x="20" y="248" width="150" height="20"/>
+                                <rect key="frame" x="20" y="248" width="82" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cover page?" id="796">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Cover page" id="796">
                                     <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" red="0.29393028846153846" green="0.29393028846153846" blue="0.29393028846153846" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -405,17 +405,6 @@
                                     <outlet property="menu" destination="834" id="931"/>
                                 </connections>
                             </imageView>
-                            <button id="933" customClass="OnOffSwitchControl">
-                                <rect key="frame" x="120" y="249" width="60" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="934" customClass="OnOffSwitchControlCell">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="coverControlAction:" target="494" id="938"/>
-                                </connections>
-                            </button>
                             <imageView identifier="coverDropArea" focusRingType="none" tag="1" id="791" customClass="PLDropZone">
                                 <rect key="frame" x="20" y="124" width="80" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -458,6 +447,13 @@
                                     <action selector="saveNewProfile:" target="494" id="fFa-dz-fjJ"/>
                                 </connections>
                             </button>
+                            <customView id="32v-Qf-gBP" customClass="ITSwitch">
+                                <rect key="frame" x="111" y="248" width="52" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="coverControlAction:" target="494" id="QWn-aK-V1U"/>
+                                </connections>
+                            </customView>
                         </subviews>
                     </customView>
                     <customView identifier="sourceContainer" canDrawConcurrently="YES" id="982" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
