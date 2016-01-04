@@ -36,7 +36,6 @@
     _setView = false;
 
     _profileWindowController = [[PLProfileWindowController alloc] initWithWindowNibName:@"PLProfileWindowController"];
-    _profileEditWindow = [[PLProfileEditWindow alloc] initWithWindowNibName:@"PLProfileEditWindow"];
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
     
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
@@ -73,10 +72,6 @@
   
     //TODO load most recently used profile
     [self selectProfile:nil];
-    
-    //Managed Object Context for ProfileViewController
-    self.profileEditWindow.managedObjectContext = [self managedObjectContext];
-
     [self updatePreviewAndActionButtons];
     
 }
@@ -183,7 +178,16 @@
 }
 
 -(void)doOpenEditor :(Profile *)profile {
+    _profileEditWindow = [[PLProfileEditWindow alloc] initWithWindowNibName:@"PLProfileEditWindow"];
     _profileEditWindow.loadedProfile = profile;
+    
+    
+    //Managed Object Context for ProfileViewController
+    self.profileEditWindow.managedObjectContext = [self managedObjectContext];
+    self.profileEditWindow.pathToAppSupport = [self applicationFilesDirectory];
+    
+    NSLog(@"url: %@", [self applicationFilesDirectory]);
+
     [_profileEditWindow showWindow:self];
 }
 

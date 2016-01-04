@@ -15,16 +15,16 @@
 @property (unsafe_unretained) IBOutlet NSImageView *coverImage;
 @property (unsafe_unretained) IBOutlet NSTextField *title;
 
-
 @end
 
 @implementation PLProfileEditWindow
+
 
 - (void)windowDidLoad {
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    
+
     NSURL *bgPath = [NSURL URLWithString:_loadedProfile.bgImagePath];
     NSURL *coverPath = [NSURL URLWithString:_loadedProfile.coverImagePath];
    
@@ -54,6 +54,12 @@
     }
 }
 
+- (IBAction)updateTitle:(id)sender {
+    NSString *str = [sender stringValue];
+    _loadedProfile.name = str;
+    
+}
+
 
 - (IBAction)doAddCover:(id)sender {
     [self openExistingDocument :@"cover"];
@@ -72,41 +78,38 @@
 }
 
 - (void)openExistingDocument :(NSString*)cover {
-//    NSOpenPanel* openPanel = [NSOpenPanel openPanel];
-//    [openPanel setCanChooseFiles:YES];
-//    [openPanel setCanChooseDirectories:NO];
-//    [openPanel setAllowsMultipleSelection:NO];
-//    
-//    // This method displays the panel and returns immediately.
-//    // The completion handler is called when the user selects an
-//    // item or cancels the panel.
-//    
-//    [openPanel beginWithCompletionHandler:^(NSInteger result){
-//        if (result == NSFileHandlingPanelOKButton) {
-//            NSString *file = [[openPanel URL] path];
-//            NSString *ext = [[file pathExtension] lowercaseString ];
-//            
-//            NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
-//            if ([validImageExtensions containsObject:ext])  {
-//                NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:file];
-//                if ([self makeOrFindAppSupportDirectory]) {
-//                    Profile *profile = [self getCurrentProfile];
-//                    if (profile) {
-//                        [self saveImage:zNewImage :profile :cover];
-//                    }
-//                }
-//            }
-//            else {
-//                NSLog(@"invalid filetype, no IMAGE");
-//            }
-//        }
-//    }];
-    NSLog(@"profile: %@", _loadedProfile);
+    NSOpenPanel* openPanel = [NSOpenPanel openPanel];
+    [openPanel setCanChooseFiles:YES];
+    [openPanel setCanChooseDirectories:NO];
+    [openPanel setAllowsMultipleSelection:NO];
+    
+    // This method displays the panel and returns immediately.
+    // The completion handler is called when the user selects an
+    // item or cancels the panel.
+    
+    [openPanel beginWithCompletionHandler:^(NSInteger result){
+        if (result == NSFileHandlingPanelOKButton) {
+            NSString *file = [[openPanel URL] path];
+            NSString *ext = [[file pathExtension] lowercaseString ];
+            
+            NSSet *validImageExtensions = [NSSet setWithArray:[NSImage imageFileTypes]];
+            if ([validImageExtensions containsObject:ext])  {
+                NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:file];
+                if ([self makeOrFindAppSupportDirectory]) {
+                    if (_loadedProfile) {
+                        [self saveImage:zNewImage :_loadedProfile :cover];
+                    }
+                }
+            }
+            else {
+                NSLog(@"invalid filetype, no IMAGE");
+            }
+        }
+    }];
 }
 
 - (void)delExistingDocument:(NSString*)cover {
-//    Profile *profile = [self getCurrentProfile];
-//    [self removeImage:profile :cover];
+    [self removeImage:_loadedProfile :cover];
 }
 
 - (IBAction)addNewProfile:(id)sender {
@@ -126,9 +129,10 @@
 -(void)removeImage:(Profile*)profile :(NSString*)cover {
     if ([cover isEqual:@"cover"]) {
         profile.coverImagePath = nil;
-        
+        [[self coverImage] setImage:nil];
     } else {
         profile.bgImagePath = nil;
+        [[self bgImage] setImage:nil];
     }
 }
 
@@ -148,10 +152,12 @@
         
         if ([cover isEqual:@"cover"]) {
             profile.coverImagePath = [pathToImage absoluteString];
+            [[self coverImage] setImage:image];
             returnVar = profile.coverImagePath;
             
         } else {
             profile.bgImagePath = [pathToImage absoluteString];
+            [[self bgImage] setImage:image];
             returnVar = profile.bgImagePath;
         }
         return returnVar;
