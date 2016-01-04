@@ -71,10 +71,14 @@
 @property (assign) IBOutlet PDFView *previewView;
 @property (assign) IBOutlet NSView *pdfOuterView;
 
+@property (retain) IBOutlet NSWindow *profileDrawer;
+
 @property (assign) BOOL coverEnabled;
 @property (assign) BOOL isSetCover;
 @property (assign) BOOL isSetBackground;
 @property (assign) BOOL isSetContent;
+@property (assign) BOOL drawerIsOpen;
+
 
 @property (readonly, retain) PLQuickStart1 *quickStartWindow;
 

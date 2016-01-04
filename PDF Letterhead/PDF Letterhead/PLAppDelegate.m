@@ -11,13 +11,14 @@
 #include "PLProfileWindowController.h"
 #include "PLProfileEditWindow.h"
 
-@interface  PLAppDelegate()
+@interface PLAppDelegate()
 @property (nonatomic,strong) IBOutlet PLProfileWindowController *profileWindowController;
 @property (nonatomic,strong) IBOutlet PLProfileEditWindow *profileEditWindow;
-@property (unsafe_unretained) IBOutlet NSView *drawerView;
 @property (strong) IBOutlet NSTableView *drawerTableView;
 @property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
+
 @property (unsafe_unretained) IBOutlet NSView *drawerContentView;
+
 @end
 
 @implementation PLAppDelegate
@@ -28,7 +29,7 @@
 @synthesize quickStartWindow = _quickStartWindow;
 @synthesize profileWindowController = _profileWindowController;
 @synthesize profileEditWindow = _profileEditWindow;
-
+@synthesize profileDrawer = _profileDrawer;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -74,7 +75,10 @@
     [self selectProfile:nil];
     [self updatePreviewAndActionButtons];
     
+    [self setupProfileDrawer];
 }
+
+
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
@@ -169,6 +173,90 @@
     [_quickStartWindow showWindow:self];
 }
 
+- (void)setupProfileDrawer {
+    
+    _drawerIsOpen = NO;
+    
+    CGRect wRect = _pdfWindow.frame;
+    CGRect rect0 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
+    
+    _profileDrawer = [[NSWindow alloc] initWithContentRect:rect0
+                                                 styleMask:NSUnifiedTitleAndToolbarWindowMask
+                                                   backing:NSBackingStoreBuffered
+                                                     defer:NO];
+    unsigned colorCode = 0;
+    unsigned char redByte, greenByte, blueByte;
+    
+    NSScanner* scanner = [NSScanner scannerWithString:@"FBFDFC"];
+    (void) [scanner scanHexInt:&colorCode]; // ignore error
+    
+    redByte = (unsigned char)(colorCode >> 16);
+    greenByte = (unsigned char)(colorCode >> 8);
+    blueByte = (unsigned char)(colorCode); // masks off high bits
+    
+    NSColor* whiteColor = [NSColor colorWithCalibratedRed:(CGFloat)redByte / 0xff
+                                                    green:(CGFloat)greenByte / 0xff
+                                                     blue:(CGFloat)blueByte / 0xff
+                                                    alpha:1.0];
+    
+    [_profileDrawer setBackgroundColor:[NSColor clearColor]];
+    [_profileDrawer setContentView: _drawerContentView];
+    [_profileDrawer setMovableByWindowBackground: YES];
+    
+    [_drawerContentView setWantsLayer:YES];
+    [[_drawerContentView layer] setCornerRadius:4.0];
+    [[_drawerContentView layer] setBackgroundColor:whiteColor.CGColor];
+    
+    _profileDrawer.hasShadow = YES;
+    
+    [_pdfWindow addChildWindow:_profileDrawer ordered:NSWindowBelow];
+}
+
+typedef void (^BasicBlock)(void);
+
+void RunAfterDelay(NSTimeInterval delay, BasicBlock block)
+{
+    [[block copy] performSelector: @selector(my_callBlock) withObject: nil afterDelay: delay];
+}
+
+- (IBAction)openProfileDrawer:(id)sender {
+    
+    if (_drawerIsOpen) {
+        _drawerIsOpen = NO;
+        CGRect wRect = _pdfWindow.frame;
+        CGRect rect1 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
+        
+        [_profileDrawer setFrame:rect1 display:YES animate:YES];
+    }
+    else {
+        
+        //check if frame is to close to screen corner
+        if (_pdfWindow.frame.origin.x < 200.0){
+            CGRect wRect1 = _pdfWindow.frame;
+            CGRect wRect = CGRectMake(220.0, wRect1.origin.y, wRect1.size.width, wRect1.size.height);
+            CGRect rect1 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
+            [_profileDrawer setFrame:rect1 display:YES animate:NO];
+            [_pdfWindow setFrame:wRect display:YES animate:YES];
+            
+            [NSTimer scheduledTimerWithTimeInterval:0.0f
+                                             target:self
+                                           selector: @selector(openProfileDrawer:)
+                                           userInfo:nil
+                                            repeats:NO];
+        }
+        else{
+            _drawerIsOpen = YES;
+            CGRect wRect = _pdfWindow.frame;
+            CGRect rect1 = CGRectMake(wRect.origin.x-180.0, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
+            
+            [_profileDrawer setFrame:rect1 display:YES animate:YES];
+        }
+    }
+    
+}
+
+
+
 - (IBAction)openProfiles:(id)sender {
     [self doOpenProfiles];
 }
@@ -206,7 +294,6 @@
         _pdfView = [[PDFView alloc] init];
         
         if (!_setView) {
-            
             
             [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
             [_pdfView setDocument: _letterheadPDF];

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1060" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -50,14 +50,6 @@
                 <outlet property="sourcedoc" destination="561" id="746"/>
             </connections>
         </customObject>
-        <drawer preferredEdge="minX" trailingOffset="15" id="589">
-            <size key="contentSize" width="180" height="500"/>
-            <size key="maxContentSize" width="10000" height="10000"/>
-            <connections>
-                <outlet property="contentView" destination="vW8-G5-9Eg" id="P3U-zb-keZ"/>
-                <outlet property="parentWindow" destination="587" id="591"/>
-            </connections>
-        </drawer>
         <toolbar implicitIdentifier="E4375EA3-2226-4250-93C9-C598C7F5616C" autosavesConfiguration="NO" showsBaselineSeparator="NO" prefersToBeShown="NO" displayMode="iconAndLabel" sizeMode="regular" id="545">
             <allowedToolbarItems>
                 <toolbarItem implicitItemIdentifier="7E948E8F-0044-40A4-A7B2-5BA90AA0AB91" label="Preview" paletteLabel="Preview" tag="-1" image="NSAdvanced" autovalidates="NO" id="857">
@@ -88,9 +80,6 @@
                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="574"/>
                 <toolbarItem implicitItemIdentifier="ABC51E90-F545-4F4B-9D6D-A0F09C7BD9D0" label="drawer" paletteLabel="drawer" tag="-1" image="NSAdvanced" id="585">
                     <nil key="toolTip"/>
-                    <connections>
-                        <action selector="toggle:" target="589" id="741"/>
-                    </connections>
                 </toolbarItem>
             </allowedToolbarItems>
             <defaultToolbarItems>
@@ -518,7 +507,7 @@
                             <font key="font" metaFont="smallSystemBold"/>
                         </buttonCell>
                         <connections>
-                            <action selector="toggle:" target="589" id="Zq3-6g-v38"/>
+                            <action selector="openProfileDrawer:" target="494" id="aue-DZ-bIo"/>
                         </connections>
                     </button>
                 </subviews>
@@ -538,17 +527,17 @@
                         <rect key="frame" x="-1" y="-1" width="512" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" id="HPJ-Mw-BeV">
-                            <rect key="frame" x="1" y="1" width="495" height="413"/>
+                            <rect key="frame" x="1" y="1" width="510" height="413"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="763" userLabel="PLfaqwindow">
                                     <rect key="frame" x="0.0" y="0.0" width="510" height="413"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -559,7 +548,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="765">
-                            <rect key="frame" x="496" y="1" width="15" height="413"/>
+                            <rect key="frame" x="495" y="1" width="16" height="413"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -771,7 +760,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="160" rowSizeStyle="automatic" viewBased="YES" id="uE2-5U-Fka">
-                                <rect key="frame" x="0.0" y="0.0" width="180" height="527"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>

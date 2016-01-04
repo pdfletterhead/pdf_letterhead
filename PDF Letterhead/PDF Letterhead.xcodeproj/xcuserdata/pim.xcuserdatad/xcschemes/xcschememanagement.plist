@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>PDF Letterhead Pro.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>PDF Letterhead.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>3E6835C01607C90400DDFB82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79726ECC1C16ED6E003B85D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
