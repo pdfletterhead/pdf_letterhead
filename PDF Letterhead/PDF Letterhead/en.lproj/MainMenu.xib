@@ -318,11 +318,11 @@
                 <subviews>
                     <customView id="894" customClass="PLBottomToolbarView">
                         <rect key="frame" x="251" y="0.0" width="452" height="46"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button verticalHuggingPriority="750" id="897">
-                                <rect key="frame" x="260" y="11" width="82" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="236" y="11" width="82" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" title="  E-mail" bezelStyle="smallSquare" image="mail" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="898" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -332,8 +332,8 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" id="991">
-                                <rect key="frame" x="170" y="11" width="82" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="146" y="11" width="82" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" title="  Save" bezelStyle="smallSquare" image="saveicon" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="992" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -343,8 +343,8 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" id="993">
-                                <rect key="frame" x="66" y="11" width="95" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="42" y="11" width="95" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" title="  Preview" bezelStyle="smallSquare" image="NSQuickLookTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="994" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -354,8 +354,8 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" id="995">
-                                <rect key="frame" x="350" y="11" width="82" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="326" y="11" width="82" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" title="  Print" bezelStyle="smallSquare" image="printer" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="996" customClass="AMDarkButtonCell">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -430,8 +430,8 @@
                             <textField verticalHuggingPriority="750" id="1010">
                                 <rect key="frame" x="12" y="65" width="191" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop background image here" id="1011">
-                                    <font key="font" metaFont="systemLight" size="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop background images here" id="1011">
+                                    <font key="font" metaFont="systemLight" size="13"/>
                                     <color key="textColor" red="0.37520032051282048" green="0.37520032051282048" blue="0.37520032051282048" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -483,6 +483,11 @@
                         <rect key="frame" x="251" y="46" width="452" height="602"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView id="Xye-zb-ewL">
+                                <rect key="frame" x="36" y="50" width="379" height="513"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp" id="HdR-P0-Wge"/>
+                            </imageView>
                             <customView id="988" customClass="PLPDFBgAreaView">
                                 <rect key="frame" x="20" y="20" width="412" height="561"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,7 +501,7 @@
                         </subviews>
                     </customView>
                     <button verticalHuggingPriority="750" id="qzB-tB-vJZ">
-                        <rect key="frame" x="20" y="306" width="214" height="32"/>
+                        <rect key="frame" x="14" y="306" width="226" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Choose letterhead" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L4e-O0-fSa">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -915,6 +920,7 @@
         <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
         <image name="bgdrop" width="276" height="359"/>
+        <image name="bghelp" width="379" height="513"/>
         <image name="contentdrop" width="367" height="509"/>
         <image name="coverdrop" width="259" height="359"/>
         <image name="mail" width="15" height="10"/>
