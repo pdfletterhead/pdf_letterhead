@@ -437,18 +437,18 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" id="1z4-dM-vE6" customClass="PLButton">
-                                <rect key="frame" x="14" y="15" width="187" height="24"/>
+                                <rect key="frame" x="14" y="7" width="187" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="Save letterhead" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
+                                <buttonCell key="cell" type="push" title="Save letterhead" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="smallSystemBold"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="saveNewProfile:" target="494" id="fFa-dz-fjJ"/>
                                 </connections>
                             </button>
                             <customView id="32v-Qf-gBP" customClass="ITSwitch">
-                                <rect key="frame" x="111" y="248" width="52" height="22"/>
+                                <rect key="frame" x="114" y="248" width="52" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <action selector="coverControlAction:" target="494" id="QWn-aK-V1U"/>
@@ -496,11 +496,11 @@
                         </subviews>
                     </customView>
                     <button verticalHuggingPriority="750" id="qzB-tB-vJZ">
-                        <rect key="frame" x="20" y="310" width="214" height="28"/>
+                        <rect key="frame" x="20" y="306" width="214" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="smallSquare" title="Choose letterhead" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L4e-O0-fSa">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                            <font key="font" metaFont="smallSystemBold"/>
+                        <buttonCell key="cell" type="push" title="Choose letterhead" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L4e-O0-fSa">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <action selector="openProfileDrawer:" target="494" id="aue-DZ-bIo"/>
@@ -508,6 +508,9 @@
                     </button>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="delegate" destination="494" id="zCr-Vx-0mo"/>
+            </connections>
             <point key="canvasLocation" x="781.5" y="743"/>
         </window>
         <window title="PDF Letterhead FAQ" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="760" customClass="NSPanel">
@@ -740,23 +743,23 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X7M-no-WSH">
-                    <rect key="frame" x="18" y="589" width="144" height="17"/>
+                    <rect key="frame" x="18" y="587" width="152" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Choose a profile" id="4xL-qD-hOz">
-                        <font key="font" metaFont="systemBold" size="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Choose a letterhead" id="4xL-qD-hOz">
+                        <font key="font" metaFont="systemBold" size="14"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="162" horizontalPageScroll="10" verticalLineScroll="162" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="tWN-xM-Ig2">
-                    <rect key="frame" x="0.0" y="47" width="180" height="527"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="tWN-xM-Ig2">
+                    <rect key="frame" x="0.0" y="52" width="180" height="522"/>
+                    <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="gaH-zx-D8Q">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="527"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="522"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="160" rowSizeStyle="automatic" viewBased="YES" id="uE2-5U-Fka">
-                                <rect key="frame" x="0.0" y="0.0" width="180" height="0.0"/>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="uE2-5U-Fka">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="522"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
@@ -872,28 +875,34 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" id="EIf-f8-Y32">
-                    <rect key="frame" x="20" y="19" width="20" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ehq-DJ-bMO">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
+                <segmentedControl verticalHuggingPriority="750" id="Hfo-bE-ad2">
+                    <rect key="frame" x="18" y="16" width="64" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="wPz-yt-5fX">
+                        <font key="font" metaFont="system" size="15"/>
+                        <segments>
+                            <segment label="+"/>
+                            <segment label="-" tag="1"/>
+                        </segments>
+                    </segmentedCell>
                     <connections>
-                        <action selector="add:" target="J24-2q-b8a" id="p50-fA-w5B"/>
+                        <action selector="addOrDeleteProfile:" target="494" id="y96-3F-52V"/>
                     </connections>
-                </button>
-                <button verticalHuggingPriority="750" id="5se-1N-NmH">
-                    <rect key="frame" x="48" y="19" width="20" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i42-tZ-M0w">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="remove:" target="J24-2q-b8a" id="pmi-Pc-L9d"/>
-                    </connections>
-                </button>
+                </segmentedControl>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="8lJ-AR-di4">
+                    <rect key="frame" x="0.0" y="50" width="180" height="5"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="OdQ-dp-hxm">
+                    <rect key="frame" x="0.0" y="571" width="180" height="5"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
             </subviews>
             <point key="canvasLocation" x="254" y="742"/>
         </customView>
@@ -901,10 +910,8 @@
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSAdvanced" width="32" height="32"/>
         <image name="NSQuickLookTemplate" width="19" height="12"/>
-        <image name="NSRemoveTemplate" width="11" height="11"/>
         <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
         <image name="bgdrop" width="276" height="359"/>

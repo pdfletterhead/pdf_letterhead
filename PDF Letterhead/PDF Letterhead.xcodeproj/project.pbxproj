@@ -372,7 +372,6 @@
 			children = (
 				3E9B90061C3AD9C2003D86E0 /* ITSwitch */,
 				79470B9C1C19914E009C37AA /* Sample Images */,
-				3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */,
 				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
 				3E0C8E9516768EF200DE6E94 /* onoffswitch */,
 				3E674466167943C200D99390 /* BottomToolbar */,
@@ -395,6 +394,7 @@
 				3E3FC58F167A9FC70006D91B /* images */,
 				3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */,
 				3EF7E6BA16089C21008EA1B1 /* white.pdf */,
+				3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */,
 				3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */,
 				3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */,
 				3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */,

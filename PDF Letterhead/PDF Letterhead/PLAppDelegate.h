@@ -14,7 +14,7 @@
 #import "PLProfileWindowController.h"
 #import "ITSwitch.h"
 
-@interface PLAppDelegate : NSObject <NSApplicationDelegate>
+@interface PLAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
 {
     float _browserWidth;
 	NSPrintingOrientation _orientation;

@@ -233,11 +233,15 @@
     [_pdfWindow addChildWindow:_profileDrawer ordered:NSWindowBelow];
 }
 
-typedef void (^BasicBlock)(void);
-
-void RunAfterDelay(NSTimeInterval delay, BasicBlock block)
-{
-    [[block copy] performSelector: @selector(my_callBlock) withObject: nil afterDelay: delay];
+-(void)windowDidResize:(NSNotification *)notification{
+  
+    CGRect wRect = _pdfWindow.frame;
+    
+    CGRect rect1 = CGRectMake(_profileDrawer.frame.origin.x, (wRect.origin.y+15), _profileDrawer.frame.size.width, (wRect.size.height-50.0));
+    
+    [_profileDrawer setFrame:rect1 display:YES];
+    
+    [_profileDrawer viewsNeedDisplay];
 }
 
 - (IBAction)openProfileDrawer:(id)sender {
@@ -638,6 +642,31 @@ void RunAfterDelay(NSTimeInterval delay, BasicBlock block)
         return nil;
     }
 }
+
+//Called by segmented control
+-(IBAction)addOrDeleteProfile:(id)sender {
+
+    NSInteger selectedSegment = [sender selectedSegment];
+    
+    if(selectedSegment==0){
+        [self.pArrayController add:sender];
+    }
+    else {
+        
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"OK"];
+        [alert addButtonWithTitle:@"Cancel"];
+        [alert setMessageText:@"Delete the letterhead?"];
+        [alert setInformativeText:@"Deleted letterheads cannot be restored."];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        
+        
+        if ([alert runModal] == NSAlertFirstButtonReturn) {
+            [self.pArrayController remove:sender];
+        }
+    }
+}
+
 
 
 - (BOOL)validateMenuItem:(NSMenuItem *)item
