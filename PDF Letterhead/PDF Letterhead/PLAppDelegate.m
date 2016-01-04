@@ -258,7 +258,7 @@
         //check if frame is to close to screen corner
         if (_pdfWindow.frame.origin.x < 200.0){
             CGRect wRect1 = _pdfWindow.frame;
-            CGRect wRect = CGRectMake(220.0, wRect1.origin.y, wRect1.size.width, wRect1.size.height);
+            CGRect wRect = CGRectMake(200.0, wRect1.origin.y, wRect1.size.width, wRect1.size.height);
             CGRect rect1 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
             [_profileDrawer setFrame:rect1 display:YES animate:NO];
             [_pdfWindow setFrame:wRect display:YES animate:YES];
