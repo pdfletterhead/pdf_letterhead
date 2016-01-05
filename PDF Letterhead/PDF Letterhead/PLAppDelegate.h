@@ -8,8 +8,6 @@
 
 #import <Quartz/Quartz.h>
 #import "PLDropZone.h"
-#import "OnOffSwitchControl.h"
-#import "OnOffSwitchControlCell.h"
 #import "PLQuickStart1.h"
 #import "PLProfileWindowController.h"
 #import "ITSwitch.h"
@@ -59,7 +57,6 @@
 @property (assign) IBOutlet NSTextField *coverbackgrounddocText;
 
 @property (assign) IBOutlet NSSegmentedControl *coverswitch;
-@property (assign) IBOutlet OnOffSwitchControl *coverswitch2;
 @property (assign) IBOutlet ITSwitch *coverswitch3;
 
 @property (readonly, retain) NSURL *tmpDirectoryURL;

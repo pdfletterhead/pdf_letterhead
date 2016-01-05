@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */; };
-		3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9216768EEC00DE6E94 /* OnOffSwitchControl.m */; };
 		3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
 		3E27703C1677DCA5002DD3DE /* bottomtoolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E27703B1677DCA5002DD3DE /* bottomtoolbar.png */; };
 		3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
@@ -72,8 +70,6 @@
 		79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F61607D22100DDFB82 /* PLPDFPage.m */; };
 		79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
 		79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
-		79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */; };
-		79726ED81C16ED6E003B85D2 /* OnOffSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C8E9216768EEC00DE6E94 /* OnOffSwitchControl.m */; };
 		79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
 		79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
 		79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E798B751677F336006F47F5 /* PLPDFBgView.m */; };
@@ -112,15 +108,9 @@
 		79EEDAA41C22CEC000DE767E /* PLProfileEditWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */; };
 		79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
 		79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
-		79EEDAAF1C22F4EB00DE767E /* PLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAAE1C22F4EB00DE767E /* PLButton.m */; };
-		79EEDAB01C22F4EB00DE767E /* PLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAAE1C22F4EB00DE767E /* PLButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E0C8E8F16768EEB00DE6E94 /* OnOffSwitchControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControlCell.h; sourceTree = "<group>"; };
-		3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControlCell.m; sourceTree = "<group>"; };
-		3E0C8E9116768EEC00DE6E94 /* OnOffSwitchControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnOffSwitchControl.h; sourceTree = "<group>"; };
-		3E0C8E9216768EEC00DE6E94 /* OnOffSwitchControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnOffSwitchControl.m; sourceTree = "<group>"; };
 		3E2770381677DC2D002DD3DE /* PLBottomToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLBottomToolbarView.h; sourceTree = "<group>"; };
 		3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLBottomToolbarView.m; sourceTree = "<group>"; };
 		3E27703B1677DCA5002DD3DE /* bottomtoolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomtoolbar.png; sourceTree = "<group>"; };
@@ -203,8 +193,6 @@
 		79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLProfileEditWindow.xib; sourceTree = "<group>"; };
 		79EEDAA51C22CF0C00DE767E /* PLProfileEditWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileEditWindow.h; sourceTree = "<group>"; };
 		79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLProfileEditWindow.m; sourceTree = "<group>"; };
-		79EEDAAD1C22F4EB00DE767E /* PLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLButton.h; sourceTree = "<group>"; };
-		79EEDAAE1C22F4EB00DE767E /* PLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,17 +219,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E0C8E9516768EF200DE6E94 /* onoffswitch */ = {
-			isa = PBXGroup;
-			children = (
-				3E0C8E8F16768EEB00DE6E94 /* OnOffSwitchControlCell.h */,
-				3E0C8E9016768EEB00DE6E94 /* OnOffSwitchControlCell.m */,
-				3E0C8E9116768EEC00DE6E94 /* OnOffSwitchControl.h */,
-				3E0C8E9216768EEC00DE6E94 /* OnOffSwitchControl.m */,
-			);
-			name = onoffswitch;
-			sourceTree = "<group>";
-		};
 		3E27702A1677D726002DD3DE /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,8 +236,6 @@
 				3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */,
 				3E2770381677DC2D002DD3DE /* PLBottomToolbarView.h */,
 				3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */,
-				79EEDAAD1C22F4EB00DE767E /* PLButton.h */,
-				79EEDAAE1C22F4EB00DE767E /* PLButton.m */,
 				79182E331C3BD26D00ABDDD9 /* PLTableRowView.h */,
 				79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */,
 			);
@@ -373,7 +348,6 @@
 			children = (
 				3E9B90061C3AD9C2003D86E0 /* ITSwitch */,
 				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
-				3E0C8E9516768EF200DE6E94 /* onoffswitch */,
 				3E674466167943C200D99390 /* BottomToolbar */,
 				3E3FC58D167A9F7B0006D91B /* FAQWindow */,
 				79B9AC8A1C18851900B260F6 /* ProfilesWindow */,
@@ -626,8 +600,6 @@
 				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
 				79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */,
-				3E0C8E9316768EEC00DE6E94 /* OnOffSwitchControlCell.m in Sources */,
-				3E0C8E9416768EEC00DE6E94 /* OnOffSwitchControl.m in Sources */,
 				7910E6BC1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
 				3E9B90041C3AD9B9003D86E0 /* ITSwitch.m in Sources */,
 				7910E6BE1C206CAC00398823 /* Profile.m in Sources */,
@@ -640,7 +612,6 @@
 				3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */,
 				3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */,
 				3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */,
-				79EEDAAF1C22F4EB00DE767E /* PLButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,8 +629,6 @@
 				79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */,
 				79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */,
 				79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */,
-				79726ED71C16ED6E003B85D2 /* OnOffSwitchControlCell.m in Sources */,
-				79726ED81C16ED6E003B85D2 /* OnOffSwitchControl.m in Sources */,
 				7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
 				3E9B90051C3AD9B9003D86E0 /* ITSwitch.m in Sources */,
 				7910E6BF1C206CAC00398823 /* Profile.m in Sources */,
@@ -672,7 +641,6 @@
 				79726EDE1C16ED6E003B85D2 /* AMDarkButtonCell.m in Sources */,
 				79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */,
 				79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */,
-				79EEDAB01C22F4EB00DE767E /* PLButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
