@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1060" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -305,7 +305,7 @@
             </items>
         </menu>
         <window title="PDF Letterhead - Main" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="587">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="237" y="273" width="703" height="648"/>
@@ -315,56 +315,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="703" height="648"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView id="894" customClass="PLBottomToolbarView">
-                        <rect key="frame" x="251" y="0.0" width="452" height="46"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" id="897">
-                                <rect key="frame" x="236" y="11" width="82" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="  E-mail" bezelStyle="smallSquare" image="mail" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="898" customClass="AMDarkButtonCell">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="saveEmail:" target="494" id="1001"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" id="991">
-                                <rect key="frame" x="146" y="11" width="82" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="  Save" bezelStyle="smallSquare" image="saveicon" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="992" customClass="AMDarkButtonCell">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="saveAs:" target="494" id="1000"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" id="993">
-                                <rect key="frame" x="42" y="11" width="95" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="  Preview" bezelStyle="smallSquare" image="NSQuickLookTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="994" customClass="AMDarkButtonCell">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="openPreview:" target="494" id="1002"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" id="995">
-                                <rect key="frame" x="326" y="11" width="82" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="  Print" bezelStyle="smallSquare" image="printer" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="996" customClass="AMDarkButtonCell">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="savePrint:" target="494" id="1003"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </customView>
                     <customView canDrawConcurrently="YES" id="939" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
                         <rect key="frame" x="20" y="348" width="214" height="280"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -479,16 +429,66 @@
                         </subviews>
                     </customView>
                     <customView id="985" customClass="PLPDFBgView">
-                        <rect key="frame" x="251" y="46" width="452" height="602"/>
+                        <rect key="frame" x="251" y="0.0" width="452" height="648"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <customView id="894" userLabel="ButtonToolbar">
+                                <rect key="frame" x="23" y="0.0" width="406" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" id="897">
+                                        <rect key="frame" x="214" y="11" width="82" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <buttonCell key="cell" type="smallSquare" title="  E-mail" bezelStyle="smallSquare" image="mail" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="898" customClass="AMDarkButtonCell">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="saveEmail:" target="494" id="1001"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" id="991">
+                                        <rect key="frame" x="124" y="11" width="82" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <buttonCell key="cell" type="smallSquare" title="  Save" bezelStyle="smallSquare" image="saveicon" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="992" customClass="AMDarkButtonCell">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="saveAs:" target="494" id="1000"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" id="993">
+                                        <rect key="frame" x="20" y="11" width="95" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <buttonCell key="cell" type="smallSquare" title="  Preview" bezelStyle="smallSquare" image="NSQuickLookTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="994" customClass="AMDarkButtonCell">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openPreview:" target="494" id="1002"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" id="995">
+                                        <rect key="frame" x="304" y="11" width="82" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <buttonCell key="cell" type="smallSquare" title="  Print" bezelStyle="smallSquare" image="printer" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="996" customClass="AMDarkButtonCell">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="savePrint:" target="494" id="1003"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </customView>
                             <imageView id="Xye-zb-ewL">
-                                <rect key="frame" x="36" y="50" width="379" height="513"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="36" y="96" width="379" height="513"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp" id="HdR-P0-Wge"/>
                             </imageView>
                             <customView id="988" customClass="PLPDFBgAreaView">
-                                <rect key="frame" x="20" y="20" width="412" height="561"/>
+                                <rect key="frame" x="20" y="66" width="412" height="561"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <customView canDrawConcurrently="YES" id="SIz-ol-d1z">
@@ -537,10 +537,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="510" height="413"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                 </textView>
                             </subviews>
