@@ -20,22 +20,69 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="461" width="440" height="350"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-            <value key="minSize" type="size" width="535" height="335"/>
-            <value key="maxSize" type="size" width="535" height="335"/>
-            <view key="contentView" id="se5-gp-TjO">
+            <value key="minSize" type="size" width="440" height="350"/>
+            <value key="maxSize" type="size" width="440" height="350"/>
+            <view key="contentView" id="se5-gp-TjO" customClass="PLMainWindowView">
                 <rect key="frame" x="0.0" y="0.0" width="440" height="350"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t6C-LF-Rww">
-                        <rect key="frame" x="17" y="17" width="196" height="276"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="XIw-VY-xid">
+                        <rect key="frame" x="18" y="311" width="109" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" imageFrameStyle="groove" id="jc4-up-EU8"/>
-                        <connections>
-                            <outlet property="menu" destination="WZ2-43-pFp" id="qMq-eC-6VL"/>
-                        </connections>
-                    </imageView>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Letterhead title:" id="fgS-nI-XWs">
+                            <font key="font" metaFont="systemMedium" size="12"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView id="VSA-Sb-kxO" customClass="PLBackgroundDropZoneContainer">
+                        <rect key="frame" x="20" y="25" width="190" height="260"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="06O-Ed-Rpd">
+                                <rect key="frame" x="13" y="16" width="164" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop cover background here" id="QNF-g2-vyi">
+                                    <font key="font" metaFont="systemLight" size="11"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView identifier="bgDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t6C-LF-Rww" customClass="PLDropZone">
+                                <rect key="frame" x="15" y="50" width="160" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="jc4-up-EU8"/>
+                                <connections>
+                                    <outlet property="menu" destination="WZ2-43-pFp" id="qMq-eC-6VL"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                    </customView>
+                    <customView id="nev-iy-Fd4" customClass="PLBackgroundDropZoneContainer">
+                        <rect key="frame" x="230" y="25" width="190" height="260"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eol-5a-vEA">
+                                <rect key="frame" x="-4" y="15" width="198" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop following backgrounds here" id="cMU-MC-Pwv">
+                                    <font key="font" metaFont="systemLight" size="11"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView identifier="coverDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W42-q6-j2N" customClass="PLDropZone">
+                                <rect key="frame" x="15" y="50" width="160" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="uG7-j5-7tH"/>
+                                <connections>
+                                    <outlet property="menu" destination="F3R-cb-Q2v" id="vNx-wW-Aii"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                    </customView>
                     <textField verticalHuggingPriority="750" id="Voj-jm-fLm">
-                        <rect key="frame" x="133" y="308" width="287" height="22"/>
+                        <rect key="frame" x="140" y="308" width="280" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bW8-8K-QiF">
                             <font key="font" metaFont="system"/>
@@ -46,23 +93,6 @@
                             <action selector="updateTitle:" target="-2" id="FMA-76-Enl"/>
                         </connections>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="XIw-VY-xid">
-                        <rect key="frame" x="18" y="311" width="109" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Letterhead title:" id="fgS-nI-XWs">
-                            <font key="font" metaFont="systemMedium" size="12"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W42-q6-j2N">
-                        <rect key="frame" x="227" y="17" width="196" height="276"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" imageFrameStyle="groove" id="uG7-j5-7tH"/>
-                        <connections>
-                            <outlet property="menu" destination="F3R-cb-Q2v" id="vNx-wW-Aii"/>
-                        </connections>
-                    </imageView>
                 </subviews>
             </view>
             <connections>

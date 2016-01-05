@@ -8,6 +8,7 @@
 #import "PLAppDelegate.h"
 #import "PLPDFPage.h"
 #import "Profile.h"
+#import "PLTableRowView.h"
 #include "PLProfileWindowController.h"
 #include "PLProfileEditWindow.h"
 
@@ -16,7 +17,6 @@
 @property (nonatomic,strong) IBOutlet PLProfileEditWindow *profileEditWindow;
 @property (strong) IBOutlet NSTableView *drawerTableView;
 @property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
-
 @property (unsafe_unretained) IBOutlet NSView *drawerContentView;
 
 @end
@@ -77,10 +77,8 @@
     
     [self setupProfileDrawer];
     [self setupColorSwitch];
+    
 }
-
-
-
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
@@ -191,6 +189,10 @@
                                                      blue:(CGFloat)blueByte / 0xff
                                                     alpha:1.0];
     [_coverswitch3 setTintColor: blueColor];
+    
+    //TODO change to preferences!
+    _coverswitch3.checked = YES;
+    [self coverControlAction:_coverswitch3];
 }
 
 
@@ -302,6 +304,12 @@
     NSLog(@"url: %@", [self applicationFilesDirectory]);
 
     [_profileEditWindow showWindow:self];
+}
+
+- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
+{
+    PLTableRowView *rowView = [[PLTableRowView alloc]init];
+    return rowView;
 }
 
 -(void)updatePreviewAndActionButtons {
@@ -479,7 +487,6 @@
 - (IBAction)coverControlAction: (id) sender{
     NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     
-//    if([_coverswitch2 state]==NSOffState){
     if([_coverswitch3 checked]==NO){
         [prefs setBool:NO forKey:@"coverEnabled"];
         [_coverbackgrounddoc unregisterDraggedTypes];
@@ -488,9 +495,9 @@
         _coverEnabled = NO;
         
         CGRect newbgframe = CGRectMake(_cvframe.origin.x+45,
-                                       _cvframe.origin.y - 5,
-                                       _bgframe.size.width +15,
-                                       (_bgframe.size.height + 15));
+                                       _cvframe.origin.y,
+                                       _bgframe.size.width,
+                                       (_bgframe.size.height));
         
         [[_backgrounddoc animator ]setFrame:newbgframe];
         
@@ -498,8 +505,8 @@
         [[_coverbackgrounddocText animator] setAlphaValue:0.0];
         [[_backgrounddocText animator] setStringValue:@"Background"];
         
-        CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+65,
-                                           _cvTextframe.origin.y,
+        CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
+                                           _cvTextframe.origin.y-6,
                                            _bgTextframe.size.width,
                                            (_bgTextframe.size.height));
         
@@ -509,7 +516,7 @@
     }
     else{
         
-        [[_backgrounddocText animator] setStringValue:@"Following bg's"];
+        [[_backgrounddocText animator] setStringValue:@"Following"];
         
         [[_backgrounddoc animator ]setFrame:_bgframe];
         [[_backgrounddocText animator ]setFrame:_bgTextframe];
@@ -656,7 +663,7 @@
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"OK"];
         [alert addButtonWithTitle:@"Cancel"];
-        [alert setMessageText:@"Delete the letterhead?"];
+        [alert setMessageText:@"Are you sure you want to delete this letterhead?"];
         [alert setInformativeText:@"Deleted letterheads cannot be restored."];
         [alert setAlertStyle:NSWarningAlertStyle];
         
@@ -666,8 +673,6 @@
         }
     }
 }
-
-
 
 - (BOOL)validateMenuItem:(NSMenuItem *)item
 {
@@ -722,8 +727,16 @@
 }
 
 - (IBAction)editSelectedProfile:(id)sender {
-    NSButton *button = (NSButton *)sender;
-    NSInteger *row = [[self drawerTableView] rowForView:button];
+    
+    NSInteger *row = NULL;
+    
+    if ([[sender identifier] isEqual: @"tableview"]) {
+        row = [_drawerTableView clickedRow];
+        
+    } else {
+        NSButton *button = (NSButton *)sender;
+        row = [[self drawerTableView] rowForView:button];
+    }
     Profile *profile = [[[self pArrayController] arrangedObjects ] objectAtIndex:row];
     
     [self doOpenEditor:profile];

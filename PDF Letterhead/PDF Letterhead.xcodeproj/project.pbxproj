@@ -34,8 +34,6 @@
 		3E6835D91607C90400DDFB82 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D81607C90400DDFB82 /* PLAppDelegate.m */; };
 		3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */; };
 		3E6835ED1607CA8A00DDFB82 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6835EC1607CA8A00DDFB82 /* Quartz.framework */; };
-		3E6835F01607CB6C00DDFB82 /* dragContentDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */; };
-		3E6835F11607CB6C00DDFB82 /* dragLetterheadDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */; };
 		3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F31607CC7900DDFB82 /* PLDropZone.m */; };
 		3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F61607D22100DDFB82 /* PLPDFPage.m */; };
 		3E6836031607EE8C00DDFB82 /* pdfletterheadIOS.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */; };
@@ -58,13 +56,11 @@
 		7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6B91C206CAC00398823 /* Profile+CoreDataProperties.m */; };
 		7910E6BE1C206CAC00398823 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6BB1C206CAC00398823 /* Profile.m */; };
 		7910E6BF1C206CAC00398823 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6BB1C206CAC00398823 /* Profile.m */; };
+		79182E351C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */; };
+		79182E361C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */; };
 		79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377FA11C1F0D5600901220 /* PLImageTransformer.m */; };
 		79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79377FA11C1F0D5600901220 /* PLImageTransformer.m */; };
 		79470B931C19766B009C37AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835DA1607C90400DDFB82 /* MainMenu.xib */; };
-		79470B9F1C19928F009C37AA /* Metallic_shield_bug444.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79470B9D1C19928F009C37AA /* Metallic_shield_bug444.jpg */; };
-		79470BA01C19928F009C37AA /* Metallic_shield_bug444.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79470B9D1C19928F009C37AA /* Metallic_shield_bug444.jpg */; };
-		79470BA11C19928F009C37AA /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 79470B9E1C19928F009C37AA /* download.jpeg */; };
-		79470BA21C19928F009C37AA /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 79470B9E1C19928F009C37AA /* download.jpeg */; };
 		79470BAD1C19AE68009C37AA /* PLProfileWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79470BAB1C19AE68009C37AA /* PLProfileWindowController.m */; };
 		79470BAE1C19AE68009C37AA /* PLProfileWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79470BAB1C19AE68009C37AA /* PLProfileWindowController.m */; };
 		79470BAF1C19AE68009C37AA /* PLProfileWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79470BAC1C19AE68009C37AA /* PLProfileWindowController.xib */; };
@@ -92,8 +88,6 @@
 		79726EE61C16ED6E003B85D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835CE1607C90400DDFB82 /* InfoPlist.strings */; };
 		79726EE71C16ED6E003B85D2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835D41607C90400DDFB82 /* Credits.rtf */; };
 		79726EE81C16ED6E003B85D2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835DA1607C90400DDFB82 /* MainMenu.xib */; };
-		79726EE91C16ED6E003B85D2 /* dragContentDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */; };
-		79726EEA1C16ED6E003B85D2 /* dragLetterheadDocument.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */; };
 		79726EEB1C16ED6E003B85D2 /* pdfletterheadIOS.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */; };
 		79726EEC1C16ED6E003B85D2 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
 		79726EED1C16ED6E003B85D2 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
@@ -113,6 +107,7 @@
 		79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0816A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png */; };
 		79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0A16A5FD03006D2CB0 /* quickstarttitle.png */; };
 		79726F011C16ED6E003B85D2 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
+		79BDBA9D1C3C15EA00FDCBD0 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BDBA9C1C3C15EA00FDCBD0 /* pencil.png */; };
 		79C3781D1C243E6A003DE151 /* PLProfileEditWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */; };
 		79EEDAA41C22CEC000DE767E /* PLProfileEditWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */; };
 		79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
@@ -165,8 +160,6 @@
 		3E6835DB1607C90400DDFB82 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3E6835DE1607C90400DDFB82 /* PDF_Letterhead.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PDF_Letterhead.xcdatamodel; sourceTree = "<group>"; };
 		3E6835EC1607CA8A00DDFB82 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragContentDocument.png; sourceTree = "<group>"; };
-		3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dragLetterheadDocument.png; sourceTree = "<group>"; };
 		3E6835F21607CC7900DDFB82 /* PLDropZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLDropZone.h; sourceTree = "<group>"; };
 		3E6835F31607CC7900DDFB82 /* PLDropZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLDropZone.m; sourceTree = "<group>"; };
 		3E6835F51607D22100DDFB82 /* PLPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFPage.h; sourceTree = "<group>"; };
@@ -197,15 +190,16 @@
 		7910E6BA1C206CAC00398823 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		7910E6BB1C206CAC00398823 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		7910E6C41C21922300398823 /* PDF_Letterhead 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PDF_Letterhead 3.xcdatamodel"; sourceTree = "<group>"; };
+		79182E331C3BD26D00ABDDD9 /* PLTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTableRowView.h; sourceTree = "<group>"; };
+		79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTableRowView.m; sourceTree = "<group>"; };
 		79377FA01C1F0D5600901220 /* PLImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLImageTransformer.h; sourceTree = "<group>"; };
 		79377FA11C1F0D5600901220 /* PLImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLImageTransformer.m; sourceTree = "<group>"; };
-		79470B9D1C19928F009C37AA /* Metallic_shield_bug444.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Metallic_shield_bug444.jpg; sourceTree = "<group>"; };
-		79470B9E1C19928F009C37AA /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
 		79470BAA1C19AE68009C37AA /* PLProfileWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileWindowController.h; sourceTree = "<group>"; };
 		79470BAB1C19AE68009C37AA /* PLProfileWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLProfileWindowController.m; sourceTree = "<group>"; };
 		79470BAC1C19AE68009C37AA /* PLProfileWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLProfileWindowController.xib; sourceTree = "<group>"; };
 		79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
+		79BDBA9C1C3C15EA00FDCBD0 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLProfileEditWindow.xib; sourceTree = "<group>"; };
 		79EEDAA51C22CF0C00DE767E /* PLProfileEditWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileEditWindow.h; sourceTree = "<group>"; };
 		79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLProfileEditWindow.m; sourceTree = "<group>"; };
@@ -267,6 +261,8 @@
 				3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */,
 				79EEDAAD1C22F4EB00DE767E /* PLButton.h */,
 				79EEDAAE1C22F4EB00DE767E /* PLButton.m */,
+				79182E331C3BD26D00ABDDD9 /* PLTableRowView.h */,
+				79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */,
 			);
 			name = MainWindow;
 			sourceTree = "<group>";
@@ -306,6 +302,10 @@
 		3E3FC58F167A9FC70006D91B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3E6744671679448400D99390 /* mail.png */,
+				3E67446D16794BE400D99390 /* saveicon.png */,
+				3E6744681679448400D99390 /* printer.png */,
+				79BDBA9C1C3C15EA00FDCBD0 /* pencil.png */,
 				3E9B90241C3B2A45003D86E0 /* bghelp.png */,
 				3E9F2DA3167929E400486537 /* pdfviewbg.png */,
 				3E2770431677E463002DD3DE /* bgdrop.png */,
@@ -321,9 +321,6 @@
 		3E674466167943C200D99390 /* BottomToolbar */ = {
 			isa = PBXGroup;
 			children = (
-				3E6744671679448400D99390 /* mail.png */,
-				3E67446D16794BE400D99390 /* saveicon.png */,
-				3E6744681679448400D99390 /* printer.png */,
 				3E67445F167943BA00D99390 /* AMBackground.h */,
 				3E674460167943BA00D99390 /* AMBackground.m */,
 				3E674461167943BA00D99390 /* AMDarkButtonCell.h */,
@@ -375,7 +372,6 @@
 			isa = PBXGroup;
 			children = (
 				3E9B90061C3AD9C2003D86E0 /* ITSwitch */,
-				79470B9C1C19914E009C37AA /* Sample Images */,
 				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
 				3E0C8E9516768EF200DE6E94 /* onoffswitch */,
 				3E674466167943C200D99390 /* BottomToolbar */,
@@ -401,8 +397,6 @@
 				3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */,
 				3E7BC9D3162459EE0092BF5E /* pdfletterheadMac.icns */,
 				3E6836021607EE8C00DDFB82 /* pdfletterheadIOS.icns */,
-				3E6835EE1607CB6C00DDFB82 /* dragContentDocument.png */,
-				3E6835EF1607CB6C00DDFB82 /* dragLetterheadDocument.png */,
 				3E6835CD1607C90400DDFB82 /* PDF Letterhead Lite.plist */,
 				79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */,
 				3E6835CE1607C90400DDFB82 /* InfoPlist.strings */,
@@ -421,15 +415,6 @@
 				3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */,
 			);
 			name = ITSwitch;
-			sourceTree = "<group>";
-		};
-		79470B9C1C19914E009C37AA /* Sample Images */ = {
-			isa = PBXGroup;
-			children = (
-				79470B9D1C19928F009C37AA /* Metallic_shield_bug444.jpg */,
-				79470B9E1C19928F009C37AA /* download.jpeg */,
-			);
-			name = "Sample Images";
 			sourceTree = "<group>";
 		};
 		79B9AC8A1C18851900B260F6 /* ProfilesWindow */ = {
@@ -536,12 +521,11 @@
 			files = (
 				3E6835D01607C90400DDFB82 /* InfoPlist.strings in Resources */,
 				3E6835D61607C90400DDFB82 /* Credits.rtf in Resources */,
-				3E6835F01607CB6C00DDFB82 /* dragContentDocument.png in Resources */,
 				79470BAF1C19AE68009C37AA /* PLProfileWindowController.xib in Resources */,
-				3E6835F11607CB6C00DDFB82 /* dragLetterheadDocument.png in Resources */,
 				3E9B90251C3B2A45003D86E0 /* bghelp.png in Resources */,
 				3E6836031607EE8C00DDFB82 /* pdfletterheadIOS.icns in Resources */,
 				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
+				79BDBA9D1C3C15EA00FDCBD0 /* pencil.png in Resources */,
 				3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */,
 				3E7BC9D4162459EE0092BF5E /* pdfletterheadMac.icns in Resources */,
 				3EAF7FED1AB23D9300C4EFB1 /* Images.xcassets in Resources */,
@@ -551,7 +535,6 @@
 				3E2770481677E5D5002DD3DE /* dropzonebg.png in Resources */,
 				3E798B711677F03C006F47F5 /* contentbg.png in Resources */,
 				3E798B731677F053006F47F5 /* contentdrop.png in Resources */,
-				79470B9F1C19928F009C37AA /* Metallic_shield_bug444.jpg in Resources */,
 				3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */,
 				3E6744691679448400D99390 /* mail.png in Resources */,
 				3E67446A1679448400D99390 /* printer.png in Resources */,
@@ -560,7 +543,6 @@
 				3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */,
 				79EEDAA41C22CEC000DE767E /* PLProfileEditWindow.xib in Resources */,
 				3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */,
-				79470BA11C19928F009C37AA /* download.jpeg in Resources */,
 				3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
 				79470B931C19766B009C37AA /* MainMenu.xib in Resources */,
 			);
@@ -574,9 +556,7 @@
 				79726EE71C16ED6E003B85D2 /* Credits.rtf in Resources */,
 				79726EE81C16ED6E003B85D2 /* MainMenu.xib in Resources */,
 				79470BB01C19AE68009C37AA /* PLProfileWindowController.xib in Resources */,
-				79726EE91C16ED6E003B85D2 /* dragContentDocument.png in Resources */,
 				3E9B90261C3B2A45003D86E0 /* bghelp.png in Resources */,
-				79726EEA1C16ED6E003B85D2 /* dragLetterheadDocument.png in Resources */,
 				79726EEB1C16ED6E003B85D2 /* pdfletterheadIOS.icns in Resources */,
 				79726EEC1C16ED6E003B85D2 /* white.pdf in Resources */,
 				79726EED1C16ED6E003B85D2 /* FAQ.rtf in Resources */,
@@ -587,7 +567,6 @@
 				79726EF21C16ED6E003B85D2 /* coverdrop.png in Resources */,
 				79726EF31C16ED6E003B85D2 /* dropzonebg.png in Resources */,
 				79726EF41C16ED6E003B85D2 /* contentbg.png in Resources */,
-				79470BA01C19928F009C37AA /* Metallic_shield_bug444.jpg in Resources */,
 				79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */,
 				79726EF61C16ED6E003B85D2 /* pdfviewbg.png in Resources */,
 				79726EF71C16ED6E003B85D2 /* mail.png in Resources */,
@@ -596,7 +575,6 @@
 				79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */,
 				79C3781D1C243E6A003DE151 /* PLProfileEditWindow.xib in Resources */,
 				79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */,
-				79470BA21C19928F009C37AA /* download.jpeg in Resources */,
 				79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */,
 				79726F011C16ED6E003B85D2 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
 			);
@@ -644,6 +622,7 @@
 				3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,
 				79470BAD1C19AE68009C37AA /* PLProfileWindowController.m in Sources */,
+				79182E351C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */,
 				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
 				79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */,
@@ -675,6 +654,7 @@
 				79726ED21C16ED6E003B85D2 /* PLDropZone.m in Sources */,
 				79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */,
 				79470BAE1C19AE68009C37AA /* PLProfileWindowController.m in Sources */,
+				79182E361C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */,
 				79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */,
 				79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */,
 				79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */,
