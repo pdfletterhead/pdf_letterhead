@@ -242,7 +242,7 @@
     
     [_profileDrawer setBackgroundColor:[NSColor clearColor]];
     [_profileDrawer setContentView: _drawerContentView];
-    [_profileDrawer setMovableByWindowBackground: YES];
+    [_profileDrawer setMovableByWindowBackground: NO];
     
     [_drawerContentView setWantsLayer:YES];
     [[_drawerContentView layer] setCornerRadius:4.0];
@@ -254,7 +254,7 @@
 }
 
 -(void)windowDidResize:(NSNotification *)notification{
-  
+    
     CGRect wRect = _pdfWindow.frame;
     
     CGRect rect1 = CGRectMake(_profileDrawer.frame.origin.x, (wRect.origin.y+15), _profileDrawer.frame.size.width, (wRect.size.height-50.0));
@@ -276,18 +276,40 @@
     else {
         
         //check if frame is to close to screen corner
-        if (_pdfWindow.frame.origin.x < 200.0){
-            CGRect wRect1 = _pdfWindow.frame;
-            CGRect wRect = CGRectMake(200.0, wRect1.origin.y, wRect1.size.width, wRect1.size.height);
-            CGRect rect1 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
-            [_profileDrawer setFrame:rect1 display:YES animate:NO];
-            [_pdfWindow setFrame:wRect display:YES animate:YES];
+        if (_pdfWindow.frame.origin.x < 180.0){
             
-            [NSTimer scheduledTimerWithTimeInterval:0.0f
-                                             target:self
-                                           selector: @selector(openProfileDrawer:)
-                                           userInfo:nil
-                                            repeats:NO];
+            if( _pdfWindow.frame.origin.x + _pdfWindow.frame.size.width + 180 > [[NSScreen mainScreen] frame].size.width){
+
+                CGFloat diff = _pdfWindow.frame.origin.x + _pdfWindow.frame.size.width - [[NSScreen mainScreen] frame].size.width;
+                
+                CGRect wRect1 = _pdfWindow.frame;
+                CGRect wRect = CGRectMake(181.0, wRect1.origin.y,([[NSScreen mainScreen] frame].size.width - 181 + diff), wRect1.size.height);
+                CGRect rect1 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
+                
+                [_profileDrawer setFrame:rect1 display:YES animate:NO];
+                [_pdfWindow setFrame:wRect display:YES animate:YES];
+                
+                [NSTimer scheduledTimerWithTimeInterval:0.0f
+                                                 target:self
+                                               selector: @selector(openProfileDrawer:)
+                                               userInfo:nil
+                                                repeats:NO];
+            }
+            else {
+                CGRect wRect1 = _pdfWindow.frame;
+                CGRect wRect = CGRectMake(181.0, wRect1.origin.y, wRect1.size.width, wRect1.size.height);
+                CGRect rect1 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
+                [_profileDrawer setFrame:rect1 display:YES animate:NO];
+                [_pdfWindow setFrame:wRect display:YES animate:YES];
+                
+                [NSTimer scheduledTimerWithTimeInterval:0.0f
+                                                 target:self
+                                               selector: @selector(openProfileDrawer:)
+                                               userInfo:nil
+                                                repeats:NO];
+            }
+            
+
         }
         else{
             _drawerIsOpen = YES;
