@@ -711,7 +711,7 @@
 }
 
 -(void)enableActions:(BOOL)enabled {
-    return;
+    //return;
     if(enabled) {
         [_mailButton1 setEnabled:YES];
         [_mailButton2 setEnabled:YES];
@@ -721,11 +721,16 @@
         [_printButton2 setEnabled:YES];
         [_previewButton1 setEnabled:YES];
         [_previewButton2 setEnabled:YES];
+        
         [previewButton3 setEnabled:YES];
-      
         [mailButton3 setEnabled:YES];
         [saveButton3 setEnabled:YES];
         [printButton3 setEnabled:YES];
+        
+        [mailButton3 setHidden:NO];
+        [saveButton3 setHidden:NO];
+        [printButton3 setHidden:NO];
+        [previewButton3 setHidden:NO];
     }
     else{
         //NSLog(@"disable Buttons");
@@ -742,6 +747,11 @@
         [saveButton3 setEnabled:NO];
         [printButton3 setEnabled:NO];
         [previewButton3 setEnabled:NO];
+        
+        [mailButton3 setHidden:YES];
+        [saveButton3 setHidden:YES];
+        [printButton3 setHidden:YES];
+        [previewButton3 setHidden:YES];
     }
 }
 
