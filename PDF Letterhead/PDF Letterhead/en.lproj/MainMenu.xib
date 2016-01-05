@@ -25,6 +25,7 @@
                 <outlet property="_pdfWindow" destination="587" id="729"/>
                 <outlet property="backgrounddoc" destination="929" id="932"/>
                 <outlet property="backgrounddocText" destination="948" id="987"/>
+                <outlet property="chooseLetterheadButton" destination="qzB-tB-vJZ" id="ZlI-vE-NG3"/>
                 <outlet property="coverbackgrounddoc" destination="791" id="797"/>
                 <outlet property="coverbackgrounddocText" destination="946" id="986"/>
                 <outlet property="coverswitch3" destination="32v-Qf-gBP" id="2Vz-TQ-zPM"/>
@@ -46,6 +47,7 @@
                 <outlet property="saveButton1" destination="583" id="807"/>
                 <outlet property="saveButton2" destination="75" id="810"/>
                 <outlet property="saveButton3" destination="991" id="1007"/>
+                <outlet property="saveLetterheadButton" destination="1z4-dM-vE6" id="eSo-ck-XLw"/>
                 <outlet property="sourcedoc" destination="561" id="746"/>
             </connections>
         </customObject>
@@ -376,10 +378,10 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" id="1z4-dM-vE6">
-                                <rect key="frame" x="14" y="7" width="187" height="32"/>
+                            <button verticalHuggingPriority="750" id="1z4-dM-vE6" customClass="KBButton">
+                                <rect key="frame" x="14" y="7" width="187" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Save letterhead" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
+                                <buttonCell key="cell" type="square" title="Save letterhead" bezelStyle="shadowlessSquare" image="save" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -388,16 +390,16 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" id="795">
-                                <rect key="frame" x="32" y="247" width="82" height="20"/>
+                                <rect key="frame" x="36" y="247" width="82" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Cover page?" id="796">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Cover page" id="796">
                                     <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" red="0.29393028846153846" green="0.29393028846153846" blue="0.29393028846153846" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </textFieldCell>
                             </textField>
                             <customView id="32v-Qf-gBP" customClass="ITSwitch">
-                                <rect key="frame" x="124" y="248" width="49" height="20"/>
+                                <rect key="frame" x="122" y="248" width="49" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <action selector="coverControlAction:" target="494" id="QWn-aK-V1U"/>
@@ -436,45 +438,45 @@
                                 <rect key="frame" x="23" y="0.0" width="406" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" id="897">
-                                        <rect key="frame" x="214" y="11" width="82" height="25"/>
+                                    <button verticalHuggingPriority="750" id="897" customClass="KBButton">
+                                        <rect key="frame" x="205" y="12" width="95" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="smallSquare" title="  E-mail" bezelStyle="smallSquare" image="mail" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="898" customClass="AMDarkButtonCell">
+                                        <buttonCell key="cell" type="square" title="  E-mail" bezelStyle="shadowlessSquare" image="mail" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="898">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="systemBold" size="11"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="saveEmail:" target="494" id="1001"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="991">
-                                        <rect key="frame" x="124" y="11" width="82" height="25"/>
+                                    <button verticalHuggingPriority="750" id="991" customClass="KBButton">
+                                        <rect key="frame" x="102" y="12" width="95" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="smallSquare" title="  Save" bezelStyle="smallSquare" image="saveicon" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="992" customClass="AMDarkButtonCell">
+                                        <buttonCell key="cell" type="square" title="  Save" bezelStyle="shadowlessSquare" image="save" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="992">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="systemBold" size="11"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="saveAs:" target="494" id="1000"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="993">
-                                        <rect key="frame" x="20" y="11" width="95" height="25"/>
+                                    <button verticalHuggingPriority="750" id="993" customClass="KBButton">
+                                        <rect key="frame" x="1" y="12" width="95" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="smallSquare" title="  Preview" bezelStyle="smallSquare" image="NSQuickLookTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="994" customClass="AMDarkButtonCell">
+                                        <buttonCell key="cell" type="square" title="  Preview" bezelStyle="shadowlessSquare" image="mag" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="994">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="systemBold" size="11"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="openPreview:" target="494" id="1002"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="995">
-                                        <rect key="frame" x="304" y="11" width="82" height="25"/>
+                                    <button verticalHuggingPriority="750" id="995" customClass="KBButton">
+                                        <rect key="frame" x="308" y="12" width="95" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <buttonCell key="cell" type="smallSquare" title="  Print" bezelStyle="smallSquare" image="printer" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="996" customClass="AMDarkButtonCell">
+                                        <buttonCell key="cell" type="square" title="  Print" bezelStyle="shadowlessSquare" image="print" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="996">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="systemBold" size="11"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="savePrint:" target="494" id="1003"/>
@@ -499,10 +501,10 @@
                             </customView>
                         </subviews>
                     </customView>
-                    <button verticalHuggingPriority="750" id="qzB-tB-vJZ">
-                        <rect key="frame" x="14" y="306" width="226" height="32"/>
+                    <button verticalHuggingPriority="750" id="qzB-tB-vJZ" customClass="KBButton">
+                        <rect key="frame" x="20" y="309" width="214" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Choose letterhead" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L4e-O0-fSa">
+                        <buttonCell key="cell" type="square" title="Choose letterhead" bezelStyle="shadowlessSquare" image="NSBookmarksTemplate" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L4e-O0-fSa">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -626,49 +628,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="633" height="662"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </pdfView>
-                    <customView id="1012" customClass="PLBottomToolbarView">
+                    <customView id="1012">
                         <rect key="frame" x="0.0" y="660" width="633" height="46"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" id="866">
-                                <rect key="frame" x="19" y="11" width="91" height="25"/>
+                            <button verticalHuggingPriority="750" id="866" customClass="KBButton">
+                                <rect key="frame" x="10" y="12" width="100" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title=" Zoom out" bezelStyle="smallSquare" image="NSRevealFreestandingTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="867" customClass="AMDarkButtonCell">
+                                <buttonCell key="cell" type="square" title=" Zoom out" bezelStyle="shadowlessSquare" image="mag" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="867">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="systemBold" size="11"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="zoomOut:" target="861" id="879"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="863">
-                                <rect key="frame" x="116" y="11" width="88" height="25"/>
+                            <button verticalHuggingPriority="750" id="863" customClass="KBButton">
+                                <rect key="frame" x="118" y="12" width="100" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="  Zoom in" bezelStyle="smallSquare" image="NSRevealFreestandingTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="864" customClass="AMDarkButtonCell">
+                                <buttonCell key="cell" type="square" title="  Zoom in" bezelStyle="shadowlessSquare" image="mag" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="864">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="systemBold" size="11"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="zoomIn:" target="861" id="865"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="1013">
-                                <rect key="frame" x="228" y="11" width="82" height="25"/>
+                            <button verticalHuggingPriority="750" id="1013" customClass="KBButton">
+                                <rect key="frame" x="227" y="12" width="100" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="  Print" bezelStyle="smallSquare" image="printer" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1020" customClass="AMDarkButtonCell">
+                                <buttonCell key="cell" type="square" title="  Print" bezelStyle="shadowlessSquare" image="print" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1020">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="systemBold" size="11"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="savePrint:" target="494" id="1022"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="872">
-                                <rect key="frame" x="548" y="11" width="75" height="25"/>
+                            <button verticalHuggingPriority="750" id="872" customClass="KBButton">
+                                <rect key="frame" x="522" y="12" width="100" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="  Close" bezelStyle="smallSquare" image="NSStopProgressTemplate" imagePosition="left" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="873" customClass="AMDarkButtonCell">
+                                <buttonCell key="cell" type="square" title="  Close" bezelStyle="shadowlessSquare" image="NSStopProgressFreestandingTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="873">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="systemBold" size="11"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="orderOut:" target="855" id="878"/>
@@ -917,16 +919,16 @@
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAdvanced" width="32" height="32"/>
-        <image name="NSQuickLookTemplate" width="19" height="12"/>
-        <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
-        <image name="NSStopProgressTemplate" width="11" height="11"/>
+        <image name="NSBookmarksTemplate" width="17" height="18"/>
+        <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
         <image name="bgdrop" width="276" height="359"/>
         <image name="bghelp" width="379" height="513"/>
         <image name="contentdrop" width="367" height="509"/>
         <image name="coverdrop" width="259" height="359"/>
-        <image name="mail" width="15" height="10"/>
+        <image name="mag" width="19" height="20"/>
+        <image name="mail" width="20" height="20"/>
         <image name="pencil" width="36" height="36"/>
-        <image name="printer" width="16" height="14"/>
-        <image name="saveicon" width="19.440000534057617" height="16.559999465942383"/>
+        <image name="print" width="20" height="20"/>
+        <image name="save" width="20" height="20"/>
     </resources>
 </document>

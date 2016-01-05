@@ -13,6 +13,7 @@
 #include "PLProfileEditWindow.h"
 
 @interface PLAppDelegate()
+
 @property (nonatomic,strong) IBOutlet PLProfileWindowController *profileWindowController;
 @property (nonatomic,strong) IBOutlet PLProfileEditWindow *profileEditWindow;
 @property (strong) IBOutlet NSTableView *drawerTableView;
@@ -30,6 +31,19 @@
 @synthesize profileWindowController = _profileWindowController;
 @synthesize profileEditWindow = _profileEditWindow;
 @synthesize profileDrawer = _profileDrawer;
+
+@synthesize chooseLetterheadButton, saveLetterheadButton, saveButton3, previewButton3, printButton3, mailButton3;
+
+
+- (void)awakeFromNib {
+    
+    [[chooseLetterheadButton cell] setKBButtonType:BButtonTypeLight];
+    [[saveLetterheadButton cell] setKBButtonType:BButtonTypeLight];
+    [[saveButton3 cell] setKBButtonType:BButtonTypeDark];
+    [[previewButton3 cell] setKBButtonType:BButtonTypeDark];
+    [[printButton3 cell] setKBButtonType:BButtonTypeDark];
+    [[mailButton3 cell] setKBButtonType:BButtonTypeDark];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -65,10 +79,7 @@
     _cvTextframe = [_coverbackgrounddocText frame];
     _bgTextframe = [_backgrounddocText frame];
     
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
-    {
-        [_coverswitch setSelectedSegment:1];
-    }
+
     [self coverControlAction:self];
   
     //TODO load most recently used profile
@@ -190,10 +201,17 @@
                                                     alpha:1.0];
     [_coverswitch3 setTintColor: blueColor];
     
-    //TODO change to preferences!
-    _coverswitch3.checked = YES;
+    //TODO TEST change to preferences!
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
+    {
+        _coverswitch3.checked = YES;
+        //[_coverswitch setSelectedSegment:1];
+    }
+    
     [self coverControlAction:_coverswitch3];
 }
+
+
 
 
 - (void)setupProfileDrawer {
@@ -693,6 +711,7 @@
 }
 
 -(void)enableActions:(BOOL)enabled {
+    return;
     if(enabled) {
         [_mailButton1 setEnabled:YES];
         [_mailButton2 setEnabled:YES];
@@ -702,11 +721,11 @@
         [_printButton2 setEnabled:YES];
         [_previewButton1 setEnabled:YES];
         [_previewButton2 setEnabled:YES];
-        [_previewButton3 setEnabled:YES];
+        [previewButton3 setEnabled:YES];
       
-        [_mailButton3 setEnabled:YES];
-        [_saveButton3 setEnabled:YES];
-        [_printButton3 setEnabled:YES];
+        [mailButton3 setEnabled:YES];
+        [saveButton3 setEnabled:YES];
+        [printButton3 setEnabled:YES];
     }
     else{
         //NSLog(@"disable Buttons");
@@ -719,10 +738,10 @@
         [_previewButton1 setEnabled:NO];
         [_previewButton2 setEnabled:NO];
         
-        [_mailButton3 setEnabled:NO];
-        [_saveButton3 setEnabled:NO];
-        [_printButton3 setEnabled:NO];
-        [_previewButton3 setEnabled:NO];
+        [mailButton3 setEnabled:NO];
+        [saveButton3 setEnabled:NO];
+        [printButton3 setEnabled:NO];
+        [previewButton3 setEnabled:NO];
     }
 }
 

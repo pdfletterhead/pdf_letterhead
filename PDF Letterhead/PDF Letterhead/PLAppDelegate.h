@@ -11,6 +11,8 @@
 #import "PLQuickStart1.h"
 #import "PLProfileWindowController.h"
 #import "ITSwitch.h"
+#import "KBButton.h"
+
 
 @interface PLAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
 {
@@ -32,21 +34,24 @@
 @property (assign) IBOutlet PDFThumbnailView *pdfThumbView;
 @property (assign) IBOutlet NSMenu *myMainMenu;
 
-@property (assign) IBOutlet NSToolbarItem *saveButton1;
-@property (assign) IBOutlet NSMenuItem *saveButton2;
-@property (assign) IBOutlet NSButton *saveButton3;
-
 @property (assign) IBOutlet NSToolbarItem *printButton1;
-@property (assign) IBOutlet NSMenuItem *printButton2;
-@property (assign) IBOutlet NSButton *printButton3;
-
-@property (assign) IBOutlet NSToolbarItem *mailButton1;
-@property (assign) IBOutlet NSMenuItem *mailButton2;
-@property (assign) IBOutlet NSButton *mailButton3;
-
 @property (assign) IBOutlet NSToolbarItem *previewButton1;
+@property (assign) IBOutlet NSToolbarItem *saveButton1;
+@property (assign) IBOutlet NSToolbarItem *mailButton1;
+
+@property (assign) IBOutlet NSMenuItem *printButton2;
+@property (assign) IBOutlet NSMenuItem *saveButton2;
+@property (assign) IBOutlet NSMenuItem *mailButton2;
 @property (assign) IBOutlet NSMenuItem *previewButton2;
+
+// Buttons below PDF Window
+@property (assign) IBOutlet NSButton *saveButton3;
+@property (assign) IBOutlet NSButton *printButton3;
+@property (assign) IBOutlet NSButton *mailButton3;
 @property (assign) IBOutlet NSButton *previewButton3;
+
+@property (assign) IBOutlet NSButton *chooseLetterheadButton;
+@property (assign) IBOutlet NSButton *saveLetterheadButton;
 
 @property (assign) IBOutlet NSButton *manageProfilesButton;
 
@@ -56,7 +61,7 @@
 @property (assign) IBOutlet NSTextField *backgrounddocText;
 @property (assign) IBOutlet NSTextField *coverbackgrounddocText;
 
-@property (assign) IBOutlet NSSegmentedControl *coverswitch;
+//@property (assign) IBOutlet NSSegmentedControl *coverswitch;
 @property (assign) IBOutlet ITSwitch *coverswitch3;
 
 @property (readonly, retain) NSURL *tmpDirectoryURL;

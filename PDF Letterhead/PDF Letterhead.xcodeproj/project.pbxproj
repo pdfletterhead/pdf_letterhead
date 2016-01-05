@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1433991C3C76A1002599D0 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1433951C3C76A1002599D0 /* save.png */; };
+		3E14339A1C3C76A1002599D0 /* print.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1433961C3C76A1002599D0 /* print.png */; };
+		3E14339B1C3C76A1002599D0 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1433971C3C76A1002599D0 /* mail.png */; };
+		3E14339C1C3C76A1002599D0 /* mag.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1433981C3C76A1002599D0 /* mag.png */; };
 		3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
 		3E27703C1677DCA5002DD3DE /* bottomtoolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E27703B1677DCA5002DD3DE /* bottomtoolbar.png */; };
 		3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
@@ -20,9 +24,12 @@
 		3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0E16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png */; };
 		3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
 		3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
-		3E674463167943BA00D99390 /* AMBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674460167943BA00D99390 /* AMBackground.m */; };
-		3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674462167943BA00D99390 /* AMDarkButtonCell.m */; };
-		3E6744691679448400D99390 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744671679448400D99390 /* mail.png */; };
+		3E5A5BA51C3C6C3700ECD755 /* KBButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5A5B9F1C3C6C3700ECD755 /* KBButtonCell.m */; };
+		3E5A5BA61C3C6C3700ECD755 /* KBButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5A5B9F1C3C6C3700ECD755 /* KBButtonCell.m */; };
+		3E5A5BA71C3C6C3700ECD755 /* NSColor+ColorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5A5BA01C3C6C3700ECD755 /* NSColor+ColorExtensions.m */; };
+		3E5A5BA81C3C6C3700ECD755 /* NSColor+ColorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5A5BA01C3C6C3700ECD755 /* NSColor+ColorExtensions.m */; };
+		3E5A5BA91C3C6C3700ECD755 /* KBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5A5BA41C3C6C3700ECD755 /* KBButton.m */; };
+		3E5A5BAA1C3C6C3700ECD755 /* KBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5A5BA41C3C6C3700ECD755 /* KBButton.m */; };
 		3E67446A1679448400D99390 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
 		3E67446E16794BE400D99390 /* saveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E67446D16794BE400D99390 /* saveicon.png */; };
 		3E6835C61607C90400DDFB82 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6835C51607C90400DDFB82 /* Cocoa.framework */; };
@@ -74,8 +81,6 @@
 		79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
 		79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E798B751677F336006F47F5 /* PLPDFBgView.m */; };
 		79726EDC1C16ED6E003B85D2 /* PLPDFBgAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */; };
-		79726EDD1C16ED6E003B85D2 /* AMBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674460167943BA00D99390 /* AMBackground.m */; };
-		79726EDE1C16ED6E003B85D2 /* AMDarkButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E674462167943BA00D99390 /* AMDarkButtonCell.m */; };
 		79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */; };
 		79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9850B61BF4E29900D7ABAB /* PLFAQWindowController.m */; };
 		79726EE21C16ED6E003B85D2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
@@ -96,7 +101,6 @@
 		79726EF41C16ED6E003B85D2 /* contentbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E798B701677F03B006F47F5 /* contentbg.png */; };
 		79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E798B721677F053006F47F5 /* contentdrop.png */; };
 		79726EF61C16ED6E003B85D2 /* pdfviewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9F2DA3167929E400486537 /* pdfviewbg.png */; };
-		79726EF71C16ED6E003B85D2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744671679448400D99390 /* mail.png */; };
 		79726EF91C16ED6E003B85D2 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
 		79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E67446D16794BE400D99390 /* saveicon.png */; };
 		79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0516A5F8B3006D2CB0 /* PLQuickStart1.xib */; };
@@ -111,6 +115,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1433951C3C76A1002599D0 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		3E1433961C3C76A1002599D0 /* print.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = print.png; sourceTree = "<group>"; };
+		3E1433971C3C76A1002599D0 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		3E1433981C3C76A1002599D0 /* mag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mag.png; sourceTree = "<group>"; };
 		3E2770381677DC2D002DD3DE /* PLBottomToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLBottomToolbarView.h; sourceTree = "<group>"; };
 		3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLBottomToolbarView.m; sourceTree = "<group>"; };
 		3E27703B1677DCA5002DD3DE /* bottomtoolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomtoolbar.png; sourceTree = "<group>"; };
@@ -128,11 +136,12 @@
 		3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMainWindowView.h; sourceTree = "<group>"; };
 		3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainWindowView.m; sourceTree = "<group>"; };
 		3E51688318591F4B007E2F3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		3E67445F167943BA00D99390 /* AMBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBackground.h; sourceTree = "<group>"; };
-		3E674460167943BA00D99390 /* AMBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBackground.m; sourceTree = "<group>"; };
-		3E674461167943BA00D99390 /* AMDarkButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDarkButtonCell.h; sourceTree = "<group>"; };
-		3E674462167943BA00D99390 /* AMDarkButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDarkButtonCell.m; sourceTree = "<group>"; };
-		3E6744671679448400D99390 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		3E5A5B9F1C3C6C3700ECD755 /* KBButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KBButtonCell.m; path = "../../../OSX-Apps/PDF-Letterhead/next-version/PDF Letterhead/PDF Letterhead/KBButtonCell.m"; sourceTree = "<group>"; };
+		3E5A5BA01C3C6C3700ECD755 /* NSColor+ColorExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+ColorExtensions.m"; path = "../../../OSX-Apps/PDF-Letterhead/next-version/PDF Letterhead/PDF Letterhead/NSColor+ColorExtensions.m"; sourceTree = "<group>"; };
+		3E5A5BA11C3C6C3700ECD755 /* NSColor+ColorExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+ColorExtensions.h"; path = "../../../OSX-Apps/PDF-Letterhead/next-version/PDF Letterhead/PDF Letterhead/NSColor+ColorExtensions.h"; sourceTree = "<group>"; };
+		3E5A5BA21C3C6C3700ECD755 /* KBButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KBButtonCell.h; path = "../../../OSX-Apps/PDF-Letterhead/next-version/PDF Letterhead/PDF Letterhead/KBButtonCell.h"; sourceTree = "<group>"; };
+		3E5A5BA31C3C6C3700ECD755 /* KBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KBButton.h; path = "../../../OSX-Apps/PDF-Letterhead/next-version/PDF Letterhead/PDF Letterhead/KBButton.h"; sourceTree = "<group>"; };
+		3E5A5BA41C3C6C3700ECD755 /* KBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KBButton.m; path = "../../../OSX-Apps/PDF-Letterhead/next-version/PDF Letterhead/PDF Letterhead/KBButton.m"; sourceTree = "<group>"; };
 		3E6744681679448400D99390 /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
 		3E67446D16794BE400D99390 /* saveicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveicon.png; sourceTree = "<group>"; };
 		3E6835C11607C90400DDFB82 /* PDF Letterhead Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,7 +286,6 @@
 		3E3FC58F167A9FC70006D91B /* images */ = {
 			isa = PBXGroup;
 			children = (
-				3E6744671679448400D99390 /* mail.png */,
 				3E67446D16794BE400D99390 /* saveicon.png */,
 				3E6744681679448400D99390 /* printer.png */,
 				79BDBA9C1C3C15EA00FDCBD0 /* pencil.png */,
@@ -293,15 +301,18 @@
 			name = images;
 			sourceTree = "<group>";
 		};
-		3E674466167943C200D99390 /* BottomToolbar */ = {
+		3E5A5B8C1C3C644600ECD755 /* KBButton */ = {
 			isa = PBXGroup;
 			children = (
-				3E67445F167943BA00D99390 /* AMBackground.h */,
-				3E674460167943BA00D99390 /* AMBackground.m */,
-				3E674461167943BA00D99390 /* AMDarkButtonCell.h */,
-				3E674462167943BA00D99390 /* AMDarkButtonCell.m */,
+				3E5A5B9F1C3C6C3700ECD755 /* KBButtonCell.m */,
+				3E5A5BA01C3C6C3700ECD755 /* NSColor+ColorExtensions.m */,
+				3E5A5BA11C3C6C3700ECD755 /* NSColor+ColorExtensions.h */,
+				3E5A5BA21C3C6C3700ECD755 /* KBButtonCell.h */,
+				3E5A5BA31C3C6C3700ECD755 /* KBButton.h */,
+				3E5A5BA41C3C6C3700ECD755 /* KBButton.m */,
 			);
-			name = BottomToolbar;
+			name = KBButton;
+			path = ../../../../../forks/KBButton/KBButton;
 			sourceTree = "<group>";
 		};
 		3E6835B61607C90300DDFB82 = {
@@ -347,8 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				3E9B90061C3AD9C2003D86E0 /* ITSwitch */,
+				3E5A5B8C1C3C644600ECD755 /* KBButton */,
 				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
-				3E674466167943C200D99390 /* BottomToolbar */,
 				3E3FC58D167A9F7B0006D91B /* FAQWindow */,
 				79B9AC8A1C18851900B260F6 /* ProfilesWindow */,
 				3E3FC58E167A9F870006D91B /* PreviewWindow */,
@@ -365,6 +376,7 @@
 		3E6835CC1607C90400DDFB82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E9AC0C71C3C75EB00DBDBE8 /* imgnew */,
 				3E3FC58F167A9FC70006D91B /* images */,
 				3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */,
 				3EF7E6BA16089C21008EA1B1 /* white.pdf */,
@@ -380,6 +392,17 @@
 				3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E9AC0C71C3C75EB00DBDBE8 /* imgnew */ = {
+			isa = PBXGroup;
+			children = (
+				3E1433951C3C76A1002599D0 /* save.png */,
+				3E1433961C3C76A1002599D0 /* print.png */,
+				3E1433971C3C76A1002599D0 /* mail.png */,
+				3E1433981C3C76A1002599D0 /* mag.png */,
+			);
+			name = imgnew;
 			sourceTree = "<group>";
 		};
 		3E9B90061C3AD9C2003D86E0 /* ITSwitch */ = {
@@ -507,15 +530,18 @@
 				3E2770451677E464002DD3DE /* bgdrop.png in Resources */,
 				3E2770461677E464002DD3DE /* coverdrop.png in Resources */,
 				3E2770481677E5D5002DD3DE /* dropzonebg.png in Resources */,
+				3E14339B1C3C76A1002599D0 /* mail.png in Resources */,
 				3E798B711677F03C006F47F5 /* contentbg.png in Resources */,
 				3E798B731677F053006F47F5 /* contentdrop.png in Resources */,
 				3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */,
-				3E6744691679448400D99390 /* mail.png in Resources */,
 				3E67446A1679448400D99390 /* printer.png in Resources */,
 				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
 				3E2AFF0716A5F8B3006D2CB0 /* PLQuickStart1.xib in Resources */,
+				3E14339C1C3C76A1002599D0 /* mag.png in Resources */,
 				3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */,
 				79EEDAA41C22CEC000DE767E /* PLProfileEditWindow.xib in Resources */,
+				3E1433991C3C76A1002599D0 /* save.png in Resources */,
+				3E14339A1C3C76A1002599D0 /* print.png in Resources */,
 				3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */,
 				3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
 				79470B931C19766B009C37AA /* MainMenu.xib in Resources */,
@@ -543,7 +569,6 @@
 				79726EF41C16ED6E003B85D2 /* contentbg.png in Resources */,
 				79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */,
 				79726EF61C16ED6E003B85D2 /* pdfviewbg.png in Resources */,
-				79726EF71C16ED6E003B85D2 /* mail.png in Resources */,
 				79726EF91C16ED6E003B85D2 /* printer.png in Resources */,
 				79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */,
 				79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */,
@@ -599,17 +624,18 @@
 				79182E351C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */,
 				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
+				3E5A5BA51C3C6C3700ECD755 /* KBButtonCell.m in Sources */,
 				79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */,
 				7910E6BC1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
 				3E9B90041C3AD9B9003D86E0 /* ITSwitch.m in Sources */,
 				7910E6BE1C206CAC00398823 /* Profile.m in Sources */,
+				3E5A5BA71C3C6C3700ECD755 /* NSColor+ColorExtensions.m in Sources */,
+				3E5A5BA91C3C6C3700ECD755 /* KBButton.m in Sources */,
 				79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */,
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
 				3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */,
-				3E674463167943BA00D99390 /* AMBackground.m in Sources */,
-				3E674464167943BA00D99390 /* AMDarkButtonCell.m in Sources */,
 				3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */,
 				3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */,
 			);
@@ -628,17 +654,18 @@
 				79182E361C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */,
 				79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */,
 				79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */,
+				3E5A5BA61C3C6C3700ECD755 /* KBButtonCell.m in Sources */,
 				79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */,
 				7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
 				3E9B90051C3AD9B9003D86E0 /* ITSwitch.m in Sources */,
 				7910E6BF1C206CAC00398823 /* Profile.m in Sources */,
+				3E5A5BA81C3C6C3700ECD755 /* NSColor+ColorExtensions.m in Sources */,
+				3E5A5BAA1C3C6C3700ECD755 /* KBButton.m in Sources */,
 				79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */,
 				79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */,
 				79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */,
 				79726EDC1C16ED6E003B85D2 /* PLPDFBgAreaView.m in Sources */,
-				79726EDD1C16ED6E003B85D2 /* AMBackground.m in Sources */,
-				79726EDE1C16ED6E003B85D2 /* AMDarkButtonCell.m in Sources */,
 				79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */,
 				79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */,
 			);

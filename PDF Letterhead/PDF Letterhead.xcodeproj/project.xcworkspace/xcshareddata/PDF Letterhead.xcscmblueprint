@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "942CF25DA3344CC94AFB5AACCF1EB4203BAAA33A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2E96C19C9A54E210ECE4E89D69774BAE295D7941" : 0,
+    "942CF25DA3344CC94AFB5AACCF1EB4203BAAA33A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "99C7E7AF-605C-4DE5-9631-4175F108A469",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2E96C19C9A54E210ECE4E89D69774BAE295D7941" : "..\/..\/forks\/KBButton",
+    "942CF25DA3344CC94AFB5AACCF1EB4203BAAA33A" : "pdf_letterhead"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PDF Letterhead",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PDF Letterhead\/PDF Letterhead.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mipmip\/KBButton.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2E96C19C9A54E210ECE4E89D69774BAE295D7941"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.lingewoud.net:pdf_letterhead.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "942CF25DA3344CC94AFB5AACCF1EB4203BAAA33A"
+    }
+  ]
+}
