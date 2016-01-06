@@ -137,6 +137,11 @@
 }
 
 -(NSString*)saveImage:(NSImage*)image :(Profile*)profile :(NSString*)cover {
+    
+    //NSLog(@"%@",image);
+    //NSLog(@"%@",profile);
+    //NSLog(@"%@",cover);
+    
     // 1. Get an NSBitmapImageRep from the image passed in
     [image lockFocus];
     NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithFocusedViewRect:NSMakeRect(0.0, 0.0, [image size].width, [image size].height)];
@@ -147,9 +152,10 @@
     NSData *data = [imgRep representationUsingType: NSPNGFileType properties: nil];
     NSString *returnVar;
     
-    // 3. Write image to disk, set path in Bug
+    NSLog(@"%@", [self pathToAppSupport]);
+    
+    // 3. Write image to disk, set path
     if ([data writeToURL:pathToImage atomically:NO]) {
-        
         if ([cover isEqual:@"cover"]) {
             profile.coverImagePath = [pathToImage absoluteString];
             [[self coverImage] setImage:image];

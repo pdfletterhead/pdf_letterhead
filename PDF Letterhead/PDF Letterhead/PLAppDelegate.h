@@ -9,7 +9,6 @@
 #import <Quartz/Quartz.h>
 #import "PLDropZone.h"
 #import "PLQuickStart1.h"
-#import "PLProfileWindowController.h"
 #import "ITSwitch.h"
 #import "KBButton.h"
 
@@ -98,7 +97,6 @@
 -(IBAction)showMainWindow: (id) sender;
 -(IBAction)coverControlAction: (id) sender;
 -(IBAction)openQuickStart:(id)sender;
--(IBAction)openProfiles:(id)sender;
 -(IBAction)selectProfile:(id)sender;
 -(IBAction)editSelectedProfile:(id)sender;
 

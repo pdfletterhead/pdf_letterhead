@@ -170,8 +170,7 @@
             if ([ext isEqual:@"pdf"]){
                 
                 self.sourcefilepath = [files lastObject];
-                //NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
-                //[self setImage:zNewImage];
+                [self setPdfFilepath:[self sourcefilepath]];
                 
                 return YES;
                 
@@ -187,8 +186,8 @@
             if ([validImageExtensions containsObject:ext])
             {
                 self.sourcefilepath = [files lastObject];
-                //NSImage *zNewImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
-                //[self setImage:zNewImage];
+                [self setPdfFilepath:[self sourcefilepath]];
+                
                 
                 return YES;
             }
@@ -212,13 +211,14 @@
         return YES;
     }
     
+    NSLog(@"%@", path);
+    
     NSMutableString *str = [[NSMutableString alloc] initWithString:path];
     NSString *word = @"file://";
     if ([str rangeOfString:word].location == NSNotFound) {
         [str insertString:word atIndex:0];
     }
     NSURL *data = [NSURL URLWithString:str];
-
     NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
     
     [self setImage:zNewImage];

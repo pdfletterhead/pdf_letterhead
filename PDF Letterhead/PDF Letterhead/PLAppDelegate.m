@@ -9,16 +9,15 @@
 #import "PLPDFPage.h"
 #import "Profile.h"
 #import "PLTableRowView.h"
-#include "PLProfileWindowController.h"
 #include "PLProfileEditWindow.h"
 
 @interface PLAppDelegate()
 
-@property (nonatomic,strong) IBOutlet PLProfileWindowController *profileWindowController;
 @property (nonatomic,strong) IBOutlet PLProfileEditWindow *profileEditWindow;
 @property (strong) IBOutlet NSTableView *drawerTableView;
 @property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
 @property (unsafe_unretained) IBOutlet NSView *drawerContentView;
+@property (weak) IBOutlet NSView *noItemsView;
 
 @end
 
@@ -28,7 +27,6 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize quickStartWindow = _quickStartWindow;
-@synthesize profileWindowController = _profileWindowController;
 @synthesize profileEditWindow = _profileEditWindow;
 @synthesize profileDrawer = _profileDrawer;
 
@@ -50,7 +48,6 @@
 
     _setView = false;
 
-    _profileWindowController = [[PLProfileWindowController alloc] initWithWindowNibName:@"PLProfileWindowController"];
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
     
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
@@ -79,7 +76,7 @@
     _cvTextframe = [_coverbackgrounddocText frame];
     _bgTextframe = [_backgrounddocText frame];
     
-
+    [self checkProfiles];
     [self coverControlAction:self];
   
     //TODO load most recently used profile
@@ -88,6 +85,11 @@
     
     [self setupProfileDrawer];
     [self setupColorSwitch];
+    
+    _profileEditWindow = [[PLProfileEditWindow alloc] init ];
+    //Managed Object Context for ProfileViewController
+    self.profileEditWindow.managedObjectContext = [self managedObjectContext];
+    self.profileEditWindow.pathToAppSupport = [self applicationFilesDirectory];
     
 }
 
@@ -202,11 +204,11 @@
     [_coverswitch3 setTintColor: blueColor];
     
     //TODO TEST change to preferences!
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
-    {
+    //if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
+    //{
         _coverswitch3.checked = YES;
         //[_coverswitch setSelectedSegment:1];
-    }
+    //}
     
     [self coverControlAction:_coverswitch3];
 }
@@ -322,27 +324,14 @@
     
 }
 
-
-
-- (IBAction)openProfiles:(id)sender {
-    [self doOpenProfiles];
-}
-
--(void)doOpenProfiles{
-    [_profileWindowController showWindow:self];
-}
-
 -(void)doOpenEditor :(Profile *)profile {
     _profileEditWindow = [[PLProfileEditWindow alloc] initWithWindowNibName:@"PLProfileEditWindow"];
     _profileEditWindow.loadedProfile = profile;
-    
     
     //Managed Object Context for ProfileViewController
     self.profileEditWindow.managedObjectContext = [self managedObjectContext];
     self.profileEditWindow.pathToAppSupport = [self applicationFilesDirectory];
     
-    NSLog(@"url: %@", [self applicationFilesDirectory]);
-
     [_profileEditWindow showWindow:self];
 }
 
@@ -627,11 +616,25 @@
     [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
 }
 
+- (void)checkProfiles {
+    
+    NSError *error;
+    BOOL ok = [self.pArrayController fetchWithRequest:nil merge:NO error:&error];
+    
+    if ([[self.pArrayController arrangedObjects] count] == 0) {
+        [[self noItemsView] setHidden:NO];
+    } else {
+        [[self noItemsView] setHidden:YES];
+    }
+}
+
 - (IBAction)saveNewProfile:(id)sender {
+   
     Profile* newProfile = [NSEntityDescription insertNewObjectForEntityForName:@"Profile" inManagedObjectContext:self.managedObjectContext];
     newProfile.name = [self inputAlert:@"Enter a name for the new letterhead" defaultValue:@"New Letterhead"];
     newProfile.bgImagePath = [[self profileEditWindow] saveImage:[[self backgrounddoc] image] :newProfile :@"background"];
     newProfile.coverImagePath = [[self profileEditWindow] saveImage:[[self coverbackgrounddoc] image] :newProfile :@"cover"];
+  
 }
 
 - (NSString *)inputAlert: (NSString *)prompt defaultValue: (NSString *)defaultValue {
@@ -682,6 +685,12 @@
     [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
 }
 
+- (NSArray *)nameSortDescriptors {
+    return [NSArray arrayWithObject:
+            [NSSortDescriptor sortDescriptorWithKey:@"title"
+                                          ascending:YES]];
+}
+
 -(Profile*)getCurrentProfile {
     if ([[self.pArrayController selectedObjects] count] > 0) {
         return [[self.pArrayController selectedObjects] objectAtIndex:0];
@@ -696,7 +705,7 @@
     NSInteger selectedSegment = [sender selectedSegment];
     
     if(selectedSegment==0){
-        [self.pArrayController add:sender];
+        [self saveNewProfile:sender];
     }
     else {
         
@@ -710,8 +719,12 @@
         
         if ([alert runModal] == NSAlertFirstButtonReturn) {
             [self.pArrayController remove:sender];
+            
         }
     }
+
+    //TODO gaat nog fout bij toevoegen!
+    [self checkProfiles];
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)item
