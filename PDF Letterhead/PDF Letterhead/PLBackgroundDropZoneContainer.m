@@ -24,7 +24,7 @@
         
         [self.layer setBorderColor:[NSColor colorWithRed:0.765 green:0.788 blue:0.812 alpha:1].CGColor];
         [self.layer setBorderWidth:1.0];
-}
+    }
     
     return self;
 }
@@ -35,7 +35,7 @@
     [background set];
     NSRectFill([self bounds]);
     
-    // Describe an inset rect (adjust for pixel border)
+    // Describe an inset rect
     NSRect whiteRect = NSInsetRect([self bounds], 0, 0);
     
     // Create and fill the shown path

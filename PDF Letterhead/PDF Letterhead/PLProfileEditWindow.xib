@@ -49,7 +49,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView identifier="bgDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t6C-LF-Rww" customClass="PLDropZone">
-                                <rect key="frame" x="15" y="50" width="160" height="200"/>
+                                <rect key="frame" x="30" y="53" width="130" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="jc4-up-EU8"/>
                                 <connections>
@@ -72,7 +72,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView identifier="coverDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W42-q6-j2N" customClass="PLDropZone">
-                                <rect key="frame" x="15" y="50" width="160" height="200"/>
+                                <rect key="frame" x="30" y="53" width="130" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="uG7-j5-7tH"/>
                                 <connections>

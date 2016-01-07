@@ -800,7 +800,7 @@
                                                 <rect key="frame" x="1" y="1" width="177" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6Db-7V-7wJ">
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6Db-7V-7wJ" customClass="PLImageView">
                                                         <rect key="frame" x="99" y="36" width="60" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="1Lg-A7-ZSv"/>
@@ -812,7 +812,7 @@
                                                             </binding>
                                                         </connections>
                                                     </imageView>
-                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ECc-p6-hGx">
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ECc-p6-hGx" customClass="PLImageView">
                                                         <rect key="frame" x="18" y="36" width="60" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="9qF-x2-SmD">
@@ -839,7 +839,7 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="h2F-Zj-7X5">
                                                             <font key="font" metaFont="systemMedium" size="12"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             <connections>
                                                                 <binding destination="hVc-bd-8Uw" name="value" keyPath="objectValue.name" id="5sw-Rj-Fvp"/>
