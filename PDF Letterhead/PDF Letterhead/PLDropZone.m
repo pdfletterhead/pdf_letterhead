@@ -150,6 +150,7 @@
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
 {
+    PLAppDelegate *delegate = [[NSApplication sharedApplication] delegate ];
     NSPasteboard *pboard = [sender draggingPasteboard];
 
     [self dropAreaFadeOut];
@@ -188,6 +189,20 @@
                 self.sourcefilepath = [files lastObject];
                 [self setPdfFilepath:[self sourcefilepath]];
                 
+                //Check if we are editing a current profile
+                Profile *loadedProfile = [delegate performSelector:@selector(returnLoadedProfile)];
+                PLProfileEditWindow *openedEditWindow = delegate.profileEditWindow;
+                
+                NSImage * newImage = [[NSImage alloc] initWithContentsOfFile:[self sourcefilepath]];
+                
+                if (loadedProfile) {
+                    
+                    if([[self identifier] isEqualToString:@"coverDropArea"]) {
+                        [openedEditWindow saveImage:newImage :loadedProfile :@"cover"];
+                    } else {
+                        [openedEditWindow saveImage:newImage :loadedProfile :@"background"];
+                    }
+                }
                 
                 return YES;
             }
@@ -211,7 +226,7 @@
         return YES;
     }
     
-    NSLog(@"%@", path);
+    NSLog(@"setpdffilepath: %@", path);
     
     NSMutableString *str = [[NSMutableString alloc] initWithString:path];
     NSString *word = @"file://";
@@ -222,6 +237,7 @@
     NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
     
     [self setImage:zNewImage];
+    
     return YES;
 
 }

@@ -13,19 +13,39 @@
 - (void)drawRect:(NSRect)dirtyRect {
     
     // add a background image
-    NSColor *backgroundColor = [NSColor colorWithPatternImage:[NSImage imageNamed:@"coverdrop"]];
+    
+    NSImage *image = [NSImage imageNamed:@"coverdrop"];
+    NSSize size = NSSizeFromString(@"{60,80}");
+    
+    image = [self imageResize:image newSize:size];
+    
+    NSColor *backgroundColor = [NSColor colorWithPatternImage:image];
     [backgroundColor setFill];
     NSRectFill(dirtyRect);
-
-//    // redraw the image to fit |yourView|'s size
-//    UIGraphicsBeginImageContextWithOptions(yourView.frame.size, NO, 0.f);
-//    [targetImage drawInRect:CGRectMake(0.f, 0.f, yourView.frame.size.width, yourView.frame.size.height)];
-//    UIImage * resultImage = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
+    
+    
     
     [super drawRect:dirtyRect];
 
+}
 
+- (NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize {
+    NSImage *sourceImage = anImage;
+    [sourceImage setScalesWhenResized:YES];
+    
+    // Report an error if the source isn't a valid image
+    if (![sourceImage isValid]){
+        NSLog(@"Invalid Image");
+    } else {
+        NSImage *smallImage = [[NSImage alloc] initWithSize: newSize];
+        [smallImage lockFocus];
+        [sourceImage setSize: newSize];
+        [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
+        [sourceImage drawAtPoint:NSZeroPoint fromRect:CGRectMake(0, 0, newSize.width, newSize.height) operation:NSCompositeCopy fraction:1.0];
+        [smallImage unlockFocus];
+        return smallImage;
+    }
+    return nil;
 }
 
 @end

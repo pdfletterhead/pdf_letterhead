@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Profile.h"
+#import "PLProfileEditWindow.h"
 
 @interface PLDropZone : NSImageView{
     NSString * sourcefilepath;

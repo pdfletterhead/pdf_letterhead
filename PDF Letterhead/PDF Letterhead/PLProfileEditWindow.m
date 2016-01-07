@@ -60,7 +60,6 @@
     
 }
 
-
 - (IBAction)doAddCover:(id)sender {
     [self openExistingDocument :@"cover"];
 }
@@ -112,12 +111,6 @@
     [self removeImage:_loadedProfile :cover];
 }
 
-- (IBAction)addNewProfile:(id)sender {
-    Profile* newProfile = [NSEntityDescription insertNewObjectForEntityForName:@"Profile" inManagedObjectContext:self.managedObjectContext];
-    newProfile.name = @"New Letterhead";
-    newProfile.uid = [self createUniqueString];
-}
-
 // Create a unique string for the images
 -(NSString *)createUniqueString {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
@@ -140,7 +133,7 @@
     
     //NSLog(@"%@",image);
     //NSLog(@"%@",profile);
-    //NSLog(@"%@",cover);
+    NSLog(@"%@",cover);
     
     // 1. Get an NSBitmapImageRep from the image passed in
     [image lockFocus];
@@ -151,8 +144,6 @@
     NSURL *pathToImage = [self.pathToAppSupport URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[self createUniqueString]]];
     NSData *data = [imgRep representationUsingType: NSPNGFileType properties: nil];
     NSString *returnVar;
-    
-    NSLog(@"%@", [self pathToAppSupport]);
     
     // 3. Write image to disk, set path
     if ([data writeToURL:pathToImage atomically:NO]) {

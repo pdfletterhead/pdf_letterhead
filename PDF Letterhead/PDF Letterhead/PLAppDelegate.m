@@ -13,7 +13,6 @@
 
 @interface PLAppDelegate()
 
-@property (nonatomic,strong) IBOutlet PLProfileEditWindow *profileEditWindow;
 @property (strong) IBOutlet NSTableView *drawerTableView;
 @property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
 @property (unsafe_unretained) IBOutlet NSView *drawerContentView;
@@ -322,6 +321,10 @@
         }
     }
     
+}
+
+-(Profile*)returnLoadedProfile {
+    return _profileEditWindow.loadedProfile;
 }
 
 -(void)doOpenEditor :(Profile *)profile {

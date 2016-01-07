@@ -89,6 +89,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSArrayController *profileArrayController;
+@property (nonatomic,strong) PLProfileEditWindow *profileEditWindow;
 
 
 -(IBAction)saveAs:(id)sender;

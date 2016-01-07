@@ -470,7 +470,7 @@
                             </customView>
                             <imageView id="Xye-zb-ewL">
                                 <rect key="frame" x="36" y="96" width="379" height="513"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp" id="HdR-P0-Wge"/>
                             </imageView>
                             <customView id="988" customClass="PLPDFBgAreaView">
@@ -547,13 +547,13 @@
         </window>
         <menu id="824" userLabel="Menu cover">
             <items>
-                <menuItem title="Open Image" id="830">
+                <menuItem title="Add Image" id="830">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doOpenFileForCover:" target="494" id="832"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Delete Image" id="826">
+                <menuItem title="Remove Image" id="826">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doDelForCover:" target="494" id="833"/>
@@ -563,13 +563,13 @@
         </menu>
         <menu id="834" userLabel="Menu bg">
             <items>
-                <menuItem title="Open Image" id="835">
+                <menuItem title="Add Image" id="835">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doOpenFileForBG:" target="494" id="844"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Delete Image" id="836">
+                <menuItem title="Remove Image" id="836">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doDelForBG:" target="494" id="845"/>
@@ -579,13 +579,13 @@
         </menu>
         <menu id="839" userLabel="Menu content">
             <items>
-                <menuItem title="Open Image" id="840">
+                <menuItem title="Add PDF" id="840">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doOpenFileForContentDoc:" target="494" id="846"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Delete Image" id="841">
+                <menuItem title="Remove PDF" id="841">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doDelForContentDoc:" target="494" id="847"/>

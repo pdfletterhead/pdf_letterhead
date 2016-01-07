@@ -48,7 +48,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView identifier="bgDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t6C-LF-Rww" customClass="PLDropZone">
+                            <imageView identifier="coverDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t6C-LF-Rww" customClass="PLDropZone">
                                 <rect key="frame" x="30" y="53" width="130" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="jc4-up-EU8"/>
@@ -71,7 +71,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView identifier="coverDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W42-q6-j2N" customClass="PLDropZone">
+                            <imageView identifier="bgDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W42-q6-j2N" customClass="PLDropZone">
                                 <rect key="frame" x="30" y="53" width="130" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="uG7-j5-7tH"/>
@@ -102,13 +102,13 @@
         </window>
         <menu autoenablesItems="NO" id="WZ2-43-pFp" userLabel="Menu cover">
             <items>
-                <menuItem title="Open Image" id="wPD-Ne-QFs">
+                <menuItem title="Add Image" id="wPD-Ne-QFs">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doAddCover:" target="-1" id="2wx-Kn-YIi"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Delete Image" id="TeH-Mw-ycX">
+                <menuItem title="Remove Image" id="TeH-Mw-ycX">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doDelCover:" target="-1" id="Je1-MT-Khs"/>
@@ -119,13 +119,13 @@
         </menu>
         <menu autoenablesItems="NO" id="F3R-cb-Q2v" userLabel="Menu bg">
             <items>
-                <menuItem title="Open Image" id="4Y7-Zp-QBS">
+                <menuItem title="Add Image" id="4Y7-Zp-QBS">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doAddBg:" target="-1" id="46c-yH-Xtt"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Delete Image" id="8e9-mJ-ffD">
+                <menuItem title="Remove Image" id="8e9-mJ-ffD">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doDelBg:" target="-1" id="9Ba-AV-RBa"/>
