@@ -44,7 +44,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-
     _setView = false;
 
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
@@ -79,8 +78,8 @@
     [self coverControlAction:self];
   
     //TODO load most recently used profile
-    [self selectProfile:nil];
-    [self updatePreviewAndActionButtons];
+    //[self selectProfile:nil];
+    //[self updatePreviewAndActionButtons];
     
     [self setupProfileDrawer];
     [self setupColorSwitch];
@@ -202,10 +201,10 @@
                                                     alpha:1.0];
     [_coverswitch3 setTintColor: blueColor];
     
-    //TODO TEST change to preferences!
+    //TODO change to preferences!
     //if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
     //{
-        _coverswitch3.checked = YES;
+        //_coverswitch3.checked = YES;
         //[_coverswitch setSelectedSegment:1];
     //}
     
@@ -622,7 +621,7 @@
 - (void)checkProfiles {
     
     NSError *error;
-    BOOL ok = [self.pArrayController fetchWithRequest:nil merge:NO error:&error];
+    [self.pArrayController fetchWithRequest:nil merge:NO error:&error];
     
     if ([[self.pArrayController arrangedObjects] count] == 0) {
         [[self noItemsView] setHidden:NO];
@@ -631,13 +630,23 @@
     }
 }
 
+- (NSString*)returnDateNow {
+    //string representation of current date
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyyMMddHHmmss"];
+    NSString *dateString = [dateFormat stringFromDate:today];
+    return dateString;
+}
+
 - (IBAction)saveNewProfile:(id)sender {
-   
+
+    NSString *dateString = [self returnDateNow];
     Profile* newProfile = [NSEntityDescription insertNewObjectForEntityForName:@"Profile" inManagedObjectContext:self.managedObjectContext];
-    newProfile.name = [self inputAlert:@"Enter a name for the new letterhead" defaultValue:@"New Letterhead"];
+    newProfile.name = [self inputAlert:@"Enter a name for the new letterhead" defaultValue:@"Untitled Letterhead"];
     newProfile.bgImagePath = [[self profileEditWindow] saveImage:[[self backgrounddoc] image] :newProfile :@"background"];
     newProfile.coverImagePath = [[self profileEditWindow] saveImage:[[self coverbackgrounddoc] image] :newProfile :@"cover"];
-  
+    newProfile.lastUpdated = dateString;
 }
 
 - (NSString *)inputAlert: (NSString *)prompt defaultValue: (NSString *)defaultValue {
@@ -688,10 +697,10 @@
     [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
 }
 
-- (NSArray *)nameSortDescriptors {
+- (NSArray *)updatedSortDescriptors {
     return [NSArray arrayWithObject:
-            [NSSortDescriptor sortDescriptorWithKey:@"title"
-                                          ascending:YES]];
+            [NSSortDescriptor sortDescriptorWithKey:@"lastUpdated"
+                                          ascending:NO]];
 }
 
 -(Profile*)getCurrentProfile {
@@ -721,8 +730,8 @@
         
         
         if ([alert runModal] == NSAlertFirstButtonReturn) {
-            [self.pArrayController remove:sender];
-            
+            NSUInteger index = [self.pArrayController selectionIndex];
+            [self.pArrayController removeObjectAtArrangedObjectIndex:index];
         }
     }
 

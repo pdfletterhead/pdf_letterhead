@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSString *bgImagePath;
 @property (nullable, nonatomic, retain) NSString *coverImagePath;
+@property (nullable, nonatomic, retain) NSString *lastUpdated;
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSString *uid;
 

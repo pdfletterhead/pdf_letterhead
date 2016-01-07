@@ -97,6 +97,7 @@
         <arrayController mode="entity" entityName="Profile" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="J24-2q-b8a" userLabel="ProfileArrayControler">
             <connections>
                 <binding destination="494" name="managedObjectContext" keyPath="managedObjectContext" id="PGg-IE-adh"/>
+                <binding destination="494" name="sortDescriptors" keyPath="updatedSortDescriptors" id="JLt-yn-DW4"/>
             </connections>
         </arrayController>
         <menu title="AMainMenu" systemMenu="main" id="29">
@@ -381,7 +382,7 @@
                             <button verticalHuggingPriority="750" id="1z4-dM-vE6" customClass="KBButton">
                                 <rect key="frame" x="14" y="14" width="187" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" title="Save letterhead" bezelStyle="shadowlessSquare" image="save" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
+                                <buttonCell key="cell" type="square" title="Save new letterhead" bezelStyle="shadowlessSquare" image="save" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -732,15 +733,6 @@
             <rect key="frame" x="0.0" y="0.0" width="180" height="626"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X7M-no-WSH">
-                    <rect key="frame" x="18" y="587" width="152" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Choose a letterhead" id="4xL-qD-hOz">
-                        <font key="font" metaFont="systemBold" size="14"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <segmentedControl verticalHuggingPriority="750" id="Hfo-bE-ad2">
                     <rect key="frame" x="18" y="16" width="64" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -752,7 +744,7 @@
                         </segments>
                     </segmentedCell>
                     <connections>
-                        <action selector="addOrDeleteProfile:" target="494" id="y96-3F-52V"/>
+                        <action selector="addOrDeleteProfile:" target="494" id="uqP-Us-7ab"/>
                     </connections>
                 </segmentedControl>
                 <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="8lJ-AR-di4">
@@ -919,6 +911,15 @@
                         </textField>
                     </subviews>
                 </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X7M-no-WSH">
+                    <rect key="frame" x="13" y="587" width="152" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Choose a letterhead" id="4xL-qD-hOz">
+                        <font key="font" metaFont="systemBold" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <point key="canvasLocation" x="254" y="742"/>
         </customView>

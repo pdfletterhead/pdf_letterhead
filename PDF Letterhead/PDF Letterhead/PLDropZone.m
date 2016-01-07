@@ -197,6 +197,8 @@
                 
                 if (loadedProfile) {
                     
+                    loadedProfile.lastUpdated = [delegate performSelector:@selector(returnDateNow)];
+                    
                     if([[self identifier] isEqualToString:@"coverDropArea"]) {
                         [openedEditWindow saveImage:newImage :loadedProfile :@"cover"];
                     } else {

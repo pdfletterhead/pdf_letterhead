@@ -192,6 +192,7 @@
 		7928A3161C3D546F006BA593 /* PLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLImageView.m; sourceTree = "<group>"; };
 		79368AE01C3D710F0009DA2C /* Lite Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Lite Icons.xcassets"; sourceTree = "<group>"; };
 		79368AE21C3D716E0009DA2C /* Pro Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Pro Icons.xcassets"; sourceTree = "<group>"; };
+		79368AE71C3EADBC0009DA2C /* PDF_Letterhead 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PDF_Letterhead 4.xcdatamodel"; sourceTree = "<group>"; };
 		79377FA01C1F0D5600901220 /* PLImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLImageTransformer.h; sourceTree = "<group>"; };
 		79377FA11C1F0D5600901220 /* PLImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLImageTransformer.m; sourceTree = "<group>"; };
 		794DA9D51C3D008E00E64582 /* KBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KBButton.h; path = "PDF Letterhead/KBButton.h"; sourceTree = SOURCE_ROOT; };
@@ -899,11 +900,12 @@
 		3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				79368AE71C3EADBC0009DA2C /* PDF_Letterhead 4.xcdatamodel */,
 				7910E6C41C21922300398823 /* PDF_Letterhead 3.xcdatamodel */,
 				7910E6A71C206AC900398823 /* PDF_Letterhead 2.xcdatamodel */,
 				3E6835DE1607C90400DDFB82 /* PDF_Letterhead.xcdatamodel */,
 			);
-			currentVersion = 7910E6C41C21922300398823 /* PDF_Letterhead 3.xcdatamodel */;
+			currentVersion = 79368AE71C3EADBC0009DA2C /* PDF_Letterhead 4.xcdatamodel */;
 			path = PDF_Letterhead.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

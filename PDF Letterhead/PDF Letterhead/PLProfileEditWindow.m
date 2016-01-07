@@ -7,6 +7,7 @@
 //
 
 #import "PLProfileEditWindow.h"
+#import "PLAppDelegate.h"
 
 @interface PLProfileEditWindow ()
 
@@ -44,6 +45,8 @@
     if (_loadedProfile.name != nil) {
         [[self title] setStringValue:_loadedProfile.name];
     }
+    
+    
 }
 
 -(Profile*)getCurrentProfile :(Profile *)profile {
@@ -55,8 +58,10 @@
 }
 
 - (IBAction)updateTitle:(id)sender {
+    
     NSString *str = [sender stringValue];
     _loadedProfile.name = str;
+    [self updateLastUpdatedTime];
     
 }
 
@@ -105,10 +110,18 @@
             }
         }
     }];
+    
+    [self updateLastUpdatedTime];
 }
 
 - (void)delExistingDocument:(NSString*)cover {
     [self removeImage:_loadedProfile :cover];
+    [self updateLastUpdatedTime];
+}
+
+- (void)updateLastUpdatedTime {
+    PLAppDelegate *delegate = [[NSApplication sharedApplication] delegate ];
+    _loadedProfile.lastUpdated = [delegate performSelector:@selector(returnDateNow)];
 }
 
 // Create a unique string for the images
@@ -127,6 +140,8 @@
         profile.bgImagePath = nil;
         [[self bgImage] setImage:nil];
     }
+    
+    
 }
 
 -(NSString*)saveImage:(NSImage*)image :(Profile*)profile :(NSString*)cover {

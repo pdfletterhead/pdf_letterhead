@@ -23,4 +23,5 @@
         [selectionPath fill];
     }
 }
+
 @end

@@ -15,6 +15,7 @@
 
 @dynamic bgImagePath;
 @dynamic coverImagePath;
+@dynamic lastUpdated;
 @dynamic name;
 @dynamic uid;
 
