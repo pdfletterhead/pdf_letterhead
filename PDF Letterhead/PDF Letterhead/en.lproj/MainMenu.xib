@@ -362,17 +362,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" id="1z4-dM-vE6" customClass="KBButton">
-                                <rect key="frame" x="14" y="7" width="187" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" title="Save letterhead" bezelStyle="shadowlessSquare" image="save" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="saveNewProfile:" target="494" id="fFa-dz-fjJ"/>
-                                </connections>
-                            </button>
                             <textField verticalHuggingPriority="750" id="795">
                                 <rect key="frame" x="36" y="247" width="82" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -389,6 +378,17 @@
                                     <action selector="coverControlAction:" target="494" id="QWn-aK-V1U"/>
                                 </connections>
                             </customView>
+                            <button verticalHuggingPriority="750" id="1z4-dM-vE6" customClass="KBButton">
+                                <rect key="frame" x="14" y="14" width="187" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" title="Save letterhead" bezelStyle="shadowlessSquare" image="save" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveNewProfile:" target="494" id="fFa-dz-fjJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </customView>
                     <customView identifier="sourceContainer" canDrawConcurrently="YES" id="982" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
