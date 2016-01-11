@@ -75,6 +75,8 @@
 		794DA9DB1C3D008E00E64582 /* KBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 794DA9D61C3D008E00E64582 /* KBButton.m */; };
 		794DA9DC1C3D008E00E64582 /* KBButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794DA9D81C3D008E00E64582 /* KBButtonCell.m */; };
 		794DA9DD1C3D008E00E64582 /* NSColor+ColorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 794DA9DA1C3D008E00E64582 /* NSColor+ColorExtensions.m */; };
+		7961490A1C4407CA002E7462 /* closebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 796149091C4407CA002E7462 /* closebutton.png */; };
+		7961490B1C4408C6002E7462 /* closebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 796149091C4407CA002E7462 /* closebutton.png */; };
 		79726ECF1C16ED6E003B85D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D11607C90400DDFB82 /* main.m */; };
 		79726ED01C16ED6E003B85D2 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D81607C90400DDFB82 /* PLAppDelegate.m */; };
 		79726ED11C16ED6E003B85D2 /* PDF_Letterhead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */; };
@@ -201,6 +203,7 @@
 		794DA9D81C3D008E00E64582 /* KBButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KBButtonCell.m; path = "PDF Letterhead/KBButtonCell.m"; sourceTree = SOURCE_ROOT; };
 		794DA9D91C3D008E00E64582 /* NSColor+ColorExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+ColorExtensions.h"; path = "PDF Letterhead/NSColor+ColorExtensions.h"; sourceTree = SOURCE_ROOT; };
 		794DA9DA1C3D008E00E64582 /* NSColor+ColorExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+ColorExtensions.m"; path = "PDF Letterhead/NSColor+ColorExtensions.m"; sourceTree = SOURCE_ROOT; };
+		796149091C4407CA002E7462 /* closebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closebutton.png; sourceTree = "<group>"; };
 		79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
 		79EEDAA31C22CEC000DE767E /* PLProfileEditWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLProfileEditWindow.xib; sourceTree = "<group>"; };
@@ -403,6 +406,7 @@
 		3E9AC0C71C3C75EB00DBDBE8 /* imgnew */ = {
 			isa = PBXGroup;
 			children = (
+				796149091C4407CA002E7462 /* closebutton.png */,
 				7928A3021C3D4D52006BA593 /* mag.png */,
 				7928A3031C3D4D52006BA593 /* mail.png */,
 				7928A3041C3D4D52006BA593 /* print.png */,
@@ -544,6 +548,7 @@
 				79EEDAA41C22CEC000DE767E /* PLProfileEditWindow.xib in Resources */,
 				7928A3081C3D4D52006BA593 /* mail.png in Resources */,
 				7928A3091C3D4D52006BA593 /* print.png in Resources */,
+				7961490A1C4407CA002E7462 /* closebutton.png in Resources */,
 				7928A30B1C3D4D52006BA593 /* pencil.png in Resources */,
 				3E2AFF0B16A5FD03006D2CB0 /* quickstarttitle.png in Resources */,
 				3E2AFF0F16A5FE91006D2CB0 /* Schermafbeelding 2013-01-15 om 22.15.47.png in Resources */,
@@ -579,6 +584,7 @@
 				7928A3111C3D4FC9006BA593 /* print.png in Resources */,
 				79726EFC1C16ED6E003B85D2 /* PLQuickStart1.xib in Resources */,
 				79C3781D1C243E6A003DE151 /* PLProfileEditWindow.xib in Resources */,
+				7961490B1C4408C6002E7462 /* closebutton.png in Resources */,
 				7928A3101C3D4FC9006BA593 /* mail.png in Resources */,
 				79726EFD1C16ED6E003B85D2 /* PDF-letterhead-QuickStart-1.png in Resources */,
 				79726EFE1C16ED6E003B85D2 /* quickstarttitle.png in Resources */,

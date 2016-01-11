@@ -12,40 +12,27 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     
-    // add a background image
+    NSBezierPath *outerPath = [NSBezierPath bezierPathWithRect: [self bounds]];
+    [[NSColor lightGrayColor] set];
+    [outerPath stroke];
     
-    NSImage *image = [NSImage imageNamed:@"coverdrop"];
-    NSSize size = NSSizeFromString(@"{60,80}");
+    self.layer.masksToBounds = NO;
     
-    image = [self imageResize:image newSize:size];
+    [self setWantsLayer:YES];
+    CALayer *imageLayer = self.layer;
+    [imageLayer setBounds:[self bounds]];
+    [imageLayer setShadowRadius:3];
+    [imageLayer setShadowOffset:CGSizeZero];
+    [imageLayer setShadowOpacity:1];
+    [imageLayer setShadowColor:CGColorCreateGenericGray(0, 1)];
+    imageLayer.masksToBounds = NO;
     
-    NSColor *backgroundColor = [NSColor colorWithPatternImage:image];
-    [backgroundColor setFill];
-    NSRectFill(dirtyRect);
     
-    
+    [NSGraphicsContext restoreGraphicsState];
+
     
     [super drawRect:dirtyRect];
 
-}
-
-- (NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize {
-    NSImage *sourceImage = anImage;
-    [sourceImage setScalesWhenResized:YES];
-    
-    // Report an error if the source isn't a valid image
-    if (![sourceImage isValid]){
-        NSLog(@"Invalid Image");
-    } else {
-        NSImage *smallImage = [[NSImage alloc] initWithSize: newSize];
-        [smallImage lockFocus];
-        [sourceImage setSize: newSize];
-        [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-        [sourceImage drawAtPoint:NSZeroPoint fromRect:CGRectMake(0, 0, newSize.width, newSize.height) operation:NSCompositeCopy fraction:1.0];
-        [smallImage unlockFocus];
-        return smallImage;
-    }
-    return nil;
 }
 
 @end

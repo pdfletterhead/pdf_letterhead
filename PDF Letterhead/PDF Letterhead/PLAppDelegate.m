@@ -34,7 +34,6 @@
 
 - (void)awakeFromNib {
     
-    [[chooseLetterheadButton cell] setKBButtonType:BButtonTypeLight];
     [[saveLetterheadButton cell] setKBButtonType:BButtonTypeLight];
     [[saveButton3 cell] setKBButtonType:BButtonTypeDark];
     [[previewButton3 cell] setKBButtonType:BButtonTypeDark];
@@ -359,7 +358,7 @@
         
         if (!_setView) {
             
-            [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+            [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
             [_pdfView setDocument: _letterheadPDF];
             [_previewView setDocument: _letterheadPDF];
             
@@ -531,6 +530,7 @@
                                        (_bgframe.size.height));
         
         [[_backgrounddoc animator ]setFrame:newbgframe];
+        //[_backgrounddoc]
         
         
         [[_coverbackgrounddocText animator] setAlphaValue:0.0];

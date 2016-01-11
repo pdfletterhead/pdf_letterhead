@@ -372,7 +372,7 @@
                                     <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </textFieldCell>
                             </textField>
-                            <customView id="32v-Qf-gBP" customClass="ITSwitch">
+                            <customView focusRingType="none" id="32v-Qf-gBP" customClass="ITSwitch">
                                 <rect key="frame" x="122" y="248" width="49" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
@@ -393,7 +393,7 @@
                         </subviews>
                     </customView>
                     <customView identifier="sourceContainer" canDrawConcurrently="YES" id="982" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
-                        <rect key="frame" x="20" y="20" width="214" height="277"/>
+                        <rect key="frame" x="20" y="53" width="214" height="277"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" id="983">
@@ -486,12 +486,12 @@
                             </customView>
                         </subviews>
                     </customView>
-                    <button verticalHuggingPriority="750" id="qzB-tB-vJZ" customClass="KBButton">
-                        <rect key="frame" x="20" y="309" width="214" height="28"/>
+                    <button verticalHuggingPriority="750" id="qzB-tB-vJZ">
+                        <rect key="frame" x="8" y="0.0" width="145" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" title="Choose letterhead" bezelStyle="shadowlessSquare" image="NSBookmarksTemplate" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L4e-O0-fSa">
+                        <buttonCell key="cell" type="square" title="MANAGE LETTERHEADS" bezelStyle="shadowlessSquare" image="NSBookmarksTemplate" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="L4e-O0-fSa">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="systemBold" size="10"/>
                         </buttonCell>
                         <connections>
                             <action selector="openProfileDrawer:" target="494" id="aue-DZ-bIo"/>
@@ -792,7 +792,7 @@
                                                 <rect key="frame" x="1" y="1" width="177" height="160"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6Db-7V-7wJ" customClass="PLImageView">
+                                                    <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6Db-7V-7wJ" customClass="PLImageView">
                                                         <rect key="frame" x="99" y="36" width="60" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="1Lg-A7-ZSv"/>
@@ -804,7 +804,7 @@
                                                             </binding>
                                                         </connections>
                                                     </imageView>
-                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ECc-p6-hGx" customClass="PLImageView">
+                                                    <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ECc-p6-hGx" customClass="PLImageView">
                                                         <rect key="frame" x="18" y="36" width="60" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="9qF-x2-SmD">

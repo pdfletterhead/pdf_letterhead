@@ -11,45 +11,24 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="PDF letterhead Quick Start" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" animationBehavior="default" id="1">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="69" y="185" width="702" height="753"/>
+            <rect key="contentRect" x="69" y="185" width="702" height="434"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <value key="minSize" type="size" width="702" height="753"/>
             <value key="maxSize" type="size" width="702" height="753"/>
             <view key="contentView" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="702" height="753"/>
+                <rect key="frame" x="0.0" y="0.0" width="702" height="434"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView id="5">
-                        <rect key="frame" x="0.0" y="47" width="702" height="645"/>
+                        <rect key="frame" x="0.0" y="-63" width="702" height="645"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="PDF-letterhead-QuickStart-1" id="6"/>
                     </imageView>
-                    <imageView id="28">
-                        <rect key="frame" x="-13" y="0.0" width="715" height="47"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" image="Schermafbeelding 2013-01-15 om 22.15.47" id="29"/>
-                    </imageView>
-                    <imageView id="40">
-                        <rect key="frame" x="0.0" y="692" width="715" height="61"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" image="Schermafbeelding 2013-01-15 om 22.15.47" id="41"/>
-                    </imageView>
-                    <imageView id="30">
-                        <rect key="frame" x="288" y="704" width="188" height="35"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="quickstarttitle" id="31"/>
-                    </imageView>
-                    <imageView id="32">
-                        <rect key="frame" x="213" y="685" width="72" height="72"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="pdfletterheadMac" id="33"/>
-                    </imageView>
                     <button id="34">
-                        <rect key="frame" x="12" y="14" width="22" height="18"/>
+                        <rect key="frame" x="18" y="18" width="22" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="35">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -60,18 +39,29 @@
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" id="36">
-                        <rect key="frame" x="35" y="15" width="309" height="17"/>
+                        <rect key="frame" x="39" y="17" width="309" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hide this window when PDF Letterhead launches" id="37">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Do not show again" id="37">
+                            <font key="font" metaFont="system" size="11"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" id="42">
-                        <rect key="frame" x="574" y="6" width="108" height="32"/>
+                    <button verticalHuggingPriority="750" id="W4z-4g-Qen" customClass="KBButton">
+                        <rect key="frame" x="587" y="19" width="95" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="43">
+                        <buttonCell key="cell" type="smallSquare" title="Buy now" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bsE-Ih-nTF">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="buyNowAction:" target="-2" id="bAp-Z6-O6o"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="42">
+                        <rect key="frame" x="5" y="415" width="14" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" title="Close" bezelStyle="rounded" image="closebutton" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="43">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -84,14 +74,12 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="4"/>
             </connections>
-            <point key="canvasLocation" x="311" y="231.5"/>
+            <point key="canvasLocation" x="417" y="156"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="45"/>
     </objects>
     <resources>
-        <image name="PDF-letterhead-QuickStart-1" width="702" height="645"/>
-        <image name="Schermafbeelding 2013-01-15 om 22.15.47" width="715" height="80"/>
-        <image name="pdfletterheadMac" width="512" height="512"/>
-        <image name="quickstarttitle" width="231" height="44"/>
+        <image name="PDF-letterhead-QuickStart-1" width="854" height="393"/>
+        <image name="closebutton" width="28" height="28"/>
     </resources>
 </document>

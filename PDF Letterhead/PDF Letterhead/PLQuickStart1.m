@@ -19,7 +19,7 @@
     self = [super initWithWindow:window];
     if (self) {
         // Initialization code here.
-
+        [[self window] setBackgroundColor:[NSColor whiteColor]];
     }
     
     return self;
@@ -30,5 +30,10 @@
     [super windowDidLoad];    
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
+
+- (IBAction)buyNowAction:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.pdfletterhead.net"]];
+}
+
 
 @end
