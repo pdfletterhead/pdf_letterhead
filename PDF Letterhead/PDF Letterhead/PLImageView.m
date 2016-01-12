@@ -13,7 +13,7 @@
 - (void)drawRect:(NSRect)dirtyRect {
     
     NSBezierPath *outerPath = [NSBezierPath bezierPathWithRect: [self bounds]];
-    [[NSColor lightGrayColor] set];
+    [[NSColor colorWithCGColor:CGColorCreateGenericGray(0,0.4)] set];
     [outerPath stroke];
     
     self.layer.masksToBounds = NO;
@@ -21,10 +21,10 @@
     [self setWantsLayer:YES];
     CALayer *imageLayer = self.layer;
     [imageLayer setBounds:[self bounds]];
-    [imageLayer setShadowRadius:3];
+    [imageLayer setShadowRadius:2];
     [imageLayer setShadowOffset:CGSizeZero];
     [imageLayer setShadowOpacity:1];
-    [imageLayer setShadowColor:CGColorCreateGenericGray(0, 1)];
+    [imageLayer setShadowColor:CGColorCreateGenericGray(0,1)];
     imageLayer.masksToBounds = NO;
     
     

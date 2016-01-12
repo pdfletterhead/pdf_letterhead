@@ -372,6 +372,8 @@
     return rowView;
 }
 
+
+
 -(void)updatePreviewAndActionButtons {
     
     //We do not have enough to set Preview

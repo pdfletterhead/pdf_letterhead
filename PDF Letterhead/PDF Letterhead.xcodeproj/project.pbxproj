@@ -83,6 +83,14 @@
 		794DA9DB1C3D008E00E64582 /* KBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 794DA9D61C3D008E00E64582 /* KBButton.m */; };
 		794DA9DC1C3D008E00E64582 /* KBButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 794DA9D81C3D008E00E64582 /* KBButtonCell.m */; };
 		794DA9DD1C3D008E00E64582 /* NSColor+ColorExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 794DA9DA1C3D008E00E64582 /* NSColor+ColorExtensions.m */; };
+		79527AB11C4553EA0030D6F9 /* PLTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79527AB01C4553EA0030D6F9 /* PLTableCellView.m */; };
+		79527AB21C4553EA0030D6F9 /* PLTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79527AB01C4553EA0030D6F9 /* PLTableCellView.m */; };
+		79527AB51C45565B0030D6F9 /* PLButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79527AB41C45565B0030D6F9 /* PLButtonCell.m */; };
+		79527AB61C45565B0030D6F9 /* PLButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79527AB41C45565B0030D6F9 /* PLButtonCell.m */; };
+		79527AB91C4559D50030D6F9 /* pencilwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 79527AB71C4559D50030D6F9 /* pencilwhite.png */; };
+		79527ABA1C4559D50030D6F9 /* pencilwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 79527AB71C4559D50030D6F9 /* pencilwhite.png */; };
+		79527ABB1C4559D50030D6F9 /* pencilgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 79527AB81C4559D50030D6F9 /* pencilgray.png */; };
+		79527ABC1C4559D50030D6F9 /* pencilgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 79527AB81C4559D50030D6F9 /* pencilgray.png */; };
 		7961490A1C4407CA002E7462 /* closebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 796149091C4407CA002E7462 /* closebutton.png */; };
 		7961490B1C4408C6002E7462 /* closebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 796149091C4407CA002E7462 /* closebutton.png */; };
 		79726ECF1C16ED6E003B85D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D11607C90400DDFB82 /* main.m */; };
@@ -216,6 +224,12 @@
 		794DA9D81C3D008E00E64582 /* KBButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KBButtonCell.m; path = "PDF Letterhead/KBButtonCell.m"; sourceTree = SOURCE_ROOT; };
 		794DA9D91C3D008E00E64582 /* NSColor+ColorExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSColor+ColorExtensions.h"; path = "PDF Letterhead/NSColor+ColorExtensions.h"; sourceTree = SOURCE_ROOT; };
 		794DA9DA1C3D008E00E64582 /* NSColor+ColorExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSColor+ColorExtensions.m"; path = "PDF Letterhead/NSColor+ColorExtensions.m"; sourceTree = SOURCE_ROOT; };
+		79527AAF1C4553EA0030D6F9 /* PLTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTableCellView.h; sourceTree = "<group>"; };
+		79527AB01C4553EA0030D6F9 /* PLTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTableCellView.m; sourceTree = "<group>"; };
+		79527AB31C45565B0030D6F9 /* PLButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLButtonCell.h; sourceTree = "<group>"; };
+		79527AB41C45565B0030D6F9 /* PLButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLButtonCell.m; sourceTree = "<group>"; };
+		79527AB71C4559D50030D6F9 /* pencilwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencilwhite.png; sourceTree = "<group>"; };
+		79527AB81C4559D50030D6F9 /* pencilgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencilgray.png; sourceTree = "<group>"; };
 		796149091C4407CA002E7462 /* closebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closebutton.png; sourceTree = "<group>"; };
 		79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
@@ -271,6 +285,10 @@
 				7928A3161C3D546F006BA593 /* PLImageView.m */,
 				791500931C4519D00007ABDC /* PLTextFieldCell.h */,
 				791500941C4519D00007ABDC /* PLTextFieldCell.m */,
+				79527AAF1C4553EA0030D6F9 /* PLTableCellView.h */,
+				79527AB01C4553EA0030D6F9 /* PLTableCellView.m */,
+				79527AB31C45565B0030D6F9 /* PLButtonCell.h */,
+				79527AB41C45565B0030D6F9 /* PLButtonCell.m */,
 			);
 			name = MainWindow;
 			sourceTree = "<group>";
@@ -421,6 +439,8 @@
 		3E9AC0C71C3C75EB00DBDBE8 /* imgnew */ = {
 			isa = PBXGroup;
 			children = (
+				79527AB71C4559D50030D6F9 /* pencilwhite.png */,
+				79527AB81C4559D50030D6F9 /* pencilgray.png */,
 				791500881C44FB030007ABDC /* upgradebutton.png */,
 				791500821C44E9400007ABDC /* drawerinicon.png */,
 				791500831C44E9400007ABDC /* drawerouticon.png */,
@@ -547,6 +567,7 @@
 				3E6835D61607C90400DDFB82 /* Credits.rtf in Resources */,
 				3E9B90251C3B2A45003D86E0 /* bghelp.png in Resources */,
 				3E6836031607EE8C00DDFB82 /* pdfletterheadIOS.icns in Resources */,
+				79527ABB1C4559D50030D6F9 /* pencilgray.png in Resources */,
 				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
 				3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */,
 				3E7BC9D4162459EE0092BF5E /* pdfletterheadMac.icns in Resources */,
@@ -563,6 +584,7 @@
 				3E67446A1679448400D99390 /* printer.png in Resources */,
 				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
 				7928A3071C3D4D52006BA593 /* mag.png in Resources */,
+				79527AB91C4559D50030D6F9 /* pencilwhite.png in Resources */,
 				3E2AFF0716A5F8B3006D2CB0 /* PLQuickStart1.xib in Resources */,
 				7928A3141C3D50A2006BA593 /* MainMenu.xib in Resources */,
 				3E2AFF0916A5FC95006D2CB0 /* PDF-letterhead-QuickStart-1.png in Resources */,
@@ -586,6 +608,7 @@
 				7928A3121C3D4FC9006BA593 /* save.png in Resources */,
 				79726EE81C16ED6E003B85D2 /* MainMenu.xib in Resources */,
 				3E9B90261C3B2A45003D86E0 /* bghelp.png in Resources */,
+				79527ABC1C4559D50030D6F9 /* pencilgray.png in Resources */,
 				79726EEB1C16ED6E003B85D2 /* pdfletterheadIOS.icns in Resources */,
 				79726EEC1C16ED6E003B85D2 /* white.pdf in Resources */,
 				79726EED1C16ED6E003B85D2 /* FAQ.rtf in Resources */,
@@ -602,6 +625,7 @@
 				79368AE31C3D716E0009DA2C /* Pro Icons.xcassets in Resources */,
 				79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */,
 				7928A30F1C3D4FC9006BA593 /* mag.png in Resources */,
+				79527ABA1C4559D50030D6F9 /* pencilwhite.png in Resources */,
 				79726EF61C16ED6E003B85D2 /* pdfviewbg.png in Resources */,
 				79726EF91C16ED6E003B85D2 /* printer.png in Resources */,
 				79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */,
@@ -663,7 +687,9 @@
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
 				79377FA21C1F0D5600901220 /* PLImageTransformer.m in Sources */,
 				7910E6BC1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
+				79527AB11C4553EA0030D6F9 /* PLTableCellView.m in Sources */,
 				3E9B90041C3AD9B9003D86E0 /* ITSwitch.m in Sources */,
+				79527AB51C45565B0030D6F9 /* PLButtonCell.m in Sources */,
 				7910E6BE1C206CAC00398823 /* Profile.m in Sources */,
 				79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				7928A3171C3D546F006BA593 /* PLImageView.m in Sources */,
@@ -694,7 +720,9 @@
 				79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */,
 				79377FA31C1F0D5600901220 /* PLImageTransformer.m in Sources */,
 				7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */,
+				79527AB21C4553EA0030D6F9 /* PLTableCellView.m in Sources */,
 				3E9B90051C3AD9B9003D86E0 /* ITSwitch.m in Sources */,
+				79527AB61C45565B0030D6F9 /* PLButtonCell.m in Sources */,
 				7910E6BF1C206CAC00398823 /* Profile.m in Sources */,
 				79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				7928A3181C3D546F006BA593 /* PLImageView.m in Sources */,
