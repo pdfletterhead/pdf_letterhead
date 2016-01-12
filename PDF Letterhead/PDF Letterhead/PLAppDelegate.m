@@ -17,6 +17,11 @@
 @property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
 @property (unsafe_unretained) IBOutlet NSView *drawerContentView;
 @property (weak) IBOutlet NSView *noItemsView;
+@property (weak) IBOutlet NSButton *manageLetterheadsButton;
+@property (weak) IBOutlet NSBox *manageLetterheadsLine;
+@property (weak) IBOutlet KBButton *saveNewLetterheadButton;
+@property (weak) IBOutlet NSBox *saveNewLetterheadLine;
+@property (weak) IBOutlet NSButton *upgradeToProButton;
 
 @end
 
@@ -43,15 +48,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    
+#ifdef LITE
+    [self disableProFeatures];
+#endif
+    
     _setView = false;
 
-    _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
-    
-    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
-    {
-        [self doOpenQuickStart];
-    }
-    
     //Temp folder creation
     NSError *tmpFileCreateError;
     _tmpDirectoryURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:[[NSProcessInfo processInfo] globallyUniqueString]] isDirectory:YES];
@@ -64,6 +67,8 @@
     [self setIsSetCover:NO];
     [self setIsSetContent:NO];
     [_myMainMenu setAutoenablesItems:NO];
+    [[[self manageLetterheadsButton] image] setSize:NSMakeSize(15.0,12.0)];
+    [[self manageLetterheadsButton] setNeedsDisplay:YES];
     
     [_pdfThumbView setAllowsDragging:NO];
     [_pdfThumbView setAllowsMultipleSelection:NO];
@@ -73,22 +78,32 @@
     _cvTextframe = [_coverbackgrounddocText frame];
     _bgTextframe = [_backgrounddocText frame];
     
+#ifdef PRO
     [self checkProfiles];
-    [self coverControlAction:self];
-  
-    //TODO load most recently used profile
-    //[self selectProfile:nil];
-    //[self updatePreviewAndActionButtons];
-    
     [self setupProfileDrawer];
-    [self setupColorSwitch];
-    
     _profileEditWindow = [[PLProfileEditWindow alloc] init ];
     //Managed Object Context for ProfileViewController
     self.profileEditWindow.managedObjectContext = [self managedObjectContext];
     self.profileEditWindow.pathToAppSupport = [self applicationFilesDirectory];
     
-}
+    //TODO load most recently used profile
+    //[self selectProfile:nil];
+    //[self updatePreviewAndActionButtons];
+#endif
+    
+    [self coverControlAction:self];
+    [self setupColorSwitch];
+    
+#ifdef LITE
+    _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
+    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
+    {
+        [self doOpenQuickStart];
+    }
+#endif
+    
+   }
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
@@ -175,12 +190,20 @@
     
 }
 
+- (IBAction)openSupportPage:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.pdfletterhead.net"]];
+}
+
+
 - (IBAction)openQuickStart:(id)sender {
     [self doOpenQuickStart];
 }
 
 -(void)doOpenQuickStart{
+    [[_quickStartWindow window] setLevel:NSPopUpMenuWindowLevel];
     [_quickStartWindow showWindow:self];
+    
+    
 }
 
 - (void)setupColorSwitch {
@@ -265,15 +288,22 @@
 
 - (IBAction)openProfileDrawer:(id)sender {
     
+    NSImage *openIcon = [NSImage imageNamed:@"drawerouticon"];
+    [openIcon setSize:NSMakeSize( 15.0, 12.0 )];
+    NSImage *closeIcon = [NSImage imageNamed:@"drawerinicon"];
+    [closeIcon setSize:NSMakeSize( 15.0, 12.0 )];
+
+    
     if (_drawerIsOpen) {
+        [[self manageLetterheadsButton] setImage:closeIcon];
         _drawerIsOpen = NO;
         CGRect wRect = _pdfWindow.frame;
         CGRect rect1 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
         
         [_profileDrawer setFrame:rect1 display:YES animate:YES];
-    }
-    else {
         
+    } else {
+        [[self manageLetterheadsButton] setImage:openIcon];
         //check if frame is to close to screen corner
         if (_pdfWindow.frame.origin.x < 180.0){
             
@@ -758,7 +788,6 @@
 }
 
 -(void)enableActions:(BOOL)enabled {
-    //return;
     if(enabled) {
         [_mailButton1 setEnabled:YES];
         [_mailButton2 setEnabled:YES];
@@ -780,7 +809,6 @@
         [previewButton3 setHidden:NO];
     }
     else{
-        //NSLog(@"disable Buttons");
         [_mailButton1 setEnabled:NO];
         [_mailButton2 setEnabled:NO];
         [_saveButton1 setEnabled:NO];
@@ -800,6 +828,15 @@
         [printButton3 setHidden:YES];
         [previewButton3 setHidden:YES];
     }
+}
+
+- (void) disableProFeatures {
+    NSLog(@"Lite Version");
+    [[self manageLetterheadsButton] setHidden:YES];
+    [[self manageLetterheadsLine] setHidden:YES];
+    [[self saveNewLetterheadButton] setHidden:YES];
+    [[self saveNewLetterheadLine] setHidden:YES];
+    [[self upgradeToProButton] setHidden:NO];
 }
 
 - (IBAction)editSelectedProfile:(id)sender {

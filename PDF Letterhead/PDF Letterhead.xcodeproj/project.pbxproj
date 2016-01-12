@@ -50,6 +50,14 @@
 		7910E6BD1C206CAC00398823 /* Profile+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6B91C206CAC00398823 /* Profile+CoreDataProperties.m */; };
 		7910E6BE1C206CAC00398823 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6BB1C206CAC00398823 /* Profile.m */; };
 		7910E6BF1C206CAC00398823 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910E6BB1C206CAC00398823 /* Profile.m */; };
+		791500841C44E9400007ABDC /* drawerinicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 791500821C44E9400007ABDC /* drawerinicon.png */; };
+		791500851C44E9400007ABDC /* drawerouticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 791500831C44E9400007ABDC /* drawerouticon.png */; };
+		791500861C44E9430007ABDC /* drawerinicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 791500821C44E9400007ABDC /* drawerinicon.png */; };
+		791500871C44E9460007ABDC /* drawerouticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 791500831C44E9400007ABDC /* drawerouticon.png */; };
+		791500891C44FB030007ABDC /* upgradebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 791500881C44FB030007ABDC /* upgradebutton.png */; };
+		7915008A1C44FB060007ABDC /* upgradebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 791500881C44FB030007ABDC /* upgradebutton.png */; };
+		791500951C4519D00007ABDC /* PLTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 791500941C4519D00007ABDC /* PLTextFieldCell.m */; };
+		791500961C4519D00007ABDC /* PLTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 791500941C4519D00007ABDC /* PLTextFieldCell.m */; };
 		79182E351C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */; };
 		79182E361C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */; };
 		7928A3071C3D4D52006BA593 /* mag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7928A3021C3D4D52006BA593 /* mag.png */; };
@@ -183,6 +191,11 @@
 		7910E6BA1C206CAC00398823 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		7910E6BB1C206CAC00398823 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		7910E6C41C21922300398823 /* PDF_Letterhead 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PDF_Letterhead 3.xcdatamodel"; sourceTree = "<group>"; };
+		791500821C44E9400007ABDC /* drawerinicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawerinicon.png; sourceTree = "<group>"; };
+		791500831C44E9400007ABDC /* drawerouticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawerouticon.png; sourceTree = "<group>"; };
+		791500881C44FB030007ABDC /* upgradebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upgradebutton.png; sourceTree = "<group>"; };
+		791500931C4519D00007ABDC /* PLTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTextFieldCell.h; sourceTree = "<group>"; };
+		791500941C4519D00007ABDC /* PLTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTextFieldCell.m; sourceTree = "<group>"; };
 		79182E331C3BD26D00ABDDD9 /* PLTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTableRowView.h; sourceTree = "<group>"; };
 		79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTableRowView.m; sourceTree = "<group>"; };
 		7928A3021C3D4D52006BA593 /* mag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mag.png; sourceTree = "<group>"; };
@@ -256,6 +269,8 @@
 				79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */,
 				7928A3151C3D546F006BA593 /* PLImageView.h */,
 				7928A3161C3D546F006BA593 /* PLImageView.m */,
+				791500931C4519D00007ABDC /* PLTextFieldCell.h */,
+				791500941C4519D00007ABDC /* PLTextFieldCell.m */,
 			);
 			name = MainWindow;
 			sourceTree = "<group>";
@@ -406,6 +421,9 @@
 		3E9AC0C71C3C75EB00DBDBE8 /* imgnew */ = {
 			isa = PBXGroup;
 			children = (
+				791500881C44FB030007ABDC /* upgradebutton.png */,
+				791500821C44E9400007ABDC /* drawerinicon.png */,
+				791500831C44E9400007ABDC /* drawerouticon.png */,
 				796149091C4407CA002E7462 /* closebutton.png */,
 				7928A3021C3D4D52006BA593 /* mag.png */,
 				7928A3031C3D4D52006BA593 /* mail.png */,
@@ -532,10 +550,13 @@
 				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
 				3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */,
 				3E7BC9D4162459EE0092BF5E /* pdfletterheadMac.icns in Resources */,
+				791500891C44FB030007ABDC /* upgradebutton.png in Resources */,
 				3E27703C1677DCA5002DD3DE /* bottomtoolbar.png in Resources */,
 				3E2770451677E464002DD3DE /* bgdrop.png in Resources */,
+				791500841C44E9400007ABDC /* drawerinicon.png in Resources */,
 				3E2770461677E464002DD3DE /* coverdrop.png in Resources */,
 				3E2770481677E5D5002DD3DE /* dropzonebg.png in Resources */,
+				791500851C44E9400007ABDC /* drawerouticon.png in Resources */,
 				3E798B711677F03C006F47F5 /* contentbg.png in Resources */,
 				3E798B731677F053006F47F5 /* contentdrop.png in Resources */,
 				3E9F2DA4167929E400486537 /* pdfviewbg.png in Resources */,
@@ -568,10 +589,13 @@
 				79726EEB1C16ED6E003B85D2 /* pdfletterheadIOS.icns in Resources */,
 				79726EEC1C16ED6E003B85D2 /* white.pdf in Resources */,
 				79726EED1C16ED6E003B85D2 /* FAQ.rtf in Resources */,
+				7915008A1C44FB060007ABDC /* upgradebutton.png in Resources */,
 				7928A3131C3D4FC9006BA593 /* pencil.png in Resources */,
 				79726EEE1C16ED6E003B85D2 /* pdfletterheadMac.icns in Resources */,
+				791500861C44E9430007ABDC /* drawerinicon.png in Resources */,
 				79726EF01C16ED6E003B85D2 /* bottomtoolbar.png in Resources */,
 				79726EF11C16ED6E003B85D2 /* bgdrop.png in Resources */,
+				791500871C44E9460007ABDC /* drawerouticon.png in Resources */,
 				79726EF21C16ED6E003B85D2 /* coverdrop.png in Resources */,
 				79726EF31C16ED6E003B85D2 /* dropzonebg.png in Resources */,
 				79726EF41C16ED6E003B85D2 /* contentbg.png in Resources */,
@@ -645,6 +669,7 @@
 				7928A3171C3D546F006BA593 /* PLImageView.m in Sources */,
 				794DA9DB1C3D008E00E64582 /* KBButton.m in Sources */,
 				3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */,
+				791500951C4519D00007ABDC /* PLTextFieldCell.m in Sources */,
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
 				794DA9DD1C3D008E00E64582 /* NSColor+ColorExtensions.m in Sources */,
@@ -675,6 +700,7 @@
 				7928A3181C3D546F006BA593 /* PLImageView.m in Sources */,
 				7928A30C1C3D4E85006BA593 /* KBButton.m in Sources */,
 				79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */,
+				791500961C4519D00007ABDC /* PLTextFieldCell.m in Sources */,
 				79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */,
 				79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */,
 				7928A30E1C3D4E8B006BA593 /* NSColor+ColorExtensions.m in Sources */,
@@ -777,6 +803,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"LITE=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead/PDF Letterhead Lite.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -831,6 +861,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PDF Letterhead/PDF Letterhead-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PRO=1",
+					"DEBUG=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PDF Letterhead Pro.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;

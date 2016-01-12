@@ -82,7 +82,6 @@
 @property (assign) BOOL isSetContent;
 @property (assign) BOOL drawerIsOpen;
 
-
 @property (readonly, retain) PLQuickStart1 *quickStartWindow;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;

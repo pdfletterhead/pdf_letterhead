@@ -21,6 +21,8 @@
         [[NSColor colorWithRed:0.271 green:0.588 blue:0.776 alpha:1.0] setFill];
         NSBezierPath *selectionPath = [NSBezierPath bezierPathWithRect:selectionRect];
         [selectionPath fill];
+        
+        
     }
 }
 
