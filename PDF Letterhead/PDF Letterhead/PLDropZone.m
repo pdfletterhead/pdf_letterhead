@@ -26,27 +26,9 @@
     return self;
 }
 
-- (BOOL)becomeFirstResponder
-{
-    //NSLog(@"is am selected");
-    [[self animator] setAlphaValue:0.5];
-
-    return YES;
-}
-
-- (BOOL)resignFirstResponder
-{
-    //NSLog(@"is am deselected");
-    [[self animator] setAlphaValue:1.0];
-    
-    return YES;
-}
-
 - (void)setImage:(NSImage *)newImage{
     
-    NSBundle* myBundle = [NSBundle mainBundle];
-    
-    if(newImage)
+    if (newImage)
     {
         imageIsSet = YES;
     }
@@ -55,29 +37,24 @@
         imageIsSet = NO;
     }
     
-    
-    
     if([[self identifier] isEqualToString:@"sourceDropArea"]){
         
         if(!newImage){
-            NSString* myImagePath = [myBundle pathForResource:@"contentdrop" ofType:@"png"];
-            newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+        
+            newImage = nil;
             [(PLAppDelegate *)[NSApp delegate] setIsSetContent:NO];
             
             //set main pdfview hidden
-//            [[(PLAppDelegate *)[NSApp delegate] pdfView] setHidden:YES];
             [[(PLAppDelegate *)[NSApp delegate] pdfOuterView] setHidden:YES];
-            //[[[NSApp delegate] pdfView] setNeedsDisplay:YES];
-            //[[[NSApp delegate] pdfView] setAlphaValue:0.0];
+
         }
         else{
             [(PLAppDelegate *)[NSApp delegate] setIsSetContent:YES];
+            [self layer].contents = nil;
 
             //set main pdfview visible
-//            [[(PLAppDelegate *)[NSApp delegate] pdfView] setHidden:NO];
-              [[(PLAppDelegate *)[NSApp delegate] pdfOuterView] setHidden:NO];
-            //[[[NSApp delegate] pdfView] setAlphaValue:1.0];
-              //setNeedsDisplay:YES];
+            [[(PLAppDelegate *)[NSApp delegate] pdfOuterView] setHidden:NO];
+
         }
     }
     else{
@@ -85,14 +62,13 @@
 
             if([[self identifier] isEqualToString:@"bgDropArea"]){
 
-                NSString* myImagePath = [myBundle pathForResource:@"bgdrop" ofType:@"png"];
-                newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
-                
+                //NSString* myImagePath = [myBundle pathForResource:@"bgdrop" ofType:@"png"];
+                newImage = nil;
                 [(PLAppDelegate *)[NSApp delegate] setIsSetBackground:NO];
             }
             else{
-                NSString* myImagePath = [myBundle pathForResource:@"coverdrop" ofType:@"png"];
-                newImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+                //NSString* myImagePath = [myBundle pathForResource:@"coverdrop" ofType:@"png"];
+                newImage = nil;
 
                 [(PLAppDelegate *)[NSApp delegate] setIsSetCover:NO];
             }
@@ -228,8 +204,6 @@
         return YES;
     }
     
-    NSLog(@"setpdffilepath: %@", path);
-    
     NSMutableString *str = [[NSMutableString alloc] initWithString:path];
     NSString *word = @"file://";
     if ([str rangeOfString:word].location == NSNotFound) {
@@ -254,14 +228,55 @@
 }
 
 - (void)drawRect:(NSRect)frame {
-
-    if(imageIsSet)
-    {
-        NSColor * background = [NSColor colorWithDeviceRed: 255.0/255.0 green: 255.0/255.0 blue: 255.0/255.0 alpha: 1.0];
-        [background set];
-        NSRectFill([self bounds]);
-    }
     
+    NSImage *coverImage = [NSImage imageNamed:@"coverdrop"];
+    NSImage *sourceImage = [NSImage imageNamed:@"contentdrop"];
+    NSImage *bgImage = [NSImage imageNamed:@"bgdrop"];
+    
+    NSBezierPath *outerPath = [NSBezierPath bezierPathWithRect: [self bounds]];
+    [[NSColor colorWithCGColor:CGColorCreateGenericGray(0,0.4)] set];
+    [outerPath stroke];
+    
+    self.layer.masksToBounds = NO;
+    
+    [self setWantsLayer:YES];
+    CALayer *imageLayer = self.layer;
+    [imageLayer setBounds:[self bounds]];
+    [imageLayer setShadowRadius:2];
+    [imageLayer setShadowOffset:CGSizeZero];
+    [imageLayer setShadowColor:CGColorCreateGenericGray(0,0.5)];
+    imageLayer.masksToBounds = NO;
+    
+    
+    [NSGraphicsContext restoreGraphicsState];
+    
+    
+    if (imageIsSet) {
+        [[NSColor colorWithWhite:1 alpha:1] setFill];
+        [imageLayer setShadowOpacity:1];
+    } else {
+        [[NSColor colorWithWhite:1 alpha:0] setFill];
+        [imageLayer setShadowOpacity:0];
+    }
+
+    NSRectFill(frame);
+    
+    if ([[self identifier] isEqual:@"coverDropArea"]) {
+        if (!imageIsSet) {
+            [coverImage drawInRect:frame fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+        }
+    }
+    else if ([[self identifier] isEqual:@"sourceDropArea"]) {
+        if (!imageIsSet) {
+            [sourceImage drawInRect:frame fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+        }
+    }
+    else {
+        if (!imageIsSet) {
+            [bgImage drawInRect:frame fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+        }
+    }
+
     [super drawRect:frame];
 }
 

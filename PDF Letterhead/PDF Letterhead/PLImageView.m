@@ -12,6 +12,14 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     
+    if ([self image]) {
+        [[NSColor colorWithWhite:1 alpha:1] setFill];
+    } else {
+        [[NSColor colorWithWhite:1 alpha:0] setFill];
+    }
+    
+    NSRectFill(dirtyRect);
+    
     NSBezierPath *outerPath = [NSBezierPath bezierPathWithRect: [self bounds]];
     [[NSColor colorWithCGColor:CGColorCreateGenericGray(0,0.4)] set];
     [outerPath stroke];
@@ -21,10 +29,10 @@
     [self setWantsLayer:YES];
     CALayer *imageLayer = self.layer;
     [imageLayer setBounds:[self bounds]];
-    [imageLayer setShadowRadius:2];
+    [imageLayer setShadowRadius:1];
     [imageLayer setShadowOffset:CGSizeZero];
     [imageLayer setShadowOpacity:1];
-    [imageLayer setShadowColor:CGColorCreateGenericGray(0,1)];
+    [imageLayer setShadowColor:CGColorCreateGenericGray(0,0.25)];
     imageLayer.masksToBounds = NO;
     
     

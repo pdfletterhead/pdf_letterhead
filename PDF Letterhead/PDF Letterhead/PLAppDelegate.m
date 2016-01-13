@@ -22,6 +22,7 @@
 @property (weak) IBOutlet KBButton *saveNewLetterheadButton;
 @property (weak) IBOutlet NSBox *saveNewLetterheadLine;
 @property (weak) IBOutlet NSButton *upgradeToProButton;
+@property (weak) IBOutlet NSSegmentedControl *segmentedControl;
 
 @end
 
@@ -79,16 +80,19 @@
     _bgTextframe = [_backgrounddocText frame];
     
 #ifdef PRO
-    [self checkProfiles];
+
     [self setupProfileDrawer];
     _profileEditWindow = [[PLProfileEditWindow alloc] init ];
     //Managed Object Context for ProfileViewController
     self.profileEditWindow.managedObjectContext = [self managedObjectContext];
     self.profileEditWindow.pathToAppSupport = [self applicationFilesDirectory];
+    [self selectProfile:nil];
+    [self checkProfiles];
     
-    //TODO load most recently used profile
-    //[self selectProfile:nil];
-    //[self updatePreviewAndActionButtons];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"drawerState"] == YES) {
+        [self openProfileDrawer:nil];
+    }
+    
 #endif
     
     [self coverControlAction:self];
@@ -223,13 +227,6 @@
                                                     alpha:1.0];
     [_coverswitch3 setTintColor: blueColor];
     
-    //TODO change to preferences!
-    //if([[NSUserDefaults standardUserDefaults] boolForKey:@"coverEnabled"])
-    //{
-        //_coverswitch3.checked = YES;
-        //[_coverswitch setSelectedSegment:1];
-    //}
-    
     [self coverControlAction:_coverswitch3];
 }
 
@@ -294,9 +291,10 @@
     [closeIcon setSize:NSMakeSize( 15.0, 12.0 )];
 
     
-    if (_drawerIsOpen) {
+    if (_drawerIsOpen && sender != nil) {
         [[self manageLetterheadsButton] setImage:closeIcon];
         _drawerIsOpen = NO;
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"drawerState"];
         CGRect wRect = _pdfWindow.frame;
         CGRect rect1 = CGRectMake(wRect.origin.x, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
         
@@ -342,6 +340,7 @@
         }
         else{
             _drawerIsOpen = YES;
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"drawerState"];
             CGRect wRect = _pdfWindow.frame;
             CGRect rect1 = CGRectMake(wRect.origin.x-180.0, (wRect.origin.y+15), 200.0, (wRect.size.height-50.0));
             
@@ -547,8 +546,9 @@
 
 
 - (IBAction)coverControlAction: (id) sender{
-    NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
     
+    NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
+
     if([_coverswitch3 checked]==NO){
         [prefs setBool:NO forKey:@"coverEnabled"];
         [_coverbackgrounddoc unregisterDraggedTypes];
@@ -562,8 +562,6 @@
                                        (_bgframe.size.height));
         
         [[_backgrounddoc animator ]setFrame:newbgframe];
-        //[_backgrounddoc]
-        
         
         [[_coverbackgrounddocText animator] setAlphaValue:0.0];
         [[_backgrounddocText animator] setStringValue:@"Background"];
@@ -580,8 +578,8 @@
     else{
         
         [[_backgrounddocText animator] setStringValue:@"Following"];
-        
         [[_backgrounddoc animator ]setFrame:_bgframe];
+        
         [[_backgrounddocText animator ]setFrame:_bgTextframe];
         
         [prefs setBool:YES forKey:@"coverEnabled"];
@@ -673,12 +671,22 @@
 
 - (IBAction)saveNewProfile:(id)sender {
 
-    NSString *dateString = [self returnDateNow];
-    Profile* newProfile = [NSEntityDescription insertNewObjectForEntityForName:@"Profile" inManagedObjectContext:self.managedObjectContext];
-    newProfile.name = [self inputAlert:@"Enter a name for the new letterhead" defaultValue:@"Untitled Letterhead"];
-    newProfile.bgImagePath = [[self profileEditWindow] saveImage:[[self backgrounddoc] image] :newProfile :@"background"];
-    newProfile.coverImagePath = [[self profileEditWindow] saveImage:[[self coverbackgrounddoc] image] :newProfile :@"cover"];
-    newProfile.lastUpdated = dateString;
+    [self openProfileDrawer:nil];
+    
+    NSString *name = [self inputAlert:@"Enter a name for the new letterhead" defaultValue:@"Untitled Letterhead"];
+    
+    if (name) {
+        NSString *dateString = [self returnDateNow];
+        Profile* newProfile = [NSEntityDescription insertNewObjectForEntityForName:@"Profile" inManagedObjectContext:self.managedObjectContext];
+        newProfile.name = name;
+        newProfile.bgImagePath = [[self profileEditWindow] saveImage:[[self backgrounddoc] image] :newProfile :@"background"];
+        newProfile.coverImagePath = [[self profileEditWindow] saveImage:[[self coverbackgrounddoc] image] :newProfile :@"cover"];
+        newProfile.lastUpdated = dateString;
+        
+        [self checkProfiles];
+        [self selectRow:newProfile];
+    }
+
 }
 
 - (NSString *)inputAlert: (NSString *)prompt defaultValue: (NSString *)defaultValue {
@@ -702,31 +710,58 @@
     }
 }
 
+- (void) selectRow:(Profile*)profile {
+    
+    
+    NSArray *selectedItems = [NSArray arrayWithObject:profile];
+    
+    [[self pArrayController] setSelectedObjects:selectedItems];
+}
+
+- (void) checkSegment {
+    
+    if ([_drawerTableView selectedRow] == -1) {
+        [[self segmentedControl] setEnabled:NO forSegment:1];
+    } else {
+        [[self segmentedControl] setEnabled:YES forSegment:1];
+    }
+}
 
 - (IBAction)selectProfile:(id)sender {
+    
+    [self checkSegment];
     
     //save moc intermittently
     [self saveManagedObjectContext];
     
     Profile *profile = [self getCurrentProfile];
-    
+
     if (sender == nil && profile == nil) {
+        
         //set previous profile
         NSURL *url = [[NSUserDefaults standardUserDefaults] URLForKey:@"recentProfile"];
         if (url) {
             NSManagedObjectID *objID = [[[self managedObjectContext] persistentStoreCoordinator] managedObjectIDForURIRepresentation:url];
             profile = [[self managedObjectContext] objectWithID:objID];
+            [self checkProfiles];
+            [self selectRow:profile];
+        }
+    } else {
+        NSManagedObjectID *objID = profile.objectID;
+        NSURL *recentProfile = [objID URIRepresentation];
+        
+        if (recentProfile != NULL) {
+            [[NSUserDefaults standardUserDefaults] setURL:recentProfile forKey:@"recentProfile"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+
         }
     }
-    
-    NSManagedObjectID *objID = profile.objectID;
-    NSURL *recentProfile = [objID URIRepresentation];
-    
-    [[NSUserDefaults standardUserDefaults] setURL:recentProfile forKey:@"recentProfile"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
-    [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
+
+    if (profile) {
+        [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
+        [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
+    }
+
 }
 
 - (NSArray *)updatedSortDescriptors {
@@ -753,21 +788,21 @@
     }
     else {
         
-        NSAlert *alert = [[NSAlert alloc] init];
-        [alert addButtonWithTitle:@"OK"];
-        [alert addButtonWithTitle:@"Cancel"];
-        [alert setMessageText:@"Are you sure you want to delete this letterhead?"];
-        [alert setInformativeText:@"Deleted letterheads cannot be restored."];
-        [alert setAlertStyle:NSWarningAlertStyle];
-        
-        
-        if ([alert runModal] == NSAlertFirstButtonReturn) {
-            NSUInteger index = [self.pArrayController selectionIndex];
-            [self.pArrayController removeObjectAtArrangedObjectIndex:index];
+        if ([_drawerTableView selectedRow] != -1) {
+            NSAlert *alert = [[NSAlert alloc] init];
+            [alert addButtonWithTitle:@"OK"];
+            [alert addButtonWithTitle:@"Cancel"];
+            [alert setMessageText:@"Are you sure you want to delete this letterhead?"];
+            [alert setInformativeText:@"Deleted letterheads cannot be restored."];
+            [alert setAlertStyle:NSWarningAlertStyle];
+            
+            if ([alert runModal] == NSAlertFirstButtonReturn) {
+                NSUInteger index = [self.pArrayController selectionIndex];
+                [self.pArrayController removeObjectAtArrangedObjectIndex:index];
+            }
         }
     }
 
-    //TODO gaat nog fout bij toevoegen!
     [self checkProfiles];
 }
 
@@ -843,7 +878,8 @@
 
 - (IBAction)editSelectedProfile:(id)sender {
     
-    NSInteger *row = NULL;
+    NSInteger row = nil;
+    Profile *profile = nil;
     
     if ([[sender identifier] isEqual: @"tableview"]) {
         row = [_drawerTableView clickedRow];
@@ -852,9 +888,11 @@
         NSButton *button = (NSButton *)sender;
         row = [[self drawerTableView] rowForView:button];
     }
-    Profile *profile = [[[self pArrayController] arrangedObjects ] objectAtIndex:row];
     
-    [self doOpenEditor:profile];
+    if (row != (long) -1) {
+        profile = [[[self pArrayController] arrangedObjects ] objectAtIndex:row];
+        [self doOpenEditor:profile];
+    }
 }
 
 

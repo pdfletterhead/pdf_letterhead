@@ -53,6 +53,7 @@
                 <outlet property="saveLetterheadButton" destination="1z4-dM-vE6" id="kuQ-2V-UBU"/>
                 <outlet property="saveNewLetterheadButton" destination="1z4-dM-vE6" id="JP5-sK-7am"/>
                 <outlet property="saveNewLetterheadLine" destination="hZ6-nf-SGY" id="04o-0I-wBG"/>
+                <outlet property="segmentedControl" destination="Hfo-bE-ad2" id="9p6-tg-Ptp"/>
                 <outlet property="sourcedoc" destination="561" id="746"/>
                 <outlet property="upgradeToProButton" destination="Ufh-uv-EKj" id="0ab-nL-dJf"/>
             </connections>
@@ -99,7 +100,7 @@
             </defaultToolbarItems>
             <point key="canvasLocation" x="461" y="1668"/>
         </toolbar>
-        <arrayController mode="entity" entityName="Profile" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="J24-2q-b8a" userLabel="ProfileArrayControler">
+        <arrayController mode="entity" entityName="Profile" automaticallyPreparesContent="YES" avoidsEmptySelection="NO" automaticallyRearrangesObjects="YES" id="J24-2q-b8a" userLabel="ProfileArrayControler">
             <connections>
                 <binding destination="494" name="managedObjectContext" keyPath="managedObjectContext" id="PGg-IE-adh"/>
                 <binding destination="494" name="sortDescriptors" keyPath="updatedSortDescriptors" id="JLt-yn-DW4"/>
@@ -332,7 +333,7 @@
                             <imageView identifier="bgDropArea" focusRingType="none" tag="1" id="929" customClass="PLDropZone">
                                 <rect key="frame" x="120" y="114" width="80" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="bgdrop" id="930"/>
+                                <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" id="930"/>
                                 <connections>
                                     <outlet property="menu" destination="834" id="931"/>
                                 </connections>
@@ -340,7 +341,7 @@
                             <imageView identifier="coverDropArea" focusRingType="none" tag="1" id="791" customClass="PLDropZone">
                                 <rect key="frame" x="20" y="114" width="80" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="coverdrop" id="792"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" id="792"/>
                                 <connections>
                                     <outlet property="menu" destination="824" id="831"/>
                                 </connections>
@@ -411,9 +412,9 @@
                                 </textFieldCell>
                             </textField>
                             <imageView identifier="sourceDropArea" focusRingType="none" tag="2" id="561" customClass="PLDropZone">
-                                <rect key="frame" x="21" y="68" width="172" height="202"/>
+                                <rect key="frame" x="27" y="70" width="160" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="contentdrop" id="566"/>
+                                <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" id="566"/>
                                 <connections>
                                     <outlet property="menu" destination="839" id="849"/>
                                 </connections>
@@ -952,10 +953,7 @@
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAdvanced" width="32" height="32"/>
         <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
-        <image name="bgdrop" width="276" height="359"/>
         <image name="bghelp" width="379" height="513"/>
-        <image name="contentdrop" width="367" height="509"/>
-        <image name="coverdrop" width="259" height="359"/>
         <image name="drawerinicon" width="30" height="24"/>
         <image name="mag" width="19" height="20"/>
         <image name="mail" width="20" height="20"/>

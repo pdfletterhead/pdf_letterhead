@@ -146,10 +146,6 @@
 
 -(NSString*)saveImage:(NSImage*)image :(Profile*)profile :(NSString*)cover {
     
-    //NSLog(@"%@",image);
-    //NSLog(@"%@",profile);
-    NSLog(@"%@",cover);
-    
     // 1. Get an NSBitmapImageRep from the image passed in
     [image lockFocus];
     NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithFocusedViewRect:NSMakeRect(0.0, 0.0, [image size].width, [image size].height)];
