@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PLProfileEditWindow">
+            <connections>
+                <outlet property="bgImage" destination="W42-q6-j2N" id="3fd-ua-0aN"/>
+                <outlet property="coverImage" destination="t6C-LF-Rww" id="c5P-iT-DVA"/>
+                <outlet property="title" destination="Voj-jm-fLm" id="zSC-76-NX8"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="0Es-Jv-fZp"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Briefhoofden" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" showsToolbarButton="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="461" width="440" height="350"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="440" height="350"/>
+            <value key="maxSize" type="size" width="440" height="350"/>
+            <view key="contentView" id="se5-gp-TjO" customClass="PLMainWindowView">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="350"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="XIw-VY-xid">
+                        <rect key="frame" x="18" y="311" width="109" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Briefhoofd titel:" id="fgS-nI-XWs">
+                            <font key="font" metaFont="systemMedium" size="12"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView id="VSA-Sb-kxO" customClass="PLBackgroundDropZoneContainer">
+                        <rect key="frame" x="20" y="25" width="190" height="260"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="06O-Ed-Rpd">
+                                <rect key="frame" x="13" y="16" width="164" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop cover background here" id="QNF-g2-vyi">
+                                    <font key="font" metaFont="systemLight" size="11"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView identifier="coverDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t6C-LF-Rww" customClass="PLDropZone">
+                                <rect key="frame" x="30" y="53" width="130" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="jc4-up-EU8"/>
+                                <connections>
+                                    <outlet property="menu" destination="WZ2-43-pFp" id="qMq-eC-6VL"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                    </customView>
+                    <customView id="nev-iy-Fd4" customClass="PLBackgroundDropZoneContainer">
+                        <rect key="frame" x="230" y="25" width="190" height="260"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eol-5a-vEA">
+                                <rect key="frame" x="-4" y="15" width="198" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop following backgrounds here" id="cMU-MC-Pwv">
+                                    <font key="font" metaFont="systemLight" size="11"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView identifier="bgDropArea" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W42-q6-j2N" customClass="PLDropZone">
+                                <rect key="frame" x="30" y="53" width="130" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" id="uG7-j5-7tH"/>
+                                <connections>
+                                    <outlet property="menu" destination="F3R-cb-Q2v" id="vNx-wW-Aii"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                    </customView>
+                    <textField verticalHuggingPriority="750" id="Voj-jm-fLm">
+                        <rect key="frame" x="140" y="308" width="280" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bW8-8K-QiF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="updateTitle:" target="-2" id="FMA-76-Enl"/>
+                        </connections>
+                    </textField>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="NuW-rh-O5y"/>
+            </connections>
+            <point key="canvasLocation" x="651" y="521"/>
+        </window>
+        <menu autoenablesItems="NO" id="WZ2-43-pFp" userLabel="Menu cover">
+            <items>
+                <menuItem title="Add Image" id="wPD-Ne-QFs">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="doAddCover:" target="-1" id="2wx-Kn-YIi"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Remove Image" id="TeH-Mw-ycX">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="doDelCover:" target="-1" id="Je1-MT-Khs"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="261.5" y="842.5"/>
+        </menu>
+        <menu autoenablesItems="NO" id="F3R-cb-Q2v" userLabel="Menu bg">
+            <items>
+                <menuItem title="Add Image" id="4Y7-Zp-QBS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="doAddBg:" target="-1" id="46c-yH-Xtt"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Remove Image" id="8e9-mJ-ffD">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="doDelBg:" target="-1" id="9Ba-AV-RBa"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="532.5" y="851.5"/>
+        </menu>
+        <userDefaultsController representsSharedInstance="YES" id="1rg-XU-g54"/>
+    </objects>
+</document>

@@ -451,7 +451,7 @@
     if(_isSetContent){
         sourceimage = [_sourcedoc image];
         NSString *filePath;
-        NSLog(@"pdf path:%@",[_sourcedoc getFilepath]);
+        
         if(![_sourcedoc getFilepath])
         {
             filePath = [NSString stringWithFormat:@"%@/no_name.pdf",[[self applicationFilesDirectory] path]];
@@ -478,7 +478,6 @@
         
         PDFDocument * sourcePDF = [[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:filePath]];
         NSUInteger pagescount = [sourcePDF pageCount];
-        NSLog(@"pages: %li",pagescount);
         
         for (int y = 0; y < pagescount; y++) {
             
@@ -486,7 +485,6 @@
             NSImage *image = [[NSImage alloc] initWithData:[currentPage dataRepresentation]];
             
             if(_coverEnabled && y==0){
-                NSLog(@"set cover as background");
                 // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
                 page = [[PLPDFPage alloc] initWithBGImage: cvrimage sourceDoc: image label:[currentPage label]];
             }
@@ -502,7 +500,7 @@
         sourceimage = NULL;
         
         if(_coverEnabled){
-            //NSLog(@"set cover as background");
+
             // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
             page = [[PLPDFPage alloc] initWithBGImage: cvrimage sourceDoc: sourceimage label:nil];
         }
@@ -564,7 +562,9 @@
         [[_backgrounddoc animator ]setFrame:newbgframe];
         
         [[_coverbackgrounddocText animator] setAlphaValue:0.0];
-        [[_backgrounddocText animator] setStringValue:@"Background"];
+        
+        
+        [[_backgrounddocText animator] setStringValue:NSLocalizedString(@"Background", @"Cover disabled Following text")];
         
         CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
                                            _cvTextframe.origin.y-6,
@@ -577,7 +577,7 @@
     }
     else{
         
-        [[_backgrounddocText animator] setStringValue:@"Following"];
+        [[_backgrounddocText animator] setStringValue:NSLocalizedString(@"Following", nil)];
         [[_backgrounddoc animator ]setFrame:_bgframe];
         
         [[_backgrounddocText animator ]setFrame:_bgTextframe];
@@ -634,8 +634,8 @@
     NSAppleScript *mailScript;
     NSURL * tmpFileUrl = [NSURL fileURLWithPath:newFileName isDirectory:NO];
 	[_letterheadPDF writeToURL:tmpFileUrl];
-    NSString * subject = @"My PDF";
-    NSString * body = @"";
+    NSString * subject = NSLocalizedString(@"My PDF", @"Subject for Email");
+    NSString * body = NSLocalizedString(@"", @"Body for Email");
     
     NSString *scriptString= [NSString stringWithFormat:@"set theAttachment to \"%@\"\nset the new_path to POSIX file theAttachment\ntell application \"Mail\"\nset theNewMessage to make new outgoing message with properties {subject:\"%@\", content:\"%@\" & return & return, visible:true}\n tell theNewMessage\ntry\nmake new attachment with properties {file name:new_path} at after the last word of the last paragraph\nend try\nend tell\nactivate\nend tell",newFileName,subject,body];
     mailScript = [[NSAppleScript alloc] initWithSource:scriptString];
@@ -673,7 +673,7 @@
 
     [self openProfileDrawer:nil];
     
-    NSString *name = [self inputAlert:@"Enter a name for the new letterhead" defaultValue:@"Untitled Letterhead"];
+    NSString *name = [self inputAlert:NSLocalizedString(@"Enter a name for the new letterhead", @"Create new Letterhead Message") defaultValue:NSLocalizedString(@"Untitled Letterhead", @"Default name new Letterhead")];
     
     if (name) {
         NSString *dateString = [self returnDateNow];
@@ -691,8 +691,8 @@
 
 - (NSString *)inputAlert: (NSString *)prompt defaultValue: (NSString *)defaultValue {
     NSAlert *alert = [NSAlert alertWithMessageText: prompt
-                                     defaultButton:@"OK"
-                                   alternateButton:@"Cancel"
+                                     defaultButton:NSLocalizedString(@"OK", @"OK button")
+                                   alternateButton:NSLocalizedString(@"Cancel", @"Cancel button")
                                        otherButton:nil
                          informativeTextWithFormat:@""];
     
@@ -790,10 +790,10 @@
         
         if ([_drawerTableView selectedRow] != -1) {
             NSAlert *alert = [[NSAlert alloc] init];
-            [alert addButtonWithTitle:@"OK"];
-            [alert addButtonWithTitle:@"Cancel"];
-            [alert setMessageText:@"Are you sure you want to delete this letterhead?"];
-            [alert setInformativeText:@"Deleted letterheads cannot be restored."];
+            [alert addButtonWithTitle:NSLocalizedString(@"OK", @"OK button")];
+            [alert addButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel button")];
+            [alert setMessageText:NSLocalizedString(@"Are you sure you want to delete this letterhead?", @"Delete Letterhead message")];
+            [alert setInformativeText:NSLocalizedString(@"Deleted letterheads cannot be restored.", @"Delete Letterhead warning")];
             [alert setAlertStyle:NSWarningAlertStyle];
             
             if ([alert runModal] == NSAlertFirstButtonReturn) {
