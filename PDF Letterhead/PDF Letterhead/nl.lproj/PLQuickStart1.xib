@@ -22,9 +22,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView id="5">
-                        <rect key="frame" x="0.0" y="-63" width="702" height="645"/>
+                        <rect key="frame" x="0.0" y="-88" width="702" height="645"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="PDF-letterhead-QuickStart-1" id="6"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="splashscreen-eng" id="6"/>
                     </imageView>
                     <button id="34">
                         <rect key="frame" x="18" y="18" width="22" height="18"/>
@@ -49,7 +49,7 @@
                     <button verticalHuggingPriority="750" id="W4z-4g-Qen" customClass="KBButton">
                         <rect key="frame" x="587" y="19" width="95" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="smallSquare" title="Koop nu" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bsE-Ih-nTF">
+                        <buttonCell key="cell" type="smallSquare" title="Nu kopen" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bsE-Ih-nTF">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -78,7 +78,7 @@
         <userDefaultsController representsSharedInstance="YES" id="45"/>
     </objects>
     <resources>
-        <image name="PDF-letterhead-QuickStart-1" width="854" height="393"/>
         <image name="closebutton" width="28" height="28"/>
+        <image name="splashscreen-eng" width="1881" height="1000"/>
     </resources>
 </document>

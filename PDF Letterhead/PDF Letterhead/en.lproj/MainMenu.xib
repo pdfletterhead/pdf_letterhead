@@ -297,7 +297,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="PDF Letterhead - Main" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="587">
+        <window title="PDF Letterhead" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="587">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -478,7 +478,7 @@
                             <imageView id="Xye-zb-ewL">
                                 <rect key="frame" x="36" y="136" width="379" height="513"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp" id="HdR-P0-Wge"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp-eng" id="HdR-P0-Wge"/>
                             </imageView>
                             <customView id="988" customClass="PLPDFBgAreaView">
                                 <rect key="frame" x="20" y="66" width="412" height="601"/>
@@ -513,7 +513,7 @@
                     <button hidden="YES" id="Ufh-uv-EKj">
                         <rect key="frame" x="-2" y="28" width="208" height="35"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="upgradebutton" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="qGj-FJ-qQF">
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="upgradebutton-eng" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="qGj-FJ-qQF">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -953,7 +953,7 @@
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAdvanced" width="32" height="32"/>
         <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
-        <image name="bghelp" width="379" height="513"/>
+        <image name="bghelp-eng" width="758" height="1026"/>
         <image name="drawerinicon" width="30" height="24"/>
         <image name="mag" width="19" height="20"/>
         <image name="mail" width="20" height="20"/>
@@ -961,6 +961,6 @@
         <image name="pencil" width="36" height="36"/>
         <image name="print" width="20" height="20"/>
         <image name="save" width="20" height="20"/>
-        <image name="upgradebutton" width="408" height="70"/>
+        <image name="upgradebutton-eng" width="408" height="70"/>
     </resources>
 </document>

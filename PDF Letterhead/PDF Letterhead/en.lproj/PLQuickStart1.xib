@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
@@ -22,9 +22,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView id="5">
-                        <rect key="frame" x="0.0" y="-63" width="702" height="645"/>
+                        <rect key="frame" x="0.0" y="-88" width="702" height="645"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="PDF-letterhead-QuickStart-1" id="6"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="splashscreen-eng" id="6"/>
                     </imageView>
                     <button id="34">
                         <rect key="frame" x="18" y="18" width="22" height="18"/>
@@ -78,7 +78,7 @@
         <userDefaultsController representsSharedInstance="YES" id="45"/>
     </objects>
     <resources>
-        <image name="PDF-letterhead-QuickStart-1" width="854" height="393"/>
         <image name="closebutton" width="28" height="28"/>
+        <image name="splashscreen-eng" width="1881" height="1000"/>
     </resources>
 </document>

@@ -1,5 +1,5 @@
 /* Delete Letterhead message */
-"Are you sure you want to delete this letterhead?" = "Weet u zeker dat u dit briefhoofd wil verwijderen?";
+"Are you sure you want to delete this letterhead?" = "Weet u zeker dat u dit briefpapier wilt verwijderen?";
 
 /* Cover disabled Following text */
 "Background" = "Achtergrond";
@@ -12,13 +12,13 @@
 "Could not save changes while quitting. Quit anyway?" = "Aanpassingen konden niet worden opgeslagen. Afsluiten?";
 
 /* Delete Letterhead warning */
-"Deleted letterheads cannot be restored." = "Verwijderde briefhoofden kunnen niet worden hersteld.";
+"Deleted letterheads cannot be restored." = "Verwijderd briefpapier kan niet worden hersteld.";
 
 /* Create new Letterhead Message */
-"Enter a name for the new letterhead" = "Kies een titel voor het nieuwe briefhoofd";
+"Enter a name for the new letterhead" = "Voer een naam in.";
 
 /* No comment provided by engineer. */
-"Following" = "Opvolgend";
+"Following" = "Volgpagina's";
 
 /* Subject for Email */
 "My PDF" = "Mijn PDF";
@@ -30,8 +30,8 @@
 "Quit anyway" = "Toch afsluiten";
 
 /* Quit without saves error question info */
-"Quitting now will lose any changes you have made since the last successful save" = "Als u nu afsluit verliest u alle aanpassingen";
+"Quitting now will lose any changes you have made since the last successful save" = "Als u nu afsluit verliest u alle vorige aanpassingen";
 
 /* Default name new Letterhead */
-"Untitled Letterhead" = "Nieuw briefhoofd";
+"Untitled Letterhead" = "Nieuw briefpapier";
 
