@@ -23,6 +23,8 @@
 @property (weak) IBOutlet NSBox *saveNewLetterheadLine;
 @property (weak) IBOutlet NSButton *upgradeToProButton;
 @property (weak) IBOutlet NSSegmentedControl *segmentedControl;
+@property BOOL renderEven;
+
 
 @end
 
@@ -383,36 +385,51 @@
     else{
         
         [self enableActions: YES];
-        [self createDocument];
+
+        dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            // Add code here to do background processing
             
-        _pdfView = [[PDFView alloc] init];
-        
-        if (!_setView) {
-            
-            [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
-            [_pdfView setDocument: _letterheadPDF];
-            [_previewView setDocument: _letterheadPDF];
-            
-            CGRect winRect = _pdfOuterView.bounds;
-            
-            [_pdfOuterView addSubview:_pdfView];
-            
-            _pdfView.frame = winRect ;
-            _pdfView.autoScales = YES;
-            [_pdfView setAutoresizingMask: NSViewHeightSizable|NSViewWidthSizable|NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin|NSViewMaxYMargin];
-            _setView = true;
-            
-        } else {
-            //Weird workaround to make PDFView work
-            _setView = false;
-            [self updatePreviewAndActionButtons];
-            
-        }
-     
+            if (_renderEven){
+            }else{
+                [self createDocument];
+            }
+
+            dispatch_async( dispatch_get_main_queue(), ^{
+                
+                _pdfView = [[PDFView alloc] init];
+                
+                if (!_setView) {
+                    
+                    [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
+                    [_pdfView setDocument: _letterheadPDF];
+                    [_previewView setDocument: _letterheadPDF];
+                    
+                    CGRect winRect = _pdfOuterView.bounds;
+                    
+                    [_pdfOuterView addSubview:_pdfView];
+                    
+                    _pdfView.frame = winRect ;
+                    _pdfView.autoScales = YES;
+                    [_pdfView setAutoresizingMask: NSViewHeightSizable|NSViewWidthSizable|NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin|NSViewMaxYMargin];
+                    _setView = true;
+                    
+                } else {
+                    //Weird workaround to make PDFView work
+                    _setView = false;
+                    [self updatePreviewAndActionButtons];
+                    
+                }
+                
+                // Add code here to update the UI/send notifications based on the
+                // results of the background processing
+            });
+        });
     }
 }
 
 -(void)createDocument {
+    _renderEven = true;
+
     
 	NSImage			*bgimage;
 	NSImage			*cvrimage;
@@ -512,6 +529,8 @@
         [_letterheadPDF insertPage: page atIndex: 0];
     }
 	
+    _renderEven = false;
+
 }
 
 -(BOOL)allowSetPreview{
