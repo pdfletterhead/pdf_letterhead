@@ -90,13 +90,25 @@
 - (void)drawImage:(NSImage*)image withFrame:(NSRect)frame inView:(NSView*)controlView
 {
     
+
+    
+    
     NSAttributedString *attrStr = [self attributedTitle];
     CGSize stringSize = [attrStr size];
     CGFloat titleWidth = stringSize.width;
     
-    CGFloat marge = (controlView.frame.size.width - titleWidth) / 2;
+    CGFloat marge = (controlView.frame.size.width - titleWidth + frame.size.width - 5) / 2;
     BOOL drawShadow = NO;
 
+
+//    NSLog(@"FOR: : %@",[self title]);
+//    NSLog(@"calc: marge: %fd", marge);
+//    NSLog(@"calc: titleWidth: %fd", stringSize.width);
+
+//    NSLog(@"given: controlview.width: %fd", controlView.frame.size.width);
+//    NSLog(@"given: frame.width: %fd", frame.size.width);
+//    NSLog(@"END: : %@",[self title]);
+   
     NSColor *titleColor;
     if ([[self getColorForButtonType] isLightColor]) {
         titleColor = [NSColor blackColor];
