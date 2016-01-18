@@ -11,6 +11,8 @@
 #import "PLQuickStart1.h"
 #import "ITSwitch.h"
 #import "KBButton.h"
+#import "PLRetrievePrice.h"
+
 
 
 @interface PLAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
@@ -62,6 +64,10 @@
 
 //@property (assign) IBOutlet NSSegmentedControl *coverswitch;
 @property (assign) IBOutlet ITSwitch *coverswitch3;
+
+@property (retain) PLRetrievePrice *retrievePrice;
+- (NSString*) productPrice;
+
 
 @property (readonly, retain) NSURL *tmpDirectoryURL;
 

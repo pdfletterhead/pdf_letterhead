@@ -10,4 +10,7 @@
 
 @interface PLQuickStart1 : NSWindowController
 
+@property (assign) IBOutlet NSButton *buyButton;
+
+
 @end

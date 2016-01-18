@@ -7,6 +7,7 @@
 //
 
 #import "PLQuickStart1.h"
+#import "PLAppDelegate.h"
 
 @interface PLQuickStart1 ()
 
@@ -17,12 +18,24 @@
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
+
+
+
     return self;
 }
 
 - (void)windowDidLoad
 {
     self.window.backgroundColor = [NSColor whiteColor];
+    
+    if( [[[NSApp delegate] retrievePrice] priceFound]==YES){
+        NSString * price = [[[NSApp delegate] retrievePrice] formattedPrice];
+        NSLog(@"pricex = %@", price);
+        
+        NSString * buttonTitle = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Buy now for only", @"Buy now for only $x.xx button"), price];
+        [_buyButton setTitle:buttonTitle];
+    }
+    
     [super windowDidLoad];
 }
 

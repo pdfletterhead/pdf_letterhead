@@ -11,6 +11,7 @@
 #import "PLTableRowView.h"
 #include "PLProfileEditWindow.h"
 
+
 @interface PLAppDelegate()
 
 @property (strong) IBOutlet NSTableView *drawerTableView;
@@ -37,6 +38,8 @@
 @synthesize quickStartWindow = _quickStartWindow;
 @synthesize profileEditWindow = _profileEditWindow;
 @synthesize profileDrawer = _profileDrawer;
+@synthesize retrievePrice = _retrievePrice;
+
 
 @synthesize chooseLetterheadButton, saveLetterheadButton, saveButton3, previewButton3, printButton3, mailButton3;
 
@@ -55,6 +58,10 @@
     
 #ifdef LITE
     [self disableProFeatures];
+    
+    //try to retrieve app price
+    _retrievePrice = [[PLRetrievePrice alloc] initWithAppId:@1075794517];
+    
 #endif
     
     _setView = false;
@@ -110,7 +117,8 @@
     }
 #endif
     
-   }
+}
+
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {

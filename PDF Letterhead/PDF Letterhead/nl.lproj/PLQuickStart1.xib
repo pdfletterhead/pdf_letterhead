@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PLQuickStart1">
             <connections>
+                <outlet property="buyButton" destination="W4z-4g-Qen" id="2js-ZB-77l"/>
                 <outlet property="window" destination="1" id="3"/>
             </connections>
         </customObject>
@@ -49,7 +50,7 @@
                     <button verticalHuggingPriority="750" id="W4z-4g-Qen" customClass="KBButton">
                         <rect key="frame" x="494" y="19" width="182" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="smallSquare" title="Koop nu voor maar € 4,99" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bsE-Ih-nTF">
+                        <buttonCell key="cell" type="smallSquare" title="Koop nu" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bsE-Ih-nTF">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
