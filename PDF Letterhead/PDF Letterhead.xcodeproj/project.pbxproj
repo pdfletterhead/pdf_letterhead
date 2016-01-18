@@ -101,6 +101,10 @@
 		796BD8ED1C4D1FB30071AE90 /* PDF Letterhead LitePlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8EF1C4D1FB30071AE90 /* PDF Letterhead LitePlist.strings */; };
 		796BD8F21C4D1FB40071AE90 /* PDF Letterhead ProPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8F41C4D1FB40071AE90 /* PDF Letterhead ProPlist.strings */; };
 		796BD8F71C4D1FB40071AE90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8F91C4D1FB40071AE90 /* Localizable.strings */; };
+		796BD9051C4D2E1B0071AE90 /* PLQuickstartWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BD9041C4D2E1B0071AE90 /* PLQuickstartWindow.m */; };
+		796BD9061C4D2E1B0071AE90 /* PLQuickstartWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BD9041C4D2E1B0071AE90 /* PLQuickstartWindow.m */; };
+		796BD90D1C4D2F0E0071AE90 /* PLQuickstartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BD90C1C4D2F0E0071AE90 /* PLQuickstartView.m */; };
+		796BD90E1C4D2F0E0071AE90 /* PLQuickstartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BD90C1C4D2F0E0071AE90 /* PLQuickstartView.m */; };
 		79726ECF1C16ED6E003B85D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D11607C90400DDFB82 /* main.m */; };
 		79726ED01C16ED6E003B85D2 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835D81607C90400DDFB82 /* PLAppDelegate.m */; };
 		79726ED11C16ED6E003B85D2 /* PDF_Letterhead.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835DD1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld */; };
@@ -233,6 +237,10 @@
 		796BD8EE1C4D1FB30071AE90 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/PDF Letterhead LitePlist.strings"; sourceTree = "<group>"; };
 		796BD8F31C4D1FB40071AE90 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/PDF Letterhead ProPlist.strings"; sourceTree = "<group>"; };
 		796BD8F81C4D1FB40071AE90 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		796BD9031C4D2E1B0071AE90 /* PLQuickstartWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLQuickstartWindow.h; path = "PDF Letterhead/PLQuickstartWindow.h"; sourceTree = "<group>"; };
+		796BD9041C4D2E1B0071AE90 /* PLQuickstartWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLQuickstartWindow.m; path = "PDF Letterhead/PLQuickstartWindow.m"; sourceTree = "<group>"; };
+		796BD90B1C4D2F0E0071AE90 /* PLQuickstartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLQuickstartView.h; path = "PDF Letterhead/PLQuickstartView.h"; sourceTree = "<group>"; };
+		796BD90C1C4D2F0E0071AE90 /* PLQuickstartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLQuickstartView.m; path = "PDF Letterhead/PLQuickstartView.m"; sourceTree = "<group>"; };
 		79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
 		79EEDAA51C22CF0C00DE767E /* PLProfileEditWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileEditWindow.h; sourceTree = "<group>"; };
@@ -300,6 +308,10 @@
 				3E2AFF0316A5F8B3006D2CB0 /* PLQuickStart1.h */,
 				3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */,
 				7967FB571C47B4DC00EC2C73 /* PLQuickStart1.xib */,
+				796BD9031C4D2E1B0071AE90 /* PLQuickstartWindow.h */,
+				796BD9041C4D2E1B0071AE90 /* PLQuickstartWindow.m */,
+				796BD90B1C4D2F0E0071AE90 /* PLQuickstartView.h */,
+				796BD90C1C4D2F0E0071AE90 /* PLQuickstartView.m */,
 			);
 			name = "Upgrade Splash";
 			path = ..;
@@ -709,10 +721,12 @@
 			files = (
 				3E6835D21607C90400DDFB82 /* main.m in Sources */,
 				3E6835D91607C90400DDFB82 /* PLAppDelegate.m in Sources */,
+				796BD9051C4D2E1B0071AE90 /* PLQuickstartWindow.m in Sources */,
 				3E6835DF1607C90400DDFB82 /* PDF_Letterhead.xcdatamodeld in Sources */,
 				3E6835F41607CC7900DDFB82 /* PLDropZone.m in Sources */,
 				3E6835F71607D22100DDFB82 /* PLPDFPage.m in Sources */,
 				79182E351C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */,
+				796BD90D1C4D2F0E0071AE90 /* PLQuickstartView.m in Sources */,
 				3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */,
 				794DA9DC1C3D008E00E64582 /* KBButtonCell.m in Sources */,
 				3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */,
@@ -742,10 +756,12 @@
 			files = (
 				79726ECF1C16ED6E003B85D2 /* main.m in Sources */,
 				79726ED01C16ED6E003B85D2 /* PLAppDelegate.m in Sources */,
+				796BD9061C4D2E1B0071AE90 /* PLQuickstartWindow.m in Sources */,
 				79726ED11C16ED6E003B85D2 /* PDF_Letterhead.xcdatamodeld in Sources */,
 				79726ED21C16ED6E003B85D2 /* PLDropZone.m in Sources */,
 				79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */,
 				79182E361C3BD26D00ABDDD9 /* PLTableRowView.m in Sources */,
+				796BD90E1C4D2F0E0071AE90 /* PLQuickstartView.m in Sources */,
 				79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */,
 				7928A30D1C3D4E88006BA593 /* KBButtonCell.m in Sources */,
 				79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */,

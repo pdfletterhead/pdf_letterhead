@@ -376,11 +376,20 @@
 }
 
 -(void)renderPDF {
+    
+    //Enable/disable buttons
+    if(![self allowSetPreview]){
+        [self enableActions: NO];
+    } else {
+        [self enableActions: YES];
+    }
 
+    //Render PDF
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        PDFDocument *document = [self renderDocument];
-        NSLog(@"document: %@", document);
         
+        PDFDocument *document = [self renderDocument];
+        	
+        //Set PDFView
         dispatch_async( dispatch_get_main_queue(), ^{
         
             [[self PDFView] setDocument:document];
@@ -843,6 +852,7 @@
         [saveButton3 setHidden:NO];
         [printButton3 setHidden:NO];
         [previewButton3 setHidden:NO];
+        [[self PDFView] setHidden:NO];
     }
     else{
         [_mailButton1 setEnabled:NO];
@@ -863,6 +873,7 @@
         [saveButton3 setHidden:YES];
         [printButton3 setHidden:YES];
         [previewButton3 setHidden:YES];
+        [[self PDFView] setHidden:YES];
     }
 }
 

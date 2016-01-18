@@ -17,17 +17,21 @@
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
+    
     return self;
 }
 
 - (void)windowDidLoad
 {
-    self.window.backgroundColor = [NSColor whiteColor];
+    self.window.backgroundColor = [NSColor clearColor];
+    
     [super windowDidLoad];
 }
 
 - (IBAction)buyNowAction:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.pdfletterhead.net/?utm_source=splashscreen&utm_medium=app&utm_campaign=letterhead-app"]];
 }
+
+
 
 @end

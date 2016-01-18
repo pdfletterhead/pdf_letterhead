@@ -73,7 +73,7 @@
             return [NSColor colorWithCalibratedRed:0.74f green:0.21f blue:0.18f alpha:1.00f];
             break;
         case BButtonTypeInverse:
-            return [NSColor colorWithCalibratedRed:0.13f green:0.13f blue:0.13f alpha:1.00f];
+            return [NSColor colorWithCalibratedRed:0.13/255.0 green:0.13f blue:0.13f alpha:1.00f];
             break;
         case BButtonTypeLight:
             return [NSColor getColorForHexCode: @"eaedf1"];
