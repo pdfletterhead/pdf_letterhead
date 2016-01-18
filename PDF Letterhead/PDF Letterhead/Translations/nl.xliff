@@ -24,7 +24,7 @@
       <trans-unit id="Are you sure you want to delete this letterhead?">
         <source>Are you sure you want to delete this letterhead?</source>
         <note>Delete Letterhead message</note>
-      <target>Weet u zeker dat u dit briefhoofd wil verwijderen?</target></trans-unit>
+      <target>Weet u zeker dat u dit briefpapier wilt verwijderen?</target></trans-unit>
       <trans-unit id="Background">
         <source>Background</source>
         <note>Cover disabled Following text</note>
@@ -37,19 +37,27 @@
       <trans-unit id="Could not save changes while quitting. Quit anyway?">
         <source>Could not save changes while quitting. Quit anyway?</source>
         <note>Quit without saves error question message</note>
-      <target>Aanpassingen konden niet worden opgeslagen. Afsluiten?</target></trans-unit>
+      <target>Aanpassingen konden niet worden opgeslagen. Toch afsluiten?</target></trans-unit>
       <trans-unit id="Deleted letterheads cannot be restored.">
         <source>Deleted letterheads cannot be restored.</source>
         <note>Delete Letterhead warning</note>
-      <target>Verwijderde briefhoofden kunnen niet worden hersteld.</target></trans-unit>
+      <target>Verwijderd briefpapier kan niet worden hersteld.</target></trans-unit>
+      <trans-unit id="Drop background image here">
+        <source>Drop background image here</source>
+        <note>Cover control action Drop Description unchecked</note>
+      <target>Sleep briefpapier</target></trans-unit>
+      <trans-unit id="Drop background images here">
+        <source>Drop background images here</source>
+        <note>Cover control action Drop Description checked</note>
+      <target>Sleep briefpapier</target></trans-unit>
       <trans-unit id="Enter a name for the new letterhead">
         <source>Enter a name for the new letterhead</source>
         <note>Create new Letterhead Message</note>
-      <target>Kies een titel voor het nieuwe briefhoofd</target></trans-unit>
+      <target>Voer een naam in.</target></trans-unit>
       <trans-unit id="Following">
         <source>Following</source>
         <note>No comment provided by engineer.</note>
-      <target>Opvolgend</target></trans-unit>
+      <target>Volgpagina's</target></trans-unit>
       <trans-unit id="My PDF">
         <source>My PDF</source>
         <note>Subject for Email</note>
@@ -65,11 +73,11 @@
       <trans-unit id="Quitting now will lose any changes you have made since the last successful save">
         <source>Quitting now will lose any changes you have made since the last successful save</source>
         <note>Quit without saves error question info</note>
-      <target>Als u nu afsluit verliest u alle aanpassingen</target></trans-unit>
+      <target>Als u nu afsluit verliest u alle vorige aanpassingen</target></trans-unit>
       <trans-unit id="Untitled Letterhead">
         <source>Untitled Letterhead</source>
         <note>Default name new Letterhead</note>
-      <target>Nieuw briefhoofd</target></trans-unit>
+      <target>Nieuw briefpapier</target></trans-unit>
     </body>
   </file>
   <file original="PDF Letterhead/PDF Letterhead Lite.plist" source-language="en" datatype="plaintext" target-language="nl">

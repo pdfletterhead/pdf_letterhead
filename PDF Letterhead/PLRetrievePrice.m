@@ -37,13 +37,11 @@
     id object = nil;
     
     if(returnedData){
-        NSLog(@"lalalala");
         
         object = [NSJSONSerialization
                      JSONObjectWithData:returnedData
                      options:0
                      error:&error];
-        
     }
     
     if(error) {

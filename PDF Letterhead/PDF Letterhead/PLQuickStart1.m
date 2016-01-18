@@ -19,28 +19,26 @@
 {
     self = [super initWithWindow:window];
 
-
-
     return self;
 }
 
 - (void)windowDidLoad
 {
-    self.window.backgroundColor = [NSColor whiteColor];
-    
+    //self.window.backgroundColor = [NSColor whiteColor];
     if( [[[NSApp delegate] retrievePrice] priceFound]==YES){
         NSString * price = [[[NSApp delegate] retrievePrice] formattedPrice];
         NSLog(@"pricex = %@", price);
-        
         NSString * buttonTitle = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Buy now for only", @"Buy now for only $x.xx button"), price];
         [_buyButton setTitle:buttonTitle];
     }
-    
+    self.window.backgroundColor = [NSColor clearColor];
     [super windowDidLoad];
 }
 
 - (IBAction)buyNowAction:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.pdfletterhead.net/?utm_source=splashscreen&utm_medium=app&utm_campaign=letterhead-app"]];
 }
+
+
 
 @end

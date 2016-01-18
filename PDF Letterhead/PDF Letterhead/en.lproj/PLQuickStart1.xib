@@ -13,12 +13,12 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="PDF letterhead Quick Start" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" animationBehavior="default" id="1">
+        <window title="PDF letterhead Quick Start" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" animationBehavior="default" id="1" customClass="PLQuickstartWindow">
             <rect key="contentRect" x="498" y="304" width="702" height="434"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <value key="minSize" type="size" width="702" height="753"/>
             <value key="maxSize" type="size" width="702" height="753"/>
-            <view key="contentView" id="2">
+            <view key="contentView" id="2" customClass="PLQuickstartView">
                 <rect key="frame" x="0.0" y="0.0" width="702" height="434"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>

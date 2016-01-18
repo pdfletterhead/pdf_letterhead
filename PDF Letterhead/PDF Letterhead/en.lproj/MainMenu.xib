@@ -32,6 +32,7 @@
                 <outlet property="coverswitch3" destination="32v-Qf-gBP" id="2Vz-TQ-zPM"/>
                 <outlet property="drawerContentView" destination="vW8-G5-9Eg" id="OA1-i8-iNJ"/>
                 <outlet property="drawerTableView" destination="uE2-5U-Fka" id="kID-RA-J1t"/>
+                <outlet property="dropDescription" destination="1010" id="g02-OS-1c7"/>
                 <outlet property="mailButton1" destination="584" id="808"/>
                 <outlet property="mailButton2" destination="812" id="814"/>
                 <outlet property="mailButton3" destination="897" id="1008"/>
@@ -290,14 +291,14 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="237" y="273" width="703" height="688"/>
+            <rect key="contentRect" x="237" y="273" width="800" height="688"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
-            <value key="minSize" type="size" width="703" height="688"/>
+            <value key="minSize" type="size" width="800" height="688"/>
             <view key="contentView" id="590" customClass="PLMainWindowView">
-                <rect key="frame" x="0.0" y="0.0" width="703" height="688"/>
+                <rect key="frame" x="0.0" y="0.0" width="800" height="688"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView canDrawConcurrently="YES" id="939" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
+                    <customView canDrawConcurrently="YES" focusRingType="none" id="939" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
                         <rect key="frame" x="20" y="398" width="214" height="270"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
@@ -411,11 +412,11 @@
                         </subviews>
                     </customView>
                     <customView id="985" customClass="PLPDFBgView">
-                        <rect key="frame" x="251" y="0.0" width="452" height="688"/>
+                        <rect key="frame" x="251" y="0.0" width="549" height="688"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <customView id="894" userLabel="ButtonToolbar">
-                                <rect key="frame" x="23" y="0.0" width="406" height="46"/>
+                                <rect key="frame" x="72" y="0.0" width="406" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" id="897" customClass="KBButton">
@@ -470,11 +471,11 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp-eng" id="HdR-P0-Wge"/>
                             </imageView>
                             <customView id="988" customClass="PLPDFBgAreaView">
-                                <rect key="frame" x="20" y="66" width="412" height="601"/>
+                                <rect key="frame" x="20" y="66" width="509" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <pdfView autoresizesSubviews="NO" id="BT2-Zw-wHE">
-                                        <rect key="frame" x="0.0" y="0.0" width="412" height="601"/>
+                                    <pdfView hidden="YES" autoresizesSubviews="NO" focusRingType="none" scaleFactor="0.79677419354838708" autoScales="YES" id="BT2-Zw-wHE">
+                                        <rect key="frame" x="0.0" y="0.0" width="509" height="601"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </pdfView>
                                 </subviews>
