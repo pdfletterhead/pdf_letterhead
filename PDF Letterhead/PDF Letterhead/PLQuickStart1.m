@@ -28,10 +28,12 @@
     if( [[[NSApp delegate] retrievePrice] priceFound]==YES){
         NSString * price = [[[NSApp delegate] retrievePrice] formattedPrice];
         NSLog(@"pricex = %@", price);
-        NSString * buttonTitle = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Buy now for only", @"Buy now for only $x.xx button"), price];
+        NSString * buttonTitle = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"BUY ONLY FOR", @"Buy now for only $x.xx button"), price];
         [_buyButton setTitle:buttonTitle];
     }
     self.window.backgroundColor = [NSColor clearColor];
+    [[_buyButton cell] setKBButtonType:BButtonTypeBuy];
+
     [super windowDidLoad];
 }
 

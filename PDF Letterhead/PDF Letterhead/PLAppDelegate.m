@@ -112,11 +112,8 @@
     
 #ifdef LITE
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
+    [self doOpenQuickStart];
     
-    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
-    {
-        [self doOpenQuickStart];
-    }
 #endif
     
 }

@@ -75,10 +75,11 @@
         case BButtonTypeInverse:
             return [NSColor colorWithCalibratedRed:0.13/255.0 green:0.13f blue:0.13f alpha:1.00f];
             break;
+        case BButtonTypeBuy:
+            return [NSColor getColorForHexCode: @"3fbc41"];
+            break;
         case BButtonTypeLight:
             return [NSColor getColorForHexCode: @"eaedf1"];
-            //return [NSColor colorWithCalibratedRed:0.85f green:0.85f blue:0.85f alpha:1.00f];
-            //#eaedf1
             break;
         case BButtonTypeDark:
             return [NSColor getColorForHexCode: @"505050"];
@@ -100,14 +101,6 @@
     CGFloat marge = (controlView.frame.size.width - titleWidth + frame.size.width - 5) / 2;
     BOOL drawShadow = NO;
 
-
-//    NSLog(@"FOR: : %@",[self title]);
-//    NSLog(@"calc: marge: %fd", marge);
-//    NSLog(@"calc: titleWidth: %fd", stringSize.width);
-
-//    NSLog(@"given: controlview.width: %fd", controlView.frame.size.width);
-//    NSLog(@"given: frame.width: %fd", frame.size.width);
-//    NSLog(@"END: : %@",[self title]);
    
     NSColor *titleColor;
     if ([[self getColorForButtonType] isLightColor]) {
@@ -180,7 +173,14 @@
                                          xRadius:roundedRadius
                                          yRadius:roundedRadius] setClip];
         
-        [[color darkenColorByValue:0.12f] setFill];
+        if(kbButtonType == BButtonTypeBuy){
+            [[color lightenColorByValue:0.12f] setFill];
+        }
+        else{
+        
+        [[color darkenColorByValue:0.6f] setFill];
+        }
+        
         NSRectFillUsingOperation(frame, NSCompositeSourceOver);
         [ctx restoreGraphicsState];
         
@@ -195,7 +195,10 @@
                                      yRadius:roundedRadius] setClip];
     
   
-    if ([[self getColorForButtonType] isLightColor]) {
+    if(kbButtonType == BButtonTypeBuy){
+        [[color lightenColorByValue:0.12f] setFill];
+    }
+    else if ([[self getColorForButtonType] isLightColor]) {
         [[color darkenColorByValue:0.12f] setFill];
     } else {
         [[color darkenColorByValue:0.20f] setFill];
@@ -229,6 +232,7 @@
     NSGraphicsContext* ctx = [NSGraphicsContext currentContext];
     
     [ctx saveGraphicsState];
+    
     NSMutableAttributedString *attrString = [title mutableCopy];
     
     //Correct vertical placement
@@ -238,16 +242,25 @@
     CGFloat vertOffset = (controlView.frame.size.height-titleHeight)/2;
     frame = NSMakeRect(frame.origin.x, vertOffset, frame.size.width, frame.size.height);
     
-    [attrString beginEditing];
     NSColor *titleColor;
     BOOL drawShadow = NO;
-    if ([[self getColorForButtonType] isLightColor]) {
+    if(kbButtonType == BButtonTypeBuy){
+        
+
+    //    [[attrString mutableString] setString:@"hallo"];
+        //[attrString endEditing];
+        
+        titleColor = [NSColor whiteColor];
+        drawShadow = NO;
+    }
+    else if ([[self getColorForButtonType] isLightColor]) {
         titleColor = [NSColor blackColor];
     } else {
         titleColor = [NSColor whiteColor];
         drawShadow = YES;
     }
     
+    [attrString beginEditing];
     [attrString addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0, [[self title] length])];
     [attrString endEditing];
     
