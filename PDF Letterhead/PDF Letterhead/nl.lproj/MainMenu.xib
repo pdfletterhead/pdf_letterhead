@@ -38,7 +38,6 @@
                 <outlet property="manageLetterheadsLine" destination="X0v-Az-JTo" id="kbe-rs-GYW"/>
                 <outlet property="noItemsView" destination="4ja-wa-Ek4" id="qda-wD-fLw"/>
                 <outlet property="pArrayController" destination="J24-2q-b8a" id="DG2-Dl-3PV"/>
-                <outlet property="pdfOuterView" destination="SIz-ol-d1z" id="JOL-at-Yym"/>
                 <outlet property="pdfWindow" destination="587" id="752"/>
                 <outlet property="previewButton1" destination="857" id="887"/>
                 <outlet property="previewButton3" destination="993" id="1006"/>
@@ -473,17 +472,17 @@
                                 <rect key="frame" x="20" y="66" width="412" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <customView canDrawConcurrently="YES" id="SIz-ol-d1z">
-                                        <rect key="frame" x="-10" y="-14" width="432" height="629"/>
+                                    <pdfView autoresizesSubviews="NO" focusRingType="none" id="Eq1-xt-nE8">
+                                        <rect key="frame" x="0.0" y="0.0" width="412" height="601"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </customView>
+                                    </pdfView>
                                 </subviews>
                             </customView>
                         </subviews>
                     </customView>
                     <button identifier="drawerclosed" verticalHuggingPriority="750" id="qzB-tB-vJZ">
                         <rect key="frame" x="8" y="0.0" width="243" height="28"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="square" title="  BRIEFPAPIER BEHEREN" bezelStyle="shadowlessSquare" image="drawerinicon" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="L4e-O0-fSa">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="systemBold" size="10"/>

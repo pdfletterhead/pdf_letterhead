@@ -85,7 +85,7 @@
     }
     [super setImage:newImage];
         
-    [(PLAppDelegate *)[NSApp delegate] updatePreviewAndActionButtons];
+    [(PLAppDelegate *)[NSApp delegate] renderPDF];
 
 }
 

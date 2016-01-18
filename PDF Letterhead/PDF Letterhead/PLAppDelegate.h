@@ -99,7 +99,8 @@
 -(IBAction)openQuickStart:(id)sender;
 -(IBAction)selectProfile:(id)sender;
 -(IBAction)editSelectedProfile:(id)sender;
+-(void)renderPDF;
 
--(void)updatePreviewAndActionButtons;
+//-(void)updatePreviewAndActionButtons;
 
 @end

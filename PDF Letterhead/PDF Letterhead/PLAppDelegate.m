@@ -23,6 +23,7 @@
 @property (weak) IBOutlet NSBox *saveNewLetterheadLine;
 @property (weak) IBOutlet NSButton *upgradeToProButton;
 @property (weak) IBOutlet NSSegmentedControl *segmentedControl;
+@property (weak) IBOutlet PDFView *PDFView;
 @property BOOL renderEven;
 
 
@@ -373,71 +374,35 @@
     return rowView;
 }
 
+-(void)renderPDF {
 
-
--(void)updatePreviewAndActionButtons {
-    
-    //We do not have enough to set Preview
-    if(![self allowSetPreview]){
-        [self enableActions: NO];
+    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        PDFDocument *document = [self renderDocument];
+        NSLog(@"document: %@", document);
         
-    }
-    else{
+        dispatch_async( dispatch_get_main_queue(), ^{
         
-        [self enableActions: YES];
-
-        dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            // Add code here to do background processing
-            
-            if (_renderEven){
-            }else{
-                [self createDocument];
-            }
-
-            dispatch_async( dispatch_get_main_queue(), ^{
-                
-                _pdfView = [[PDFView alloc] init];
-                
-                if (!_setView) {
-                    
-                    [_pdfView setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
-                    [_pdfView setDocument: _letterheadPDF];
-                    [_previewView setDocument: _letterheadPDF];
-                    
-                    CGRect winRect = _pdfOuterView.bounds;
-                    
-                    [_pdfOuterView addSubview:_pdfView];
-                    
-                    _pdfView.frame = winRect ;
-                    _pdfView.autoScales = YES;
-                    [_pdfView setAutoresizingMask: NSViewHeightSizable|NSViewWidthSizable|NSViewMinXMargin|NSViewMaxXMargin|NSViewMinYMargin|NSViewMaxYMargin];
-                    _setView = true;
-                    
-                } else {
-                    //Weird workaround to make PDFView work
-                    _setView = false;
-                    [self updatePreviewAndActionButtons];
-                    
-                }
-                
-                // Add code here to update the UI/send notifications based on the
-                // results of the background processing
-            });
+            [[self PDFView] setDocument:document];
+            _letterheadPDF = document;
         });
-    }
+    });
+    
 }
 
--(void)createDocument {
-    _renderEven = true;
-
+-(PDFDocument*)renderDocument {
     
-	NSImage			*bgimage;
-	NSImage			*cvrimage;
-	NSImage			*sourceimage;
-	PLPDFPage       *page;
+    NSImage			*bgimage;
+    NSImage			*cvrimage;
+    NSImage			*sourceimage;
+    PLPDFPage       *page;
+    PDFDocument     *letterheadPDF;
+    
+    NSLog(@"setcover: %hhd", _isSetCover);
+    NSLog(@"setbackground: %hhd", _isSetBackground);
+    NSLog(@"setcontent: %hhd", _isSetContent);
     
     // Start with an empty PDFDocument.
-    _letterheadPDF = [[PDFDocument alloc] init];
+    letterheadPDF = [[PDFDocument alloc] init];
     
     if(_coverEnabled){
         
@@ -466,6 +431,7 @@
     
     // Get image.
     if(_isSetContent){
+        
         sourceimage = [_sourcedoc image];
         NSString *filePath;
         
@@ -510,14 +476,14 @@
                 page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: image label:[currentPage label]];
             }
             // Insert the new page in our PDF document.
-            [_letterheadPDF insertPage: page atIndex: y];
+            [letterheadPDF insertPage: page atIndex: y];
         }
     }
     else{
         sourceimage = NULL;
         
         if(_coverEnabled){
-
+            
             // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
             page = [[PLPDFPage alloc] initWithBGImage: cvrimage sourceDoc: sourceimage label:nil];
         }
@@ -526,10 +492,10 @@
             page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: sourceimage label:nil];
         }
         
-        [_letterheadPDF insertPage: page atIndex: 0];
+        [letterheadPDF insertPage: page atIndex: 0];
     }
-	
-    _renderEven = false;
+    
+    return letterheadPDF;
 
 }
 
@@ -612,11 +578,11 @@
         _coverEnabled = YES;
     }
     
-    [self updatePreviewAndActionButtons];
+    [self renderPDF];
 }
 
 
-- (IBAction)saveAs: (id) sender{
+- (IBAction)saveAs: (id) sender {
     
     NSString * defaultName;
     if ([_sourcedoc getFilepath] == nil) {
@@ -634,8 +600,7 @@
     
     }
 
-- (IBAction)saveEmail: (id) sender
-{
+- (IBAction)saveEmail: (id) sender {
     
 
     NSString * newFileName;
