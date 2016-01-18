@@ -47,9 +47,9 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" id="W4z-4g-Qen" customClass="KBButton">
-                        <rect key="frame" x="587" y="19" width="95" height="23"/>
+                        <rect key="frame" x="505" y="19" width="170" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="smallSquare" title="Buy now" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bsE-Ih-nTF">
+                        <buttonCell key="cell" type="smallSquare" title="Buy now for only $ 4.99" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bsE-Ih-nTF">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -58,9 +58,9 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="42">
-                        <rect key="frame" x="5" y="415" width="14" height="14"/>
+                        <rect key="frame" x="4" y="408" width="21" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" title="Close" bezelStyle="rounded" image="closebutton" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="43">
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="closebutton" imagePosition="only" alignment="center" state="on" inset="2" id="43">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -76,9 +76,17 @@
             <point key="canvasLocation" x="417" y="156"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="45"/>
+        <button verticalHuggingPriority="750" id="6Ax-fz-JgR">
+            <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <buttonCell key="cell" type="bevel" title="Close" bezelStyle="rounded" image="closebutton" imagePosition="only" alignment="center" state="on" inset="2" id="EPF-Hc-KPT">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="system"/>
+            </buttonCell>
+        </button>
     </objects>
     <resources>
-        <image name="closebutton" width="28" height="28"/>
+        <image name="closebutton" width="16" height="16"/>
         <image name="splashscreen-eng" width="1881" height="1000"/>
     </resources>
 </document>
