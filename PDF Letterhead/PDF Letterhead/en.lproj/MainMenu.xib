@@ -32,6 +32,7 @@
                 <outlet property="coverswitch3" destination="32v-Qf-gBP" id="2Vz-TQ-zPM"/>
                 <outlet property="drawerContentView" destination="vW8-G5-9Eg" id="OA1-i8-iNJ"/>
                 <outlet property="drawerTableView" destination="uE2-5U-Fka" id="kID-RA-J1t"/>
+                <outlet property="dropDescription" destination="1010" id="g02-OS-1c7"/>
                 <outlet property="mailButton1" destination="584" id="808"/>
                 <outlet property="mailButton2" destination="812" id="814"/>
                 <outlet property="mailButton3" destination="897" id="1008"/>

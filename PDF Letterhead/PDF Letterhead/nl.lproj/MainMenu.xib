@@ -22,6 +22,7 @@
         </customObject>
         <customObject id="494" userLabel="Delegate" customClass="PLAppDelegate">
             <connections>
+                <outlet property="PDFView" destination="Eq1-xt-nE8" id="Yhq-21-9iq"/>
                 <outlet property="_pdfWindow" destination="587" id="729"/>
                 <outlet property="backgrounddoc" destination="929" id="932"/>
                 <outlet property="backgrounddocText" destination="948" id="987"/>
@@ -31,6 +32,7 @@
                 <outlet property="coverswitch3" destination="32v-Qf-gBP" id="2Vz-TQ-zPM"/>
                 <outlet property="drawerContentView" destination="vW8-G5-9Eg" id="OA1-i8-iNJ"/>
                 <outlet property="drawerTableView" destination="uE2-5U-Fka" id="kID-RA-J1t"/>
+                <outlet property="dropDescription" destination="1010" id="Ojj-lU-sIX"/>
                 <outlet property="mailButton1" destination="584" id="808"/>
                 <outlet property="mailButton2" destination="812" id="814"/>
                 <outlet property="mailButton3" destination="897" id="1008"/>
@@ -376,7 +378,7 @@
                             <button verticalHuggingPriority="750" id="1z4-dM-vE6" customClass="KBButton">
                                 <rect key="frame" x="12" y="8" width="191" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" title="Briefpapier opslaan" bezelStyle="shadowlessSquare" image="newsaveicon" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
+                                <buttonCell key="cell" type="square" title="  Briefpapier opslaan" bezelStyle="shadowlessSquare" image="newsaveicon" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hCa-r2-tYo">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>

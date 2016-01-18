@@ -9,16 +9,10 @@
 "Cancel" = "Annuleren";
 
 /* Quit without saves error question message */
-"Could not save changes while quitting. Quit anyway?" = "Aanpassingen konden niet worden opgeslagen. Toch afsluiten?";
+"Could not save changes while quitting. Quit anyway?" = "Aanpassingen konden niet worden opgeslagen. Afsluiten?";
 
 /* Delete Letterhead warning */
 "Deleted letterheads cannot be restored." = "Verwijderd briefpapier kan niet worden hersteld.";
-
-/* Cover control action Drop Description unchecked */
-"Drop background image here" = "Sleep briefpapier";
-
-/* Cover control action Drop Description checked */
-"Drop background images here" = "Sleep briefpapier";
 
 /* Create new Letterhead Message */
 "Enter a name for the new letterhead" = "Voer een naam in.";

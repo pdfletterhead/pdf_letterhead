@@ -24,6 +24,7 @@
 @property (weak) IBOutlet NSButton *upgradeToProButton;
 @property (weak) IBOutlet NSSegmentedControl *segmentedControl;
 @property (weak) IBOutlet PDFView *PDFView;
+@property (weak) IBOutlet NSTextField *dropDescription;
 @property BOOL renderEven;
 
 
@@ -42,7 +43,6 @@
 
 
 - (void)awakeFromNib {
-    
     [[saveLetterheadButton cell] setKBButtonType:BButtonTypeLight];
     [[saveButton3 cell] setKBButtonType:BButtonTypeDark];
     [[previewButton3 cell] setKBButtonType:BButtonTypeDark];
@@ -55,9 +55,10 @@
     
 #ifdef LITE
     [self disableProFeatures];
+    [self moveInterfaceElements];
 #endif
     
-    _setView = false;
+    [[self PDFView] setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
 
     //Temp folder creation
     NSError *tmpFileCreateError;
@@ -65,7 +66,7 @@
     [[NSFileManager defaultManager] createDirectoryAtURL:_tmpDirectoryURL withIntermediateDirectories:YES attributes:nil error:&tmpFileCreateError];
     
     //style main pdfview
-    [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 70.0/255.0 green: 70.0/255.0 blue: 70.0/255.0 alpha: 1.0]];
+    [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
     
     [self setIsSetBackground:NO];
     [self setIsSetCover:NO];
@@ -396,11 +397,7 @@
     NSImage			*sourceimage;
     PLPDFPage       *page;
     PDFDocument     *letterheadPDF;
-    
-    NSLog(@"setcover: %hhd", _isSetCover);
-    NSLog(@"setbackground: %hhd", _isSetBackground);
-    NSLog(@"setcontent: %hhd", _isSetContent);
-    
+
     // Start with an empty PDFDocument.
     letterheadPDF = [[PDFDocument alloc] init];
     
@@ -539,10 +536,17 @@
         [_coverbackgrounddoc setEditable:NO];
         _coverEnabled = NO;
         
+#ifdef PRO
         CGRect newbgframe = CGRectMake(_cvframe.origin.x+45,
                                        _cvframe.origin.y,
                                        _bgframe.size.width,
                                        (_bgframe.size.height));
+#else
+        CGRect newbgframe = CGRectMake(_cvframe.origin.x+45,
+                                       _cvframe.origin.y+6,
+                                       _bgframe.size.width,
+                                       (_bgframe.size.height));
+#endif
         
         [[_backgrounddoc animator ]setFrame:newbgframe];
         
@@ -551,13 +555,21 @@
         
         [[_backgrounddocText animator] setStringValue:NSLocalizedString(@"Background", @"Cover disabled Following text")];
         
+#ifdef PRO
         CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
                                            _cvTextframe.origin.y-6,
                                            _bgTextframe.size.width,
                                            (_bgTextframe.size.height));
-        
+#else
+        CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
+                                           _cvTextframe.origin.y,
+                                           _bgTextframe.size.width,
+                                           (_bgTextframe.size.height));
+#endif
         [[_backgrounddocText animator ]setFrame:newbgTextframe];
-        
+        _backgrounddoc.identifier = @"coverDropArea";
+        [self dropDescription].stringValue = NSLocalizedString(@"Drop background image here", @"Cover control action Drop Description unchecked");
+        [_backgrounddoc setNeedsDisplay:YES];
         
     }
     else{
@@ -575,6 +587,9 @@
         [[_coverbackgrounddocText animator] setAlphaValue:1.0];
         
         [_coverbackgrounddoc setEditable:YES];
+        _backgrounddoc.identifier = @"bgDropArea";
+        [self dropDescription].stringValue = NSLocalizedString(@"Drop background images here", @"Cover control action Drop Description checked");
+        [_backgrounddoc setNeedsDisplay:YES];
         _coverEnabled = YES;
     }
     
@@ -858,6 +873,18 @@
     [[self saveNewLetterheadButton] setHidden:YES];
     [[self saveNewLetterheadLine] setHidden:YES];
     [[self upgradeToProButton] setHidden:NO];
+}
+
+- (void) moveInterfaceElements {
+    
+    [_coverbackgrounddoc setFrameOrigin:NSMakePoint(_coverbackgrounddoc.frame.origin.x, _coverbackgrounddoc.frame.origin.y - 20)];
+    [_coverbackgrounddocText setFrameOrigin:NSMakePoint(_coverbackgrounddocText.frame.origin.x, _coverbackgrounddocText.frame.origin.y - 26)];
+
+    [_backgrounddoc setFrameOrigin:NSMakePoint(_backgrounddoc.frame.origin.x, _backgrounddoc.frame.origin.y - 20)];
+    [_backgrounddocText setFrameOrigin:NSMakePoint(_backgrounddocText.frame.origin.x, _backgrounddocText.frame.origin.y - 26)];
+    
+    [[self dropDescription ] setFrameOrigin:NSMakePoint([self dropDescription ].frame.origin.x, [self dropDescription ].frame.origin.y - 30)];
+
 }
 
 - (IBAction)editSelectedProfile:(id)sender {
