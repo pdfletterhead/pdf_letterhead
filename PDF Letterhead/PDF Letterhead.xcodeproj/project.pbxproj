@@ -295,14 +295,14 @@
 			name = MainWindow;
 			sourceTree = "<group>";
 		};
-		3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */ = {
+		3E2AFEFD16A5F4B3006D2CB0 /* Upgrade Splash */ = {
 			isa = PBXGroup;
 			children = (
 				3E2AFF0316A5F8B3006D2CB0 /* PLQuickStart1.h */,
 				3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */,
 				7967FB571C47B4DC00EC2C73 /* PLQuickStart1.xib */,
 			);
-			name = QuickStart;
+			name = "Upgrade Splash";
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -394,7 +394,7 @@
 			children = (
 				3E9B90061C3AD9C2003D86E0 /* ITSwitch */,
 				3E5A5B8C1C3C644600ECD755 /* KBButton */,
-				3E2AFEFD16A5F4B3006D2CB0 /* QuickStart */,
+				3E2AFEFD16A5F4B3006D2CB0 /* Upgrade Splash */,
 				3E3FC58D167A9F7B0006D91B /* FAQWindow */,
 				79B9AC8A1C18851900B260F6 /* ProfilesWindow */,
 				3E3FC58E167A9F870006D91B /* PreviewWindow */,
@@ -431,15 +431,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3E9AC0C71C3C75EB00DBDBE8 /* imgnew */ = {
+		3E7849301C4D017700A01DCF /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				791574E41C4924FA006B1FC8 /* splashscreen-nl.png */,
-				791574E51C4924FA006B1FC8 /* bghelp-eng.png */,
-				791574E61C4924FA006B1FC8 /* bghelp-nl.png */,
-				791574E71C4924FA006B1FC8 /* splashscreen-eng.png */,
-				791574E81C4924FA006B1FC8 /* upgradebutton-eng.png */,
-				791574E91C4924FA006B1FC8 /* upgradebutton-nl.png */,
 				7967FB511C47B31E00EC2C73 /* newsaveicon.png */,
 				79527AB71C4559D50030D6F9 /* pencilwhite.png */,
 				79527AB81C4559D50030D6F9 /* pencilgray.png */,
@@ -451,6 +445,44 @@
 				7928A3041C3D4D52006BA593 /* print.png */,
 				7928A3051C3D4D52006BA593 /* save.png */,
 				7928A3061C3D4D52006BA593 /* pencil.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		3E7849311C4D018300A01DCF /* upgrade splash screens */ = {
+			isa = PBXGroup;
+			children = (
+				791574E41C4924FA006B1FC8 /* splashscreen-nl.png */,
+				791574E71C4924FA006B1FC8 /* splashscreen-eng.png */,
+			);
+			name = "upgrade splash screens";
+			sourceTree = "<group>";
+		};
+		3E7849321C4D01B200A01DCF /* Background help screens */ = {
+			isa = PBXGroup;
+			children = (
+				791574E51C4924FA006B1FC8 /* bghelp-eng.png */,
+				791574E61C4924FA006B1FC8 /* bghelp-nl.png */,
+			);
+			name = "Background help screens";
+			sourceTree = "<group>";
+		};
+		3E7849331C4D01C400A01DCF /* Upgrade buttons */ = {
+			isa = PBXGroup;
+			children = (
+				791574E81C4924FA006B1FC8 /* upgradebutton-eng.png */,
+				791574E91C4924FA006B1FC8 /* upgradebutton-nl.png */,
+			);
+			name = "Upgrade buttons";
+			sourceTree = "<group>";
+		};
+		3E9AC0C71C3C75EB00DBDBE8 /* imgnew */ = {
+			isa = PBXGroup;
+			children = (
+				3E7849311C4D018300A01DCF /* upgrade splash screens */,
+				3E7849321C4D01B200A01DCF /* Background help screens */,
+				3E7849331C4D01C400A01DCF /* Upgrade buttons */,
+				3E7849301C4D017700A01DCF /* icons */,
 			);
 			name = imgnew;
 			sourceTree = "<group>";
