@@ -474,7 +474,7 @@
                                 <rect key="frame" x="20" y="66" width="509" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <pdfView autoresizesSubviews="NO" focusRingType="none" autoScales="YES" id="BT2-Zw-wHE">
+                                    <pdfView hidden="YES" autoresizesSubviews="NO" focusRingType="none" autoScales="YES" id="BT2-Zw-wHE">
                                         <rect key="frame" x="0.0" y="0.0" width="509" height="601"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </pdfView>
@@ -538,10 +538,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="510" height="413"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                 </textView>
                             </subviews>

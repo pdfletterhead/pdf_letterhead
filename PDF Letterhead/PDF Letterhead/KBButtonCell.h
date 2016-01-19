@@ -18,6 +18,7 @@ typedef enum {
     BButtonTypeInverse,
     BButtonTypeLight,
     BButtonTypeDark,
+    BButtonTypeBuy
 
 } BButtonType;
 

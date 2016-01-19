@@ -112,11 +112,8 @@
     
 #ifdef LITE
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
+    [self doOpenQuickStart];
     
-    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"showQuickStart"])
-    {
-        [self doOpenQuickStart];
-    }
 #endif
     
 }
@@ -289,7 +286,15 @@
     
     CGRect wRect = _pdfWindow.frame;
     
-    CGRect rect1 = CGRectMake(_profileDrawer.frame.origin.x, (wRect.origin.y+15), _profileDrawer.frame.size.width, (wRect.size.height-50.0));
+    CGFloat pos_x;
+    if(_drawerIsOpen){
+        pos_x = _pdfWindow.frame.origin.x-180;
+    }
+    else{
+        pos_x = _pdfWindow.frame.origin.x;
+    }
+
+    CGRect rect1 = CGRectMake(pos_x, (wRect.origin.y+15), _profileDrawer.frame.size.width, (wRect.size.height-50.0));
     
     [_profileDrawer setFrame:rect1 display:YES];
     
