@@ -773,6 +773,7 @@
     }
 
     if (profile) {
+        NSLog(@"lkjlksajdlas");
         [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
         [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
     }

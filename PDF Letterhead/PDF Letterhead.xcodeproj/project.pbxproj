@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
 		3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
 		3E2770451677E464002DD3DE /* bgdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770431677E463002DD3DE /* bgdrop.png */; };
 		3E2770461677E464002DD3DE /* coverdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770441677E463002DD3DE /* coverdrop.png */; };
@@ -113,7 +112,6 @@
 		79726ED31C16ED6E003B85D2 /* PLPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6835F61607D22100DDFB82 /* PLPDFPage.m */; };
 		79726ED51C16ED6E003B85D2 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
 		79726ED61C16ED6E003B85D2 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
-		79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
 		79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
 		79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E798B751677F336006F47F5 /* PLPDFBgView.m */; };
 		79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */; };
@@ -139,8 +137,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E2770381677DC2D002DD3DE /* PLBottomToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLBottomToolbarView.h; sourceTree = "<group>"; };
-		3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLBottomToolbarView.m; sourceTree = "<group>"; };
 		3E2770401677E336002DD3DE /* PLBackgroundDropZoneContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLBackgroundDropZoneContainer.h; sourceTree = "<group>"; };
 		3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLBackgroundDropZoneContainer.m; sourceTree = "<group>"; };
 		3E2770431677E463002DD3DE /* bgdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgdrop.png; sourceTree = "<group>"; };
@@ -277,21 +273,16 @@
 		3E27702A1677D726002DD3DE /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
+				3EA26AD71C4E53FB00B6BE7A /* PDFPage subclass */,
 				3EA26AD61C4E423A00B6BE7A /* drawer */,
 				3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */,
 				3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */,
-				3E6835F51607D22100DDFB82 /* PLPDFPage.h */,
-				3E6835F61607D22100DDFB82 /* PLPDFPage.m */,
 				3E6835F21607CC7900DDFB82 /* PLDropZone.h */,
 				3E6835F31607CC7900DDFB82 /* PLDropZone.m */,
 				3E798B741677F336006F47F5 /* PLPDFBgView.h */,
 				3E798B751677F336006F47F5 /* PLPDFBgView.m */,
 				3E2770401677E336002DD3DE /* PLBackgroundDropZoneContainer.h */,
 				3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */,
-				3E2770381677DC2D002DD3DE /* PLBottomToolbarView.h */,
-				3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */,
-				7928A3151C3D546F006BA593 /* PLImageView.h */,
-				7928A3161C3D546F006BA593 /* PLImageView.m */,
 			);
 			name = MainWindow;
 			sourceTree = "<group>";
@@ -508,6 +499,8 @@
 		3EA26AD61C4E423A00B6BE7A /* drawer */ = {
 			isa = PBXGroup;
 			children = (
+				7928A3151C3D546F006BA593 /* PLImageView.h */,
+				7928A3161C3D546F006BA593 /* PLImageView.m */,
 				79182E331C3BD26D00ABDDD9 /* PLTableRowView.h */,
 				79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */,
 				791500931C4519D00007ABDC /* PLTextFieldCell.h */,
@@ -518,6 +511,15 @@
 				79527AB41C45565B0030D6F9 /* PLButtonCell.m */,
 			);
 			name = drawer;
+			sourceTree = "<group>";
+		};
+		3EA26AD71C4E53FB00B6BE7A /* PDFPage subclass */ = {
+			isa = PBXGroup;
+			children = (
+				3E6835F51607D22100DDFB82 /* PLPDFPage.h */,
+				3E6835F61607D22100DDFB82 /* PLPDFPage.m */,
+			);
+			name = "PDFPage subclass";
 			sourceTree = "<group>";
 		};
 		79B9AC8A1C18851900B260F6 /* ProfilesWindow */ = {
@@ -754,7 +756,6 @@
 				79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				7928A3171C3D546F006BA593 /* PLImageView.m in Sources */,
 				794DA9DB1C3D008E00E64582 /* KBButton.m in Sources */,
-				3E27703A1677DC2D002DD3DE /* PLBottomToolbarView.m in Sources */,
 				791500951C4519D00007ABDC /* PLTextFieldCell.m in Sources */,
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
@@ -789,7 +790,6 @@
 				79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */,
 				7928A3181C3D546F006BA593 /* PLImageView.m in Sources */,
 				7928A30C1C3D4E85006BA593 /* KBButton.m in Sources */,
-				79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */,
 				791500961C4519D00007ABDC /* PLTextFieldCell.m in Sources */,
 				79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */,
 				79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */,
