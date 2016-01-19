@@ -28,6 +28,8 @@
 
 - (void)setImage:(NSImage *)newImage{
     
+    NSLog(@"image: %@", newImage);
+    
     if (newImage)
     {
         imageIsSet = YES;
@@ -40,20 +42,13 @@
     if([[self identifier] isEqualToString:@"sourceDropArea"]){
         
         if(!newImage){
-        
             newImage = nil;
             [(PLAppDelegate *)[NSApp delegate] setIsSetContent:NO];
-            
-            //set main pdfview hidden
-            [[(PLAppDelegate *)[NSApp delegate] pdfOuterView] setHidden:YES];
 
         }
         else{
             [(PLAppDelegate *)[NSApp delegate] setIsSetContent:YES];
             [self layer].contents = nil;
-
-            //set main pdfview visible
-            [[(PLAppDelegate *)[NSApp delegate] pdfOuterView] setHidden:NO];
 
         }
     }
@@ -62,14 +57,11 @@
 
             if([[self identifier] isEqualToString:@"bgDropArea"]){
 
-                //NSString* myImagePath = [myBundle pathForResource:@"bgdrop" ofType:@"png"];
                 newImage = nil;
                 [(PLAppDelegate *)[NSApp delegate] setIsSetBackground:NO];
             }
             else{
-                //NSString* myImagePath = [myBundle pathForResource:@"coverdrop" ofType:@"png"];
                 newImage = nil;
-
                 [(PLAppDelegate *)[NSApp delegate] setIsSetCover:NO];
             }
         }
@@ -85,8 +77,6 @@
     }
     [super setImage:newImage];
         
-    [(PLAppDelegate *)[NSApp delegate] renderPDF];
-
 }
 
 - (void)dropAreaFadeIn
@@ -149,6 +139,8 @@
                 self.sourcefilepath = [files lastObject];
                 [self setPdfFilepath:[self sourcefilepath]];
                 
+                [(PLAppDelegate *)[NSApp delegate] renderPDF];
+                
                 return YES;
                 
             } else {
@@ -181,6 +173,8 @@
                         [openedEditWindow saveImage:newImage :loadedProfile :@"background"];
                     }
                 }
+                
+                [(PLAppDelegate *)[NSApp delegate] renderPDF];
                 
                 return YES;
             }

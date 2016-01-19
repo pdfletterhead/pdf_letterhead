@@ -17,18 +17,7 @@
 
 @interface PLAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
 {
-    float _browserWidth;
-	NSPrintingOrientation _orientation;
-	NSString *_headerLeftJs;
-	NSString *_headerRightJs;
-	NSString *_footerLeftJs;
-	NSString *_footerRightJs;
-
-    BOOL _paginate;
     BOOL _setView;
-    
-    PDFView                 *_pdfView;
-    PDFDocument				*_letterheadPDF;
 }
 
 @property (assign) IBOutlet NSWindow *pdfWindow;
@@ -64,10 +53,7 @@
 
 //@property (assign) IBOutlet NSSegmentedControl *coverswitch;
 @property (assign) IBOutlet ITSwitch *coverswitch3;
-
 @property (retain) PLRetrievePrice *retrievePrice;
-- (NSString*) productPrice;
-
 
 @property (readonly, retain) NSURL *tmpDirectoryURL;
 
@@ -95,6 +81,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSArrayController *profileArrayController;
 @property (nonatomic,strong) PLProfileEditWindow *profileEditWindow;
+@property PDFDocument *letterheadPDF;
 
 
 -(IBAction)saveAs:(id)sender;

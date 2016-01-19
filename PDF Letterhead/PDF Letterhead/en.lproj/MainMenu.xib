@@ -474,7 +474,7 @@
                                 <rect key="frame" x="20" y="66" width="509" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <pdfView hidden="YES" autoresizesSubviews="NO" focusRingType="none" scaleFactor="0.79677419354838708" autoScales="YES" id="BT2-Zw-wHE">
+                                    <pdfView autoresizesSubviews="NO" focusRingType="none" autoScales="YES" id="BT2-Zw-wHE">
                                         <rect key="frame" x="0.0" y="0.0" width="509" height="601"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </pdfView>
@@ -552,7 +552,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="765">
-                            <rect key="frame" x="495" y="1" width="16" height="413"/>
+                            <rect key="frame" x="496" y="1" width="15" height="413"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>

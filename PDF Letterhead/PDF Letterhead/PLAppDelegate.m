@@ -26,7 +26,7 @@
 @property (weak) IBOutlet NSSegmentedControl *segmentedControl;
 @property (weak) IBOutlet PDFView *PDFView;
 @property (weak) IBOutlet NSTextField *dropDescription;
-@property BOOL renderEven;
+@property BOOL rendering;
 
 
 @end
@@ -66,6 +66,9 @@
     [self moveInterfaceElements];
 #endif
     
+    _rendering = NO;
+    _isSetContent = NO;
+    
     [[self PDFView] setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
 
     //Temp folder creation
@@ -76,9 +79,6 @@
     //style main pdfview
     [_previewView setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
     
-    [self setIsSetBackground:NO];
-    [self setIsSetCover:NO];
-    [self setIsSetContent:NO];
     [_myMainMenu setAutoenablesItems:NO];
     [[[self manageLetterheadsButton] image] setSize:NSMakeSize(15.0,12.0)];
     [[self manageLetterheadsButton] setNeedsDisplay:YES];
@@ -386,23 +386,17 @@
 
 -(void)renderPDF {
     
-    //Enable/disable buttons
-    if(![self allowSetPreview]){
-        [self enableActions: NO];
-    } else {
-        [self enableActions: YES];
-    }
-
     //Render PDF
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         PDFDocument *document = [self renderDocument];
-        	
+            
         //Set PDFView
         dispatch_async( dispatch_get_main_queue(), ^{
         
             [[self PDFView] setDocument:document];
             _letterheadPDF = document;
+            
         });
     });
     
@@ -415,6 +409,9 @@
     NSImage			*sourceimage;
     PLPDFPage       *page;
     PDFDocument     *letterheadPDF;
+
+    NSLog(@"coverimage: %@", [_coverbackgrounddoc image]);
+    NSLog(@"backgroundimage: %@", [_backgrounddoc image]);
 
     // Start with an empty PDFDocument.
     letterheadPDF = [[PDFDocument alloc] init];
@@ -485,11 +482,13 @@
             if(_coverEnabled && y==0){
                 // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
                 page = [[PLPDFPage alloc] initWithBGImage: cvrimage sourceDoc: image label:[currentPage label]];
+                
             }
             else{
                 // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
                 page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: image label:[currentPage label]];
             }
+            
             // Insert the new page in our PDF document.
             [letterheadPDF insertPage: page atIndex: y];
         }
@@ -545,26 +544,17 @@
 
 - (IBAction)coverControlAction: (id) sender{
     
-    NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
-
     if([_coverswitch3 checked]==NO){
-        [prefs setBool:NO forKey:@"coverEnabled"];
+        
+        _coverEnabled = NO;
         [_coverbackgrounddoc unregisterDraggedTypes];
         [[_coverbackgrounddoc animator] setAlphaValue:0.0];
         [_coverbackgrounddoc setEditable:NO];
-        _coverEnabled = NO;
         
-#ifdef PRO
         CGRect newbgframe = CGRectMake(_cvframe.origin.x+45,
                                        _cvframe.origin.y,
                                        _bgframe.size.width,
                                        (_bgframe.size.height));
-#else
-        CGRect newbgframe = CGRectMake(_cvframe.origin.x+45,
-                                       _cvframe.origin.y+6,
-                                       _bgframe.size.width,
-                                       (_bgframe.size.height));
-#endif
         
         [[_backgrounddoc animator ]setFrame:newbgframe];
         
@@ -573,17 +563,11 @@
         
         [[_backgrounddocText animator] setStringValue:NSLocalizedString(@"Background", @"Cover disabled Following text")];
         
-#ifdef PRO
-        CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
-                                           _cvTextframe.origin.y-6,
-                                           _bgTextframe.size.width,
-                                           (_bgTextframe.size.height));
-#else
         CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
                                            _cvTextframe.origin.y,
                                            _bgTextframe.size.width,
                                            (_bgTextframe.size.height));
-#endif
+
         [[_backgrounddocText animator ]setFrame:newbgTextframe];
         _backgrounddoc.identifier = @"coverDropArea";
         [self dropDescription].stringValue = NSLocalizedString(@"Drop background image here", @"Cover control action Drop Description unchecked");
@@ -592,12 +576,12 @@
     }
     else{
         
+        _coverEnabled = YES;
         [[_backgrounddocText animator] setStringValue:NSLocalizedString(@"Following", nil)];
         [[_backgrounddoc animator ]setFrame:_bgframe];
         
         [[_backgrounddocText animator ]setFrame:_bgTextframe];
         
-        [prefs setBool:YES forKey:@"coverEnabled"];
         [_coverbackgrounddoc registerForDraggedTypes:[NSArray arrayWithObjects:
                                                       NSColorPboardType, NSFilenamesPboardType, nil]];
         
@@ -608,7 +592,7 @@
         _backgrounddoc.identifier = @"bgDropArea";
         [self dropDescription].stringValue = NSLocalizedString(@"Drop background images here", @"Cover control action Drop Description checked");
         [_backgrounddoc setNeedsDisplay:YES];
-        _coverEnabled = YES;
+
     }
     
     [self renderPDF];
@@ -662,7 +646,7 @@
 
 - (IBAction)savePrint: (id) sender{
     NSPrintInfo *info = [NSPrintInfo sharedPrintInfo];
-    [_pdfView printWithInfo:info autoRotate:YES pageScaling:YES];
+    [_PDFView printWithInfo:info autoRotate:YES pageScaling:YES];
 }
 
 - (void)checkProfiles {
@@ -778,6 +762,8 @@
         [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
         [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
     }
+    
+    [self renderPDF];
 
 }
 

@@ -134,6 +134,8 @@
 		79726EF51C16ED6E003B85D2 /* contentdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E798B721677F053006F47F5 /* contentdrop.png */; };
 		79726EF91C16ED6E003B85D2 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
 		79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E67446D16794BE400D99390 /* saveicon.png */; };
+		79AFB2001C4D36CF00926CA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8F91C4D1FB40071AE90 /* Localizable.strings */; };
+		79AFB2021C4D939500926CA0 /* transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 79AFB2011C4D939500926CA0 /* transparent.png */; };
 		79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
 		79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
 /* End PBXBuildFile section */
@@ -247,6 +249,7 @@
 		796BD90C1C4D2F0E0071AE90 /* PLQuickstartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLQuickstartView.m; path = "PDF Letterhead/PLQuickstartView.m"; sourceTree = "<group>"; };
 		79726F051C16ED6E003B85D2 /* PDF Letterhead Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
+		79AFB2011C4D939500926CA0 /* transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent.png; sourceTree = "<group>"; };
 		79EEDAA51C22CF0C00DE767E /* PLProfileEditWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileEditWindow.h; sourceTree = "<group>"; };
 		79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLProfileEditWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -313,11 +316,11 @@
 				3E7849581C4D201900A01DCF /* PLRetrievePrice.m */,
 				3E2AFF0316A5F8B3006D2CB0 /* PLQuickStart1.h */,
 				3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */,
-				7967FB571C47B4DC00EC2C73 /* PLQuickStart1.xib */,
 				796BD9031C4D2E1B0071AE90 /* PLQuickstartWindow.h */,
 				796BD9041C4D2E1B0071AE90 /* PLQuickstartWindow.m */,
 				796BD90B1C4D2F0E0071AE90 /* PLQuickstartView.h */,
 				796BD90C1C4D2F0E0071AE90 /* PLQuickstartView.m */,
+				7967FB571C47B4DC00EC2C73 /* PLQuickStart1.xib */,
 			);
 			name = "Upgrade Splash";
 			path = ..;
@@ -497,6 +500,7 @@
 		3E9AC0C71C3C75EB00DBDBE8 /* imgnew */ = {
 			isa = PBXGroup;
 			children = (
+				79AFB2011C4D939500926CA0 /* transparent.png */,
 				3E7849311C4D018300A01DCF /* upgrade splash screens */,
 				3E7849321C4D01B200A01DCF /* Background help screens */,
 				3E7849331C4D01C400A01DCF /* Upgrade buttons */,
@@ -628,6 +632,7 @@
 				791574ED1C4924FA006B1FC8 /* splashscreen-eng.png in Resources */,
 				3E2770461677E464002DD3DE /* coverdrop.png in Resources */,
 				796BD8F71C4D1FB40071AE90 /* Localizable.strings in Resources */,
+				79AFB2021C4D939500926CA0 /* transparent.png in Resources */,
 				791500851C44E9400007ABDC /* drawerouticon.png in Resources */,
 				3E798B731677F053006F47F5 /* contentdrop.png in Resources */,
 				3E67446A1679448400D99390 /* printer.png in Resources */,
@@ -667,6 +672,7 @@
 				79726EEE1C16ED6E003B85D2 /* pdfletterheadMac.icns in Resources */,
 				791574F31C4924FF006B1FC8 /* splashscreen-eng.png in Resources */,
 				791500861C44E9430007ABDC /* drawerinicon.png in Resources */,
+				79AFB2001C4D36CF00926CA0 /* Localizable.strings in Resources */,
 				79726EF11C16ED6E003B85D2 /* bgdrop.png in Resources */,
 				791500871C44E9460007ABDC /* drawerouticon.png in Resources */,
 				79726EF21C16ED6E003B85D2 /* coverdrop.png in Resources */,
