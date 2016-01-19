@@ -423,8 +423,6 @@
     PLPDFPage       *page;
     PDFDocument     *letterheadPDF;
 
-    NSLog(@"coverimage: %@", [_coverbackgrounddoc image]);
-    NSLog(@"backgroundimage: %@", [_backgrounddoc image]);
 
     // Start with an empty PDFDocument.
     letterheadPDF = [[PDFDocument alloc] init];
@@ -446,6 +444,10 @@
     if(_isSetBackground){
         bgimage = [_backgrounddoc image];
     }
+    else if ([_backgrounddoc image]){
+        bgimage = [_backgrounddoc image];
+    }
+    
     else{
         bgimage = NULL;
         NSBundle* myBundle = [NSBundle mainBundle];
@@ -455,7 +457,7 @@
     }
     
     // Get image.
-    if(_isSetContent){
+    if(_isSetContent || [_sourcedoc image]){
         
         sourceimage = [_sourcedoc image];
         NSString *filePath;
@@ -773,7 +775,6 @@
     }
 
     if (profile) {
-        NSLog(@"lkjlksajdlas");
         [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
         [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
     }

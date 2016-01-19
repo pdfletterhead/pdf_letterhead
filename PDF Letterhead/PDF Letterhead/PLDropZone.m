@@ -28,7 +28,7 @@
 
 - (void)setImage:(NSImage *)newImage{
     
-    NSLog(@"ximage: %@", newImage);
+    //NSLog(@"ximage: %@", newImage);
     
     if (newImage)
     {
