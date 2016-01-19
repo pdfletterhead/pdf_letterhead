@@ -33,7 +33,6 @@
 		3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9850B61BF4E29900D7ABAB /* PLFAQWindowController.m */; };
 		3E9B90041C3AD9B9003D86E0 /* ITSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */; };
 		3E9B90051C3AD9B9003D86E0 /* ITSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */; };
-		3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */; };
 		3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BA16089C21008EA1B1 /* white.pdf */; };
 		3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */; };
 		3EFB08F81615032E006063F9 /* PLPreviewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFB08F71615032E006063F9 /* PLPreviewWindow.m */; };
@@ -117,7 +116,6 @@
 		79726ED91C16ED6E003B85D2 /* PLBottomToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */; };
 		79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
 		79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E798B751677F336006F47F5 /* PLPDFBgView.m */; };
-		79726EDC1C16ED6E003B85D2 /* PLPDFBgAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */; };
 		79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */; };
 		79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9850B61BF4E29900D7ABAB /* PLFAQWindowController.m */; };
 		79726EE21C16ED6E003B85D2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
@@ -183,8 +181,6 @@
 		3E9850B61BF4E29900D7ABAB /* PLFAQWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFAQWindowController.m; sourceTree = "<group>"; };
 		3E9B90021C3AD9B9003D86E0 /* ITSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSwitch.h; sourceTree = "<group>"; };
 		3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSwitch.m; sourceTree = "<group>"; };
-		3E9F2DA91679378E00486537 /* PLPDFBgAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPDFBgAreaView.h; sourceTree = "<group>"; };
-		3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPDFBgAreaView.m; sourceTree = "<group>"; };
 		3EAF7FEE1AB23FE100C4EFB1 /* PDF Letterhead.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "PDF Letterhead.entitlements"; sourceTree = "<group>"; };
 		3EF7E6BA16089C21008EA1B1 /* white.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = white.pdf; sourceTree = "<group>"; };
 		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
@@ -286,8 +282,6 @@
 				3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */,
 				3E6835F51607D22100DDFB82 /* PLPDFPage.h */,
 				3E6835F61607D22100DDFB82 /* PLPDFPage.m */,
-				3E9F2DA91679378E00486537 /* PLPDFBgAreaView.h */,
-				3E9F2DAA1679378E00486537 /* PLPDFBgAreaView.m */,
 				3E6835F21607CC7900DDFB82 /* PLDropZone.h */,
 				3E6835F31607CC7900DDFB82 /* PLDropZone.m */,
 				3E798B741677F336006F47F5 /* PLPDFBgView.h */,
@@ -765,7 +759,6 @@
 				3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */,
 				3E798B761677F336006F47F5 /* PLPDFBgView.m in Sources */,
 				794DA9DD1C3D008E00E64582 /* NSColor+ColorExtensions.m in Sources */,
-				3E9F2DAB1679378E00486537 /* PLPDFBgAreaView.m in Sources */,
 				3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */,
 				3E9850B71BF4E29900D7ABAB /* PLFAQWindowController.m in Sources */,
 			);
@@ -801,7 +794,6 @@
 				79726EDA1C16ED6E003B85D2 /* PLBackgroundDropZoneContainer.m in Sources */,
 				79726EDB1C16ED6E003B85D2 /* PLPDFBgView.m in Sources */,
 				7928A30E1C3D4E8B006BA593 /* NSColor+ColorExtensions.m in Sources */,
-				79726EDC1C16ED6E003B85D2 /* PLPDFBgAreaView.m in Sources */,
 				79726EDF1C16ED6E003B85D2 /* PLQuickStart1.m in Sources */,
 				79726EE01C16ED6E003B85D2 /* PLFAQWindowController.m in Sources */,
 			);

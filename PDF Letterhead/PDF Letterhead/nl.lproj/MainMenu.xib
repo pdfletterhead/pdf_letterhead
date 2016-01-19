@@ -470,7 +470,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp-nl" id="HdR-P0-Wge"/>
                             </imageView>
-                            <customView id="988" customClass="PLPDFBgAreaView">
+                            <customView id="988">
                                 <rect key="frame" x="20" y="66" width="509" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -538,10 +538,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="510" height="413"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                 </textView>
                             </subviews>

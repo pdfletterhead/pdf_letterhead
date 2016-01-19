@@ -470,7 +470,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp-eng" id="HdR-P0-Wge"/>
                             </imageView>
-                            <customView id="988" customClass="PLPDFBgAreaView">
+                            <customView id="988">
                                 <rect key="frame" x="20" y="66" width="509" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>

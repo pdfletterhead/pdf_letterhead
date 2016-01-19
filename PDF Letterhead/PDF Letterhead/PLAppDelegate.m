@@ -769,7 +769,6 @@
         if (recentProfile != NULL) {
             [[NSUserDefaults standardUserDefaults] setURL:recentProfile forKey:@"recentProfile"];
             [[NSUserDefaults standardUserDefaults] synchronize];
-
         }
     }
 
