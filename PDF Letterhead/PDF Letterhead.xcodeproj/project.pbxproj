@@ -281,6 +281,7 @@
 		3E27702A1677D726002DD3DE /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
+				3EA26AD61C4E423A00B6BE7A /* drawer */,
 				3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */,
 				3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */,
 				3E6835F51607D22100DDFB82 /* PLPDFPage.h */,
@@ -295,16 +296,8 @@
 				3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */,
 				3E2770381677DC2D002DD3DE /* PLBottomToolbarView.h */,
 				3E2770391677DC2D002DD3DE /* PLBottomToolbarView.m */,
-				79182E331C3BD26D00ABDDD9 /* PLTableRowView.h */,
-				79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */,
 				7928A3151C3D546F006BA593 /* PLImageView.h */,
 				7928A3161C3D546F006BA593 /* PLImageView.m */,
-				791500931C4519D00007ABDC /* PLTextFieldCell.h */,
-				791500941C4519D00007ABDC /* PLTextFieldCell.m */,
-				79527AAF1C4553EA0030D6F9 /* PLTableCellView.h */,
-				79527AB01C4553EA0030D6F9 /* PLTableCellView.m */,
-				79527AB31C45565B0030D6F9 /* PLButtonCell.h */,
-				79527AB41C45565B0030D6F9 /* PLButtonCell.m */,
 			);
 			name = MainWindow;
 			sourceTree = "<group>";
@@ -516,6 +509,21 @@
 				3E9B90031C3AD9B9003D86E0 /* ITSwitch.m */,
 			);
 			name = ITSwitch;
+			sourceTree = "<group>";
+		};
+		3EA26AD61C4E423A00B6BE7A /* drawer */ = {
+			isa = PBXGroup;
+			children = (
+				79182E331C3BD26D00ABDDD9 /* PLTableRowView.h */,
+				79182E341C3BD26D00ABDDD9 /* PLTableRowView.m */,
+				791500931C4519D00007ABDC /* PLTextFieldCell.h */,
+				791500941C4519D00007ABDC /* PLTextFieldCell.m */,
+				79527AAF1C4553EA0030D6F9 /* PLTableCellView.h */,
+				79527AB01C4553EA0030D6F9 /* PLTableCellView.m */,
+				79527AB31C45565B0030D6F9 /* PLButtonCell.h */,
+				79527AB41C45565B0030D6F9 /* PLButtonCell.m */,
+			);
+			name = drawer;
 			sourceTree = "<group>";
 		};
 		79B9AC8A1C18851900B260F6 /* ProfilesWindow */ = {

@@ -28,7 +28,7 @@
 
 - (void)setImage:(NSImage *)newImage{
     
-    NSLog(@"image: %@", newImage);
+    NSLog(@"ximage: %@", newImage);
     
     if (newImage)
     {
@@ -76,7 +76,8 @@
         }
     }
     [super setImage:newImage];
-        
+    [(PLAppDelegate *)[NSApp delegate] renderPDF];
+    
 }
 
 - (void)dropAreaFadeIn
@@ -139,7 +140,7 @@
                 self.sourcefilepath = [files lastObject];
                 [self setPdfFilepath:[self sourcefilepath]];
                 
-                [(PLAppDelegate *)[NSApp delegate] renderPDF];
+  //              [(PLAppDelegate *)[NSApp delegate] renderPDF];
                 
                 return YES;
                 
@@ -174,7 +175,7 @@
                     }
                 }
                 
-                [(PLAppDelegate *)[NSApp delegate] renderPDF];
+  //              [(PLAppDelegate *)[NSApp delegate] renderPDF];
                 
                 return YES;
             }

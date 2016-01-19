@@ -385,6 +385,7 @@
 
 - (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
 {
+
     PLTableRowView *rowView = [[PLTableRowView alloc]init];
     return rowView;
 }
@@ -400,11 +401,18 @@
         dispatch_async( dispatch_get_main_queue(), ^{
         
             [[self PDFView] setDocument:document];
+            [[self previewView] setDocument:document];
             _letterheadPDF = document;
+            if(_isSetContent){
+                [[self PDFView] setHidden:NO];
+            }
+            else
+            {
+                [[self PDFView] setHidden:YES];
+            }
             
         });
     });
-    
 }
 
 -(PDFDocument*)renderDocument {
@@ -485,13 +493,13 @@
             NSImage *image = [[NSImage alloc] initWithData:[currentPage dataRepresentation]];
             
             if(_coverEnabled && y==0){
-                // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
+                // Create our custom PDFPage subclass (pass it an image and the month it is to represent).f
                 page = [[PLPDFPage alloc] initWithBGImage: cvrimage sourceDoc: image label:[currentPage label]];
-                
             }
             else{
                 // Create our custom PDFPage subclass (pass it an image and the month it is to represent).
                 page = [[PLPDFPage alloc] initWithBGImage: bgimage sourceDoc: image label:[currentPage label]];
+
             }
             
             // Insert the new page in our PDF document.
@@ -520,26 +528,28 @@
 
 -(BOOL)allowSetPreview{
     
+    BOOL allow = NO;
     if(!_isSetContent)
     {
-        return NO;
+        allow = NO;
     }
     else{
         //LAZY CHECKING, ONLY CONTENT DOCUMENT IS NEEDED
-        return YES;
+        allow = YES;
     }
     
     if(!_coverEnabled && _isSetBackground)
     {
-        return YES;
+        allow = YES;
     }
     
     if(_coverEnabled && _isSetCover && _isSetBackground)
     {
-        return YES;
+        allow = YES;
     }
     
-    return NO;
+    NSLog(@"allow: %hhd", allow);
+    return allow;
 }
 
 - (IBAction)showMainWindow: (id) sender{
@@ -718,7 +728,7 @@
 
 - (void) selectRow:(Profile*)profile {
     
-    
+
     NSArray *selectedItems = [NSArray arrayWithObject:profile];
     
     [[self pArrayController] setSelectedObjects:selectedItems];
