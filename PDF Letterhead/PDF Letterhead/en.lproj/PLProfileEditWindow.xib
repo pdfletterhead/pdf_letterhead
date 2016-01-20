@@ -65,7 +65,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eol-5a-vEA">
                                 <rect key="frame" x="-4" y="15" width="198" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop following backgrounds here" id="cMU-MC-Pwv">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop following background here" id="cMU-MC-Pwv">
                                     <font key="font" metaFont="systemLight" size="11"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

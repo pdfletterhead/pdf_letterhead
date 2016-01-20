@@ -21,13 +21,13 @@
 "Drop background images here" = "Sleep briefpapier";
 
 /* Create new Letterhead Message */
-"Enter a name for the new letterhead" = "Voer een naam in.";
+"Enter a name for the new letterhead" = "Voer een naam in";
 
 /* No comment provided by engineer. */
 "Following" = "Volgpagina's";
 
 /* Subject for Email */
-"My PDF" = "Mijn PDF";
+"My PDF" = "Mijn pdf";
 
 /* OK button */
 "OK" = "OK";

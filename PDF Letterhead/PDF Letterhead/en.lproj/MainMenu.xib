@@ -392,15 +392,6 @@
                         <rect key="frame" x="20" y="93" width="214" height="290"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" id="983">
-                                <rect key="frame" x="33" y="24" width="149" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop content PDF Here" id="984">
-                                    <font key="font" metaFont="systemLight" size="14"/>
-                                    <color key="textColor" white="0.14337224768312185" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <imageView identifier="sourceDropArea" focusRingType="none" tag="2" id="561" customClass="PLDropZone">
                                 <rect key="frame" x="27" y="70" width="160" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -409,6 +400,15 @@
                                     <outlet property="menu" destination="839" id="849"/>
                                 </connections>
                             </imageView>
+                            <textField verticalHuggingPriority="750" id="983">
+                                <rect key="frame" x="32" y="20" width="151" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop content PDF here" id="984">
+                                    <font key="font" metaFont="systemLight" size="14"/>
+                                    <color key="textColor" white="0.14337224768312185" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </customView>
                     <customView id="985" customClass="PLPDFBgView">
