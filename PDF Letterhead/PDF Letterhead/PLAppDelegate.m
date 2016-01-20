@@ -26,8 +26,6 @@
 @property (weak) IBOutlet NSSegmentedControl *segmentedControl;
 @property (weak) IBOutlet PDFView *PDFView;
 @property (weak) IBOutlet NSTextField *dropDescription;
-@property BOOL rendering;
-
 
 @end
 
@@ -66,7 +64,6 @@
     [self moveInterfaceElements];
 #endif
     
-    _rendering = NO;
     _isSetContent = NO;
     
     [[self PDFView] setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
@@ -406,10 +403,20 @@
             _letterheadPDF = document;
             if(_isSetContent){
                 [[self PDFView] setHidden:NO];
+                [mailButton3 setHidden:NO];
+                [saveButton3 setHidden:NO];
+                [printButton3 setHidden:NO];
+                [previewButton3 setHidden:NO];
+
             }
             else
             {
                 [[self PDFView] setHidden:YES];
+                [mailButton3 setHidden:YES];
+                [saveButton3 setHidden:YES];
+                [printButton3 setHidden:YES];
+                [previewButton3 setHidden:YES];
+
             }
             
         });
@@ -650,15 +657,17 @@
 
    
     NSLog(@"email: %@", newFileName);
-    NSAppleScript *mailScript;
     NSURL * tmpFileUrl = [NSURL fileURLWithPath:newFileName isDirectory:NO];
 	[_letterheadPDF writeToURL:tmpFileUrl];
     NSString * subject = NSLocalizedString(@"My PDF", @"Subject for Email");
     NSString * body = NSLocalizedString(@"", @"Body for Email");
     
-    NSString *scriptString= [NSString stringWithFormat:@"set theAttachment to \"%@\"\nset the new_path to POSIX file theAttachment\ntell application \"Mail\"\nset theNewMessage to make new outgoing message with properties {subject:\"%@\", content:\"%@\" & return & return, visible:true}\n tell theNewMessage\ntry\nmake new attachment with properties {file name:new_path} at after the last word of the last paragraph\nend try\nend tell\nactivate\nend tell",newFileName,subject,body];
-    mailScript = [[NSAppleScript alloc] initWithSource:scriptString];
-    [mailScript executeAndReturnError:nil];
+    NSString* textAttributedString = body;
+    
+    NSSharingService* mailShare = [NSSharingService sharingServiceNamed:NSSharingServiceNameComposeEmail];
+    NSArray* shareItems = @[textAttributedString,tmpFileUrl];
+    [mailShare setSubject:subject];
+    [mailShare performWithItems:shareItems];
 }
 
 
@@ -842,51 +851,6 @@
     }
     
     return YES;
-}
-
--(void)enableActions:(BOOL)enabled {
-    if(enabled) {
-        [_mailButton1 setEnabled:YES];
-        [_mailButton2 setEnabled:YES];
-        [_saveButton1 setEnabled:YES];
-        [_saveButton2 setEnabled:YES];
-        [_printButton1 setEnabled:YES];
-        [_printButton2 setEnabled:YES];
-        [_previewButton1 setEnabled:YES];
-        [_previewButton2 setEnabled:YES];
-        
-        [previewButton3 setEnabled:YES];
-        [mailButton3 setEnabled:YES];
-        [saveButton3 setEnabled:YES];
-        [printButton3 setEnabled:YES];
-        
-        [mailButton3 setHidden:NO];
-        [saveButton3 setHidden:NO];
-        [printButton3 setHidden:NO];
-        [previewButton3 setHidden:NO];
-        [[self PDFView] setHidden:NO];
-    }
-    else{
-        [_mailButton1 setEnabled:NO];
-        [_mailButton2 setEnabled:NO];
-        [_saveButton1 setEnabled:NO];
-        [_saveButton2 setEnabled:NO];
-        [_printButton1 setEnabled:NO];
-        [_printButton2 setEnabled:NO];
-        [_previewButton1 setEnabled:NO];
-        [_previewButton2 setEnabled:NO];
-        
-        [mailButton3 setEnabled:NO];
-        [saveButton3 setEnabled:NO];
-        [printButton3 setEnabled:NO];
-        [previewButton3 setEnabled:NO];
-        
-        [mailButton3 setHidden:YES];
-        [saveButton3 setHidden:YES];
-        [printButton3 setHidden:YES];
-        [previewButton3 setHidden:YES];
-        [[self PDFView] setHidden:YES];
-    }
 }
 
 - (void) disableProFeatures {
@@ -1103,7 +1067,7 @@
     if (flag) {
         return NO;
     } else {
-        [self showMainWindow:self];
+        [ _pdfWindow makeKeyAndOrderFront:self];
         return YES;
     }
 }
