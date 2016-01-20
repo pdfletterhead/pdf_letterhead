@@ -236,6 +236,7 @@
                                                      blue:(CGFloat)blueByte / 0xff
                                                     alpha:1.0];
     [_coverswitch3 setTintColor: blueColor];
+    [_coverswitch3 setFocusRingType:NSFocusRingTypeNone];
     
     [self coverControlAction:_coverswitch3];
 }
