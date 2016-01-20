@@ -58,8 +58,10 @@
     [self disableProFeatures];
     
     //try to retrieve app price
-    _retrievePrice = [[PLRetrievePrice alloc] initWithAppId:@422876559];
-    //_retrievePrice = [[PLRetrievePrice alloc] initWithAppId:@1075794517];
+    //Test ID:
+    //_retrievePrice = [[PLRetrievePrice alloc] initWithAppId:@422876559];
+    
+    _retrievePrice = [[PLRetrievePrice alloc] initWithAppId:@1075794517];
 
     [self moveInterfaceElements];
 #endif
@@ -1064,12 +1066,8 @@
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
 {
-    if (flag) {
-        return NO;
-    } else {
         [ _pdfWindow makeKeyAndOrderFront:self];
         return YES;
-    }
 }
 
 

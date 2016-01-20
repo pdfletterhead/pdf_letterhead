@@ -291,11 +291,11 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="237" y="273" width="800" height="688"/>
+            <rect key="contentRect" x="237" y="273" width="708" height="688"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
-            <value key="minSize" type="size" width="800" height="688"/>
+            <value key="minSize" type="size" width="708" height="688"/>
             <view key="contentView" id="590" customClass="PLMainWindowView">
-                <rect key="frame" x="0.0" y="0.0" width="800" height="688"/>
+                <rect key="frame" x="0.0" y="0.0" width="708" height="688"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView canDrawConcurrently="YES" focusRingType="none" id="939" userLabel="PLBackgroundDropZoneContainer" customClass="PLBackgroundDropZoneContainer">
@@ -354,7 +354,7 @@
                                 <rect key="frame" x="12" y="55" width="191" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Sleep briefpapier" id="1011">
-                                    <font key="font" metaFont="systemLight" size="13"/>
+                                    <font key="font" metaFont="systemLight" size="14"/>
                                     <color key="textColor" white="0.19670197147651006" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -412,14 +412,14 @@
                         </subviews>
                     </customView>
                     <customView id="985" customClass="PLPDFBgView">
-                        <rect key="frame" x="251" y="0.0" width="549" height="688"/>
+                        <rect key="frame" x="251" y="0.0" width="457" height="688"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <customView id="894" userLabel="ButtonToolbar">
-                                <rect key="frame" x="72" y="0.0" width="406" height="46"/>
+                                <rect key="frame" x="26" y="0.0" width="406" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" id="897" customClass="KBButton">
+                                    <button hidden="YES" verticalHuggingPriority="750" id="897" customClass="KBButton">
                                         <rect key="frame" x="205" y="12" width="95" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <buttonCell key="cell" type="square" title="  E-mail" bezelStyle="shadowlessSquare" image="mail" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="898">
@@ -430,7 +430,7 @@
                                             <action selector="saveEmail:" target="494" id="1001"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="991" customClass="KBButton">
+                                    <button hidden="YES" verticalHuggingPriority="750" id="991" customClass="KBButton">
                                         <rect key="frame" x="102" y="11" width="95" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <buttonCell key="cell" type="square" title="Opslaan" bezelStyle="shadowlessSquare" image="save" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="992">
@@ -441,7 +441,7 @@
                                             <action selector="saveAs:" target="494" id="1000"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="993" customClass="KBButton">
+                                    <button hidden="YES" verticalHuggingPriority="750" id="993" customClass="KBButton">
                                         <rect key="frame" x="1" y="11" width="95" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <buttonCell key="cell" type="square" title="Voorbeeld" bezelStyle="shadowlessSquare" image="mag" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="994">
@@ -452,7 +452,7 @@
                                             <action selector="openPreview:" target="494" id="1002"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" id="995" customClass="KBButton">
+                                    <button hidden="YES" verticalHuggingPriority="750" id="995" customClass="KBButton">
                                         <rect key="frame" x="308" y="11" width="95" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <buttonCell key="cell" type="square" title="Afdrukken" bezelStyle="shadowlessSquare" image="print" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="996">
@@ -471,11 +471,11 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp-nl" id="HdR-P0-Wge"/>
                             </imageView>
                             <customView id="988">
-                                <rect key="frame" x="20" y="66" width="509" height="601"/>
+                                <rect key="frame" x="20" y="66" width="417" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <pdfView autoresizesSubviews="NO" focusRingType="none" autoScales="YES" id="Eq1-xt-nE8">
-                                        <rect key="frame" x="0.0" y="0.0" width="509" height="601"/>
+                                    <pdfView hidden="YES" autoresizesSubviews="NO" focusRingType="none" autoScales="YES" id="Eq1-xt-nE8">
+                                        <rect key="frame" x="0.0" y="0.0" width="420" height="600"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </pdfView>
                                 </subviews>
