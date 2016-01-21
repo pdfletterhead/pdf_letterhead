@@ -408,7 +408,7 @@
             [[self PDFView] setDocument:document];
             [[self previewView] setDocument:document];
             _letterheadPDF = document;
-            if(_isSetContent){
+            if([_sourcedoc image]){
                 [[self PDFView] setHidden:NO];
                 [mailButton3 setHidden:NO];
                 [saveButton3 setHidden:NO];
@@ -466,7 +466,7 @@
     }
     
     // Get image.
-    if(_isSetContent || [_sourcedoc image]){
+    if([_sourcedoc image]){
         
         sourceimage = [_sourcedoc image];
         NSString *filePath;
