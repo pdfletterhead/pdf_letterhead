@@ -39,6 +39,7 @@
 
 - (IBAction)buyNowAction:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.pdfletterhead.net/?utm_source=splashscreen&utm_medium=app&utm_campaign=letterhead-app"]];
+    [self close];
 }
 
 

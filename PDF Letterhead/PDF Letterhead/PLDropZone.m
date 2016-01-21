@@ -200,8 +200,6 @@
 
 -(BOOL) setPdfFilepath:(NSString*)path{
     
-    NSLog(@"path: %@", path);
-    
     if (path == nil) {
         [self setImage:nil];
         return YES;
@@ -213,12 +211,21 @@
         [str insertString:word atIndex:0];
     }
     
-    NSString *encodedString = [str stringByAddingPercentEscapesUsingEncoding : NSUTF8StringEncoding];
-    
-    NSLog(@"str: %@", encodedString);
+    NSString *encodedString;
+    NSString *decoded = [path stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+    if ([path isEqualToString:decoded]) {
+        encodedString = [str stringByAddingPercentEscapesUsingEncoding : NSUTF8StringEncoding];
+    } else {
+        encodedString = path;
+    }
+
+    NSLog(@"encodedstr: %@", encodedString);
     
     NSURL *data = [NSURL URLWithString:encodedString];
     NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
+    
+    NSLog(@"image: %@", zNewImage);
     
     [self setImage:zNewImage];
     

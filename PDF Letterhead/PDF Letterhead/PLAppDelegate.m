@@ -168,7 +168,6 @@
     if ([openPanel runModal] == NSOKButton)
     {
         NSString *tvarFilename = [[openPanel URL] path];
-        NSLog(@"file: %@", tvarFilename);
         NSString *ext = [[tvarFilename pathExtension] lowercaseString ];
 
         if([[theView identifier] isEqualToString:@"sourceDropArea"])
@@ -656,8 +655,6 @@
         newFileName = [ [_tmpDirectoryURL path] stringByAppendingPathComponent:tmpName];
     }
 
-   
-    NSLog(@"email: %@", newFileName);
     NSURL * tmpFileUrl = [NSURL fileURLWithPath:newFileName isDirectory:NO];
 	[_letterheadPDF writeToURL:tmpFileUrl];
     NSString * subject = NSLocalizedString(@"My PDF", @"Subject for Email");
@@ -681,8 +678,6 @@
 }
 
 - (void)sharingService:(NSSharingService *)sharingService didFailToShareItems:(NSArray *)items error:(NSError *)error {
-    
-    NSLog(@"error: %@", error);
     
     if (error) {
         
@@ -711,6 +706,8 @@
     } else {
         [[self noItemsView] setHidden:YES];
     }
+    
+    [self checkSegment];
 }
 
 - (NSString*)returnDateNow {
@@ -736,8 +733,10 @@
         newProfile.coverImagePath = [[self profileEditWindow] saveImage:[[self coverbackgrounddoc] image] :newProfile :@"cover"];
         newProfile.lastUpdated = dateString;
         
-        [self checkProfiles];
+        [self saveManagedObjectContext];
         [self selectRow:newProfile];
+        [self checkProfiles];
+
     }
 
 }
@@ -764,15 +763,40 @@
 }
 
 - (void) selectRow:(Profile*)profile {
-    
-
     NSArray *selectedItems = [NSArray arrayWithObject:profile];
     
     [[self pArrayController] setSelectedObjects:selectedItems];
+    
+    [self saveRecentProfile :profile];
+}
+
+- (void) saveRecentProfile :(Profile *)profile {
+    
+    NSManagedObjectID *objID = profile.objectID;
+    NSURL *recentProfile = [objID URIRepresentation];
+    
+    [[NSUserDefaults standardUserDefaults] setURL:recentProfile forKey:@"recentProfile"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
+- (Profile*) setRecentProfile {
+    Profile *profile;
+    
+    //set previous profile
+    NSURL *url = [[NSUserDefaults standardUserDefaults] URLForKey:@"recentProfile"];
+    NSLog(@"url: %@", url);
+    if (url) {
+        NSManagedObjectID *objID = [[[self managedObjectContext] persistentStoreCoordinator] managedObjectIDForURIRepresentation:url];
+        profile = [[self managedObjectContext] objectWithID:objID];
+        NSLog(@"profile: %@", profile);
+        [self checkProfiles];
+        [self selectRow:profile];
+    }
+    return profile;
 }
 
 - (void) checkSegment {
-    
     if ([_drawerTableView selectedRow] == -1) {
         [[self segmentedControl] setEnabled:NO forSegment:1];
     } else {
@@ -782,38 +806,25 @@
 
 - (IBAction)selectProfile:(id)sender {
     
-    [self checkSegment];
-    
     //save moc intermittently
     [self saveManagedObjectContext];
     
     Profile *profile = [self getCurrentProfile];
-
+    
     if (sender == nil && profile == nil) {
-        
-        //set previous profile
-        NSURL *url = [[NSUserDefaults standardUserDefaults] URLForKey:@"recentProfile"];
-        if (url) {
-            NSManagedObjectID *objID = [[[self managedObjectContext] persistentStoreCoordinator] managedObjectIDForURIRepresentation:url];
-            profile = [[self managedObjectContext] objectWithID:objID];
-            [self checkProfiles];
-            [self selectRow:profile];
-        }
+        profile = [self setRecentProfile];
     } else {
-        NSManagedObjectID *objID = profile.objectID;
-        NSURL *recentProfile = [objID URIRepresentation];
-        
-        if (recentProfile != NULL) {
-            [[NSUserDefaults standardUserDefaults] setURL:recentProfile forKey:@"recentProfile"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
+        [self saveRecentProfile:profile];
     }
+    
+    NSLog(@"profile: %@", profile);
 
     if (profile) {
         [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
         [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
     }
     
+    [self checkSegment];
     [self renderPDF];
 
 }
@@ -853,11 +864,13 @@
             if ([alert runModal] == NSAlertFirstButtonReturn) {
                 NSUInteger index = [self.pArrayController selectionIndex];
                 [self.pArrayController removeObjectAtArrangedObjectIndex:index];
+                [self saveRecentProfile:nil];
             }
         }
     }
 
     [self checkProfiles];
+    [self checkSegment];
 }
 
 - (BOOL)validateMenuItem:(NSMenuItem *)item
