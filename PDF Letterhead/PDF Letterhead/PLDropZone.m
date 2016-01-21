@@ -138,9 +138,11 @@
             if ([ext isEqual:@"pdf"]){
                 
                 self.sourcefilepath = [files lastObject];
-                [self setPdfFilepath:[self sourcefilepath]];
+                BOOL ok = [self setPdfFilepath:[self sourcefilepath]];
                 
-                [(PLAppDelegate *)[NSApp delegate] renderPDF];
+                if (ok) {
+                    [(PLAppDelegate *)[NSApp delegate] renderPDF];
+                }
                 
                 return YES;
                 
@@ -156,9 +158,10 @@
             if ([validImageExtensions containsObject:ext])
             {
                 self.sourcefilepath = [files lastObject];
-                [self setPdfFilepath:[self sourcefilepath]];
+                BOOL ok = [self setPdfFilepath:[self sourcefilepath]];
                 
                 //Check if we are editing a current profile
+#ifdef PRO
                 Profile *loadedProfile = [delegate performSelector:@selector(returnLoadedProfile)];
                 PLProfileEditWindow *openedEditWindow = delegate.profileEditWindow;
                 
@@ -174,8 +177,11 @@
                         [openedEditWindow saveImage:newImage :loadedProfile :@"background"];
                     }
                 }
+#endif
                 
-                [(PLAppDelegate *)[NSApp delegate] renderPDF];
+                if (ok) {
+                    [(PLAppDelegate *)[NSApp delegate] renderPDF];
+                }
                 
                 return YES;
             }
@@ -194,6 +200,8 @@
 
 -(BOOL) setPdfFilepath:(NSString*)path{
     
+    NSLog(@"path: %@", path);
+    
     if (path == nil) {
         [self setImage:nil];
         return YES;
@@ -204,7 +212,12 @@
     if ([str rangeOfString:word].location == NSNotFound) {
         [str insertString:word atIndex:0];
     }
-    NSURL *data = [NSURL URLWithString:str];
+    
+    NSString *encodedString = [str stringByAddingPercentEscapesUsingEncoding : NSUTF8StringEncoding];
+    
+    NSLog(@"str: %@", encodedString);
+    
+    NSURL *data = [NSURL URLWithString:encodedString];
     NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
     
     [self setImage:zNewImage];
