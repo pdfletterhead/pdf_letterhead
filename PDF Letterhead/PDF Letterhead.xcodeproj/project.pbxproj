@@ -96,8 +96,6 @@
 		7967FB531C47B3D100EC2C73 /* newsaveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7967FB511C47B31E00EC2C73 /* newsaveicon.png */; };
 		7967FB541C47B4DC00EC2C73 /* PLQuickStart1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7967FB571C47B4DC00EC2C73 /* PLQuickStart1.xib */; };
 		7967FB551C47B4DC00EC2C73 /* PLQuickStart1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7967FB571C47B4DC00EC2C73 /* PLQuickStart1.xib */; };
-		796BD8ED1C4D1FB30071AE90 /* PDF Letterhead LitePlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8EF1C4D1FB30071AE90 /* PDF Letterhead LitePlist.strings */; };
-		796BD8F21C4D1FB40071AE90 /* PDF Letterhead ProPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8F41C4D1FB40071AE90 /* PDF Letterhead ProPlist.strings */; };
 		796BD8F71C4D1FB40071AE90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8F91C4D1FB40071AE90 /* Localizable.strings */; };
 		796BD9051C4D2E1B0071AE90 /* PLQuickstartWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BD9041C4D2E1B0071AE90 /* PLQuickstartWindow.m */; };
 		796BD9061C4D2E1B0071AE90 /* PLQuickstartWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 796BD9041C4D2E1B0071AE90 /* PLQuickstartWindow.m */; };
@@ -127,10 +125,10 @@
 		79726EF91C16ED6E003B85D2 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
 		79726EFB1C16ED6E003B85D2 /* saveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E67446D16794BE400D99390 /* saveicon.png */; };
 		79AFB2001C4D36CF00926CA0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8F91C4D1FB40071AE90 /* Localizable.strings */; };
+		79BF0B521C50E8400034EA4C /* PDF Letterhead LitePlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8EF1C4D1FB30071AE90 /* PDF Letterhead LitePlist.strings */; };
+		79BF0B531C50E8430034EA4C /* PDF Letterhead ProPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8F41C4D1FB40071AE90 /* PDF Letterhead ProPlist.strings */; };
 		79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
 		79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
-		79F384571C4FE34000B66585 /* PDF Letterhead Pro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */; };
-		79F384581C4FE34400B66585 /* PDF Letterhead Lite.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E6835CD1607C90400DDFB82 /* PDF Letterhead Lite.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -616,7 +614,6 @@
 				791574EA1C4924FA006B1FC8 /* splashscreen-nl.png in Resources */,
 				791574EF1C4924FA006B1FC8 /* upgradebutton-nl.png in Resources */,
 				79368AE11C3D710F0009DA2C /* Lite Icons.xcassets in Resources */,
-				79F384581C4FE34400B66585 /* PDF Letterhead Lite.plist in Resources */,
 				3E6835D61607C90400DDFB82 /* Credits.rtf in Resources */,
 				79527ABB1C4559D50030D6F9 /* pencilgray.png in Resources */,
 				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
@@ -641,7 +638,7 @@
 				791574EB1C4924FA006B1FC8 /* bghelp-eng.png in Resources */,
 				7928A3081C3D4D52006BA593 /* mail.png in Resources */,
 				7928A3091C3D4D52006BA593 /* print.png in Resources */,
-				796BD8ED1C4D1FB30071AE90 /* PDF Letterhead LitePlist.strings in Resources */,
+				79BF0B521C50E8400034EA4C /* PDF Letterhead LitePlist.strings in Resources */,
 				7961490A1C4407CA002E7462 /* closebutton.png in Resources */,
 				7928A30B1C3D4D52006BA593 /* pencil.png in Resources */,
 				7928A30A1C3D4D52006BA593 /* save.png in Resources */,
@@ -653,7 +650,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				791574F01C4924FF006B1FC8 /* splashscreen-nl.png in Resources */,
-				79F384571C4FE34000B66585 /* PDF Letterhead Pro.plist in Resources */,
 				791574F51C4924FF006B1FC8 /* upgradebutton-nl.png in Resources */,
 				79726EE71C16ED6E003B85D2 /* Credits.rtf in Resources */,
 				7928A3121C3D4FC9006BA593 /* save.png in Resources */,
@@ -668,7 +664,7 @@
 				79726EF11C16ED6E003B85D2 /* bgdrop.png in Resources */,
 				791500871C44E9460007ABDC /* drawerouticon.png in Resources */,
 				79726EF21C16ED6E003B85D2 /* coverdrop.png in Resources */,
-				796BD8F21C4D1FB40071AE90 /* PDF Letterhead ProPlist.strings in Resources */,
+				79BF0B531C50E8430034EA4C /* PDF Letterhead ProPlist.strings in Resources */,
 				79368AE31C3D716E0009DA2C /* Pro Icons.xcassets in Resources */,
 				791574F21C4924FF006B1FC8 /* bghelp-nl.png in Resources */,
 				791574F41C4924FF006B1FC8 /* upgradebutton-eng.png in Resources */,
