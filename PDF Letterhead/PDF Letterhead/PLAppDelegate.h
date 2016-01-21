@@ -15,7 +15,7 @@
 
 
 
-@interface PLAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
+@interface PLAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate, NSSharingServiceDelegate>
 {
     BOOL _setView;
 }

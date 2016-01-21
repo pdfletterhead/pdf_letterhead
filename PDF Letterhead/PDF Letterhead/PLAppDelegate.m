@@ -143,14 +143,17 @@
 
 - (IBAction)doDelForCover:(id)sender {
     [_coverbackgrounddoc setImage:nil];
+    [self renderPDF];
 }
 
 - (IBAction)doDelForBG:(id)sender {
     [_backgrounddoc setImage:nil];
+    [self renderPDF];
 }
 
 - (IBAction)doDelForContentDoc:(id)sender {
     [_sourcedoc setImage:nil];
+    [self renderPDF];
 }
 
 - (void)doOpenFileForImageView:(PLDropZone*)theView {
@@ -173,6 +176,7 @@
             if ([ext isEqual:@"pdf"]){
                 
                 [theView setPdfFilepath:tvarFilename];
+                [self renderPDF];
             }
             else {
                 NSLog(@"invalid filetype, no PDF");
@@ -184,6 +188,7 @@
             if ([validImageExtensions containsObject:ext])
             {
                 [theView setPdfFilepath:tvarFilename];
+                [self renderPDF];
             }
             else {
                 NSLog(@"invalid filetype, no IMAGE");
@@ -439,26 +444,20 @@
     
     if(_coverEnabled){
         
-        if(_isSetCover){
-            cvrimage = [_coverbackgrounddoc image];
-        }
-        else{
+        
+        cvrimage = [_coverbackgrounddoc image];
+        if (!cvrimage) {
             cvrimage = NULL;
             NSBundle* myBundle = [NSBundle mainBundle];
             NSString* myImagePath = [myBundle pathForResource:@"white" ofType:@"pdf"];
             
             cvrimage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
         }
+        
     }
-    
-    if(_isSetBackground){
-        bgimage = [_backgrounddoc image];
-    }
-    else if ([_backgrounddoc image]){
-        bgimage = [_backgrounddoc image];
-    }
-    
-    else{
+  
+    bgimage = [_backgrounddoc image];
+    if (!bgimage) {
         bgimage = NULL;
         NSBundle* myBundle = [NSBundle mainBundle];
         NSString* myImagePath = [myBundle pathForResource:@"white" ofType:@"pdf"];
@@ -667,9 +666,33 @@
     NSString* textAttributedString = body;
     
     NSSharingService* mailShare = [NSSharingService sharingServiceNamed:NSSharingServiceNameComposeEmail];
+    mailShare.delegate = self;
     NSArray* shareItems = @[textAttributedString,tmpFileUrl];
     [mailShare setSubject:subject];
     [mailShare performWithItems:shareItems];
+
+}
+- (void)sharingService:(NSSharingService *)sharingService willShareItems:(NSArray *)items {
+    //
+}
+
+- (void)sharingService:(NSSharingService *)sharingService didShareItems:(NSArray *)items {
+    //
+}
+
+- (void)sharingService:(NSSharingService *)sharingService didFailToShareItems:(NSArray *)items error:(NSError *)error {
+    
+    NSLog(@"error: %@", error);
+    
+    if (error) {
+        
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", @"OK button")];
+        [alert setMessageText:NSLocalizedString(@"Mail application could not be reached", @"Mail share error title")];
+        [alert setInformativeText:NSLocalizedString(@"Make sure that the application is correctly configured for sharing", @"Mail share error description")];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        
+    }
 }
 
 
