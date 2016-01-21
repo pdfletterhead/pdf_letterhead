@@ -16,9 +16,6 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
 	
 	_bgimage = [bgimage copy];
 	_frontimage = [sourceimage copy];
-    
-
-    
 	_label = [label copy];
     
 	return self;
@@ -58,17 +55,13 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
 	// Scale and center image within top half of page.
 	destRect = sourceRect;
 	fitRectInRect(&destRect, topHalf);
-	
-	// Draw.
-//	[_bgimage drawInRect: destRect fromRect: sourceRect operation: NSCompositeSourceOver fraction: 1.0];
-
+    
     [_bgimage drawInRect: destRect fromRect: sourceRect operation: NSCompositeSourceOver fraction: 1.0];
 
     if(_frontimage){
 
        [_frontimage drawInRect: destRect fromRect: sourceRect operation: NSCompositeSourceOver fraction: 1.0];
     }
-
 }
 
 static void fitRectInRect (NSRect *srcRect, NSRect destRect)
