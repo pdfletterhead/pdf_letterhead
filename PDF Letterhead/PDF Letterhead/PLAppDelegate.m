@@ -9,6 +9,7 @@
 #import "PLPDFPage.h"
 #import "Profile.h"
 #import "PLTableRowView.h"
+
 #include "PLProfileEditWindow.h"
 
 
@@ -53,6 +54,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    
+    
+
+    
     
 #ifdef LITE
     [self disableProFeatures];

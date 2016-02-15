@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		314D1E7651F68C9F5055A6FF /* libPods-PDF Letterhead Pro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCA531AEA0A2626161B1981 /* libPods-PDF Letterhead Pro.a */; };
 		3E2770421677E336002DD3DE /* PLBackgroundDropZoneContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */; };
 		3E2770451677E464002DD3DE /* bgdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770431677E463002DD3DE /* bgdrop.png */; };
 		3E2770461677E464002DD3DE /* coverdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2770441677E463002DD3DE /* coverdrop.png */; };
 		3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */; };
 		3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
 		3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
+		3E601B191C7231E00086FB5A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E601B181C7231E00086FB5A /* libz.1.dylib */; };
+		3E601B1A1C7231F30086FB5A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E601B181C7231E00086FB5A /* libz.1.dylib */; };
 		3E67446A1679448400D99390 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
 		3E67446E16794BE400D99390 /* saveicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E67446D16794BE400D99390 /* saveicon.png */; };
 		3E6835C61607C90400DDFB82 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6835C51607C90400DDFB82 /* Cocoa.framework */; };
@@ -129,9 +132,11 @@
 		79BF0B531C50E8430034EA4C /* PDF Letterhead ProPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 796BD8F41C4D1FB40071AE90 /* PDF Letterhead ProPlist.strings */; };
 		79EEDAA71C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
 		79EEDAA81C22CF0C00DE767E /* PLProfileEditWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */; };
+		EF9A1D0A923B26F5BB097A6E /* libPods-PDF Letterhead Lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B6AFEB1D22BE3F018F4545 /* libPods-PDF Letterhead Lite.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BC95308914D977236C6A3C5 /* Pods-PDF Letterhead Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDF Letterhead Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PDF Letterhead Pro/Pods-PDF Letterhead Pro.debug.xcconfig"; sourceTree = "<group>"; };
 		3E2770401677E336002DD3DE /* PLBackgroundDropZoneContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLBackgroundDropZoneContainer.h; sourceTree = "<group>"; };
 		3E2770411677E336002DD3DE /* PLBackgroundDropZoneContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLBackgroundDropZoneContainer.m; sourceTree = "<group>"; };
 		3E2770431677E463002DD3DE /* bgdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgdrop.png; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 		3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMainWindowView.h; sourceTree = "<group>"; };
 		3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainWindowView.m; sourceTree = "<group>"; };
 		3E51688318591F4B007E2F3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3E601B181C7231E00086FB5A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		3E6744681679448400D99390 /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
 		3E67446D16794BE400D99390 /* saveicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveicon.png; sourceTree = "<group>"; };
 		3E6835C11607C90400DDFB82 /* PDF Letterhead Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF Letterhead Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +181,9 @@
 		3EF7E6BD16089EFA008EA1B1 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		3EFB08F61615032E006063F9 /* PLPreviewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPreviewWindow.h; sourceTree = "<group>"; };
 		3EFB08F71615032E006063F9 /* PLPreviewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPreviewWindow.m; sourceTree = "<group>"; };
+		3FCA531AEA0A2626161B1981 /* libPods-PDF Letterhead Pro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDF Letterhead Pro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4259CA9BD5A97CC0ED44503A /* Pods-PDF Letterhead Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDF Letterhead Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDF Letterhead Pro/Pods-PDF Letterhead Pro.release.xcconfig"; sourceTree = "<group>"; };
+		50D5EC3B9071AFE57E46E4FA /* Pods-PDF Letterhead Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDF Letterhead Lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDF Letterhead Lite/Pods-PDF Letterhead Lite.release.xcconfig"; sourceTree = "<group>"; };
 		7910E6A71C206AC900398823 /* PDF_Letterhead 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PDF_Letterhead 2.xcdatamodel"; sourceTree = "<group>"; };
 		7910E6B81C206CAC00398823 /* Profile+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Profile+CoreDataProperties.h"; sourceTree = "<group>"; };
 		7910E6B91C206CAC00398823 /* Profile+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Profile+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -236,6 +245,8 @@
 		79726F061C16ED6F003B85D2 /* PDF Letterhead Pro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PDF Letterhead Pro.plist"; path = "/Users/richard/Apps/pdf_letterhead/PDF Letterhead/PDF Letterhead Pro.plist"; sourceTree = "<absolute>"; };
 		79EEDAA51C22CF0C00DE767E /* PLProfileEditWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLProfileEditWindow.h; sourceTree = "<group>"; };
 		79EEDAA61C22CF0C00DE767E /* PLProfileEditWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLProfileEditWindow.m; sourceTree = "<group>"; };
+		F2B6AFEB1D22BE3F018F4545 /* libPods-PDF Letterhead Lite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDF Letterhead Lite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F778A95AABCDD9C46C85C187 /* Pods-PDF Letterhead Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDF Letterhead Lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PDF Letterhead Lite/Pods-PDF Letterhead Lite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,9 +254,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E601B191C7231E00086FB5A /* libz.1.dylib in Frameworks */,
 				3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */,
 				3E6835ED1607CA8A00DDFB82 /* Quartz.framework in Frameworks */,
 				3E6835C61607C90400DDFB82 /* Cocoa.framework in Frameworks */,
+				EF9A1D0A923B26F5BB097A6E /* libPods-PDF Letterhead Lite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +266,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E601B1A1C7231F30086FB5A /* libz.1.dylib in Frameworks */,
 				79726EE21C16ED6E003B85D2 /* WebKit.framework in Frameworks */,
 				79726EE31C16ED6E003B85D2 /* Quartz.framework in Frameworks */,
 				79726EE41C16ED6E003B85D2 /* Cocoa.framework in Frameworks */,
+				314D1E7651F68C9F5055A6FF /* libPods-PDF Letterhead Pro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +361,7 @@
 				3E6835CB1607C90400DDFB82 /* PDF Letterhead */,
 				3E6835C41607C90400DDFB82 /* Frameworks */,
 				3E6835C21607C90400DDFB82 /* Products */,
+				CC588740350184C175210088 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -361,10 +377,13 @@
 		3E6835C41607C90400DDFB82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E601B181C7231E00086FB5A /* libz.1.dylib */,
 				3E51688318591F4B007E2F3C /* WebKit.framework */,
 				3E6835EC1607CA8A00DDFB82 /* Quartz.framework */,
 				3E6835C51607C90400DDFB82 /* Cocoa.framework */,
 				3E6835C71607C90400DDFB82 /* Other Frameworks */,
+				F2B6AFEB1D22BE3F018F4545 /* libPods-PDF Letterhead Lite.a */,
+				3FCA531AEA0A2626161B1981 /* libPods-PDF Letterhead Pro.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -527,6 +546,17 @@
 			name = ProfilesWindow;
 			sourceTree = "<group>";
 		};
+		CC588740350184C175210088 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F778A95AABCDD9C46C85C187 /* Pods-PDF Letterhead Lite.debug.xcconfig */,
+				50D5EC3B9071AFE57E46E4FA /* Pods-PDF Letterhead Lite.release.xcconfig */,
+				1BC95308914D977236C6A3C5 /* Pods-PDF Letterhead Pro.debug.xcconfig */,
+				4259CA9BD5A97CC0ED44503A /* Pods-PDF Letterhead Pro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -534,10 +564,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E6835E21607C90400DDFB82 /* Build configuration list for PBXNativeTarget "PDF Letterhead Lite" */;
 			buildPhases = (
+				1D3D13D26CD0B34DA1F3B79C /* Check Pods Manifest.lock */,
 				3EF7E6C41608A136008EA1B1 /* ShellScript */,
 				3E6835BD1607C90400DDFB82 /* Sources */,
 				3E6835BE1607C90400DDFB82 /* Frameworks */,
 				3E6835BF1607C90400DDFB82 /* Resources */,
+				7452928D4C4D56261E20B523 /* Embed Pods Frameworks */,
+				F517B505DB16B981CBF1B046 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -552,10 +585,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79726F021C16ED6E003B85D2 /* Build configuration list for PBXNativeTarget "PDF Letterhead Pro" */;
 			buildPhases = (
+				E1DE95B36525060604D97EA4 /* Check Pods Manifest.lock */,
 				79726ECD1C16ED6E003B85D2 /* ShellScript */,
 				79726ECE1C16ED6E003B85D2 /* Sources */,
 				79726EE11C16ED6E003B85D2 /* Frameworks */,
 				79726EE51C16ED6E003B85D2 /* Resources */,
+				E8F291B48704B71419BC7BE9 /* Embed Pods Frameworks */,
+				008056A2829023FB25A18E74 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -686,6 +722,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		008056A2829023FB25A18E74 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PDF Letterhead Pro/Pods-PDF Letterhead Pro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D3D13D26CD0B34DA1F3B79C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		3EF7E6C41608A136008EA1B1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -699,6 +765,21 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\n#bN=$((0x$bN))\nbN=$(($bN + 1))\nbN=$(printf \"%u\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
 		};
+		7452928D4C4D56261E20B523 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PDF Letterhead Lite/Pods-PDF Letterhead Lite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		79726ECD1C16ED6E003B85D2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,6 +792,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\n#bN=$((0x$bN))\nbN=$(($bN + 1))\nbN=$(printf \"%u\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
+		};
+		E1DE95B36525060604D97EA4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F291B48704B71419BC7BE9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PDF Letterhead Pro/Pods-PDF Letterhead Pro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F517B505DB16B981CBF1B046 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PDF Letterhead Lite/Pods-PDF Letterhead Lite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -900,6 +1026,7 @@
 		};
 		3E6835E31607C90400DDFB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F778A95AABCDD9C46C85C187 /* Pods-PDF Letterhead Lite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -931,6 +1058,7 @@
 		};
 		3E6835E41607C90400DDFB82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50D5EC3B9071AFE57E46E4FA /* Pods-PDF Letterhead Lite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -958,6 +1086,7 @@
 		};
 		79726F031C16ED6E003B85D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BC95308914D977236C6A3C5 /* Pods-PDF Letterhead Pro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -989,6 +1118,7 @@
 		};
 		79726F041C16ED6E003B85D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4259CA9BD5A97CC0ED44503A /* Pods-PDF Letterhead Pro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
