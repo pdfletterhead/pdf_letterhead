@@ -122,6 +122,9 @@
 {
     if ([[[filename pathExtension] lowercaseString] isEqual:@"pdf"]){
         [_sourcedoc setPdfFilepath:filename];
+        [self renderPDF];
+
+        NSLog(@"ja");
         return YES;
     }
     else {
