@@ -90,11 +90,11 @@
   //      NSLog(@"raw now: %@", plainA);
         //NSLog(@"raw now: %@", plainC);
         //NSLog(@"raw now2: %@", newStr);
-        NSLog(@"plain now: %@", plainContent);
+        //NSLog(@"plain now: %@", plainContent);
         
         NSString * newplain = [self removeWhiteBackgrounds:plainContent];
         
-        NSLog(@"newplain now: %@", newplain);
+        //NSLog(@"newplain now: %@", newplain);
         
         [pageContentsObject setStreamContentsWithString:newplain];
         
@@ -158,6 +158,7 @@
     NSRange startRange = [streamContent rangeOfString:aStartItem];
     NSRange stopRange = [streamContent rangeOfString:aStopItem];
     
+    
     if(stopRange.location == NSNotFound || stopRange.location == NSNotFound)
     {
         NSLog(@"no sc colorscace rectangles found");
@@ -166,7 +167,9 @@
     
     else
     {
-        //NSLog(@"r1: %lu, r2:, %lu\n",(unsigned long)startRange.location, (unsigned long)stopRange.location);
+       NSLog(@"plain now: %@", streamContent);
+        
+        NSLog(@"r1: %lu, r2:, %lu\n",(unsigned long)startRange.location, (unsigned long)stopRange.location);
         
         cleanedStreamContent = (NSMutableString*)[streamContent substringToIndex:startRange.location];
         cleanedStreamContent = (NSMutableString*)[cleanedStreamContent stringByAppendingString:[streamContent substringFromIndex:stopRange.location]];
