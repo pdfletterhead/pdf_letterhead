@@ -55,16 +55,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     
-    
-
-    
+    [self makeOrFindAppSupportDirectory];
     
 #ifdef LITE
     [self disableProFeatures];
-    
-    //try to retrieve app price
-    //Test ID:
-    //_retrievePrice = [[PLRetrievePrice alloc] initWithAppId:@422876559];
     
     _retrievePrice = [[PLRetrievePrice alloc] initWithAppId:@1075794517];
 
@@ -1099,6 +1093,23 @@
     }
     
     return NSTerminateNow;
+}
+
+-(BOOL)makeOrFindAppSupportDirectory {
+    BOOL isDir;
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:[[self applicationFilesDirectory] absoluteString] isDirectory:&isDir] && isDir) {
+        return YES;
+    } else {
+        NSError *error = nil;
+        [manager createDirectoryAtURL:[self applicationFilesDirectory] withIntermediateDirectories:YES attributes:nil error:&error];
+        if (!error) {
+            return YES;
+        } else {
+            NSLog(@"Error creating directory");
+            return NO;
+        }
+    }
 }
 
 - (void) saveManagedObjectContext {

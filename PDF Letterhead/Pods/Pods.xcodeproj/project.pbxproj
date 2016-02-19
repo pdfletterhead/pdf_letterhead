@@ -7,44 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01B02EF48DCBC53EFF2F803A253EF59E /* YPNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0BE6579C9DA9A2BEF10B834E551FB8 /* YPNumber.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0244A888D06E42917E00C0422BAF8107 /* YPHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D2264EE882BAB57BE4578F48040A3 /* YPHexString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		076F81C72603FDB0E4464CA7A092A5EB /* YPObject.h in Headers */ = {isa = PBXBuildFile; fileRef = AE7C155B0AB5B42EE2A963A7B72BE697 /* YPObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08FB6E910B109BF06F20F53B2095D849 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		0A4CBFE31612F9C66D92CBE2A78344E5 /* PDFParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CCB7A790BC56B3A0061914814C158194 /* PDFParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0BBDF35AEDF86B7B12C87CF97B287756 /* YPObjectStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 98208CFE7617924D70D8041282B9ABD4 /* YPObjectStream.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0DF85D48E1EC4C2AC853213A3FC44D63 /* YPDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 037E14B78ED112C0B49265038EA84129 /* YPDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1291C3522754E9AA05B77D82C64F8DBD /* YPBool.h in Headers */ = {isa = PBXBuildFile; fileRef = B42E621E7249B645289799FB27FA2B8C /* YPBool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1311B2433DDA0D09BECBB40A81E73FC5 /* YPObjectReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF331AF18309439124029715C33C7DB /* YPObjectReference.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		13323EAC9CC9AA54C447686BF17E7868 /* Utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 539338A49D05D3F432E54FDB442D61D7 /* Utils.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0F3774E4106274C66E3F4C63F877C6AF /* YAPDFKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C3EC73F0286F9F435842E3E2819F00 /* YAPDFKit-dummy.m */; };
 		1CE3377690C7AA6E3F6FFFF48F220351 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		26043AACFB18774C6C2D4C2BBDA310AA /* YPDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = C87E9C7CED20FC634B1429246A7279B4 /* YPDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		288EB8F4227A47150B5A19B721154D4D /* YPObjectStream.h in Headers */ = {isa = PBXBuildFile; fileRef = B705FE5210E2C93B30CB1A732412EE06 /* YPObjectStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3501EAB2BDF402F1A8A599581C8FC7AC /* YPDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BEF9CA0045A2F34A685F957370DE59 /* YPDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		217947ABBEDD77F4953B9469701A41D8 /* YPBool.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A3C0B07B83FAE3D3199E8058AF7AF5E /* YPBool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26FE4173C031465B00FB458065665D3C /* YPArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C55F0241C002374236ADFBC332D6D7F /* YPArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E0C0CFB51011E3C92A3AEE5961C2924 /* YPXref.h in Headers */ = {isa = PBXBuildFile; fileRef = 469E6B59EB87CD22D3A7D6508AFB59EC /* YPXref.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30CB92160E503DD603015AEFC02173EC /* YPDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F998E568F258DE6093AB097C96F149FD /* YPDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		377A7F967C26CA9448BA5F7BB43913ED /* YPString.h in Headers */ = {isa = PBXBuildFile; fileRef = 7698ADB8471D121DB164B3500A59C051 /* YPString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DE9D769DFFACD55E4BE785254F31FC2 /* YPString.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3C5B740B2452853B7B0A29D62DB434 /* YPString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		3FF230FFF4C91F78172EFF61DA7739F1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		40C9D0C2948F6A2E1EE2DA28203088D9 /* YPPages.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9F3D4DB176CBDCE610B1E4894E59D8 /* YPPages.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4624E35D72DBDC920E2FA42ACE2B2879 /* YPHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = 67C1C7CB9F49D4A69BBED918154F9839 /* YPHexString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4AA9D33944E15DAC0B48A66C38DA8AC3 /* YPName.m in Sources */ = {isa = PBXBuildFile; fileRef = C1918E2A8CE3D31DF98A7156FF2C0105 /* YPName.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4DE180B0A512A296C1B24AF8CFDE8E1F /* pdfzlib.h in Headers */ = {isa = PBXBuildFile; fileRef = D20983D89B181F70DA371A3802A7424B /* pdfzlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51039995F582EBDA5A55E2BB2B7DEF8B /* YPString.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9F31107FF3314919EB45A9A1E75574 /* YPString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5963C6C45872D0D998DAE8498C75B8C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C2803A6A12E3C6C67A48A35986C776 /* main.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5D842BC87505D79CBE5F0AE68C897EB0 /* YPArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1215AE201D01C1550CA24A445A8661CB /* YPArray.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5EC46F2709CC4F8BBD6421FA70AA5BEA /* YPDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BE79B75BA995AA4A912AEA5E190D07 /* YPDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6C57D8EA34A875C39A964AE997827257 /* YPString.h in Headers */ = {isa = PBXBuildFile; fileRef = 406FFAD490EA561B5DC15681713FEE95 /* YPString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F0A941FABEE28370FD6B3CC8467E6D3 /* YPPages.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C3915F70126A466D90B90768B66401 /* YPPages.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BDCA4DA7D6E8A51B92F16E84F780E50 /* YPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A787DC0C41E63FEF61B8FC64DC5464D /* YPObject.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4D5CC11A25C4DC450D4CE9B69EB2269E /* YPAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 907C2BA86180E22653B3A6FD6D10C1D8 /* YPAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DBA7E4110A117291A815E0429C9E1CC /* YPHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC6319F7471CC0882D44B6F95768A43 /* YPHexString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F1BABA4769157AB4375D19F50928E49 /* YPObjectReference.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA5F9F059221BF57CA34B3392D871CD /* YPObjectReference.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5465831424EABD22049C71F8272D4A08 /* YPAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = EADEED2262F5EC7D9F79295D1CF54F08 /* YPAttribute.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6219C7A0428A81928CFE6BAB7F3B3BCE /* YPArray.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CA39BD337188C07ED9CA231B790705 /* YPArray.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6283E66D34966EB55A2A239E18D16D54 /* YPDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6C1A1EB8DB241FB93B058BA27AA7E4 /* YPDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6584D3ADE91CBFF0728C22280C3433A0 /* YPPages.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F055018303159CD54000C226A17BE2F /* YPPages.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		843354C8658A67CE3DA9B4727AF495C4 /* Pods-PDF Letterhead Pro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7662AEDF2E7F8875226A819FC90673 /* Pods-PDF Letterhead Pro-dummy.m */; };
-		868B66A985F7FA81A764C69079396C57 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C09394093CBFB8066A944DC51EE4C2 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C3AB33BA5F7277CFB60F380D50A8ABD /* YAPDFKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 361EEE1775BC230D83861BCC0D2CFA0E /* YAPDFKit-dummy.m */; };
-		963A582A45AC8D82A1ABDC14C3939B15 /* YPBool.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E1880296248807A2438CB356AF7C9D /* YPBool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8725266E2A94D93E5E393156F294392F /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD16D1DF7682C2443FE693133758998 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D8FB8A5A48C9F01CA15A588AE74862B /* PDFParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3209E033B5A0F68A1136D46445A50EA8 /* PDFParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		956B81AB349A5BCA3EDE6C82A7908073 /* pdfzlib.h in Headers */ = {isa = PBXBuildFile; fileRef = F96B5767CE34A34A45E104DA5EDE937D /* pdfzlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9837F190B833C5341D4D3B9EB8CB8EBD /* YPObjectReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 985768D039497DB1DEECE37F029603A1 /* YPObjectReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CB051DFF79C7CD0F162FDD1CBA1A0F0 /* YPName.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE4F431D957B06AAFD04CEBC7799DD1 /* YPName.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E801C7A81D3F5E6D706098BB3F34E1A /* YPObjectStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 59EC8D8A33E0E25E3E7B8288FD2B1BB5 /* YPObjectStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A05B35A80E47D458498116945D856974 /* Pods-PDF Letterhead Lite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D61330B89283056053035ACF86227DE8 /* Pods-PDF Letterhead Lite-dummy.m */; };
-		A59D893AF29F917052DCD9A949931BE6 /* YPName.h in Headers */ = {isa = PBXBuildFile; fileRef = 476F6B2C30FAB480EDEF256C38073FFF /* YPName.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B642590ED406EAAF2FDAA682CD47189F /* YPXref.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CC26F518C35723A636E8D1168AED28 /* YPXref.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B7E3E0F2A223D97E364A1C37FA5BD2C6 /* pdfzlib.m in Sources */ = {isa = PBXBuildFile; fileRef = F18A83B1D977ABCB0D136816D2A26DAE /* pdfzlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CB28B95088F32270F0DFCD0FD7C96875 /* YPXref.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A6D2F9351BC04D54CE76E503EB1FFA /* YPXref.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D80B3E42315BDCE5F39BA169B7066406 /* YPArray.h in Headers */ = {isa = PBXBuildFile; fileRef = B00C1DF96E8A1BEF0D69F8D4BF853686 /* YPArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F22F5D37CEE2E9D9DD739FE2B256CD22 /* YPObjectReference.h in Headers */ = {isa = PBXBuildFile; fileRef = FD335C0E0206092FF28A9BFFB21F43C4 /* YPObjectReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAF501CB5E6652AAA087FF15B62CD684 /* YPNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBFFB94A740385058CAD10BB0532BF7 /* YPNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0FFD45784565B8A2503083C97AE1B23 /* YPObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A97C76D4F075D02B309CFA3C83248D7 /* YPObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACA5C537BC6F64B23364097C27BD8093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB669CBB3632123FFD1D93074ED258DB /* main.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BACC0E6CB6601B55CB31DC54F8BC912F /* YPXref.m in Sources */ = {isa = PBXBuildFile; fileRef = D137841C3A2347274854C566DBA26677 /* YPXref.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BAF9BBCB02D85BE52219B90D4751FCF8 /* YPNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE0AEA91EF7D58412D559B5C03E314 /* YPNumber.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BEB10BF8EB549B6CFC8A1CEB0CCAF99C /* YPName.m in Sources */ = {isa = PBXBuildFile; fileRef = C41E61D6E57B74A1D45AF7725D9AAAA4 /* YPName.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BF0EC4CED125D59562F023F82398CE9E /* YPObjectStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1674194CE68ED01BB95CE2EE13552A97 /* YPObjectStream.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BF5DC10D8966177B9F9D045940FE82F5 /* YPBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B19FDEDE6D06190D4EDE3FB88171A5 /* YPBool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C2A916D9CD3EF2CD891C806118B48FFE /* pdfzlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D92F2F55A99F7ED72C6BDA469B3DB8 /* pdfzlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D358D112D81C47EC57CC57A764699734 /* YPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 43932CAA28ECABE88C9C8F36ECF88BCA /* YPObject.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E7A688BBD35B6B7309F053E3FEF34E96 /* Utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 24790C3F2A2484F6132DEC856545BEDA /* Utils.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ECA4B04E1B09863DE30407E01609BA15 /* YPDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = C41557E29A5C529EA3A4FECF0DBB235C /* YPDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE2AF4C27A19015204E68C1550359595 /* YPPages.m in Sources */ = {isa = PBXBuildFile; fileRef = C81BAEDE1B78EB033A5D5D9549ACBA4E /* YPPages.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F32DF878ABC9D9D1D986EAAE7B1F4470 /* YPNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B98163E12004FD4449848CE6E41E348 /* YPNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F756B914B925CAE91731224540DE566F /* YPDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 540C5BCC309D3862161B28CB77833756 /* YPDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D9C9517472F9BE907CE6E0975D383E /* YPHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 238DF44808940068C34C05357D925244 /* YPHexString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,60 +67,62 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		037E14B78ED112C0B49265038EA84129 /* YPDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPDictionary.m; path = YAPDFKit/YPDictionary.m; sourceTree = "<group>"; };
-		04BEF9CA0045A2F34A685F957370DE59 /* YPDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPDocument.h; path = YAPDFKit/YPDocument.h; sourceTree = "<group>"; };
+		07AE0AEA91EF7D58412D559B5C03E314 /* YPNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPNumber.m; sourceTree = "<group>"; };
 		0A7662AEDF2E7F8875226A819FC90673 /* Pods-PDF Letterhead Pro-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PDF Letterhead Pro-dummy.m"; sourceTree = "<group>"; };
+		0C6C1A1EB8DB241FB93B058BA27AA7E4 /* YPDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPDictionary.m; sourceTree = "<group>"; };
+		0D28E5C0AABD1E738B43F5419ABA6611 /* YAPDFKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YAPDFKit-prefix.pch"; sourceTree = "<group>"; };
 		11EDC2C49BA110993B65866F1D610BC4 /* Pods-PDF Letterhead Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Lite.release.xcconfig"; sourceTree = "<group>"; };
-		1215AE201D01C1550CA24A445A8661CB /* YPArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPArray.m; path = YAPDFKit/YPArray.m; sourceTree = "<group>"; };
-		1A934BC5C32FFAD5FA21D13EF06B5247 /* YAPDFKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YAPDFKit-prefix.pch"; sourceTree = "<group>"; };
+		12D92F2F55A99F7ED72C6BDA469B3DB8 /* pdfzlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = pdfzlib.m; sourceTree = "<group>"; };
+		1674194CE68ED01BB95CE2EE13552A97 /* YPObjectStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPObjectStream.m; sourceTree = "<group>"; };
+		1A97C76D4F075D02B309CFA3C83248D7 /* YPObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPObject.h; sourceTree = "<group>"; };
 		1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		2A787DC0C41E63FEF61B8FC64DC5464D /* YPObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObject.m; path = YAPDFKit/YPObject.m; sourceTree = "<group>"; };
+		238DF44808940068C34C05357D925244 /* YPHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPHexString.m; sourceTree = "<group>"; };
+		24790C3F2A2484F6132DEC856545BEDA /* Utils.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = Utils.c; sourceTree = "<group>"; };
+		3209E033B5A0F68A1136D46445A50EA8 /* PDFParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PDFParser.h; sourceTree = "<group>"; };
 		32D34ED196C1465C8E116B4AC79ABFCF /* Pods-PDF Letterhead Pro-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PDF Letterhead Pro-acknowledgements.markdown"; sourceTree = "<group>"; };
-		361EEE1775BC230D83861BCC0D2CFA0E /* YAPDFKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YAPDFKit-dummy.m"; sourceTree = "<group>"; };
-		37C09394093CBFB8066A944DC51EE4C2 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = YAPDFKit/Utils.h; sourceTree = "<group>"; };
-		406FFAD490EA561B5DC15681713FEE95 /* YPString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPString.h; path = YAPDFKit/YPString.h; sourceTree = "<group>"; };
+		3BD16D1DF7682C2443FE693133758998 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		41ACA549A6B1C40E5D7A86C4D0BE3F73 /* Pods-PDF Letterhead Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Pro.release.xcconfig"; sourceTree = "<group>"; };
-		476F6B2C30FAB480EDEF256C38073FFF /* YPName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPName.h; path = YAPDFKit/YPName.h; sourceTree = "<group>"; };
+		43932CAA28ECABE88C9C8F36ECF88BCA /* YPObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPObject.m; sourceTree = "<group>"; };
+		469E6B59EB87CD22D3A7D6508AFB59EC /* YPXref.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPXref.h; sourceTree = "<group>"; };
+		4BE4F431D957B06AAFD04CEBC7799DD1 /* YPName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPName.h; sourceTree = "<group>"; };
 		4E4C0116A38DD3BA3FE047006FD99E33 /* Pods-PDF Letterhead Lite-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Lite-frameworks.sh"; sourceTree = "<group>"; };
-		539338A49D05D3F432E54FDB442D61D7 /* Utils.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = Utils.c; path = YAPDFKit/Utils.c; sourceTree = "<group>"; };
+		540C5BCC309D3862161B28CB77833756 /* YPDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPDocument.h; sourceTree = "<group>"; };
+		59EC8D8A33E0E25E3E7B8288FD2B1BB5 /* YPObjectStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPObjectStream.h; sourceTree = "<group>"; };
 		5C607F1E61C6DAE422C927A50C9D1F6E /* Pods-PDF Letterhead Lite-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PDF Letterhead Lite-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5CF5869790AB75F2C2856AECBEE0AF88 /* YAPDFKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YAPDFKit.xcconfig; sourceTree = "<group>"; };
 		613C53B4E636C4296F0EA30503349253 /* Pods-PDF Letterhead Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Pro.debug.xcconfig"; sourceTree = "<group>"; };
-		67C1C7CB9F49D4A69BBED918154F9839 /* YPHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPHexString.h; path = YAPDFKit/YPHexString.h; sourceTree = "<group>"; };
+		6A3C0B07B83FAE3D3199E8058AF7AF5E /* YPBool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPBool.h; sourceTree = "<group>"; };
+		6F055018303159CD54000C226A17BE2F /* YPPages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPPages.h; sourceTree = "<group>"; };
+		7698ADB8471D121DB164B3500A59C051 /* YPString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPString.h; sourceTree = "<group>"; };
 		7865942B70D153E9B3330A7C059BD1E4 /* Pods-PDF Letterhead Lite-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PDF Letterhead Lite-acknowledgements.plist"; sourceTree = "<group>"; };
-		7F0D2264EE882BAB57BE4578F48040A3 /* YPHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPHexString.m; path = YAPDFKit/YPHexString.m; sourceTree = "<group>"; };
-		81BE79B75BA995AA4A912AEA5E190D07 /* YPDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPDocument.m; path = YAPDFKit/YPDocument.m; sourceTree = "<group>"; };
 		8B0E632E1440B9E7CD8EB1FAD55570F7 /* Pods-PDF Letterhead Pro-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Pro-frameworks.sh"; sourceTree = "<group>"; };
-		8BF331AF18309439124029715C33C7DB /* YPObjectReference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObjectReference.m; path = YAPDFKit/YPObjectReference.m; sourceTree = "<group>"; };
-		98208CFE7617924D70D8041282B9ABD4 /* YPObjectStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObjectStream.m; path = YAPDFKit/YPObjectStream.m; sourceTree = "<group>"; };
+		8B98163E12004FD4449848CE6E41E348 /* YPNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPNumber.h; sourceTree = "<group>"; };
+		8C55F0241C002374236ADFBC332D6D7F /* YPArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPArray.h; sourceTree = "<group>"; };
+		907C2BA86180E22653B3A6FD6D10C1D8 /* YPAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPAttribute.h; sourceTree = "<group>"; };
+		93B19FDEDE6D06190D4EDE3FB88171A5 /* YPBool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPBool.m; sourceTree = "<group>"; };
+		985768D039497DB1DEECE37F029603A1 /* YPObjectReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPObjectReference.h; sourceTree = "<group>"; };
 		98A3F944764A695A248658DED24D87EB /* Pods-PDF Letterhead Pro-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PDF Letterhead Pro-acknowledgements.plist"; sourceTree = "<group>"; };
-		9E9F3D4DB176CBDCE610B1E4894E59D8 /* YPPages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPPages.m; path = YAPDFKit/YPPages.m; sourceTree = "<group>"; };
 		A1323CEF29595494DE0C8ED6F44C136E /* libPods-PDF Letterhead Pro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDF Letterhead Pro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3A6D2F9351BC04D54CE76E503EB1FFA /* YPXref.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPXref.h; path = YAPDFKit/YPXref.h; sourceTree = "<group>"; };
-		AE7C155B0AB5B42EE2A963A7B72BE697 /* YPObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObject.h; path = YAPDFKit/YPObject.h; sourceTree = "<group>"; };
+		A4C3EC73F0286F9F435842E3E2819F00 /* YAPDFKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YAPDFKit-dummy.m"; sourceTree = "<group>"; };
 		AEDD8AF221B35778A495DB856E1DB5CA /* Pods-PDF Letterhead Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Lite.debug.xcconfig"; sourceTree = "<group>"; };
-		B00C1DF96E8A1BEF0D69F8D4BF853686 /* YPArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPArray.h; path = YAPDFKit/YPArray.h; sourceTree = "<group>"; };
 		B274740FE705F1D311FEDDCDFE3E5582 /* libPods-PDF Letterhead Lite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDF Letterhead Lite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2E1880296248807A2438CB356AF7C9D /* YPBool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPBool.m; path = YAPDFKit/YPBool.m; sourceTree = "<group>"; };
-		B42E621E7249B645289799FB27FA2B8C /* YPBool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPBool.h; path = YAPDFKit/YPBool.h; sourceTree = "<group>"; };
 		B475EDB50708E37F183FDC0EDDA368C3 /* Pods-PDF Letterhead Lite-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Lite-resources.sh"; sourceTree = "<group>"; };
-		B5C3915F70126A466D90B90768B66401 /* YPPages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPPages.h; path = YAPDFKit/YPPages.h; sourceTree = "<group>"; };
-		B705FE5210E2C93B30CB1A732412EE06 /* YPObjectStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObjectStream.h; path = YAPDFKit/YPObjectStream.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BDBFFB94A740385058CAD10BB0532BF7 /* YPNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPNumber.h; path = YAPDFKit/YPNumber.h; sourceTree = "<group>"; };
-		C1918E2A8CE3D31DF98A7156FF2C0105 /* YPName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPName.m; path = YAPDFKit/YPName.m; sourceTree = "<group>"; };
-		C87E9C7CED20FC634B1429246A7279B4 /* YPDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPDictionary.h; path = YAPDFKit/YPDictionary.h; sourceTree = "<group>"; };
-		CCB7A790BC56B3A0061914814C158194 /* PDFParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFParser.h; path = YAPDFKit/PDFParser.h; sourceTree = "<group>"; };
-		D20983D89B181F70DA371A3802A7424B /* pdfzlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pdfzlib.h; path = YAPDFKit/pdfzlib.h; sourceTree = "<group>"; };
-		D4C2803A6A12E3C6C67A48A35986C776 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = YAPDFKit/main.m; sourceTree = "<group>"; };
+		BE3C5B740B2452853B7B0A29D62DB434 /* YPString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPString.m; sourceTree = "<group>"; };
+		C41557E29A5C529EA3A4FECF0DBB235C /* YPDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPDictionary.h; sourceTree = "<group>"; };
+		C41E61D6E57B74A1D45AF7725D9AAAA4 /* YPName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPName.m; sourceTree = "<group>"; };
+		C81BAEDE1B78EB033A5D5D9549ACBA4E /* YPPages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPPages.m; sourceTree = "<group>"; };
+		CDC6319F7471CC0882D44B6F95768A43 /* YPHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPHexString.h; sourceTree = "<group>"; };
+		CFA5F9F059221BF57CA34B3392D871CD /* YPObjectReference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPObjectReference.m; sourceTree = "<group>"; };
+		D137841C3A2347274854C566DBA26677 /* YPXref.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPXref.m; sourceTree = "<group>"; };
 		D61330B89283056053035ACF86227DE8 /* Pods-PDF Letterhead Lite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PDF Letterhead Lite-dummy.m"; sourceTree = "<group>"; };
-		DB9F31107FF3314919EB45A9A1E75574 /* YPString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPString.m; path = YAPDFKit/YPString.m; sourceTree = "<group>"; };
 		DD6DFEDCD8DF92693181CAA84F9CE8BE /* Pods-PDF Letterhead Pro-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Pro-resources.sh"; sourceTree = "<group>"; };
-		E9CC26F518C35723A636E8D1168AED28 /* YPXref.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPXref.m; path = YAPDFKit/YPXref.m; sourceTree = "<group>"; };
+		E9CA39BD337188C07ED9CA231B790705 /* YPArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPArray.m; sourceTree = "<group>"; };
+		EADEED2262F5EC7D9F79295D1CF54F08 /* YPAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPAttribute.m; sourceTree = "<group>"; };
+		EB669CBB3632123FFD1D93074ED258DB /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB893DD030176D2CBB658885887DC838 /* libYAPDFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYAPDFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE0BE6579C9DA9A2BEF10B834E551FB8 /* YPNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPNumber.m; path = YAPDFKit/YPNumber.m; sourceTree = "<group>"; };
-		F18A83B1D977ABCB0D136816D2A26DAE /* pdfzlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = pdfzlib.m; path = YAPDFKit/pdfzlib.m; sourceTree = "<group>"; };
-		FD335C0E0206092FF28A9BFFB21F43C4 /* YPObjectReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObjectReference.h; path = YAPDFKit/YPObjectReference.h; sourceTree = "<group>"; };
+		F20C72D7F5CF5AE1C5013A659B0ECD8E /* YAPDFKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YAPDFKit.xcconfig; sourceTree = "<group>"; };
+		F96B5767CE34A34A45E104DA5EDE937D /* pdfzlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pdfzlib.h; sourceTree = "<group>"; };
+		F998E568F258DE6093AB097C96F149FD /* YPDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = YPDocument.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,17 +153,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08AC90EECA139E287D9F694C09778A65 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5CF5869790AB75F2C2856AECBEE0AF88 /* YAPDFKit.xcconfig */,
-				361EEE1775BC230D83861BCC0D2CFA0E /* YAPDFKit-dummy.m */,
-				1A934BC5C32FFAD5FA21D13EF06B5247 /* YAPDFKit-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/YAPDFKit";
-			sourceTree = "<group>";
-		};
 		28C17CEF104526ACA07B6EEE217EC43E /* OS X */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,44 +169,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		459232B46510DA2E9442B4C4B19B89D0 /* YAPDFKit */ = {
+		4019CC1EBA44C43BA499AF4B48CDA8D6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4C2803A6A12E3C6C67A48A35986C776 /* main.m */,
-				CCB7A790BC56B3A0061914814C158194 /* PDFParser.h */,
-				D20983D89B181F70DA371A3802A7424B /* pdfzlib.h */,
-				F18A83B1D977ABCB0D136816D2A26DAE /* pdfzlib.m */,
-				539338A49D05D3F432E54FDB442D61D7 /* Utils.c */,
-				37C09394093CBFB8066A944DC51EE4C2 /* Utils.h */,
-				B00C1DF96E8A1BEF0D69F8D4BF853686 /* YPArray.h */,
-				1215AE201D01C1550CA24A445A8661CB /* YPArray.m */,
-				B42E621E7249B645289799FB27FA2B8C /* YPBool.h */,
-				B2E1880296248807A2438CB356AF7C9D /* YPBool.m */,
-				C87E9C7CED20FC634B1429246A7279B4 /* YPDictionary.h */,
-				037E14B78ED112C0B49265038EA84129 /* YPDictionary.m */,
-				04BEF9CA0045A2F34A685F957370DE59 /* YPDocument.h */,
-				81BE79B75BA995AA4A912AEA5E190D07 /* YPDocument.m */,
-				67C1C7CB9F49D4A69BBED918154F9839 /* YPHexString.h */,
-				7F0D2264EE882BAB57BE4578F48040A3 /* YPHexString.m */,
-				476F6B2C30FAB480EDEF256C38073FFF /* YPName.h */,
-				C1918E2A8CE3D31DF98A7156FF2C0105 /* YPName.m */,
-				BDBFFB94A740385058CAD10BB0532BF7 /* YPNumber.h */,
-				EE0BE6579C9DA9A2BEF10B834E551FB8 /* YPNumber.m */,
-				AE7C155B0AB5B42EE2A963A7B72BE697 /* YPObject.h */,
-				2A787DC0C41E63FEF61B8FC64DC5464D /* YPObject.m */,
-				FD335C0E0206092FF28A9BFFB21F43C4 /* YPObjectReference.h */,
-				8BF331AF18309439124029715C33C7DB /* YPObjectReference.m */,
-				B705FE5210E2C93B30CB1A732412EE06 /* YPObjectStream.h */,
-				98208CFE7617924D70D8041282B9ABD4 /* YPObjectStream.m */,
-				B5C3915F70126A466D90B90768B66401 /* YPPages.h */,
-				9E9F3D4DB176CBDCE610B1E4894E59D8 /* YPPages.m */,
-				406FFAD490EA561B5DC15681713FEE95 /* YPString.h */,
-				DB9F31107FF3314919EB45A9A1E75574 /* YPString.m */,
-				A3A6D2F9351BC04D54CE76E503EB1FFA /* YPXref.h */,
-				E9CC26F518C35723A636E8D1168AED28 /* YPXref.m */,
-				08AC90EECA139E287D9F694C09778A65 /* Support Files */,
+				F20C72D7F5CF5AE1C5013A659B0ECD8E /* YAPDFKit.xcconfig */,
+				A4C3EC73F0286F9F435842E3E2819F00 /* YAPDFKit-dummy.m */,
+				0D28E5C0AABD1E738B43F5419ABA6611 /* YAPDFKit-prefix.pch */,
 			);
-			path = YAPDFKit;
+			name = "Support Files";
+			path = "../../OSX-Apps/PDF-Letterhead/next-version/PDF Letterhead/Pods/Target Support Files/YAPDFKit";
 			sourceTree = "<group>";
 		};
 		5A4BD0B868D48C80A53BABE727AEB24B /* Targets Support Files */ = {
@@ -225,24 +189,75 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		71735B9AA2130839808D6B0A9820E636 /* Pods */ = {
+		76D844B2069F077829117977C7C184AA /* YAPDFKit */ = {
 			isa = PBXGroup;
 			children = (
-				459232B46510DA2E9442B4C4B19B89D0 /* YAPDFKit */,
+				EB669CBB3632123FFD1D93074ED258DB /* main.m */,
+				3209E033B5A0F68A1136D46445A50EA8 /* PDFParser.h */,
+				F96B5767CE34A34A45E104DA5EDE937D /* pdfzlib.h */,
+				12D92F2F55A99F7ED72C6BDA469B3DB8 /* pdfzlib.m */,
+				24790C3F2A2484F6132DEC856545BEDA /* Utils.c */,
+				3BD16D1DF7682C2443FE693133758998 /* Utils.h */,
+				8C55F0241C002374236ADFBC332D6D7F /* YPArray.h */,
+				E9CA39BD337188C07ED9CA231B790705 /* YPArray.m */,
+				907C2BA86180E22653B3A6FD6D10C1D8 /* YPAttribute.h */,
+				EADEED2262F5EC7D9F79295D1CF54F08 /* YPAttribute.m */,
+				6A3C0B07B83FAE3D3199E8058AF7AF5E /* YPBool.h */,
+				93B19FDEDE6D06190D4EDE3FB88171A5 /* YPBool.m */,
+				C41557E29A5C529EA3A4FECF0DBB235C /* YPDictionary.h */,
+				0C6C1A1EB8DB241FB93B058BA27AA7E4 /* YPDictionary.m */,
+				540C5BCC309D3862161B28CB77833756 /* YPDocument.h */,
+				F998E568F258DE6093AB097C96F149FD /* YPDocument.m */,
+				CDC6319F7471CC0882D44B6F95768A43 /* YPHexString.h */,
+				238DF44808940068C34C05357D925244 /* YPHexString.m */,
+				4BE4F431D957B06AAFD04CEBC7799DD1 /* YPName.h */,
+				C41E61D6E57B74A1D45AF7725D9AAAA4 /* YPName.m */,
+				8B98163E12004FD4449848CE6E41E348 /* YPNumber.h */,
+				07AE0AEA91EF7D58412D559B5C03E314 /* YPNumber.m */,
+				1A97C76D4F075D02B309CFA3C83248D7 /* YPObject.h */,
+				43932CAA28ECABE88C9C8F36ECF88BCA /* YPObject.m */,
+				985768D039497DB1DEECE37F029603A1 /* YPObjectReference.h */,
+				CFA5F9F059221BF57CA34B3392D871CD /* YPObjectReference.m */,
+				59EC8D8A33E0E25E3E7B8288FD2B1BB5 /* YPObjectStream.h */,
+				1674194CE68ED01BB95CE2EE13552A97 /* YPObjectStream.m */,
+				6F055018303159CD54000C226A17BE2F /* YPPages.h */,
+				C81BAEDE1B78EB033A5D5D9549ACBA4E /* YPPages.m */,
+				7698ADB8471D121DB164B3500A59C051 /* YPString.h */,
+				BE3C5B740B2452853B7B0A29D62DB434 /* YPString.m */,
+				469E6B59EB87CD22D3A7D6508AFB59EC /* YPXref.h */,
+				D137841C3A2347274854C566DBA26677 /* YPXref.m */,
 			);
-			name = Pods;
+			path = YAPDFKit;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				9D55069846E8B36C9213191D90B5BD51 /* Development Pods */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				71735B9AA2130839808D6B0A9820E636 /* Pods */,
 				BC82FE10AFCDE79D745F8C6E91CD3288 /* Products */,
 				5A4BD0B868D48C80A53BABE727AEB24B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
+		};
+		9D55069846E8B36C9213191D90B5BD51 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7601515CCF1C743DCC4399A72100FF9 /* YAPDFKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B7601515CCF1C743DCC4399A72100FF9 /* YAPDFKit */ = {
+			isa = PBXGroup;
+			children = (
+				4019CC1EBA44C43BA499AF4B48CDA8D6 /* Support Files */,
+				76D844B2069F077829117977C7C184AA /* YAPDFKit */,
+			);
+			name = YAPDFKit;
+			path = /Users/pim/RnD/Pods/YAPDFKit;
+			sourceTree = "<absolute>";
 		};
 		BC82FE10AFCDE79D745F8C6E91CD3288 /* Products */ = {
 			isa = PBXGroup;
@@ -287,26 +302,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7513BE9F21DD3323EFBF8751523B0D4E /* Headers */ = {
+		FF1C80C4768CA779A153417571A44492 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A4CBFE31612F9C66D92CBE2A78344E5 /* PDFParser.h in Headers */,
-				4DE180B0A512A296C1B24AF8CFDE8E1F /* pdfzlib.h in Headers */,
-				868B66A985F7FA81A764C69079396C57 /* Utils.h in Headers */,
-				D80B3E42315BDCE5F39BA169B7066406 /* YPArray.h in Headers */,
-				1291C3522754E9AA05B77D82C64F8DBD /* YPBool.h in Headers */,
-				26043AACFB18774C6C2D4C2BBDA310AA /* YPDictionary.h in Headers */,
-				3501EAB2BDF402F1A8A599581C8FC7AC /* YPDocument.h in Headers */,
-				4624E35D72DBDC920E2FA42ACE2B2879 /* YPHexString.h in Headers */,
-				A59D893AF29F917052DCD9A949931BE6 /* YPName.h in Headers */,
-				FAF501CB5E6652AAA087FF15B62CD684 /* YPNumber.h in Headers */,
-				076F81C72603FDB0E4464CA7A092A5EB /* YPObject.h in Headers */,
-				F22F5D37CEE2E9D9DD739FE2B256CD22 /* YPObjectReference.h in Headers */,
-				288EB8F4227A47150B5A19B721154D4D /* YPObjectStream.h in Headers */,
-				6F0A941FABEE28370FD6B3CC8467E6D3 /* YPPages.h in Headers */,
-				6C57D8EA34A875C39A964AE997827257 /* YPString.h in Headers */,
-				CB28B95088F32270F0DFCD0FD7C96875 /* YPXref.h in Headers */,
+				8D8FB8A5A48C9F01CA15A588AE74862B /* PDFParser.h in Headers */,
+				956B81AB349A5BCA3EDE6C82A7908073 /* pdfzlib.h in Headers */,
+				8725266E2A94D93E5E393156F294392F /* Utils.h in Headers */,
+				26FE4173C031465B00FB458065665D3C /* YPArray.h in Headers */,
+				4D5CC11A25C4DC450D4CE9B69EB2269E /* YPAttribute.h in Headers */,
+				217947ABBEDD77F4953B9469701A41D8 /* YPBool.h in Headers */,
+				ECA4B04E1B09863DE30407E01609BA15 /* YPDictionary.h in Headers */,
+				F756B914B925CAE91731224540DE566F /* YPDocument.h in Headers */,
+				4DBA7E4110A117291A815E0429C9E1CC /* YPHexString.h in Headers */,
+				9CB051DFF79C7CD0F162FDD1CBA1A0F0 /* YPName.h in Headers */,
+				F32DF878ABC9D9D1D986EAAE7B1F4470 /* YPNumber.h in Headers */,
+				A0FFD45784565B8A2503083C97AE1B23 /* YPObject.h in Headers */,
+				9837F190B833C5341D4D3B9EB8CB8EBD /* YPObjectReference.h in Headers */,
+				9E801C7A81D3F5E6D706098BB3F34E1A /* YPObjectStream.h in Headers */,
+				6584D3ADE91CBFF0728C22280C3433A0 /* YPPages.h in Headers */,
+				377A7F967C26CA9448BA5F7BB43913ED /* YPString.h in Headers */,
+				2E0C0CFB51011E3C92A3AEE5961C2924 /* YPXref.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +367,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C435199CE27692E9AD8BA737DA47E50 /* Build configuration list for PBXNativeTarget "YAPDFKit" */;
 			buildPhases = (
-				5CE47048C89F7C3DABBBC314ACD43AF8 /* Sources */,
+				B47C159CCAE70320B46B713E61BB1ACF /* Sources */,
 				4AABDCC9C99E62D63638249DD6EF8AE4 /* Frameworks */,
-				7513BE9F21DD3323EFBF8751523B0D4E /* Headers */,
+				FF1C80C4768CA779A153417571A44492 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -393,27 +409,28 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5CE47048C89F7C3DABBBC314ACD43AF8 /* Sources */ = {
+		B47C159CCAE70320B46B713E61BB1ACF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5963C6C45872D0D998DAE8498C75B8C4 /* main.m in Sources */,
-				B7E3E0F2A223D97E364A1C37FA5BD2C6 /* pdfzlib.m in Sources */,
-				13323EAC9CC9AA54C447686BF17E7868 /* Utils.c in Sources */,
-				8C3AB33BA5F7277CFB60F380D50A8ABD /* YAPDFKit-dummy.m in Sources */,
-				5D842BC87505D79CBE5F0AE68C897EB0 /* YPArray.m in Sources */,
-				963A582A45AC8D82A1ABDC14C3939B15 /* YPBool.m in Sources */,
-				0DF85D48E1EC4C2AC853213A3FC44D63 /* YPDictionary.m in Sources */,
-				5EC46F2709CC4F8BBD6421FA70AA5BEA /* YPDocument.m in Sources */,
-				0244A888D06E42917E00C0422BAF8107 /* YPHexString.m in Sources */,
-				4AA9D33944E15DAC0B48A66C38DA8AC3 /* YPName.m in Sources */,
-				01B02EF48DCBC53EFF2F803A253EF59E /* YPNumber.m in Sources */,
-				7BDCA4DA7D6E8A51B92F16E84F780E50 /* YPObject.m in Sources */,
-				1311B2433DDA0D09BECBB40A81E73FC5 /* YPObjectReference.m in Sources */,
-				0BBDF35AEDF86B7B12C87CF97B287756 /* YPObjectStream.m in Sources */,
-				40C9D0C2948F6A2E1EE2DA28203088D9 /* YPPages.m in Sources */,
-				51039995F582EBDA5A55E2BB2B7DEF8B /* YPString.m in Sources */,
-				B642590ED406EAAF2FDAA682CD47189F /* YPXref.m in Sources */,
+				ACA5C537BC6F64B23364097C27BD8093 /* main.m in Sources */,
+				C2A916D9CD3EF2CD891C806118B48FFE /* pdfzlib.m in Sources */,
+				E7A688BBD35B6B7309F053E3FEF34E96 /* Utils.c in Sources */,
+				0F3774E4106274C66E3F4C63F877C6AF /* YAPDFKit-dummy.m in Sources */,
+				6219C7A0428A81928CFE6BAB7F3B3BCE /* YPArray.m in Sources */,
+				5465831424EABD22049C71F8272D4A08 /* YPAttribute.m in Sources */,
+				BF5DC10D8966177B9F9D045940FE82F5 /* YPBool.m in Sources */,
+				6283E66D34966EB55A2A239E18D16D54 /* YPDictionary.m in Sources */,
+				30CB92160E503DD603015AEFC02173EC /* YPDocument.m in Sources */,
+				F9D9C9517472F9BE907CE6E0975D383E /* YPHexString.m in Sources */,
+				BEB10BF8EB549B6CFC8A1CEB0CCAF99C /* YPName.m in Sources */,
+				BAF9BBCB02D85BE52219B90D4751FCF8 /* YPNumber.m in Sources */,
+				D358D112D81C47EC57CC57A764699734 /* YPObject.m in Sources */,
+				4F1BABA4769157AB4375D19F50928E49 /* YPObjectReference.m in Sources */,
+				BF0EC4CED125D59562F023F82398CE9E /* YPObjectStream.m in Sources */,
+				EE2AF4C27A19015204E68C1550359595 /* YPPages.m in Sources */,
+				3DE9D769DFFACD55E4BE785254F31FC2 /* YPString.m in Sources */,
+				BACC0E6CB6601B55CB31DC54F8BC912F /* YPXref.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +522,7 @@
 		};
 		71011621B1A6BE9E171499B22AF8A57E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CF5869790AB75F2C2856AECBEE0AF88 /* YAPDFKit.xcconfig */;
+			baseConfigurationReference = F20C72D7F5CF5AE1C5013A659B0ECD8E /* YAPDFKit.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -600,7 +617,7 @@
 		};
 		D180B00DE1250464310C4B29FBFEBBA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CF5869790AB75F2C2856AECBEE0AF88 /* YAPDFKit.xcconfig */;
+			baseConfigurationReference = F20C72D7F5CF5AE1C5013A659B0ECD8E /* YAPDFKit.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

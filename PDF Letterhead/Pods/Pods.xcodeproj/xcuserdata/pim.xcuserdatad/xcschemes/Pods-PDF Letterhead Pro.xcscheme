@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0A147CC5C303BDE56839A692'
+               BlueprintIdentifier = 'C1A03283AD122E71EE42D9C7'
                BlueprintName = 'Pods-PDF Letterhead Pro'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-PDF Letterhead Pro.a'>

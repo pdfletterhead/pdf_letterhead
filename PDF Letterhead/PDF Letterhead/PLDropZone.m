@@ -9,6 +9,7 @@
 #import "PLAppDelegate.h"
 #import "PLDropZone.h"
 #import "YPDocument.h"
+#import "PLTransparencyUtils.h"
 
 @implementation PLDropZone
 
@@ -136,43 +137,28 @@
         
         if([[self identifier] isEqualToString:@"sourceDropArea"])
         {
+            
             if ([ext isEqual:@"pdf"]){
                 
-                self.sourcefilepath = [files lastObject];
+                //DETECT WHITE BG
+                NSData *fileData = [NSData dataWithContentsOfFile:[files lastObject]];
+                PLTransparencyUtils* trUtils = [[PLTransparencyUtils alloc] initWithData:fileData];
+                if([trUtils documentHasWhiteBackgrounds])
+                {
+                    [trUtils cleanDocumentFromWhiteBackgrounds];
+                    NSString *pathToPDF = [[[[NSApp delegate] applicationFilesDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf",@"transparentSource"]] path];
+                    [trUtils writeNewDocToFile:pathToPDF];
+                    self.sourcefilepath = pathToPDF;
+                }
+                else
+                {
+                    self.sourcefilepath = [files lastObject];
+                }
+                
                 
                 BOOL ok = [self setPdfFilepath:[self sourcefilepath]];
                 
                 if (ok) {
-
-                    NSData *fileData = [NSData dataWithContentsOfFile:[self sourcefilepath]];
-                    
-                    YPDocument *document = [[YPDocument alloc] initWithData:fileData];
-                    
-                    YPPages *pg = [[YPPages alloc] initWithDocument:document];
-                    NSLog(@"page count: %d", [pg getPageCount]);
-                    
-                    //All Pages unsorted
-                    NSArray * allPages = [document getAllObjectsWithKey:@"Type" value:@"Page"];
-                    NSLog(@"all: %@ ", allPages);
-                    
-                    for (YPObject* page in allPages) {
-                        
-                        NSString *docContentNumber = [[document getInfoForKey:@"Contents" inObject:[page getObjectNumber]] getReferenceNumber];
-                        YPObject * pageContentsObject = [document getObjectByNumber:docContentNumber];
-                        
-                        NSString *plainContent = [pageContentsObject getUncompressedStreamContents];
-                        
-                        NSLog(@"plain: %@", plainContent);
-                        
-                        NSString * newplain = [plainContent stringByReplacingOccurrencesOfString:@"0 0 595 842 re W n /Cs1 cs 1 1 1 sc"
-                                                                                      withString:@"0 0 000 000 re W n /Cs1 cs 1 1 1 sc"];
-                        [pageContentsObject setStreamContentsWithString:newplain];
-                        
-                        [document addObjectToUpdateQueue:pageContentsObject];
-                    }
-                    
-                    [document updateDocumentData];
-                    [[document modifiedPDFData] writeToFile:@"/Users/pim/Desktop/test2.pdf" atomically:YES];
                     
                     [(PLAppDelegate *)[NSApp delegate] renderPDF];
                 }
@@ -253,12 +239,12 @@
         encodedString = path;
     }
 
-    NSLog(@"encodedstr: %@", encodedString);
+    //NSLog(@"encodedstr: %@", encodedString);
     
     NSURL *data = [NSURL URLWithString:encodedString];
     NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
     
-    NSLog(@"image: %@", zNewImage);
+    //NSLog(@"image: %@", zNewImage);
     
     [self setImage:zNewImage];
     
