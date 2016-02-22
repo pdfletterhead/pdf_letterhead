@@ -1,19 +1,27 @@
 PODS:
+  - MMGetAppStorePrice (0.0.1)
   - YAPDFKit (0.1.2)
 
 DEPENDENCIES:
+  - MMGetAppStorePrice (from `https://github.com/mipmip/MMGetAppStorePrice.git`)
   - YAPDFKit (from `https://github.com/mipmip/YAPDFKit.git`)
 
 EXTERNAL SOURCES:
+  MMGetAppStorePrice:
+    :git: https://github.com/mipmip/MMGetAppStorePrice.git
   YAPDFKit:
     :git: https://github.com/mipmip/YAPDFKit.git
 
 CHECKOUT OPTIONS:
+  MMGetAppStorePrice:
+    :commit: c10b97d04f2bb09be3aa5dd4831ca2140e5f4c81
+    :git: https://github.com/mipmip/MMGetAppStorePrice.git
   YAPDFKit:
     :commit: 8dc1acaf3ebca70971ef249ee3caa82b58b25149
     :git: https://github.com/mipmip/YAPDFKit.git
 
 SPEC CHECKSUMS:
+  MMGetAppStorePrice: f9d27d73944680ef24e1f9075844676a5346ec66
   YAPDFKit: 15314ebf1eda0a9a4686858d48380c19c76d1155
 
 COCOAPODS: 0.39.0

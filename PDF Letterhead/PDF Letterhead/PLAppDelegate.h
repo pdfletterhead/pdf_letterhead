@@ -11,7 +11,7 @@
 #import "PLQuickStart1.h"
 #import "ITSwitch.h"
 #import "KBButton.h"
-#import "PLRetrievePrice.h"
+#import "MMGetAppStorePrice.h"
 
 
 
@@ -53,7 +53,7 @@
 
 //@property (assign) IBOutlet NSSegmentedControl *coverswitch;
 @property (assign) IBOutlet ITSwitch *coverswitch3;
-@property (retain) PLRetrievePrice *retrievePrice;
+@property (retain) MMGetAppStorePrice *retrievePrice;
 
 @property (readonly, retain) NSURL *tmpDirectoryURL;
 

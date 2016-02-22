@@ -6,6 +6,8 @@
 target 'PDF Letterhead Lite' do
   pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
   #pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
+
+  pod 'MMGetAppStorePrice', :git => 'https://github.com/mipmip/MMGetAppStorePrice.git'
 end
 
 target 'PDF Letterhead Pro' do

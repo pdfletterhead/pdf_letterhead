@@ -1,0 +1,1 @@
+../../../MMGetAppStorePrice/MMGetAppStorePrice/Classes/MMGetAppStorePrice.h

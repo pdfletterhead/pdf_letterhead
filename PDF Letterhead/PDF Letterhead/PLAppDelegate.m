@@ -60,7 +60,7 @@
 #ifdef LITE
     [self disableProFeatures];
     
-    _retrievePrice = [[PLRetrievePrice alloc] initWithAppId:@1075794517];
+    _retrievePrice = [[MMGetAppStorePrice alloc] initWithAppId:@1075794517];
 
     [self moveInterfaceElements];
 #endif

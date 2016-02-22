@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B2099622A142EB2632472F08'
-               BlueprintName = 'Pods-PDF Letterhead Pro'
+               BlueprintIdentifier = 'FAA2192EB8C3F0FE83152EDF'
+               BlueprintName = 'MMGetAppStorePrice'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-PDF Letterhead Pro.a'>
+               BuildableName = 'libMMGetAppStorePrice.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B2099622A142EB2632472F08'
-               BlueprintName = 'Pods-PDF Letterhead Pro'
+               BlueprintIdentifier = 'AD2B464B451E41EAE909B5A3'
+               BlueprintName = 'YAPDFKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-PDF Letterhead Pro.a'>
+               BuildableName = 'libYAPDFKit.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

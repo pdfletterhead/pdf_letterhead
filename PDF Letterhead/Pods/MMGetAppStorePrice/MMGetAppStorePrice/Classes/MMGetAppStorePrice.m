@@ -1,14 +1,14 @@
 //
-//  PLRetrievePrice.m
-//  App Pricing
+//  MMGetAppStorePrice.m
+//  MMGetAppStorePrice
 //
-//  Created by Pim Snel on 18-01-16.
-//  Copyright © 2016 Lingewoud BV. All rights reserved.
+//  Created by Pim Snel on 22-02-16.
+//  Copyright © 2016 MunsterMade. All rights reserved.
 //
 
-#import "PLRetrievePrice.h"
+#import "MMGetAppStorePrice.h"
 
-@implementation PLRetrievePrice
+@implementation MMGetAppStorePrice
 
 - (id) initWithAppId:(NSNumber*)appId{
     
@@ -39,9 +39,9 @@
     if(returnedData){
         
         object = [NSJSONSerialization
-                     JSONObjectWithData:returnedData
-                     options:0
-                     error:&error];
+                  JSONObjectWithData:returnedData
+                  options:0
+                  error:&error];
     }
     
     if(error) {
@@ -61,6 +61,5 @@
     {
     }
 }
-
 
 @end
