@@ -86,7 +86,7 @@
 		469E6B59EB87CD22D3A7D6508AFB59EC /* YPXref.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPXref.h; sourceTree = "<group>"; };
 		4BE4F431D957B06AAFD04CEBC7799DD1 /* YPName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPName.h; sourceTree = "<group>"; };
 		4E4C0116A38DD3BA3FE047006FD99E33 /* Pods-PDF Letterhead Lite-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Lite-frameworks.sh"; sourceTree = "<group>"; };
-		540C5BCC309D3862161B28CB77833756 /* YPDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPDocument.h; sourceTree = "<group>"; };
+		540C5BCC309D3862161B28CB77833756 /* YPDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPDocument.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		59EC8D8A33E0E25E3E7B8288FD2B1BB5 /* YPObjectStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YPObjectStream.h; sourceTree = "<group>"; };
 		5C607F1E61C6DAE422C927A50C9D1F6E /* Pods-PDF Letterhead Lite-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PDF Letterhead Lite-acknowledgements.markdown"; sourceTree = "<group>"; };
 		613C53B4E636C4296F0EA30503349253 /* Pods-PDF Letterhead Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Pro.debug.xcconfig"; sourceTree = "<group>"; };

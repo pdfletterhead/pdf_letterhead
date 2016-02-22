@@ -21,6 +21,6 @@
 -(BOOL) documentHasWhiteBackgrounds;
 -(BOOL) hasWhiteBackgrounds:(NSString*)streamContent;
 -(void) cleanDocumentFromWhiteBackgrounds;
--(NSString*) removeWhiteBackgrounds:(NSString*)streamContent;
+-(NSData*) removeWhiteBackgrounds:(NSData*)streamContent;
 -(void) writeNewDocToFile:(NSString*)path;
 @end

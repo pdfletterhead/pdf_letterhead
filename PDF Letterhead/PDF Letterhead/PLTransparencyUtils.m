@@ -30,12 +30,9 @@
 -(BOOL) documentHasWhiteBackgrounds
 {
     NSLog(@"Detect white bgs");
-//    YPPages *pg = [[YPPages alloc] initWithDocument:ypDoc];
-//    NSLog(@"page count: %d", [pg getPageCount]);
     
-    //All Pages unsorted
     NSArray * allPages = [ypDoc getAllObjectsWithKey:@"Type" value:@"Page"];
-    //NSLog(@"all: %@ ", allPages);
+    
     
     BOOL whiteBackgroundFound = NO;
     NSMutableArray * contentsObjects = [NSMutableArray array];
@@ -43,7 +40,7 @@
     for (YPObject* page in allPages) {
         
         NSString *docContentNumber = [[ypDoc getInfoForKey:@"Contents" inObject:[page getObjectNumber]] getReferenceNumber];
-        NSLog(@"page content objnr: %@", docContentNumber);
+       // NSLog(@"page content objnr: %@", docContentNumber);
         
         if(docContentNumber)
         {
@@ -77,26 +74,12 @@
 
     for (YPObject* pageContentsObject in allPageContentsObjects)
     {
-        //id plainA = [[pageContentsObject getStreamObject] getRawData];
-        
-//        NSString *pathTo = [[[[NSApp delegate] applicationFilesDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.xx",@"raw"]] path];
-//        [plainA writeToFile:pathTo atomically:YES];
 
-  //      id plainC = [NSString stringWithUTF8String:[[[pageContentsObject getStreamObject] getRawData] bytes]];
-        NSString *plainContent = [pageContentsObject getUncompressedStreamContents];
-//        NSString* newStr = [[NSString alloc] initWithData:[[pageContentsObject getStreamObject] getRawData] encoding:NSUTF8StringEncoding];
-
+        NSData *plainContent = [pageContentsObject getUncompressedStreamContentsAsData];
         
-  //      NSLog(@"raw now: %@", plainA);
-        //NSLog(@"raw now: %@", plainC);
-        //NSLog(@"raw now2: %@", newStr);
-        //NSLog(@"plain now: %@", plainContent);
+        NSData * newplain = [self removeWhiteBackgrounds:plainContent];
         
-        NSString * newplain = [self removeWhiteBackgrounds:plainContent];
-        
-        //NSLog(@"newplain now: %@", newplain);
-        
-        [pageContentsObject setStreamContentsWithString:newplain];
+        [pageContentsObject setStreamContentsWithData:newplain];
         
         [ypDoc addObjectToUpdateQueue:pageContentsObject];
     }
@@ -129,31 +112,34 @@
 }
 
 
--(NSString*) removeWhiteBackgrounds:(NSString*)streamContent
+-(NSData*) removeWhiteBackgrounds:(NSData*)streamContent
 {
-    NSMutableString* newStreamContent;
+    NSMutableData* newStreamContent;
     
-    newStreamContent = (NSMutableString*)[self removeWhiteBackgroundsWithColorStates:streamContent startItem:@"/Cs1 cs 1 1 1 sc" stopItem:@"/Cs1 cs 0 0 0 sc"];
-    
-    if(newStreamContent)
-    {
-        return newStreamContent;
-    }
-    
-    newStreamContent = (NSMutableString*)[self removeWhiteBackgroundsWithColorStates:streamContent startItem:@"1 1 1 rg" stopItem:@"0 0 0 rg"];
+    newStreamContent = (NSMutableData*)[self removeWhiteBackgroundsWithColorStates:streamContent startItem:@"/Cs1 cs 1 1 1 sc" stopItem:@"/Cs1 cs 0 0 0 sc"];
     
     if(newStreamContent)
     {
         return newStreamContent;
     }
     
-    return streamContent;
+    newStreamContent = (NSMutableData*)[self removeWhiteBackgroundsWithColorStates:streamContent startItem:@"1 1 1 rg" stopItem:@"0 0 0 rg"];
+    
+    if(newStreamContent)
+    {
+        return newStreamContent;
+    }
+    
+    return (NSData*)streamContent;
 }
 
-
--(NSString*) removeWhiteBackgroundsWithColorStates:(NSString*)streamContent startItem:(NSString*)aStartItem stopItem:(NSString*)aStopItem
+-(NSData*) removeWhiteBackgroundsWithColorStates:(NSData*)streamContentAsData startItem:(NSString*)aStartItem stopItem:(NSString*)aStopItem
 {
-    NSMutableString * cleanedStreamContent;
+    
+//    NSString * streamContent = [[NSString alloc] initWithData:streamContentAsData encoding:NSUTF8StringEncoding];
+//    NSString * streamContent = [[NSString alloc] initWithData:streamContentAsData encoding:NSASCIIStringEncoding];
+    NSString * streamContent = [[NSString alloc] initWithData:streamContentAsData encoding:NSMacOSRomanStringEncoding];
+    
 
     NSRange startRange = [streamContent rangeOfString:aStartItem];
     NSRange stopRange = [streamContent rangeOfString:aStopItem];
@@ -167,17 +153,31 @@
     
     else
     {
-       NSLog(@"plain now: %@", streamContent);
+        NSRange firstPartRange = {0,startRange.location};
+        NSRange lastPartRange = {stopRange.location, ([streamContentAsData length]-stopRange.location)};
+        NSData *firstPartCleanedStreamContent = [streamContentAsData subdataWithRange:firstPartRange];
+        NSData *lastPartCleanedStreamContent = [streamContentAsData subdataWithRange:lastPartRange];
         
-        NSLog(@"r1: %lu, r2:, %lu\n",(unsigned long)startRange.location, (unsigned long)stopRange.location);
+        NSMutableData * cleanedStreamContent = [firstPartCleanedStreamContent mutableCopy];
+        [cleanedStreamContent appendData:lastPartCleanedStreamContent];
         
-        cleanedStreamContent = (NSMutableString*)[streamContent substringToIndex:startRange.location];
-        cleanedStreamContent = (NSMutableString*)[cleanedStreamContent stringByAppendingString:[streamContent substringFromIndex:stopRange.location]];
+        NSLog(@"\nranges: %@\n%@", NSStringFromRange(firstPartRange), NSStringFromRange(lastPartRange));
+   //     NSLog(@"plain now: %@", streamContent);
+   //     NSLog(@"r1: %lu, r2:, %lu\n",(unsigned long)startRange.location, (unsigned long)stopRange.location);
+        //cleanedStreamContent = (NSMutableString*)[streamContent substringToIndex:startRange.location];
+        //cleanedStreamContent = (NSMutableString*)[cleanedStreamContent stringByAppendingString:[streamContent substringFromIndex:stopRange.location]];
+   //     NSLog(@"r1: %lu, r2:, %lu\ncleaned: %@",(unsigned long)startRange.location, (unsigned long)stopRange.location, cleanedStreamContent);
+       
+        const char *output = malloc([streamContentAsData length]);
+        output = [streamContentAsData bytes];
+        printf("\nwat:%s\n",output);
         
-        NSLog(@"r1: %lu, r2:, %lu\ncleaned: %@",(unsigned long)startRange.location, (unsigned long)stopRange.location, cleanedStreamContent);
-        return (NSString*)cleanedStreamContent;
+        const char *output2 = malloc([cleanedStreamContent length]);
+        output2 = [cleanedStreamContent bytes];
+        printf("\nwat2:%s\n",output2);
+        return (NSData*)cleanedStreamContent;
     }
-   
+    
 }
 
 @end
