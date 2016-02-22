@@ -26,6 +26,12 @@
 /* No comment provided by engineer. */
 "Following" = "Volgpagina's";
 
+/* Mail share error title */
+"Mail application could not be reached" = "Mail application kon niet worden gevonden";
+
+/* Mail share error description */
+"Make sure that the application is correctly configured for sharing" = "Zorg er voor dat de applicatie correct is geconfigureerd voor delen";
+
 /* Subject for Email */
 "My PDF" = "Mijn pdf";
 
@@ -40,4 +46,7 @@
 
 /* Default name new Letterhead */
 "Untitled Letterhead" = "Nieuw briefpapier";
+
+/* Buy now for only $x.xx button */
+"Upgrade" = "Upgrade";
 
