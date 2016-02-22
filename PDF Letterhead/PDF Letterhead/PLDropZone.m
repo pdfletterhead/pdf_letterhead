@@ -8,6 +8,8 @@
 
 #import "PLAppDelegate.h"
 #import "PLDropZone.h"
+#import "YPDocument.h"
+#import "PLTransparencyUtils.h"
 
 @implementation PLDropZone
 
@@ -135,12 +137,29 @@
         
         if([[self identifier] isEqualToString:@"sourceDropArea"])
         {
+            
             if ([ext isEqual:@"pdf"]){
                 
-                self.sourcefilepath = [files lastObject];
+                //DETECT WHITE BG
+                NSData *fileData = [NSData dataWithContentsOfFile:[files lastObject]];
+                PLTransparencyUtils* trUtils = [[PLTransparencyUtils alloc] initWithData:fileData];
+                if([trUtils documentHasWhiteBackgrounds])
+                {
+                    [trUtils cleanDocumentFromWhiteBackgrounds];
+                    NSString *pathToPDF = [[[[NSApp delegate] applicationFilesDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf",@"transparentSource"]] path];
+                    [trUtils writeNewDocToFile:pathToPDF];
+                    self.sourcefilepath = pathToPDF;
+                }
+                else
+                {
+                    self.sourcefilepath = [files lastObject];
+                }
+                
+                
                 BOOL ok = [self setPdfFilepath:[self sourcefilepath]];
                 
                 if (ok) {
+                    
                     [(PLAppDelegate *)[NSApp delegate] renderPDF];
                 }
                 
@@ -220,12 +239,12 @@
         encodedString = path;
     }
 
-    NSLog(@"encodedstr: %@", encodedString);
+    //NSLog(@"encodedstr: %@", encodedString);
     
     NSURL *data = [NSURL URLWithString:encodedString];
     NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
     
-    NSLog(@"image: %@", zNewImage);
+    //NSLog(@"image: %@", zNewImage);
     
     [self setImage:zNewImage];
     

@@ -1,0 +1,14 @@
+PODS:
+  - YAPDFKit (0.1.0)
+
+DEPENDENCIES:
+  - YAPDFKit (from `/Users/pim/RnD/Pods/YAPDFKit`)
+
+EXTERNAL SOURCES:
+  YAPDFKit:
+    :path: "/Users/pim/RnD/Pods/YAPDFKit"
+
+SPEC CHECKSUMS:
+  YAPDFKit: 049568b499036dab996ead1d2a1959286b9d0c14
+
+COCOAPODS: 0.39.0

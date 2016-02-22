@@ -83,7 +83,6 @@
 @property (nonatomic,strong) PLProfileEditWindow *profileEditWindow;
 @property PDFDocument *letterheadPDF;
 
-
 -(IBAction)saveAs:(id)sender;
 -(IBAction)saveEmail: (id) sender;
 -(IBAction)savePrint: (id) sender;
@@ -93,6 +92,8 @@
 -(IBAction)selectProfile:(id)sender;
 -(IBAction)editSelectedProfile:(id)sender;
 -(void)renderPDF;
+-(BOOL)makeOrFindAppSupportDirectory;
+- (NSURL *)applicationFilesDirectory;
 
 //-(void)updatePreviewAndActionButtons;
 
