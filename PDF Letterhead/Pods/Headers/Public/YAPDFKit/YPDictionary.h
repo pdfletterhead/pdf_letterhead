@@ -1,1 +1,1 @@
-../../../../../../../../Pods/YAPDFKit/YAPDFKit/YPDictionary.h
+../../../YAPDFKit/YAPDFKit/YPDictionary.h

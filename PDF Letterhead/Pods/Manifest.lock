@@ -1,14 +1,19 @@
 PODS:
-  - YAPDFKit (0.1.0)
+  - YAPDFKit (0.1.2)
 
 DEPENDENCIES:
-  - YAPDFKit (from `/Users/pim/RnD/Pods/YAPDFKit`)
+  - YAPDFKit (from `https://github.com/mipmip/YAPDFKit.git`)
 
 EXTERNAL SOURCES:
   YAPDFKit:
-    :path: "/Users/pim/RnD/Pods/YAPDFKit"
+    :git: https://github.com/mipmip/YAPDFKit.git
+
+CHECKOUT OPTIONS:
+  YAPDFKit:
+    :commit: 8dc1acaf3ebca70971ef249ee3caa82b58b25149
+    :git: https://github.com/mipmip/YAPDFKit.git
 
 SPEC CHECKSUMS:
-  YAPDFKit: 049568b499036dab996ead1d2a1959286b9d0c14
+  YAPDFKit: 15314ebf1eda0a9a4686858d48380c19c76d1155
 
 COCOAPODS: 0.39.0

@@ -1,1 +1,1 @@
-../../../../../../../../Pods/YAPDFKit/YAPDFKit/PDFParser.h
+../../../YAPDFKit/YAPDFKit/PDFParser.h

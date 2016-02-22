@@ -1,1 +1,1 @@
-../../../../../../../../Pods/YAPDFKit/YAPDFKit/YPString.h
+../../../YAPDFKit/YAPDFKit/YPString.h
