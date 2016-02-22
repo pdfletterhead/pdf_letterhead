@@ -40,7 +40,6 @@
     for (YPObject* page in allPages) {
         
         NSString *docContentNumber = [[ypDoc getInfoForKey:@"Contents" inObject:[page getObjectNumber]] getReferenceNumber];
-       // NSLog(@"page content objnr: %@", docContentNumber);
         
         if(docContentNumber)
         {
@@ -135,22 +134,16 @@
 
 -(NSData*) removeWhiteBackgroundsWithColorStates:(NSData*)streamContentAsData startItem:(NSString*)aStartItem stopItem:(NSString*)aStopItem
 {
-    
-//    NSString * streamContent = [[NSString alloc] initWithData:streamContentAsData encoding:NSUTF8StringEncoding];
-//    NSString * streamContent = [[NSString alloc] initWithData:streamContentAsData encoding:NSASCIIStringEncoding];
     NSString * streamContent = [[NSString alloc] initWithData:streamContentAsData encoding:NSMacOSRomanStringEncoding];
-    
 
     NSRange startRange = [streamContent rangeOfString:aStartItem];
     NSRange stopRange = [streamContent rangeOfString:aStopItem];
-    
     
     if(stopRange.location == NSNotFound || stopRange.location == NSNotFound)
     {
         NSLog(@"no sc colorscace rectangles found");
         return nil;
     }
-    
     else
     {
         NSRange firstPartRange = {0,startRange.location};
@@ -160,24 +153,14 @@
         
         NSMutableData * cleanedStreamContent = [firstPartCleanedStreamContent mutableCopy];
         [cleanedStreamContent appendData:lastPartCleanedStreamContent];
-        
-        NSLog(@"\nranges: %@\n%@", NSStringFromRange(firstPartRange), NSStringFromRange(lastPartRange));
-   //     NSLog(@"plain now: %@", streamContent);
-   //     NSLog(@"r1: %lu, r2:, %lu\n",(unsigned long)startRange.location, (unsigned long)stopRange.location);
-        //cleanedStreamContent = (NSMutableString*)[streamContent substringToIndex:startRange.location];
-        //cleanedStreamContent = (NSMutableString*)[cleanedStreamContent stringByAppendingString:[streamContent substringFromIndex:stopRange.location]];
-   //     NSLog(@"r1: %lu, r2:, %lu\ncleaned: %@",(unsigned long)startRange.location, (unsigned long)stopRange.location, cleanedStreamContent);
        
-        const char *output = malloc([streamContentAsData length]);
-        output = [streamContentAsData bytes];
-        printf("\nwat:%s\n",output);
+        //const char *output = malloc([streamContentAsData length]);
+        //output = [streamContentAsData bytes];
         
-        const char *output2 = malloc([cleanedStreamContent length]);
-        output2 = [cleanedStreamContent bytes];
-        printf("\nwat2:%s\n",output2);
+        //const char *output2 = malloc([cleanedStreamContent length]);
+        //output2 = [cleanedStreamContent bytes];
         return (NSData*)cleanedStreamContent;
     }
-    
 }
 
 @end
