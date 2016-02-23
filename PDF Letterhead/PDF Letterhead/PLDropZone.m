@@ -30,8 +30,6 @@
 
 - (void)setImage:(NSImage *)newImage{
     
-    //NSLog(@"ximage: %@", newImage);
-    
     if (newImage)
     {
         imageIsSet = YES;
@@ -78,8 +76,6 @@
         }
     }
     [super setImage:newImage];
-    //[(PLAppDelegate *)[NSApp delegate] renderPDF];
-    
 }
 
 - (void)dropAreaFadeIn
@@ -145,7 +141,7 @@
         {
             if ([ext isEqual:@"pdf"]){
                 
-                
+
                 //DETECT WHITE BG
                 NSData *fileData = [NSData dataWithContentsOfFile:[files lastObject]];
                 PLTransparencyUtils* trUtils = [[PLTransparencyUtils alloc] initWithData:fileData];
@@ -161,6 +157,7 @@
                     self.sourcefilepath = [files lastObject];
                 }
                 
+                [[NSApp delegate] setSourceFileName: [[[[files lastObject] lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"]];
                 
                 BOOL ok = [self setPdfFilepath:[self sourcefilepath]];
                 

@@ -23,14 +23,8 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
 
 - (NSRect) boundsForBox: (PDFDisplayBox) box
 {
-	// Always return 8.5 x 11 inches (in points of course).
-//	return NSMakeRect(0.0, 0.0, 612.0, 792.0);
-//    return NSMakeRect(0.0, 0.0, 842, 595);
-
     NSSize mainPDFSize = [_frontimage size];
-    //NSLog(@"main doc size: w=%f h=%f",mainPDFSize.width, mainPDFSize.height);
     return NSMakeRect(0.0, 0.0, mainPDFSize.width, mainPDFSize.height);
-
 }
 
 

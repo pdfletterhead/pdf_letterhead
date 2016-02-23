@@ -584,7 +584,7 @@
                 <action selector="newDocument:" target="-1" id="373"/>
             </connections>
         </menuItem>
-        <window title="PDF Letterhead - Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="PDF Letterhead - Preview" animationBehavior="default" id="855" userLabel="Window - PDF Letterhead Preview" customClass="PLPreviewWindow">
+        <window title="PDF Letterhead - Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="Preview" animationBehavior="default" id="855" userLabel="Window - PDF Letterhead Preview" customClass="PLPreviewWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>

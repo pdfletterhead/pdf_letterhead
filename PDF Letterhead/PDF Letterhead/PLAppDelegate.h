@@ -84,6 +84,7 @@
 @property PDFDocument *letterheadPDF;
 
 @property (nonatomic) IBOutlet YRKSpinningProgressIndicator *turboFan;
+@property NSString *sourceFileName;
 
 -(IBAction)saveAs:(id)sender;
 -(IBAction)saveEmail: (id) sender;
@@ -95,13 +96,8 @@
 -(IBAction)editSelectedProfile:(id)sender;
 -(void)renderPDF;
 -(BOOL)makeOrFindAppSupportDirectory;
-- (NSURL *)applicationFilesDirectory;
-- (void) startSpinner;
-- (void) stopSpinner;
-
-
-
-
-
+-(NSURL*)applicationFilesDirectory;
+-(void)startSpinner;
+-(void)stopSpinner;
 
 @end

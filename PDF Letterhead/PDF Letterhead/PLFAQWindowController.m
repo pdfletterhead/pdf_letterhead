@@ -26,9 +26,6 @@
 - (void)awakeFromNib
 {
     [_FAQView readRTFDFromFile:[[NSBundle mainBundle] pathForResource:@"FAQ" ofType:@"rtf"]];
-    //NSLog(@"%@",[[NSBundle mainBundle] pathForResource:@"FAQ" ofType:@"rtf"]);
-    // Initialization code here.
-
 }
 
 - (void)windowDidLoad

@@ -55,9 +55,11 @@
 @synthesize profileEditWindow = _profileEditWindow;
 @synthesize profileDrawer = _profileDrawer;
 @synthesize retrievePrice = _retrievePrice;
-
+@synthesize sourceFileName;
 
 @synthesize chooseLetterheadButton, saveLetterheadButton, saveButton3, previewButton3, printButton3, mailButton3;
+
+//BOOL _spinnerIsRunning;
 
 - (void)awakeFromNib {
     [[saveLetterheadButton cell] setKBButtonType:BButtonTypeLight];
@@ -183,10 +185,13 @@
 
 - (void) startSpinner
 {
+//    NSLog(@"start");
+//   if(!_spinnerIsRunning) { }
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         dispatch_async( dispatch_get_main_queue(), ^{
             
+    //        _spinnerIsRunning = YES;
             [_helpImage setHidden:YES];
             [[self PDFView] setHidden:YES];
             [_turboFan setHidden:NO];
@@ -194,21 +199,28 @@
             
         });
     });
+    
+    
 }
 
 - (void) stopSpinner
 {
-    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        dispatch_async( dispatch_get_main_queue(), ^{
-            
-        });
-    });
-    
+//    NSLog(@"stop");
+
     [_turboFan setHidden:YES];
     [[self PDFView] setHidden:NO];
     [_turboFan stopAnimation:self];
     [_helpImage setHidden:NO];
+/*    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        dispatch_async( dispatch_get_main_queue(), ^{
+            
+
+//            _spinnerIsRunning = NO;
+            
+        });
+    });
+*/
 }
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
@@ -217,7 +229,6 @@
         [_sourcedoc setPdfFilepath:filename];
         [self renderPDF];
 
-        NSLog(@"ja");
         return YES;
     }
     else {
@@ -501,6 +512,8 @@
             
         //Set PDFView
         dispatch_async( dispatch_get_main_queue(), ^{
+            
+     //       [self startSpinner];
         
             [[self PDFView] setDocument:document];
             [[self previewView] setDocument:document];
@@ -511,7 +524,6 @@
                 [saveButton3 setHidden:NO];
                 [printButton3 setHidden:NO];
                 [previewButton3 setHidden:NO];
-
             }
             else
             {
@@ -520,8 +532,9 @@
                 [saveButton3 setHidden:YES];
                 [printButton3 setHidden:YES];
                 [previewButton3 setHidden:YES];
-
             }
+            
+    //        [self stopSpinner];
             
         });
     });
@@ -655,7 +668,6 @@
         allow = YES;
     }
     
-    NSLog(@"allow: %hhd", allow);
     return allow;
 }
 
@@ -728,7 +740,7 @@
         defaultName = @"Untitled.pdf";
     }
     else {
-        defaultName =[[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"];
+        defaultName = self.sourceFileName;
     }
     
     NSSavePanel *savePanel = [NSSavePanel savePanel];
@@ -882,11 +894,9 @@
     
     //set previous profile
     NSURL *url = [[NSUserDefaults standardUserDefaults] URLForKey:@"recentProfile"];
-    NSLog(@"url: %@", url);
     if (url) {
         NSManagedObjectID *objID = [[[self managedObjectContext] persistentStoreCoordinator] managedObjectIDForURIRepresentation:url];
         profile = [[self managedObjectContext] objectWithID:objID];
-        NSLog(@"profile: %@", profile);
         [self checkProfiles];
         [self selectRow:profile];
     }
@@ -914,8 +924,6 @@
         [self saveRecentProfile:profile];
     }
     
-    NSLog(@"profile: %@", profile);
-
     if (profile) {
         [self.backgrounddoc setPdfFilepath:profile.bgImagePath];
         [self.coverbackgrounddoc setPdfFilepath:profile.coverImagePath];
@@ -923,7 +931,6 @@
     
     [self checkSegment];
     [self renderPDF];
-
 }
 
 - (NSArray *)updatedSortDescriptors {
@@ -989,7 +996,6 @@
 }
 
 - (void) disableProFeatures {
-    NSLog(@"Lite Version");
     [[self manageLetterheadsButton] setHidden:YES];
     [[self manageLetterheadsLine] setHidden:YES];
     [[self saveNewLetterheadButton] setHidden:YES];

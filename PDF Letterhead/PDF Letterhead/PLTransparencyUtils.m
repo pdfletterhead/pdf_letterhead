@@ -29,8 +29,6 @@
 
 -(BOOL) documentHasWhiteBackgrounds
 {
-  //  NSLog(@"Detect white bgs");
-    
     NSArray * allPages = [ypDoc getAllObjectsWithKey:@"Type" value:@"Page"];
     
     
@@ -62,7 +60,6 @@
 
 -(void) cleanDocumentFromWhiteBackgrounds
 {
-//    NSLog(@"Clear white bgs");
     if(!allPageContentsObjects)
     {
         if(![self documentHasWhiteBackgrounds])
@@ -97,16 +94,13 @@
     NSString *needle = @"/Cs1 cs 1 1 1 sc";
     NSString *needle2 = @"1 1 1 rg";
     if ([streamContent rangeOfString:needle].location != NSNotFound) {
-      //  NSLog(@"PDF may contain white backgrounds");
         return YES;
     }
 
     if ([streamContent rangeOfString:needle2].location != NSNotFound) {
-     //   NSLog(@"PDF may contain white backgrounds");
         return YES;
     }
     
-    //NSLog(@"PDF does not contain white backgrounds");
     return NO;
 }
 
@@ -141,7 +135,6 @@
     
     if(startRange.location == NSNotFound || stopRange.location == NSNotFound)
     {
-//        NSLog(@"no sc colorscace rectangles found");
         return nil;
     }
     else

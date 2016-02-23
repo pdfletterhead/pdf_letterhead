@@ -12,7 +12,6 @@
 
 - (void)orderOut:(id)sender;
 {
-    NSLog(@"did close");
     NSUInteger masks = [self styleMask];
     if ( masks & NSFullScreenWindowMask) {
         [self toggleFullScreen:sender];
