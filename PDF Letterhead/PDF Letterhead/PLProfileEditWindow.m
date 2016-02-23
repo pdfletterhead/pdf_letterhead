@@ -16,6 +16,10 @@
 @property (unsafe_unretained) IBOutlet NSImageView *coverImage;
 @property (unsafe_unretained) IBOutlet NSTextField *title;
 
+@property (unsafe_unretained) IBOutlet NSTextField *titleLabel;
+@property (unsafe_unretained) IBOutlet NSTextField *dropCoverLabel;
+@property (unsafe_unretained) IBOutlet NSTextField *dropFollowingLabel;
+
 @end
 
 @implementation PLProfileEditWindow
@@ -25,7 +29,12 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-
+    // setup translations
+    [_titleLabel setStringValue:NSLocalizedString(@"Title",@"Title")];
+    [_dropCoverLabel setStringValue:NSLocalizedString(@"Drop cover background here",@"Drop cover background here")];
+    [_dropFollowingLabel setStringValue:NSLocalizedString(@"Drop following background here",@"Drop following background here")];
+    [[self window] setTitle:NSLocalizedString(@"Edit Letterhead","Edit Letterhead")];
+    
     NSURL *bgPath = [NSURL URLWithString:_loadedProfile.bgImagePath];
     NSURL *coverPath = [NSURL URLWithString:_loadedProfile.coverImagePath];
    

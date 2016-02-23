@@ -18,7 +18,6 @@
 @property (strong) IBOutlet NSTableView *drawerTableView;
 @property (unsafe_unretained) IBOutlet NSArrayController *pArrayController;
 @property (unsafe_unretained) IBOutlet NSView *drawerContentView;
-@property (weak) IBOutlet NSView *noItemsView;
 @property (weak) IBOutlet NSButton *manageLetterheadsButton;
 @property (weak) IBOutlet NSBox *manageLetterheadsLine;
 @property (weak) IBOutlet KBButton *saveNewLetterheadButton;
@@ -27,6 +26,23 @@
 @property (weak) IBOutlet NSSegmentedControl *segmentedControl;
 @property (weak) IBOutlet PDFView *PDFView;
 @property (weak) IBOutlet NSTextField *dropDescription;
+@property (weak) IBOutlet NSView *noItemsView;
+
+//TRANSLATED//
+@property (nonatomic) IBOutlet NSImageView *helpImage;
+@property (nonatomic) IBOutlet NSTextField *coverImageLabel;
+@property (nonatomic) IBOutlet NSTextField *ChooseLetterheadLabel;
+@property (nonatomic) IBOutlet NSTextField *coverLabelInDrawer;
+@property (nonatomic) IBOutlet NSTextField *followingLabelInDrawer;
+@property (nonatomic) IBOutlet NSTextField *dropContentPDFLabel;
+@property (nonatomic) IBOutlet NSTextField *libraryEmptyLabel;
+@property (nonatomic) IBOutlet NSTextField *saveFirstLHLabel;
+
+@property (assign) IBOutlet NSButton *prevZoominButton;
+@property (assign) IBOutlet NSButton *prevZoomoutButton;
+@property (assign) IBOutlet NSButton *prevPrintButton;
+@property (assign) IBOutlet NSButton *prevCloseButton;
+
 
 @end
 
@@ -49,6 +65,7 @@
     [[previewButton3 cell] setKBButtonType:BButtonTypeDark];
     [[printButton3 cell] setKBButtonType:BButtonTypeDark];
     [[mailButton3 cell] setKBButtonType:BButtonTypeDark];
+    [self setupLocalizedElements];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -120,6 +137,47 @@
     
 #endif
     
+}
+
+-(void) setupLocalizedElements
+{
+    [saveLetterheadButton setTitle:NSLocalizedString(@"Save new letterhead", @"Save new letterhead")];
+    [saveButton3 setTitle:NSLocalizedString(@"Save", @"Save")];
+    [previewButton3 setTitle:NSLocalizedString(@"Preview", @"Preview")];
+    [printButton3 setTitle:NSLocalizedString(@"Print", @"Print")];
+    [mailButton3 setTitle:NSLocalizedString(@"E-Mail", @"E-Mail")];
+    
+    [_ChooseLetterheadLabel setStringValue: NSLocalizedString(@"Choose a letterhead", @"Choose a letterhead")];
+    [_coverLabelInDrawer setStringValue: NSLocalizedString(@"Cover", @"Cover")];
+    [_followingLabelInDrawer setStringValue: NSLocalizedString(@"Following", @"Following")];
+    [_coverbackgrounddocText setStringValue: NSLocalizedString(@"Background", @"Background")];
+    [_backgrounddocText setStringValue: NSLocalizedString(@"Cover page", @"Cover page")];
+    [_dropDescription setStringValue: NSLocalizedString(@"Drop background images here", @"Drop background images here")];
+    [_dropContentPDFLabel setStringValue: NSLocalizedString(@"Drop content PDF here", @"Drop content PDF here")];
+    [_manageLetterheadsButton setTitle: NSLocalizedString(@"MANAGE LETTERHEADS", @"MANAGE LETTERHEADS")];
+    
+    NSBundle* myBundle = [NSBundle mainBundle];
+    NSString* myImagePath = [myBundle pathForResource:NSLocalizedString(@"bghelp-eng", @"bghelp.eng") ofType:@"png"];
+    NSImage *image = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+    [_helpImage setImage:image];
+    
+    NSString* myImagePath2 = [myBundle pathForResource:NSLocalizedString(@"upgradebutton-eng", @"bghelp.eng") ofType:@"png"];
+    NSImage *image2 = [[NSImage alloc] initWithContentsOfFile: myImagePath2];
+    [_upgradeToProButton setImage:image2];
+    
+    /*
+    NSLocalizedString(@"Add Image", @"Add Image")
+    NSLocalizedString(@"Remove Image", @"Remove Image")
+    NSLocalizedString(@"Add PDF", @"Add PDF")
+    NSLocalizedString(@"Remove PDF", @"Remove PDF")
+    */
+    
+    [_libraryEmptyLabel setStringValue: NSLocalizedString(@"Library Empty", @"Library Empty")];
+    [_saveFirstLHLabel setStringValue: NSLocalizedString(@"Save your first letterhead", @"Library Empty\n\nSave your first letterhead")];
+    [_prevZoominButton setTitle: NSLocalizedString(@"Zoom in", @"Zoom in")];
+    [_prevZoomoutButton setTitle: NSLocalizedString(@"Zoom out", @"Zoom out")];
+    [_prevCloseButton setTitle:NSLocalizedString(@"Close", @"Close")];
+    [_prevPrintButton setTitle:NSLocalizedString(@"Print", @"Print")];
 }
 
 - (void) startSpinner

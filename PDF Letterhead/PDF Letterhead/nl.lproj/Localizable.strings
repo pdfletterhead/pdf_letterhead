@@ -1,7 +1,8 @@
 /* Delete Letterhead message */
 "Are you sure you want to delete this letterhead?" = "Weet u zeker dat u dit briefpapier wilt verwijderen?";
 
-/* Cover disabled Following text */
+/* Background
+   Cover disabled Following text */
 "Background" = "Achtergrond";
 
 /* Cancel button
@@ -17,13 +18,17 @@
 /* Cover control action Drop Description unchecked */
 "Drop background image here" = "Sleep briefpapier";
 
-/* Cover control action Drop Description checked */
+/* Cover control action Drop Description checked
+   Drop background images here */
 "Drop background images here" = "Sleep briefpapier";
+
+/* Drop cover background here */
+"Drop cover background here" = "Sleep achtergrond voorpagina";
 
 /* Create new Letterhead Message */
 "Enter a name for the new letterhead" = "Voer een naam in";
 
-/* No comment provided by engineer. */
+/* Following */
 "Following" = "Volgpagina's";
 
 /* Mail share error title */

@@ -14,26 +14,26 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="420" customClass="NSFontManager"/>
-        <customObject id="785" userLabel="FAQWindowController" customClass="PLFAQWindowController">
-            <connections>
-                <outlet property="FAQView" destination="763" id="787"/>
-                <outlet property="window" destination="760" id="786"/>
-            </connections>
-        </customObject>
+        <customObject id="785" userLabel="FAQWindowController" customClass="PLFAQWindowController"/>
         <customObject id="494" userLabel="Delegate" customClass="PLAppDelegate">
             <connections>
+                <outlet property="ChooseLetterheadLabel" destination="X7M-no-WSH" id="NID-CR-sRf"/>
                 <outlet property="PDFView" destination="BT2-Zw-wHE" id="YuV-1r-1pq"/>
                 <outlet property="_pdfWindow" destination="587" id="729"/>
                 <outlet property="backgrounddoc" destination="929" id="932"/>
                 <outlet property="backgrounddocText" destination="948" id="987"/>
                 <outlet property="chooseLetterheadButton" destination="qzB-tB-vJZ" id="ZlI-vE-NG3"/>
+                <outlet property="coverLabelInDrawer" destination="XjU-9E-1Dp" id="hVl-og-tCs"/>
                 <outlet property="coverbackgrounddoc" destination="791" id="797"/>
                 <outlet property="coverbackgrounddocText" destination="946" id="986"/>
                 <outlet property="coverswitch3" destination="32v-Qf-gBP" id="2Vz-TQ-zPM"/>
                 <outlet property="drawerContentView" destination="vW8-G5-9Eg" id="OA1-i8-iNJ"/>
                 <outlet property="drawerTableView" destination="uE2-5U-Fka" id="kID-RA-J1t"/>
+                <outlet property="dropContentPDFLabel" destination="983" id="pSY-Ze-4Ta"/>
                 <outlet property="dropDescription" destination="1010" id="g02-OS-1c7"/>
+                <outlet property="followingLabelInDrawer" destination="FrI-JM-siA" id="1pR-ei-tds"/>
                 <outlet property="helpImage" destination="Xye-zb-ewL" id="oEB-bR-Muy"/>
+                <outlet property="libraryEmptyLabel" destination="BE0-71-oHs" id="GHR-6b-P3S"/>
                 <outlet property="mailButton1" destination="584" id="808"/>
                 <outlet property="mailButton2" destination="812" id="814"/>
                 <outlet property="mailButton3" destination="897" id="1008"/>
@@ -42,6 +42,10 @@
                 <outlet property="noItemsView" destination="4ja-wa-Ek4" id="qda-wD-fLw"/>
                 <outlet property="pArrayController" destination="J24-2q-b8a" id="DG2-Dl-3PV"/>
                 <outlet property="pdfWindow" destination="587" id="752"/>
+                <outlet property="prevCloseButton" destination="872" id="6vX-It-82u"/>
+                <outlet property="prevPrintButton" destination="1013" id="dgh-wG-l9o"/>
+                <outlet property="prevZoominButton" destination="863" id="f7T-gh-o9S"/>
+                <outlet property="prevZoomoutButton" destination="866" id="3cp-24-b1j"/>
                 <outlet property="previewButton1" destination="857" id="887"/>
                 <outlet property="previewButton3" destination="993" id="1006"/>
                 <outlet property="previewView" destination="861" id="862"/>
@@ -52,6 +56,7 @@
                 <outlet property="saveButton1" destination="583" id="807"/>
                 <outlet property="saveButton2" destination="75" id="810"/>
                 <outlet property="saveButton3" destination="991" id="1007"/>
+                <outlet property="saveFirstLHLabel" destination="heZ-Gc-DAM" id="Vkz-A6-c77"/>
                 <outlet property="saveLetterheadButton" destination="1z4-dM-vE6" id="kuQ-2V-UBU"/>
                 <outlet property="saveNewLetterheadButton" destination="1z4-dM-vE6" id="JP5-sK-7am"/>
                 <outlet property="saveNewLetterheadLine" destination="hZ6-nf-SGY" id="04o-0I-wBG"/>
@@ -289,7 +294,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="PDF Letterhead" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="587">
+        <window title="PDF Letterhead" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" frameAutosaveName="MainWindow" animationBehavior="default" id="587">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -524,48 +529,6 @@
             </connections>
             <point key="canvasLocation" x="775" y="743"/>
         </window>
-        <window title="PDF Letterhead FAQ" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="760" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1876" y="-14" width="510" height="413"/>
-            <rect key="screenRect" x="1920" y="42" width="1680" height="1027"/>
-            <view key="contentView" id="761">
-                <rect key="frame" x="0.0" y="0.0" width="510" height="413"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="762">
-                        <rect key="frame" x="-1" y="-1" width="512" height="415"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <clipView key="contentView" id="HPJ-Mw-BeV">
-                            <rect key="frame" x="1" y="1" width="510" height="413"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="763" userLabel="PLfaqwindow">
-                                    <rect key="frame" x="0.0" y="0.0" width="510" height="413"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="510" height="413"/>
-                                    <size key="maxSize" width="525" height="10000000"/>
-                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="510" height="413"/>
-                                    <size key="maxSize" width="525" height="10000000"/>
-                                </textView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="764">
-                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="765">
-                            <rect key="frame" x="496" y="1" width="15" height="413"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
-                </subviews>
-            </view>
-            <point key="canvasLocation" x="910" y="412.5"/>
-        </window>
         <menu id="824" userLabel="Menu cover">
             <items>
                 <menuItem title="Add Image" id="830">
@@ -620,7 +583,7 @@
                 <action selector="newDocument:" target="-1" id="373"/>
             </connections>
         </menuItem>
-        <window title="PDF Letterhead - Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="855" userLabel="Window - PDF Letterhead Preview" customClass="PLPreviewWindow">
+        <window title="PDF Letterhead - Preview" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="PDF Letterhead - Preview" animationBehavior="default" id="855" userLabel="Window - PDF Letterhead Preview" customClass="PLPreviewWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -686,7 +649,7 @@
                     </customView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="987.5" y="418"/>
+            <point key="canvasLocation" x="1191.5" y="380"/>
         </window>
         <menuItem title="File" id="UtU-yO-fEo">
             <modifierMask key="keyEquivalentModifierMask"/>

@@ -29,7 +29,6 @@
 
     NSBundle* myBundle = [NSBundle mainBundle];
     NSString* myImagePath = [myBundle pathForResource:NSLocalizedString(@"splashscreen-eng", @"splashscreen-eng") ofType:@"png"];
-    NSLog(@"pa: %@",myImagePath);
     NSImage *splashImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
     [_featureImage setImage:splashImage];
     
