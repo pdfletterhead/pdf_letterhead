@@ -146,25 +146,29 @@
 
 -(NSString*)saveImage:(NSImage*)image :(Profile*)profile :(NSString*)cover {
     
-    // 1. Get an NSBitmapImageRep from the image passed in
-    [image lockFocus];
-    NSBitmapImageRep *imgRep = [[NSBitmapImageRep alloc] initWithFocusedViewRect:NSMakeRect(0.0, 0.0, [image size].width, [image size].height)];
-    [image unlockFocus];
+    NSImageView *myView;
+    NSRect vFrame;
+    NSURL *pathToPdf = [self.pathToAppSupport URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf",[self createUniqueString]]];
     
-    // 2. Create URL to where image will be saved
-    NSURL *pathToImage = [self.pathToAppSupport URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[self createUniqueString]]];
-    NSData *data = [imgRep representationUsingType: NSPNGFileType properties: nil];
+    vFrame = NSZeroRect;
+    vFrame.size = [image size];
+    myView = [[NSImageView alloc] initWithFrame:vFrame];
+    
+    [myView setImage:image];
+    
+    NSData *data = [myView dataWithPDFInsideRect:vFrame];
+    
     NSString *returnVar;
     
     // 3. Write image to disk, set path
-    if ([data writeToURL:pathToImage atomically:NO]) {
+    if ([data writeToURL:pathToPdf atomically:NO]) {
         if ([cover isEqual:@"cover"]) {
-            profile.coverImagePath = [pathToImage absoluteString];
+            profile.coverImagePath = [pathToPdf absoluteString];
             [[self coverImage] setImage:image];
             returnVar = profile.coverImagePath;
             
         } else {
-            profile.bgImagePath = [pathToImage absoluteString];
+            profile.bgImagePath = [pathToPdf absoluteString];
             [[self bgImage] setImage:image];
             returnVar = profile.bgImagePath;
         }

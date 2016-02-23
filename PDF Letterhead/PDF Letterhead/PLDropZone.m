@@ -239,12 +239,8 @@
         encodedString = path;
     }
 
-    //NSLog(@"encodedstr: %@", encodedString);
-    
     NSURL *data = [NSURL URLWithString:encodedString];
     NSImage *zNewImage = [[NSImage alloc] initWithContentsOfURL:data];
-    
-    //NSLog(@"image: %@", zNewImage);
     
     [self setImage:zNewImage];
     
