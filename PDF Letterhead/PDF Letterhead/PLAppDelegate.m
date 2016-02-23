@@ -148,9 +148,10 @@
     [mailButton3 setTitle:NSLocalizedString(@"E-Mail", @"E-Mail")];
     
     [_ChooseLetterheadLabel setStringValue: NSLocalizedString(@"Choose a letterhead", @"Choose a letterhead")];
-    [_coverLabelInDrawer setStringValue: NSLocalizedString(@"Cover", @"Cover")];
+    [_coverLabelInDrawer setStringValue: NSLocalizedString(@"Cover", @"Cover label drawer")];
     [_followingLabelInDrawer setStringValue: NSLocalizedString(@"Following", @"Following")];
     [_coverbackgrounddocText setStringValue: NSLocalizedString(@"Background", @"Background")];
+    [_coverImageLabel setStringValue: NSLocalizedString(@"Cover page", @"Cover page")];
     [_backgrounddocText setStringValue: NSLocalizedString(@"Cover page", @"Cover page")];
     [_dropDescription setStringValue: NSLocalizedString(@"Drop background images here", @"Drop background images here")];
     [_dropContentPDFLabel setStringValue: NSLocalizedString(@"Drop content PDF here", @"Drop content PDF here")];
@@ -682,7 +683,7 @@
         [[_coverbackgrounddocText animator] setAlphaValue:0.0];
         
         
-        [[_backgrounddocText animator] setStringValue:NSLocalizedString(@"Background", @"Cover disabled Following text")];
+        [[_backgrounddocText animator] setStringValue:NSLocalizedString(@"Background", @"Background")];
         
         CGRect newbgTextframe = CGRectMake(_cvTextframe.origin.x+45,
                                            _cvTextframe.origin.y,
@@ -691,7 +692,7 @@
 
         [[_backgrounddocText animator ]setFrame:newbgTextframe];
         _backgrounddoc.identifier = @"coverDropArea";
-        [self dropDescription].stringValue = NSLocalizedString(@"Drop background image here", @"Cover control action Drop Description unchecked");
+        [self dropDescription].stringValue = NSLocalizedString(@"Drop background image here", @"Cover control action Drop");
         [_backgrounddoc setNeedsDisplay:YES];
         
     }
@@ -711,7 +712,7 @@
         
         [_coverbackgrounddoc setEditable:YES];
         _backgrounddoc.identifier = @"bgDropArea";
-        [self dropDescription].stringValue = NSLocalizedString(@"Drop background images here", @"Cover control action Drop Description checked");
+        [self dropDescription].stringValue = NSLocalizedString(@"Drop background images here", @"Cover control action");
         [_backgrounddoc setNeedsDisplay:YES];
 
     }

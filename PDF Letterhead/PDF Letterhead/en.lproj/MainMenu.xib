@@ -23,6 +23,7 @@
                 <outlet property="backgrounddoc" destination="929" id="932"/>
                 <outlet property="backgrounddocText" destination="948" id="987"/>
                 <outlet property="chooseLetterheadButton" destination="qzB-tB-vJZ" id="ZlI-vE-NG3"/>
+                <outlet property="coverImageLabel" destination="795" id="9Xh-eB-bRN"/>
                 <outlet property="coverLabelInDrawer" destination="XjU-9E-1Dp" id="hVl-og-tCs"/>
                 <outlet property="coverbackgrounddoc" destination="791" id="797"/>
                 <outlet property="coverbackgrounddocText" destination="946" id="986"/>
