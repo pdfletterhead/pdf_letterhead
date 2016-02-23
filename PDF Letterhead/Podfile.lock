@@ -1,10 +1,12 @@
 PODS:
   - MMGetAppStorePrice (0.0.1)
   - YAPDFKit (0.1.2)
+  - YRKSpinningProgressIndicator (1.4)
 
 DEPENDENCIES:
   - MMGetAppStorePrice (from `https://github.com/mipmip/MMGetAppStorePrice.git`)
   - YAPDFKit (from `https://github.com/mipmip/YAPDFKit.git`)
+  - YRKSpinningProgressIndicator
 
 EXTERNAL SOURCES:
   MMGetAppStorePrice:
@@ -23,5 +25,6 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   MMGetAppStorePrice: f9d27d73944680ef24e1f9075844676a5346ec66
   YAPDFKit: 15314ebf1eda0a9a4686858d48380c19c76d1155
+  YRKSpinningProgressIndicator: ff42b7cb298b18ce2fd280782c9b2b28e1a10c71
 
 COCOAPODS: 0.39.0

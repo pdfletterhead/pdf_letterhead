@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1070" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
-        <plugIn identifier="com.apple.pdfkit.ibplugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <plugIn identifier="com.apple.pdfkit.ibplugin" version="9532"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -33,6 +33,7 @@
                 <outlet property="drawerContentView" destination="vW8-G5-9Eg" id="OA1-i8-iNJ"/>
                 <outlet property="drawerTableView" destination="uE2-5U-Fka" id="kID-RA-J1t"/>
                 <outlet property="dropDescription" destination="1010" id="g02-OS-1c7"/>
+                <outlet property="helpImage" destination="Xye-zb-ewL" id="oEB-bR-Muy"/>
                 <outlet property="mailButton1" destination="584" id="808"/>
                 <outlet property="mailButton2" destination="812" id="814"/>
                 <outlet property="mailButton3" destination="897" id="1008"/>
@@ -56,6 +57,7 @@
                 <outlet property="saveNewLetterheadLine" destination="hZ6-nf-SGY" id="04o-0I-wBG"/>
                 <outlet property="segmentedControl" destination="Hfo-bE-ad2" id="9p6-tg-Ptp"/>
                 <outlet property="sourcedoc" destination="561" id="746"/>
+                <outlet property="turboFan" destination="Liv-5Y-qUx" id="88D-Lk-0vj"/>
                 <outlet property="upgradeToProButton" destination="Ufh-uv-EKj" id="0ab-nL-dJf"/>
             </connections>
         </customObject>
@@ -466,10 +468,14 @@
                                 </subviews>
                             </customView>
                             <imageView id="Xye-zb-ewL">
-                                <rect key="frame" x="36" y="136" width="379" height="513"/>
+                                <rect key="frame" x="45" y="87" width="379" height="513"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="bghelp-eng" id="HdR-P0-Wge"/>
                             </imageView>
+                            <customView id="Liv-5Y-qUx" customClass="YRKSpinningProgressIndicator">
+                                <rect key="frame" x="184" y="294" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </customView>
                             <customView id="988">
                                 <rect key="frame" x="20" y="66" width="429" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,10 +544,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="510" height="413"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="495" height="413"/>
+                                    <size key="minSize" width="510" height="413"/>
                                     <size key="maxSize" width="525" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -591,6 +597,7 @@
                     </connections>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="1262.5" y="843.5"/>
         </menu>
         <menu id="839" userLabel="Menu content">
             <items>

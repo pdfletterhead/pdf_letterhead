@@ -399,8 +399,7 @@
 		3E6835CB1607C90400DDFB82 /* PDF Letterhead */ = {
 			isa = PBXGroup;
 			children = (
-				3E9250961C73668900744747 /* PLTransparencyUtils.h */,
-				3E9250971C73668900744747 /* PLTransparencyUtils.m */,
+				3E728F941C7C8C96001FC453 /* TransparentMaker */,
 				3E9B90061C3AD9C2003D86E0 /* ITSwitch */,
 				3E5A5B8C1C3C644600ECD755 /* KBButton */,
 				3E2AFEFD16A5F4B3006D2CB0 /* Upgrade Splash */,
@@ -437,6 +436,15 @@
 				79368AE21C3D716E0009DA2C /* Pro Icons.xcassets */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E728F941C7C8C96001FC453 /* TransparentMaker */ = {
+			isa = PBXGroup;
+			children = (
+				3E9250961C73668900744747 /* PLTransparencyUtils.h */,
+				3E9250971C73668900744747 /* PLTransparencyUtils.m */,
+			);
+			name = TransparentMaker;
 			sourceTree = "<group>";
 		};
 		3E7849301C4D017700A01DCF /* icons */ = {

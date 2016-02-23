@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F56B2BC98638B1F02C573BAB'
-               BlueprintName = 'Pods-PDF Letterhead Pro'
+               BlueprintIdentifier = '3211B8896B6EE276034D0B74'
+               BlueprintName = 'YRKSpinningProgressIndicator'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-PDF Letterhead Pro.a'>
+               BuildableName = 'libYRKSpinningProgressIndicator.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

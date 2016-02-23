@@ -24,15 +24,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YRKSpinningProgressIndicator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>107B67DEE56FC4373AA0267EA6841E69</key>
+		<key>11C6D2805FFCD57C4CD168F645583E3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E91949694E2B98A549A07EA5651E2FE</key>
+		<key>5FABFE4CA35BF82ED624AD316014DC2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88F28F11BE73AD227563C46C3D144B44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C2A3F769A5CFB3C303B940DD3D466B4</key>
+		<key>B7C48F9FCC66011EB131DA7623651342</key>
 		<dict>
 			<key>primary</key>
 			<true/>

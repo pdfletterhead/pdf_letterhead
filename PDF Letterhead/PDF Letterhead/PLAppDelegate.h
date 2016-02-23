@@ -12,6 +12,7 @@
 #import "ITSwitch.h"
 #import "KBButton.h"
 #import "MMGetAppStorePrice.h"
+#import "YRKSpinningProgressIndicator.h"
 
 
 
@@ -51,7 +52,6 @@
 @property (assign) IBOutlet NSTextField *backgrounddocText;
 @property (assign) IBOutlet NSTextField *coverbackgrounddocText;
 
-//@property (assign) IBOutlet NSSegmentedControl *coverswitch;
 @property (assign) IBOutlet ITSwitch *coverswitch3;
 @property (retain) MMGetAppStorePrice *retrievePrice;
 
@@ -83,6 +83,9 @@
 @property (nonatomic,strong) PLProfileEditWindow *profileEditWindow;
 @property PDFDocument *letterheadPDF;
 
+@property (nonatomic) IBOutlet YRKSpinningProgressIndicator *turboFan;
+@property (nonatomic) IBOutlet NSImageView *helpImage;
+
 -(IBAction)saveAs:(id)sender;
 -(IBAction)saveEmail: (id) sender;
 -(IBAction)savePrint: (id) sender;
@@ -94,7 +97,7 @@
 -(void)renderPDF;
 -(BOOL)makeOrFindAppSupportDirectory;
 - (NSURL *)applicationFilesDirectory;
-
-//-(void)updatePreviewAndActionButtons;
+- (void) startSpinner;
+- (void) stopSpinner;
 
 @end

@@ -119,6 +119,12 @@
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
 {
+    
+    if([[self identifier] isEqualToString:@"sourceDropArea"])
+    {
+        [[NSApp delegate] startSpinner];
+    }
+    
     PLAppDelegate *delegate = [[NSApplication sharedApplication] delegate ];
     NSPasteboard *pboard = [sender draggingPasteboard];
 
@@ -137,8 +143,8 @@
         
         if([[self identifier] isEqualToString:@"sourceDropArea"])
         {
-            
             if ([ext isEqual:@"pdf"]){
+                
                 
                 //DETECT WHITE BG
                 NSData *fileData = [NSData dataWithContentsOfFile:[files lastObject]];
@@ -159,9 +165,10 @@
                 BOOL ok = [self setPdfFilepath:[self sourcefilepath]];
                 
                 if (ok) {
-                    
                     [(PLAppDelegate *)[NSApp delegate] renderPDF];
                 }
+                
+                [[NSApp delegate] stopSpinner];
                 
                 return YES;
                 

@@ -7,155 +7,195 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03287396279E0F00B41DE9CD493F466E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95117A5E0D434F1D13915FCEE854F1FC /* main.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		03E81A4DF98AC2A45F29DA2E6CE5377D /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 963C1B44A78B83170DA3A0451A98A8F4 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04874FFEB1F8034A2EDB4EDF56B85BE8 /* Utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 257CE96C982D0F18D013D48EF323EA9F /* Utils.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0A34589128E93A550153582ED691EF16 /* YPDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 232001002094B44725A3BB443C2A1E07 /* YPDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1507FB742955B680A186AE1BC714B16E /* MMGetAppStorePrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FFD57E169E8C8A4BF313218FCE2A2E9 /* MMGetAppStorePrice.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		173357546CBC582DABE8A6834134B1A7 /* YPXref.h in Headers */ = {isa = PBXBuildFile; fileRef = 9270F0A7D50D878F885277ECDD5FAAB4 /* YPXref.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1829DF4809984290CCB2117F3B780F2C /* YPObjectStream.h in Headers */ = {isa = PBXBuildFile; fileRef = EB009F52B0545B23ECE8B4C367243B7E /* YPObjectStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A7F94EE4D1130B49D6C974EB213A1F0 /* YPAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA64F15BEDE77A4A59516879057906 /* YPAttribute.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1DF94BAE2FCC60F7312E3F1394F5FD00 /* YPHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E904AD7D6D908B7F51D43D3E9B2ACCD /* YPHexString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22010DE4203259FDF473D26D0ADB1F22 /* YPDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4BFBF6179E262E6E8D230B6F403E9B /* YPDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		22A6D899B91E7CD56A3672313223ABC3 /* YPName.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D313A414D5448687822C0068C061EE /* YPName.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2EA0AA97DF99892FF990B074E7E57801 /* MMGetAppStorePrice-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E12D53229E0710D129060EE0CF6594 /* MMGetAppStorePrice-dummy.m */; };
-		34D1463F0BFA8DD4291E9521A55B7C8F /* YPDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0EA5D18D6658551AB163D83D513C5F /* YPDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3AA4EB0B886FEC00D3C5DAA0510A1BFF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		3CF08D030DCC343A2D8214A032973D9F /* pdfzlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A7E0222825DC7132D4B17BE4AF7B061 /* pdfzlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FF230FFF4C91F78172EFF61DA7739F1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		45716101CB86968CBDB7A16673D221F6 /* YPPages.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0CB47E956CA38CAB322F978BB9258 /* YPPages.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		497098F6D0CAC146F7E33548165EEF84 /* YPHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B68F129C4C39F8EB1ED759A2BEB56 /* YPHexString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4E1B8AFF4A0B7215290D676E34B19EAB /* PDFParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 99570CA72EE8E896E64AC792CB24DC9D /* PDFParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57FA62226484D5B4EC6FFA273B0AD5F2 /* YPBool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CD50065B4C5EE59802B74E5C70469E3 /* YPBool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AC44C779C4C00A463D497E34F087320 /* YPBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 02246221B2835210A17F4B0E9FE5985E /* YPBool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7052270190E8450B14B2709380FEFA17 /* YPArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F9392E9AAFA8D50F82A3217B089F10 /* YPArray.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		777996161EB487052F0500BE6F118069 /* YPDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 37253A0245C9AC4CD66CD277F461EBCC /* YPDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82102FECB5C367CE65A418BAC47E6661 /* MMGetAppStorePrice.h in Headers */ = {isa = PBXBuildFile; fileRef = ACAC65DB2BDF465F346A308941AC169F /* MMGetAppStorePrice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		825B14463EB16DDD53D76D9503035300 /* YPObjectReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 9442EE5D4D8B1CA81D1002596DA920B1 /* YPObjectReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		843354C8658A67CE3DA9B4727AF495C4 /* Pods-PDF Letterhead Pro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7662AEDF2E7F8875226A819FC90673 /* Pods-PDF Letterhead Pro-dummy.m */; };
-		93B55DAE1952BCB42662BADFDA36AEAA /* YPAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D7311AADCF1CBE77921A18E748CD0D /* YPAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		955F1C826069663BE2764575A89C850C /* YPString.h in Headers */ = {isa = PBXBuildFile; fileRef = B77009FE38ACC3EE10BC3C1101A08F4E /* YPString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B66BBA49F88A3D7511E3E96E781B909 /* YPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 565D8CE071673CC653E7D4F2B1D52845 /* YPObject.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A17D5103B23A89064068B2B8C6C50750 /* YPName.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DFC318A05D97BACE1EDFFE521A186 /* YPName.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		002973C856296B50076B03DBEC9DD9D9 /* YPXref.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C64803333EDFE3AC2D94BEA41458D5 /* YPXref.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06D166BDEF5D3E1FE2550658959500C3 /* YPObjectStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1538070A6B3CD872BE81A580BF445F72 /* YPObjectStream.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		078AC6C662A38AEE62B20891BC2951F9 /* PDFParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1211E3E8EF62D1DF15B370C6315C0778 /* PDFParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14606B3FAC58DA7F328B6AA77D6319EC /* YPObjectReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 013244DC4D64B1C61E68C3508992B3E1 /* YPObjectReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1507FB742955B680A186AE1BC714B16E /* MMGetAppStorePrice.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0CAD69984C563D8E0189CC3A1F210 /* MMGetAppStorePrice.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		21EE9209BEEF66F16FBEB96D9B231CCF /* YPPages.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE3D1186644611A9034D1076CF4F4D7 /* YPPages.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2260785E4A1393988E26A50BFCE261CC /* YPNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 8188A182A1D56BB8BAA45E9BDD72AFCB /* YPNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		290C7AC5E9DBFB81E670CFBD9FCA7F01 /* YPHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = A0166641F4154FAD0032F64DDB0239F2 /* YPHexString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A2D51552D27ABFD8A4B8E362B802C25 /* YPDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C99FA2F2272B4606217C89EAF521277 /* YPDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EA0AA97DF99892FF990B074E7E57801 /* MMGetAppStorePrice-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F91089AB64AFB7834140ADF03952F95 /* MMGetAppStorePrice-dummy.m */; };
+		2FB3523705528B657F6ADE5CC9175254 /* YPObjectReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B44B6CCB584131B4DF1C33D935B8B07 /* YPObjectReference.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		308F37B2577F9508717962962A2DF352 /* YPNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D72246A6348AB6777A36EB8ED9A12 /* YPNumber.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		341BEA09DEE793FA58D5F12A7C56722F /* YPHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4974110568B55639C246CC80EDEFF62E /* YPHexString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3597E347E73F881C7C1BE42929F20699 /* YPString.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F23BB6680A535AB16DD38217F45814B /* YPString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AD83812F9864FC604A579DE1E8B8CC9 /* YAPDFKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A1AADAD36B0AAECDCE22206018CE8 /* YAPDFKit-dummy.m */; };
+		3D8FBA5D866B7B15748C811ED15A0515 /* YPDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 520A4ED3ECA088F270875137CAC53CA0 /* YPDictionary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		41A27F121C46B44D423048158627E23B /* YPXref.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0E371C296196ACBE9A8D3063D5E6A5 /* YPXref.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		53EB0A7586B5B9BC4B77032BE64784BC /* YRKSpinningProgressIndicator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D227A807CBA0355AA88CF08C9EB8606 /* YRKSpinningProgressIndicator-dummy.m */; };
+		578E647437B35F2C1734EC7B027D0E80 /* YPAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFF511657ED5C1E156EAB31ED33FE18 /* YPAttribute.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		648F6C0D6D2488F20E070DDF2956AA23 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
+		64A906C38E00E17AF3F1563F436580E9 /* pdfzlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 965EB55B6162D3F521FADF2733FBC291 /* pdfzlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6CB1CA67ADDD12F9E740A324C01737C0 /* YPArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8E5E64BF401F3A76E36925BBFA0B0 /* YPArray.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		720E2DE6FDBACDECDFE797F0273BF389 /* YPObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4664D5056B87964FC2E2B91EFA862908 /* YPObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72303715D40F22E882DC9264C19FA7E4 /* YPBool.m in Sources */ = {isa = PBXBuildFile; fileRef = FF3CC86A076068ABD322057C20F022D3 /* YPBool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		75E2AEBCD3C19B43EF72EE5DD61EABEA /* YPBool.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C3142CB73902CC1D32DFF323E97211 /* YPBool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A030CE8AB8BF3C9F0FE3BBE884ACA67 /* YPDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A397A09D60D1C5C17CD393288242CD6 /* YPDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D49B341E4E36C646C213AE8C19A3511 /* YRKSpinningProgressIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = AADC9D8F49CBADA464C4CCEB383EA099 /* YRKSpinningProgressIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82102FECB5C367CE65A418BAC47E6661 /* MMGetAppStorePrice.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D7E1C93D13A757DBE71BBC2FDDE16D /* MMGetAppStorePrice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92353925C7CF0B067098553247A4ECC7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
+		9D675A13B45A1053A70FEC06A05BD036 /* YPObjectStream.h in Headers */ = {isa = PBXBuildFile; fileRef = E73AE7E3F70482050F9D0E3D06D62FA8 /* YPObjectStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A12BD14073911B601BB6A5F44C3A8090 /* Pods-PDF Letterhead Pro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7662AEDF2E7F8875226A819FC90673 /* Pods-PDF Letterhead Pro-dummy.m */; };
+		A1778FA5A9D68D62BFE9A8112F5142B7 /* Pods-PDF Letterhead Lite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D61330B89283056053035ACF86227DE8 /* Pods-PDF Letterhead Lite-dummy.m */; };
+		A2931B732568DBC5B272520B6973AED9 /* YPString.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCB94869C6FFD58094685E2D690DC08 /* YPString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AB25AC2163A3C4D8466911387C80B93E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		B1350030727E093CC2E54FBCF3154725 /* YAPDFKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A92FAB670498B1CA12BFF8A5E58F4AF4 /* YAPDFKit-dummy.m */; };
-		B4813E49345B9A24400E7002D0DA0911 /* YPObjectStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D31670616EA30026DF0167DCA3EFC0D3 /* YPObjectStream.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B912A31C604DF3CA737CF620D8658832 /* YPObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C1759F1543D3B03693FBC888306688A /* YPObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9F587EAE69EED8A0111B46CD59DCABF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
-		D443F7EC5B1C89DF4EF9ECFFAC686A7E /* Pods-PDF Letterhead Lite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D61330B89283056053035ACF86227DE8 /* Pods-PDF Letterhead Lite-dummy.m */; };
-		D5EC936A734FF0CB7262ED3588F97351 /* YPNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = E99274D022973E40903CFCED1426C5FD /* YPNumber.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DA28DE85D834E6EC9AF4DA0BB0EF2C8B /* YPPages.h in Headers */ = {isa = PBXBuildFile; fileRef = D50EA47B9C12A5103D49F9843447C3B2 /* YPPages.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DBCB0A58872DB768FB5F55E00188F44C /* pdfzlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 426006D444AF46D39FF8E333D066DD5A /* pdfzlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DEC3E8A777FC12E05CB082B4E774EFE7 /* YPString.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A31C7E4B55D85D7C4068FBC88DB9C0 /* YPString.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EF9CD57464BD1099FAAF1F87AECED746 /* YPNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E1DE7C27D86BDAD9EF1144B11AFB0EA /* YPNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1A59DB642B8DAD7CE1A24A6F85B1BE9 /* YPArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 121C77964B5B0178F2CF98B854048137 /* YPArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3CCFF78BD60F6AE0F4CE0A1C3F7D1F3 /* YPObjectReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE517F15895ABC838E03C77202D2E5D /* YPObjectReference.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F6D3537E8CF0264717E25E034BD7A58E /* YPXref.m in Sources */ = {isa = PBXBuildFile; fileRef = 9715EF1DE5E9C6AEBB2E488F0CC1EBCF /* YPXref.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AF2C5AF3B764DB9C60C4D0FB24091FDD /* YPArray.h in Headers */ = {isa = PBXBuildFile; fileRef = A10799EB0913500C16B330E0776F28B7 /* YPArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B95C9DF8AC3554C431CC8A2626EEB00D /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E6F933E20FB3B316F212D94090E466 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C10E7D6F7D5EA040763DAE513EC8C8B0 /* YPDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DBB807FC49376E8DED47AB7F9DCA9A /* YPDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C37860A1B439BE886FB0A35B0DFEB6A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
+		C6B12B9595AB149CF621D360B76F6055 /* YPName.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B17A8E5253C7513819746245CBAE50 /* YPName.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C9A3702692D35F99AEB2E1952B656733 /* YRKSpinningProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE42B67D4151206B87193B297323C7 /* YRKSpinningProgressIndicator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CCF8AA6B8049FAF5489823B6C91F41BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C610EA079977963751C9B174348539E4 /* main.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D6C486FE069367A5A72717F21697C3D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
+		E4B733ACD91FD90B2A6CF625567374FC /* YPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D88DABAB2E16EE79B58EFBB2B3E7CEAE /* YPObject.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E5C9C6CDEBB4F0C319A1FF0C45BE1F84 /* YPName.h in Headers */ = {isa = PBXBuildFile; fileRef = E33DAF3E0AB20CF21851650221DC629E /* YPName.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9FE9699848EDCCD43DB52AB3ACFB46F /* pdfzlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 60FBC9AA162A3AE1F3766F475224B966 /* pdfzlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEFBDA50E582E7FC5927DFE06DD89436 /* Utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 27B0AACE3ECB60AE97EBB6E6A1E901B6 /* Utils.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EF69F63B7FDC155576746B5E0F37D12B /* YPPages.h in Headers */ = {isa = PBXBuildFile; fileRef = C34B8AA600BE40DCFDBE98C8F1F391D1 /* YPPages.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCEB9614CB88BAAAA467C7F9CEE50E7D /* YPAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 397F23EF056303969894A05C4BD24994 /* YPAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		98D075E78BF6A98B4CF966D1BE600B92 /* PBXContainerItemProxy */ = {
+		1ECD809FEBFAE74BB917060F2C383CCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3E91949694E2B98A549A07EA5651E2FE;
-			remoteInfo = YAPDFKit;
+			remoteGlobalIDString = B7C48F9FCC66011EB131DA7623651342;
+			remoteInfo = YRKSpinningProgressIndicator;
 		};
-		A986ED501FCC281103402960AE12558D /* PBXContainerItemProxy */ = {
+		21EA5B6E3A0DE11FF1E7A5A2116C9E1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3E91949694E2B98A549A07EA5651E2FE;
+			remoteGlobalIDString = 5FABFE4CA35BF82ED624AD316014DC2A;
 			remoteInfo = YAPDFKit;
 		};
-		FC77FD58F935663E8232A444C7137B10 /* PBXContainerItemProxy */ = {
+		4263BBF1785E891BA52C9A7B8018FCA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FABFE4CA35BF82ED624AD316014DC2A;
+			remoteInfo = YAPDFKit;
+		};
+		AF3C60F16B6FF60D7DFDA9F1C3F424E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8C232BD94C8BBE900DF5C3D08B2899A8;
 			remoteInfo = MMGetAppStorePrice;
 		};
+		B7C16A3A8FA3615F6D272CDFC771ED24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7C48F9FCC66011EB131DA7623651342;
+			remoteInfo = YRKSpinningProgressIndicator;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02246221B2835210A17F4B0E9FE5985E /* YPBool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPBool.m; path = YAPDFKit/YPBool.m; sourceTree = "<group>"; };
+		013244DC4D64B1C61E68C3508992B3E1 /* YPObjectReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObjectReference.h; path = YAPDFKit/YPObjectReference.h; sourceTree = "<group>"; };
 		0A7662AEDF2E7F8875226A819FC90673 /* Pods-PDF Letterhead Pro-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PDF Letterhead Pro-dummy.m"; sourceTree = "<group>"; };
-		0A7E0222825DC7132D4B17BE4AF7B061 /* pdfzlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pdfzlib.h; path = YAPDFKit/pdfzlib.h; sourceTree = "<group>"; };
 		11EDC2C49BA110993B65866F1D610BC4 /* Pods-PDF Letterhead Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Lite.release.xcconfig"; sourceTree = "<group>"; };
-		121C77964B5B0178F2CF98B854048137 /* YPArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPArray.h; path = YAPDFKit/YPArray.h; sourceTree = "<group>"; };
+		1211E3E8EF62D1DF15B370C6315C0778 /* PDFParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFParser.h; path = YAPDFKit/PDFParser.h; sourceTree = "<group>"; };
+		1538070A6B3CD872BE81A580BF445F72 /* YPObjectStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObjectStream.m; path = YAPDFKit/YPObjectStream.m; sourceTree = "<group>"; };
+		1AF5F68D18C0009D4FDD3164E6EBCD21 /* MMGetAppStorePrice-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMGetAppStorePrice-prefix.pch"; sourceTree = "<group>"; };
 		1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		232001002094B44725A3BB443C2A1E07 /* YPDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPDocument.m; path = YAPDFKit/YPDocument.m; sourceTree = "<group>"; };
-		257CE96C982D0F18D013D48EF323EA9F /* Utils.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = Utils.c; path = YAPDFKit/Utils.c; sourceTree = "<group>"; };
-		297A7188F8102841725D72911717E79C /* MMGetAppStorePrice.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMGetAppStorePrice.xcconfig; sourceTree = "<group>"; };
+		1CFF511657ED5C1E156EAB31ED33FE18 /* YPAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPAttribute.m; path = YAPDFKit/YPAttribute.m; sourceTree = "<group>"; };
+		27B0AACE3ECB60AE97EBB6E6A1E901B6 /* Utils.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = Utils.c; path = YAPDFKit/Utils.c; sourceTree = "<group>"; };
+		2D7C01C2C7E095C718194BA8D5494395 /* YRKSpinningProgressIndicator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YRKSpinningProgressIndicator.xcconfig; sourceTree = "<group>"; };
 		32D34ED196C1465C8E116B4AC79ABFCF /* Pods-PDF Letterhead Pro-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PDF Letterhead Pro-acknowledgements.markdown"; sourceTree = "<group>"; };
-		36A31C7E4B55D85D7C4068FBC88DB9C0 /* YPString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPString.m; path = YAPDFKit/YPString.m; sourceTree = "<group>"; };
-		37253A0245C9AC4CD66CD277F461EBCC /* YPDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPDocument.h; path = YAPDFKit/YPDocument.h; sourceTree = "<group>"; };
-		3CD50065B4C5EE59802B74E5C70469E3 /* YPBool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPBool.h; path = YAPDFKit/YPBool.h; sourceTree = "<group>"; };
+		330A1AADAD36B0AAECDCE22206018CE8 /* YAPDFKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YAPDFKit-dummy.m"; sourceTree = "<group>"; };
+		397F23EF056303969894A05C4BD24994 /* YPAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPAttribute.h; path = YAPDFKit/YPAttribute.h; sourceTree = "<group>"; };
+		3B44B6CCB584131B4DF1C33D935B8B07 /* YPObjectReference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObjectReference.m; path = YAPDFKit/YPObjectReference.m; sourceTree = "<group>"; };
 		41ACA549A6B1C40E5D7A86C4D0BE3F73 /* Pods-PDF Letterhead Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Pro.release.xcconfig"; sourceTree = "<group>"; };
-		426006D444AF46D39FF8E333D066DD5A /* pdfzlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = pdfzlib.m; path = YAPDFKit/pdfzlib.m; sourceTree = "<group>"; };
-		45E12D53229E0710D129060EE0CF6594 /* MMGetAppStorePrice-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMGetAppStorePrice-dummy.m"; sourceTree = "<group>"; };
-		46F9392E9AAFA8D50F82A3217B089F10 /* YPArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPArray.m; path = YAPDFKit/YPArray.m; sourceTree = "<group>"; };
-		47D966CA3952DF61E54E776A13BC4D8A /* libMMGetAppStorePrice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMGetAppStorePrice.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		47EA64F15BEDE77A4A59516879057906 /* YPAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPAttribute.m; path = YAPDFKit/YPAttribute.m; sourceTree = "<group>"; };
+		4664D5056B87964FC2E2B91EFA862908 /* YPObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObject.h; path = YAPDFKit/YPObject.h; sourceTree = "<group>"; };
+		4974110568B55639C246CC80EDEFF62E /* YPHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPHexString.m; path = YAPDFKit/YPHexString.m; sourceTree = "<group>"; };
+		4A397A09D60D1C5C17CD393288242CD6 /* YPDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPDictionary.h; path = YAPDFKit/YPDictionary.h; sourceTree = "<group>"; };
 		4E4C0116A38DD3BA3FE047006FD99E33 /* Pods-PDF Letterhead Lite-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Lite-frameworks.sh"; sourceTree = "<group>"; };
-		4FE517F15895ABC838E03C77202D2E5D /* YPObjectReference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObjectReference.m; path = YAPDFKit/YPObjectReference.m; sourceTree = "<group>"; };
-		565D8CE071673CC653E7D4F2B1D52845 /* YPObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObject.m; path = YAPDFKit/YPObject.m; sourceTree = "<group>"; };
-		57D7311AADCF1CBE77921A18E748CD0D /* YPAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPAttribute.h; path = YAPDFKit/YPAttribute.h; sourceTree = "<group>"; };
+		4F23BB6680A535AB16DD38217F45814B /* YPString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPString.h; path = YAPDFKit/YPString.h; sourceTree = "<group>"; };
+		50DBB807FC49376E8DED47AB7F9DCA9A /* YPDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPDocument.m; path = YAPDFKit/YPDocument.m; sourceTree = "<group>"; };
+		520A4ED3ECA088F270875137CAC53CA0 /* YPDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPDictionary.m; path = YAPDFKit/YPDictionary.m; sourceTree = "<group>"; };
+		55C64803333EDFE3AC2D94BEA41458D5 /* YPXref.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPXref.h; path = YAPDFKit/YPXref.h; sourceTree = "<group>"; };
 		5C607F1E61C6DAE422C927A50C9D1F6E /* Pods-PDF Letterhead Lite-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PDF Letterhead Lite-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5D227A807CBA0355AA88CF08C9EB8606 /* YRKSpinningProgressIndicator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YRKSpinningProgressIndicator-dummy.m"; sourceTree = "<group>"; };
+		5FA8E5E64BF401F3A76E36925BBFA0B0 /* YPArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPArray.m; path = YAPDFKit/YPArray.m; sourceTree = "<group>"; };
+		60FBC9AA162A3AE1F3766F475224B966 /* pdfzlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pdfzlib.h; path = YAPDFKit/pdfzlib.h; sourceTree = "<group>"; };
 		613C53B4E636C4296F0EA30503349253 /* Pods-PDF Letterhead Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Pro.debug.xcconfig"; sourceTree = "<group>"; };
-		6C1759F1543D3B03693FBC888306688A /* YPObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObject.h; path = YAPDFKit/YPObject.h; sourceTree = "<group>"; };
-		6E904AD7D6D908B7F51D43D3E9B2ACCD /* YPHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPHexString.h; path = YAPDFKit/YPHexString.h; sourceTree = "<group>"; };
+		65C3142CB73902CC1D32DFF323E97211 /* YPBool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPBool.h; path = YAPDFKit/YPBool.h; sourceTree = "<group>"; };
+		69E6F933E20FB3B316F212D94090E466 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = YAPDFKit/Utils.h; sourceTree = "<group>"; };
+		6AA4F6DC40C3AF0D7A1E8C08C63EA047 /* YAPDFKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YAPDFKit.xcconfig; sourceTree = "<group>"; };
+		6C99FA2F2272B4606217C89EAF521277 /* YPDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPDocument.h; path = YAPDFKit/YPDocument.h; sourceTree = "<group>"; };
 		7865942B70D153E9B3330A7C059BD1E4 /* Pods-PDF Letterhead Lite-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PDF Letterhead Lite-acknowledgements.plist"; sourceTree = "<group>"; };
-		7D4BFBF6179E262E6E8D230B6F403E9B /* YPDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPDictionary.m; path = YAPDFKit/YPDictionary.m; sourceTree = "<group>"; };
-		7E1DE7C27D86BDAD9EF1144B11AFB0EA /* YPNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPNumber.h; path = YAPDFKit/YPNumber.h; sourceTree = "<group>"; };
-		810DFC318A05D97BACE1EDFFE521A186 /* YPName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPName.m; path = YAPDFKit/YPName.m; sourceTree = "<group>"; };
+		8188A182A1D56BB8BAA45E9BDD72AFCB /* YPNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPNumber.h; path = YAPDFKit/YPNumber.h; sourceTree = "<group>"; };
+		83D6B74B48A8795CEE7E752E5791A723 /* MMGetAppStorePrice.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMGetAppStorePrice.xcconfig; sourceTree = "<group>"; };
 		8B0E632E1440B9E7CD8EB1FAD55570F7 /* Pods-PDF Letterhead Pro-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Pro-frameworks.sh"; sourceTree = "<group>"; };
-		8FFD57E169E8C8A4BF313218FCE2A2E9 /* MMGetAppStorePrice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMGetAppStorePrice.m; path = MMGetAppStorePrice/Classes/MMGetAppStorePrice.m; sourceTree = "<group>"; };
-		9270F0A7D50D878F885277ECDD5FAAB4 /* YPXref.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPXref.h; path = YAPDFKit/YPXref.h; sourceTree = "<group>"; };
-		92D313A414D5448687822C0068C061EE /* YPName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPName.h; path = YAPDFKit/YPName.h; sourceTree = "<group>"; };
-		9442EE5D4D8B1CA81D1002596DA920B1 /* YPObjectReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObjectReference.h; path = YAPDFKit/YPObjectReference.h; sourceTree = "<group>"; };
-		95117A5E0D434F1D13915FCEE854F1FC /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = YAPDFKit/main.m; sourceTree = "<group>"; };
-		963C1B44A78B83170DA3A0451A98A8F4 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = YAPDFKit/Utils.h; sourceTree = "<group>"; };
-		9715EF1DE5E9C6AEBB2E488F0CC1EBCF /* YPXref.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPXref.m; path = YAPDFKit/YPXref.m; sourceTree = "<group>"; };
+		8EE3D1186644611A9034D1076CF4F4D7 /* YPPages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPPages.m; path = YAPDFKit/YPPages.m; sourceTree = "<group>"; };
+		91D5FD544EFE2CF570791311B4D9C74E /* libYRKSpinningProgressIndicator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYRKSpinningProgressIndicator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B477AD6676F20D89B7355AAEC928D2 /* YRKSpinningProgressIndicator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YRKSpinningProgressIndicator-prefix.pch"; sourceTree = "<group>"; };
+		965EB55B6162D3F521FADF2733FBC291 /* pdfzlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = pdfzlib.m; path = YAPDFKit/pdfzlib.m; sourceTree = "<group>"; };
 		98A3F944764A695A248658DED24D87EB /* Pods-PDF Letterhead Pro-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PDF Letterhead Pro-acknowledgements.plist"; sourceTree = "<group>"; };
-		99570CA72EE8E896E64AC792CB24DC9D /* PDFParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PDFParser.h; path = YAPDFKit/PDFParser.h; sourceTree = "<group>"; };
-		A92FAB670498B1CA12BFF8A5E58F4AF4 /* YAPDFKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YAPDFKit-dummy.m"; sourceTree = "<group>"; };
-		ACAC65DB2BDF465F346A308941AC169F /* MMGetAppStorePrice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMGetAppStorePrice.h; path = MMGetAppStorePrice/Classes/MMGetAppStorePrice.h; sourceTree = "<group>"; };
-		ACC6C4DD9AA93DDE0E205DFDA2E64F79 /* libYAPDFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYAPDFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6D4AD76EBB6056C42219DF5376E7F9 /* YAPDFKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YAPDFKit-prefix.pch"; sourceTree = "<group>"; };
+		9F91089AB64AFB7834140ADF03952F95 /* MMGetAppStorePrice-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMGetAppStorePrice-dummy.m"; sourceTree = "<group>"; };
+		A0166641F4154FAD0032F64DDB0239F2 /* YPHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPHexString.h; path = YAPDFKit/YPHexString.h; sourceTree = "<group>"; };
+		A10799EB0913500C16B330E0776F28B7 /* YPArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPArray.h; path = YAPDFKit/YPArray.h; sourceTree = "<group>"; };
+		AADC9D8F49CBADA464C4CCEB383EA099 /* YRKSpinningProgressIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YRKSpinningProgressIndicator.h; path = Classes/YRKSpinningProgressIndicator.h; sourceTree = "<group>"; };
 		AEDD8AF221B35778A495DB856E1DB5CA /* Pods-PDF Letterhead Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PDF Letterhead Lite.debug.xcconfig"; sourceTree = "<group>"; };
+		B195486F1AB8BF8A2EA87D1865D4BE00 /* libPods-PDF Letterhead Pro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDF Letterhead Pro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B475EDB50708E37F183FDC0EDDA368C3 /* Pods-PDF Letterhead Lite-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Lite-resources.sh"; sourceTree = "<group>"; };
-		B77009FE38ACC3EE10BC3C1101A08F4E /* YPString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPString.h; path = YAPDFKit/YPString.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BEB0CB47E956CA38CAB322F978BB9258 /* YPPages.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPPages.m; path = YAPDFKit/YPPages.m; sourceTree = "<group>"; };
-		CE0EA5D18D6658551AB163D83D513C5F /* YPDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPDictionary.h; path = YAPDFKit/YPDictionary.h; sourceTree = "<group>"; };
-		CE750616CAB8D719627DF67240BBF371 /* libPods-PDF Letterhead Lite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDF Letterhead Lite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D31670616EA30026DF0167DCA3EFC0D3 /* YPObjectStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObjectStream.m; path = YAPDFKit/YPObjectStream.m; sourceTree = "<group>"; };
-		D50EA47B9C12A5103D49F9843447C3B2 /* YPPages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPPages.h; path = YAPDFKit/YPPages.h; sourceTree = "<group>"; };
-		D5E31FFC55C12633E5F8CFCDBE8E1B2E /* MMGetAppStorePrice-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMGetAppStorePrice-prefix.pch"; sourceTree = "<group>"; };
+		BCCB94869C6FFD58094685E2D690DC08 /* YPString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPString.m; path = YAPDFKit/YPString.m; sourceTree = "<group>"; };
+		C34B8AA600BE40DCFDBE98C8F1F391D1 /* YPPages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPPages.h; path = YAPDFKit/YPPages.h; sourceTree = "<group>"; };
+		C610EA079977963751C9B174348539E4 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = YAPDFKit/main.m; sourceTree = "<group>"; };
+		C9FE42B67D4151206B87193B297323C7 /* YRKSpinningProgressIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YRKSpinningProgressIndicator.m; path = Classes/YRKSpinningProgressIndicator.m; sourceTree = "<group>"; };
+		D1F0CAD69984C563D8E0189CC3A1F210 /* MMGetAppStorePrice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMGetAppStorePrice.m; path = MMGetAppStorePrice/Classes/MMGetAppStorePrice.m; sourceTree = "<group>"; };
 		D61330B89283056053035ACF86227DE8 /* Pods-PDF Letterhead Lite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PDF Letterhead Lite-dummy.m"; sourceTree = "<group>"; };
-		D66B68F129C4C39F8EB1ED759A2BEB56 /* YPHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPHexString.m; path = YAPDFKit/YPHexString.m; sourceTree = "<group>"; };
+		D88DABAB2E16EE79B58EFBB2B3E7CEAE /* YPObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPObject.m; path = YAPDFKit/YPObject.m; sourceTree = "<group>"; };
+		D9B17A8E5253C7513819746245CBAE50 /* YPName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPName.m; path = YAPDFKit/YPName.m; sourceTree = "<group>"; };
 		DD6DFEDCD8DF92693181CAA84F9CE8BE /* Pods-PDF Letterhead Pro-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDF Letterhead Pro-resources.sh"; sourceTree = "<group>"; };
-		E300EB48A7E66A97D370502AE73C8415 /* libPods-PDF Letterhead Pro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDF Letterhead Pro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4D8F696B91E48575F85242D8F44F22B /* YAPDFKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YAPDFKit-prefix.pch"; sourceTree = "<group>"; };
-		E99274D022973E40903CFCED1426C5FD /* YPNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPNumber.m; path = YAPDFKit/YPNumber.m; sourceTree = "<group>"; };
-		EB009F52B0545B23ECE8B4C367243B7E /* YPObjectStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObjectStream.h; path = YAPDFKit/YPObjectStream.h; sourceTree = "<group>"; };
-		FB5772F01F512D6131B4E25AAD2BF66F /* YAPDFKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YAPDFKit.xcconfig; sourceTree = "<group>"; };
+		E33DAF3E0AB20CF21851650221DC629E /* YPName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPName.h; path = YAPDFKit/YPName.h; sourceTree = "<group>"; };
+		E70C98F52A294E119E4418393EA51327 /* libYAPDFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYAPDFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73AE7E3F70482050F9D0E3D06D62FA8 /* YPObjectStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YPObjectStream.h; path = YAPDFKit/YPObjectStream.h; sourceTree = "<group>"; };
+		EA9D3C5269718A072690797325FCFFA8 /* libMMGetAppStorePrice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMGetAppStorePrice.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25D72246A6348AB6777A36EB8ED9A12 /* YPNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPNumber.m; path = YAPDFKit/YPNumber.m; sourceTree = "<group>"; };
+		F5D7E1C93D13A757DBE71BBC2FDDE16D /* MMGetAppStorePrice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMGetAppStorePrice.h; path = MMGetAppStorePrice/Classes/MMGetAppStorePrice.h; sourceTree = "<group>"; };
+		F77A8E63334A4C67178D8ED7C4D3E0F4 /* libPods-PDF Letterhead Lite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDF Letterhead Lite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0E371C296196ACBE9A8D3063D5E6A5 /* YPXref.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPXref.m; path = YAPDFKit/YPXref.m; sourceTree = "<group>"; };
+		FF3CC86A076068ABD322057C20F022D3 /* YPBool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YPBool.m; path = YAPDFKit/YPBool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		28C948420BD54C6EA57CDC1360309DAC /* Frameworks */ = {
+		3FC6976F81BEF61A7C07ED0D199EE3E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9F587EAE69EED8A0111B46CD59DCABF /* Cocoa.framework in Frameworks */,
+				92353925C7CF0B067098553247A4ECC7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8741E997AA26394318EEDE2C3D80D18E /* Frameworks */ = {
+		443585BE83860BEE396BE7E1623E7469 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA4EB0B886FEC00D3C5DAA0510A1BFF /* Cocoa.framework in Frameworks */,
+				D6C486FE069367A5A72717F21697C3D2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EFC910024C33FFB4C9CB07A4FDA4A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648F6C0D6D2488F20E070DDF2956AA23 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C464E8B516F46EC1A12EBF4C638F2184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37860A1B439BE886FB0A35B0DFEB6A3 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,78 +207,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5F8E283D98881E4102DC16B2B0960D1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FF230FFF4C91F78172EFF61DA7739F1 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03432A891245B3183E9E619B96322E8A /* MMGetAppStorePrice */ = {
-			isa = PBXGroup;
-			children = (
-				ACAC65DB2BDF465F346A308941AC169F /* MMGetAppStorePrice.h */,
-				8FFD57E169E8C8A4BF313218FCE2A2E9 /* MMGetAppStorePrice.m */,
-				7DBC6FA72F208FCDD3A3E9C90BC01F57 /* Support Files */,
-			);
-			path = MMGetAppStorePrice;
-			sourceTree = "<group>";
-		};
-		10FF38280BF5D57FAA313211C700CADA /* YAPDFKit */ = {
-			isa = PBXGroup;
-			children = (
-				95117A5E0D434F1D13915FCEE854F1FC /* main.m */,
-				99570CA72EE8E896E64AC792CB24DC9D /* PDFParser.h */,
-				0A7E0222825DC7132D4B17BE4AF7B061 /* pdfzlib.h */,
-				426006D444AF46D39FF8E333D066DD5A /* pdfzlib.m */,
-				257CE96C982D0F18D013D48EF323EA9F /* Utils.c */,
-				963C1B44A78B83170DA3A0451A98A8F4 /* Utils.h */,
-				121C77964B5B0178F2CF98B854048137 /* YPArray.h */,
-				46F9392E9AAFA8D50F82A3217B089F10 /* YPArray.m */,
-				57D7311AADCF1CBE77921A18E748CD0D /* YPAttribute.h */,
-				47EA64F15BEDE77A4A59516879057906 /* YPAttribute.m */,
-				3CD50065B4C5EE59802B74E5C70469E3 /* YPBool.h */,
-				02246221B2835210A17F4B0E9FE5985E /* YPBool.m */,
-				CE0EA5D18D6658551AB163D83D513C5F /* YPDictionary.h */,
-				7D4BFBF6179E262E6E8D230B6F403E9B /* YPDictionary.m */,
-				37253A0245C9AC4CD66CD277F461EBCC /* YPDocument.h */,
-				232001002094B44725A3BB443C2A1E07 /* YPDocument.m */,
-				6E904AD7D6D908B7F51D43D3E9B2ACCD /* YPHexString.h */,
-				D66B68F129C4C39F8EB1ED759A2BEB56 /* YPHexString.m */,
-				92D313A414D5448687822C0068C061EE /* YPName.h */,
-				810DFC318A05D97BACE1EDFFE521A186 /* YPName.m */,
-				7E1DE7C27D86BDAD9EF1144B11AFB0EA /* YPNumber.h */,
-				E99274D022973E40903CFCED1426C5FD /* YPNumber.m */,
-				6C1759F1543D3B03693FBC888306688A /* YPObject.h */,
-				565D8CE071673CC653E7D4F2B1D52845 /* YPObject.m */,
-				9442EE5D4D8B1CA81D1002596DA920B1 /* YPObjectReference.h */,
-				4FE517F15895ABC838E03C77202D2E5D /* YPObjectReference.m */,
-				EB009F52B0545B23ECE8B4C367243B7E /* YPObjectStream.h */,
-				D31670616EA30026DF0167DCA3EFC0D3 /* YPObjectStream.m */,
-				D50EA47B9C12A5103D49F9843447C3B2 /* YPPages.h */,
-				BEB0CB47E956CA38CAB322F978BB9258 /* YPPages.m */,
-				B77009FE38ACC3EE10BC3C1101A08F4E /* YPString.h */,
-				36A31C7E4B55D85D7C4068FBC88DB9C0 /* YPString.m */,
-				9270F0A7D50D878F885277ECDD5FAAB4 /* YPXref.h */,
-				9715EF1DE5E9C6AEBB2E488F0CC1EBCF /* YPXref.m */,
-				D77D7E5E7FFEC5796035A3FBD9E93832 /* Support Files */,
-			);
-			path = YAPDFKit;
-			sourceTree = "<group>";
-		};
-		16DC0E1DF7F988B0252E2193E6EF9C71 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				03432A891245B3183E9E619B96322E8A /* MMGetAppStorePrice */,
-				10FF38280BF5D57FAA313211C700CADA /* YAPDFKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		28C17CEF104526ACA07B6EEE217EC43E /* OS X */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +226,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		551141A01B555D9C51433F3882EC7AFD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AA4F6DC40C3AF0D7A1E8C08C63EA047 /* YAPDFKit.xcconfig */,
+				330A1AADAD36B0AAECDCE22206018CE8 /* YAPDFKit-dummy.m */,
+				9C6D4AD76EBB6056C42219DF5376E7F9 /* YAPDFKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YAPDFKit";
+			sourceTree = "<group>";
+		};
+		5549AB6064C6F1BFC39B1AAE48CF080E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				83D6B74B48A8795CEE7E752E5791A723 /* MMGetAppStorePrice.xcconfig */,
+				9F91089AB64AFB7834140ADF03952F95 /* MMGetAppStorePrice-dummy.m */,
+				1AF5F68D18C0009D4FDD3164E6EBCD21 /* MMGetAppStorePrice-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMGetAppStorePrice";
+			sourceTree = "<group>";
+		};
+		56AF1DD22DE0569371247D25444B2E9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA9D3C5269718A072690797325FCFFA8 /* libMMGetAppStorePrice.a */,
+				F77A8E63334A4C67178D8ED7C4D3E0F4 /* libPods-PDF Letterhead Lite.a */,
+				B195486F1AB8BF8A2EA87D1865D4BE00 /* libPods-PDF Letterhead Pro.a */,
+				E70C98F52A294E119E4418393EA51327 /* libYAPDFKit.a */,
+				91D5FD544EFE2CF570791311B4D9C74E /* libYRKSpinningProgressIndicator.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5A4BD0B868D48C80A53BABE727AEB24B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,32 +274,31 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				16DC0E1DF7F988B0252E2193E6EF9C71 /* Pods */,
-				93E1D91EE30C104722D6BD2B3F66FBEA /* Products */,
+				CD32EE921AFFF2422818C7AC2F25FAAA /* Pods */,
+				56AF1DD22DE0569371247D25444B2E9A /* Products */,
 				5A4BD0B868D48C80A53BABE727AEB24B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7DBC6FA72F208FCDD3A3E9C90BC01F57 /* Support Files */ = {
+		972DB381E0FBAC198E8A0017194D2E07 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				297A7188F8102841725D72911717E79C /* MMGetAppStorePrice.xcconfig */,
-				45E12D53229E0710D129060EE0CF6594 /* MMGetAppStorePrice-dummy.m */,
-				D5E31FFC55C12633E5F8CFCDBE8E1B2E /* MMGetAppStorePrice-prefix.pch */,
+				2D7C01C2C7E095C718194BA8D5494395 /* YRKSpinningProgressIndicator.xcconfig */,
+				5D227A807CBA0355AA88CF08C9EB8606 /* YRKSpinningProgressIndicator-dummy.m */,
+				93B477AD6676F20D89B7355AAEC928D2 /* YRKSpinningProgressIndicator-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MMGetAppStorePrice";
+			path = "../Target Support Files/YRKSpinningProgressIndicator";
 			sourceTree = "<group>";
 		};
-		93E1D91EE30C104722D6BD2B3F66FBEA /* Products */ = {
+		BA9D7350DC23716E68E65C409205C7D0 /* MMGetAppStorePrice */ = {
 			isa = PBXGroup;
 			children = (
-				47D966CA3952DF61E54E776A13BC4D8A /* libMMGetAppStorePrice.a */,
-				CE750616CAB8D719627DF67240BBF371 /* libPods-PDF Letterhead Lite.a */,
-				E300EB48A7E66A97D370502AE73C8415 /* libPods-PDF Letterhead Pro.a */,
-				ACC6C4DD9AA93DDE0E205DFDA2E64F79 /* libYAPDFKit.a */,
+				F5D7E1C93D13A757DBE71BBC2FDDE16D /* MMGetAppStorePrice.h */,
+				D1F0CAD69984C563D8E0189CC3A1F210 /* MMGetAppStorePrice.m */,
+				5549AB6064C6F1BFC39B1AAE48CF080E /* Support Files */,
 			);
-			name = Products;
+			path = MMGetAppStorePrice;
 			sourceTree = "<group>";
 		};
 		C1B3FB19388C778E19E7E0208FCBB88D /* Pods-PDF Letterhead Pro */ = {
@@ -312,15 +316,56 @@
 			path = "Target Support Files/Pods-PDF Letterhead Pro";
 			sourceTree = "<group>";
 		};
-		D77D7E5E7FFEC5796035A3FBD9E93832 /* Support Files */ = {
+		CD32EE921AFFF2422818C7AC2F25FAAA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FB5772F01F512D6131B4E25AAD2BF66F /* YAPDFKit.xcconfig */,
-				A92FAB670498B1CA12BFF8A5E58F4AF4 /* YAPDFKit-dummy.m */,
-				E4D8F696B91E48575F85242D8F44F22B /* YAPDFKit-prefix.pch */,
+				BA9D7350DC23716E68E65C409205C7D0 /* MMGetAppStorePrice */,
+				EA06F9A70AF38A3D10A23D34E6D80141 /* YAPDFKit */,
+				F360F7F4FACD5D2E6E29858432E391FA /* YRKSpinningProgressIndicator */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/YAPDFKit";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA06F9A70AF38A3D10A23D34E6D80141 /* YAPDFKit */ = {
+			isa = PBXGroup;
+			children = (
+				C610EA079977963751C9B174348539E4 /* main.m */,
+				1211E3E8EF62D1DF15B370C6315C0778 /* PDFParser.h */,
+				60FBC9AA162A3AE1F3766F475224B966 /* pdfzlib.h */,
+				965EB55B6162D3F521FADF2733FBC291 /* pdfzlib.m */,
+				27B0AACE3ECB60AE97EBB6E6A1E901B6 /* Utils.c */,
+				69E6F933E20FB3B316F212D94090E466 /* Utils.h */,
+				A10799EB0913500C16B330E0776F28B7 /* YPArray.h */,
+				5FA8E5E64BF401F3A76E36925BBFA0B0 /* YPArray.m */,
+				397F23EF056303969894A05C4BD24994 /* YPAttribute.h */,
+				1CFF511657ED5C1E156EAB31ED33FE18 /* YPAttribute.m */,
+				65C3142CB73902CC1D32DFF323E97211 /* YPBool.h */,
+				FF3CC86A076068ABD322057C20F022D3 /* YPBool.m */,
+				4A397A09D60D1C5C17CD393288242CD6 /* YPDictionary.h */,
+				520A4ED3ECA088F270875137CAC53CA0 /* YPDictionary.m */,
+				6C99FA2F2272B4606217C89EAF521277 /* YPDocument.h */,
+				50DBB807FC49376E8DED47AB7F9DCA9A /* YPDocument.m */,
+				A0166641F4154FAD0032F64DDB0239F2 /* YPHexString.h */,
+				4974110568B55639C246CC80EDEFF62E /* YPHexString.m */,
+				E33DAF3E0AB20CF21851650221DC629E /* YPName.h */,
+				D9B17A8E5253C7513819746245CBAE50 /* YPName.m */,
+				8188A182A1D56BB8BAA45E9BDD72AFCB /* YPNumber.h */,
+				F25D72246A6348AB6777A36EB8ED9A12 /* YPNumber.m */,
+				4664D5056B87964FC2E2B91EFA862908 /* YPObject.h */,
+				D88DABAB2E16EE79B58EFBB2B3E7CEAE /* YPObject.m */,
+				013244DC4D64B1C61E68C3508992B3E1 /* YPObjectReference.h */,
+				3B44B6CCB584131B4DF1C33D935B8B07 /* YPObjectReference.m */,
+				E73AE7E3F70482050F9D0E3D06D62FA8 /* YPObjectStream.h */,
+				1538070A6B3CD872BE81A580BF445F72 /* YPObjectStream.m */,
+				C34B8AA600BE40DCFDBE98C8F1F391D1 /* YPPages.h */,
+				8EE3D1186644611A9034D1076CF4F4D7 /* YPPages.m */,
+				4F23BB6680A535AB16DD38217F45814B /* YPString.h */,
+				BCCB94869C6FFD58094685E2D690DC08 /* YPString.m */,
+				55C64803333EDFE3AC2D94BEA41458D5 /* YPXref.h */,
+				FB0E371C296196ACBE9A8D3063D5E6A5 /* YPXref.m */,
+				551141A01B555D9C51433F3882EC7AFD /* Support Files */,
+			);
+			path = YAPDFKit;
 			sourceTree = "<group>";
 		};
 		F087F7CE3FBBB322A69CB5301A2F1B09 /* Pods-PDF Letterhead Lite */ = {
@@ -338,6 +383,16 @@
 			path = "Target Support Files/Pods-PDF Letterhead Lite";
 			sourceTree = "<group>";
 		};
+		F360F7F4FACD5D2E6E29858432E391FA /* YRKSpinningProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				AADC9D8F49CBADA464C4CCEB383EA099 /* YRKSpinningProgressIndicator.h */,
+				C9FE42B67D4151206B87193B297323C7 /* YRKSpinningProgressIndicator.m */,
+				972DB381E0FBAC198E8A0017194D2E07 /* Support Files */,
+			);
+			path = YRKSpinningProgressIndicator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -349,58 +404,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5CA87711D9F4EE44F76CC9D15B16B501 /* Headers */ = {
+		397B20467DBDF17632AECDE2C454A7BC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1B8AFF4A0B7215290D676E34B19EAB /* PDFParser.h in Headers */,
-				3CF08D030DCC343A2D8214A032973D9F /* pdfzlib.h in Headers */,
-				03E81A4DF98AC2A45F29DA2E6CE5377D /* Utils.h in Headers */,
-				F1A59DB642B8DAD7CE1A24A6F85B1BE9 /* YPArray.h in Headers */,
-				93B55DAE1952BCB42662BADFDA36AEAA /* YPAttribute.h in Headers */,
-				57FA62226484D5B4EC6FFA273B0AD5F2 /* YPBool.h in Headers */,
-				34D1463F0BFA8DD4291E9521A55B7C8F /* YPDictionary.h in Headers */,
-				777996161EB487052F0500BE6F118069 /* YPDocument.h in Headers */,
-				1DF94BAE2FCC60F7312E3F1394F5FD00 /* YPHexString.h in Headers */,
-				22A6D899B91E7CD56A3672313223ABC3 /* YPName.h in Headers */,
-				EF9CD57464BD1099FAAF1F87AECED746 /* YPNumber.h in Headers */,
-				B912A31C604DF3CA737CF620D8658832 /* YPObject.h in Headers */,
-				825B14463EB16DDD53D76D9503035300 /* YPObjectReference.h in Headers */,
-				1829DF4809984290CCB2117F3B780F2C /* YPObjectStream.h in Headers */,
-				DA28DE85D834E6EC9AF4DA0BB0EF2C8B /* YPPages.h in Headers */,
-				955F1C826069663BE2764575A89C850C /* YPString.h in Headers */,
-				173357546CBC582DABE8A6834134B1A7 /* YPXref.h in Headers */,
+				7D49B341E4E36C646C213AE8C19A3511 /* YRKSpinningProgressIndicator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E7874F4C63513E76D984E613A7A9BFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078AC6C662A38AEE62B20891BC2951F9 /* PDFParser.h in Headers */,
+				E9FE9699848EDCCD43DB52AB3ACFB46F /* pdfzlib.h in Headers */,
+				B95C9DF8AC3554C431CC8A2626EEB00D /* Utils.h in Headers */,
+				AF2C5AF3B764DB9C60C4D0FB24091FDD /* YPArray.h in Headers */,
+				FCEB9614CB88BAAAA467C7F9CEE50E7D /* YPAttribute.h in Headers */,
+				75E2AEBCD3C19B43EF72EE5DD61EABEA /* YPBool.h in Headers */,
+				7A030CE8AB8BF3C9F0FE3BBE884ACA67 /* YPDictionary.h in Headers */,
+				2A2D51552D27ABFD8A4B8E362B802C25 /* YPDocument.h in Headers */,
+				290C7AC5E9DBFB81E670CFBD9FCA7F01 /* YPHexString.h in Headers */,
+				E5C9C6CDEBB4F0C319A1FF0C45BE1F84 /* YPName.h in Headers */,
+				2260785E4A1393988E26A50BFCE261CC /* YPNumber.h in Headers */,
+				720E2DE6FDBACDECDFE797F0273BF389 /* YPObject.h in Headers */,
+				14606B3FAC58DA7F328B6AA77D6319EC /* YPObjectReference.h in Headers */,
+				9D675A13B45A1053A70FEC06A05BD036 /* YPObjectStream.h in Headers */,
+				EF69F63B7FDC155576746B5E0F37D12B /* YPPages.h in Headers */,
+				3597E347E73F881C7C1BE42929F20699 /* YPString.h in Headers */,
+				002973C856296B50076B03DBEC9DD9D9 /* YPXref.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		107B67DEE56FC4373AA0267EA6841E69 /* Pods-PDF Letterhead Lite */ = {
+		11C6D2805FFCD57C4CD168F645583E3C /* Pods-PDF Letterhead Lite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16C974ACF404BC0C770C0033B4B9AA4F /* Build configuration list for PBXNativeTarget "Pods-PDF Letterhead Lite" */;
+			buildConfigurationList = 49A8D4B109E8D65BF9E032C61E54680E /* Build configuration list for PBXNativeTarget "Pods-PDF Letterhead Lite" */;
 			buildPhases = (
-				87EB80A69E4F7DED5630EF57AABD9337 /* Sources */,
-				8741E997AA26394318EEDE2C3D80D18E /* Frameworks */,
+				98D1D41ACBE1E6E99AC3D36B4E0B010A /* Sources */,
+				8EFC910024C33FFB4C9CB07A4FDA4A87 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AEAAA68CA6121FB8D8AB13A7226B0382 /* PBXTargetDependency */,
-				5B7033230D645BAC79D14E76272F3E0A /* PBXTargetDependency */,
+				059A64701C700532AAA5A6007D31FFED /* PBXTargetDependency */,
+				8A7B968B54D5E0A09CE53B8F2AFD73DF /* PBXTargetDependency */,
+				EA5973265CAF9D6FF4E67B89D8D98B2A /* PBXTargetDependency */,
 			);
 			name = "Pods-PDF Letterhead Lite";
 			productName = "Pods-PDF Letterhead Lite";
-			productReference = CE750616CAB8D719627DF67240BBF371 /* libPods-PDF Letterhead Lite.a */;
+			productReference = F77A8E63334A4C67178D8ED7C4D3E0F4 /* libPods-PDF Letterhead Lite.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		3E91949694E2B98A549A07EA5651E2FE /* YAPDFKit */ = {
+		5FABFE4CA35BF82ED624AD316014DC2A /* YAPDFKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1F7909E591D89220EBD7A18CC525B46 /* Build configuration list for PBXNativeTarget "YAPDFKit" */;
+			buildConfigurationList = BCD04E5BBA38B0E402CEEA219B6590FF /* Build configuration list for PBXNativeTarget "YAPDFKit" */;
 			buildPhases = (
-				C93CF503A05E3536BEEDD57DB00A4642 /* Sources */,
-				28C948420BD54C6EA57CDC1360309DAC /* Frameworks */,
-				5CA87711D9F4EE44F76CC9D15B16B501 /* Headers */,
+				8C4C85999F8CC7B57FF500B40C6EFD15 /* Sources */,
+				C464E8B516F46EC1A12EBF4C638F2184 /* Frameworks */,
+				8E7874F4C63513E76D984E613A7A9BFF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -408,7 +472,25 @@
 			);
 			name = YAPDFKit;
 			productName = YAPDFKit;
-			productReference = ACC6C4DD9AA93DDE0E205DFDA2E64F79 /* libYAPDFKit.a */;
+			productReference = E70C98F52A294E119E4418393EA51327 /* libYAPDFKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		88F28F11BE73AD227563C46C3D144B44 /* Pods-PDF Letterhead Pro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE03CBBC9C0607C806788478F1C4B9D4 /* Build configuration list for PBXNativeTarget "Pods-PDF Letterhead Pro" */;
+			buildPhases = (
+				24019E5A3A6ECAC19C9B8CDF62270F1C /* Sources */,
+				3FC6976F81BEF61A7C07ED0D199EE3E2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F7D0EA0073F1974385FACAADD63AC3D /* PBXTargetDependency */,
+				80C2A2C29D265BEF6B68E0671383D7EF /* PBXTargetDependency */,
+			);
+			name = "Pods-PDF Letterhead Pro";
+			productName = "Pods-PDF Letterhead Pro";
+			productReference = B195486F1AB8BF8A2EA87D1865D4BE00 /* libPods-PDF Letterhead Pro.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8C232BD94C8BBE900DF5C3D08B2899A8 /* MMGetAppStorePrice */ = {
@@ -425,24 +507,24 @@
 			);
 			name = MMGetAppStorePrice;
 			productName = MMGetAppStorePrice;
-			productReference = 47D966CA3952DF61E54E776A13BC4D8A /* libMMGetAppStorePrice.a */;
+			productReference = EA9D3C5269718A072690797325FCFFA8 /* libMMGetAppStorePrice.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		9C2A3F769A5CFB3C303B940DD3D466B4 /* Pods-PDF Letterhead Pro */ = {
+		B7C48F9FCC66011EB131DA7623651342 /* YRKSpinningProgressIndicator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2576B1765D0A41F901BDFB884CBC5B6 /* Build configuration list for PBXNativeTarget "Pods-PDF Letterhead Pro" */;
+			buildConfigurationList = 02BC3C693CC39334989138920BAA2E9F /* Build configuration list for PBXNativeTarget "YRKSpinningProgressIndicator" */;
 			buildPhases = (
-				E55B63C9424019535C5E16C5F2BE3CFD /* Sources */,
-				F5F8E283D98881E4102DC16B2B0960D1 /* Frameworks */,
+				26ECFE291A761C0EEE5F28E77A24E4E0 /* Sources */,
+				443585BE83860BEE396BE7E1623E7469 /* Frameworks */,
+				397B20467DBDF17632AECDE2C454A7BC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				996A0656EBE01DEB517F52D788A0BB7C /* PBXTargetDependency */,
 			);
-			name = "Pods-PDF Letterhead Pro";
-			productName = "Pods-PDF Letterhead Pro";
-			productReference = E300EB48A7E66A97D370502AE73C8415 /* libPods-PDF Letterhead Pro.a */;
+			name = YRKSpinningProgressIndicator;
+			productName = YRKSpinningProgressIndicator;
+			productReference = 91D5FD544EFE2CF570791311B4D9C74E /* libYRKSpinningProgressIndicator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -462,19 +544,37 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 93E1D91EE30C104722D6BD2B3F66FBEA /* Products */;
+			productRefGroup = 56AF1DD22DE0569371247D25444B2E9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8C232BD94C8BBE900DF5C3D08B2899A8 /* MMGetAppStorePrice */,
-				107B67DEE56FC4373AA0267EA6841E69 /* Pods-PDF Letterhead Lite */,
-				9C2A3F769A5CFB3C303B940DD3D466B4 /* Pods-PDF Letterhead Pro */,
-				3E91949694E2B98A549A07EA5651E2FE /* YAPDFKit */,
+				11C6D2805FFCD57C4CD168F645583E3C /* Pods-PDF Letterhead Lite */,
+				88F28F11BE73AD227563C46C3D144B44 /* Pods-PDF Letterhead Pro */,
+				5FABFE4CA35BF82ED624AD316014DC2A /* YAPDFKit */,
+				B7C48F9FCC66011EB131DA7623651342 /* YRKSpinningProgressIndicator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		24019E5A3A6ECAC19C9B8CDF62270F1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12BD14073911B601BB6A5F44C3A8090 /* Pods-PDF Letterhead Pro-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26ECFE291A761C0EEE5F28E77A24E4E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EB0A7586B5B9BC4B77032BE64784BC /* YRKSpinningProgressIndicator-dummy.m in Sources */,
+				C9A3702692D35F99AEB2E1952B656733 /* YRKSpinningProgressIndicator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D22E0925D5318B9405D9D19AF6F0C51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,81 +584,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87EB80A69E4F7DED5630EF57AABD9337 /* Sources */ = {
+		8C4C85999F8CC7B57FF500B40C6EFD15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D443F7EC5B1C89DF4EF9ECFFAC686A7E /* Pods-PDF Letterhead Lite-dummy.m in Sources */,
+				CCF8AA6B8049FAF5489823B6C91F41BF /* main.m in Sources */,
+				64A906C38E00E17AF3F1563F436580E9 /* pdfzlib.m in Sources */,
+				EEFBDA50E582E7FC5927DFE06DD89436 /* Utils.c in Sources */,
+				3AD83812F9864FC604A579DE1E8B8CC9 /* YAPDFKit-dummy.m in Sources */,
+				6CB1CA67ADDD12F9E740A324C01737C0 /* YPArray.m in Sources */,
+				578E647437B35F2C1734EC7B027D0E80 /* YPAttribute.m in Sources */,
+				72303715D40F22E882DC9264C19FA7E4 /* YPBool.m in Sources */,
+				3D8FBA5D866B7B15748C811ED15A0515 /* YPDictionary.m in Sources */,
+				C10E7D6F7D5EA040763DAE513EC8C8B0 /* YPDocument.m in Sources */,
+				341BEA09DEE793FA58D5F12A7C56722F /* YPHexString.m in Sources */,
+				C6B12B9595AB149CF621D360B76F6055 /* YPName.m in Sources */,
+				308F37B2577F9508717962962A2DF352 /* YPNumber.m in Sources */,
+				E4B733ACD91FD90B2A6CF625567374FC /* YPObject.m in Sources */,
+				2FB3523705528B657F6ADE5CC9175254 /* YPObjectReference.m in Sources */,
+				06D166BDEF5D3E1FE2550658959500C3 /* YPObjectStream.m in Sources */,
+				21EE9209BEEF66F16FBEB96D9B231CCF /* YPPages.m in Sources */,
+				A2931B732568DBC5B272520B6973AED9 /* YPString.m in Sources */,
+				41A27F121C46B44D423048158627E23B /* YPXref.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C93CF503A05E3536BEEDD57DB00A4642 /* Sources */ = {
+		98D1D41ACBE1E6E99AC3D36B4E0B010A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03287396279E0F00B41DE9CD493F466E /* main.m in Sources */,
-				DBCB0A58872DB768FB5F55E00188F44C /* pdfzlib.m in Sources */,
-				04874FFEB1F8034A2EDB4EDF56B85BE8 /* Utils.c in Sources */,
-				B1350030727E093CC2E54FBCF3154725 /* YAPDFKit-dummy.m in Sources */,
-				7052270190E8450B14B2709380FEFA17 /* YPArray.m in Sources */,
-				1A7F94EE4D1130B49D6C974EB213A1F0 /* YPAttribute.m in Sources */,
-				6AC44C779C4C00A463D497E34F087320 /* YPBool.m in Sources */,
-				22010DE4203259FDF473D26D0ADB1F22 /* YPDictionary.m in Sources */,
-				0A34589128E93A550153582ED691EF16 /* YPDocument.m in Sources */,
-				497098F6D0CAC146F7E33548165EEF84 /* YPHexString.m in Sources */,
-				A17D5103B23A89064068B2B8C6C50750 /* YPName.m in Sources */,
-				D5EC936A734FF0CB7262ED3588F97351 /* YPNumber.m in Sources */,
-				9B66BBA49F88A3D7511E3E96E781B909 /* YPObject.m in Sources */,
-				F3CCFF78BD60F6AE0F4CE0A1C3F7D1F3 /* YPObjectReference.m in Sources */,
-				B4813E49345B9A24400E7002D0DA0911 /* YPObjectStream.m in Sources */,
-				45716101CB86968CBDB7A16673D221F6 /* YPPages.m in Sources */,
-				DEC3E8A777FC12E05CB082B4E774EFE7 /* YPString.m in Sources */,
-				F6D3537E8CF0264717E25E034BD7A58E /* YPXref.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E55B63C9424019535C5E16C5F2BE3CFD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				843354C8658A67CE3DA9B4727AF495C4 /* Pods-PDF Letterhead Pro-dummy.m in Sources */,
+				A1778FA5A9D68D62BFE9A8112F5142B7 /* Pods-PDF Letterhead Lite-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B7033230D645BAC79D14E76272F3E0A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YAPDFKit;
-			target = 3E91949694E2B98A549A07EA5651E2FE /* YAPDFKit */;
-			targetProxy = 98D075E78BF6A98B4CF966D1BE600B92 /* PBXContainerItemProxy */;
-		};
-		996A0656EBE01DEB517F52D788A0BB7C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YAPDFKit;
-			target = 3E91949694E2B98A549A07EA5651E2FE /* YAPDFKit */;
-			targetProxy = A986ED501FCC281103402960AE12558D /* PBXContainerItemProxy */;
-		};
-		AEAAA68CA6121FB8D8AB13A7226B0382 /* PBXTargetDependency */ = {
+		059A64701C700532AAA5A6007D31FFED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMGetAppStorePrice;
 			target = 8C232BD94C8BBE900DF5C3D08B2899A8 /* MMGetAppStorePrice */;
-			targetProxy = FC77FD58F935663E8232A444C7137B10 /* PBXContainerItemProxy */;
+			targetProxy = AF3C60F16B6FF60D7DFDA9F1C3F424E5 /* PBXContainerItemProxy */;
+		};
+		6F7D0EA0073F1974385FACAADD63AC3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YAPDFKit;
+			target = 5FABFE4CA35BF82ED624AD316014DC2A /* YAPDFKit */;
+			targetProxy = 4263BBF1785E891BA52C9A7B8018FCA0 /* PBXContainerItemProxy */;
+		};
+		80C2A2C29D265BEF6B68E0671383D7EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YRKSpinningProgressIndicator;
+			target = B7C48F9FCC66011EB131DA7623651342 /* YRKSpinningProgressIndicator */;
+			targetProxy = B7C16A3A8FA3615F6D272CDFC771ED24 /* PBXContainerItemProxy */;
+		};
+		8A7B968B54D5E0A09CE53B8F2AFD73DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YAPDFKit;
+			target = 5FABFE4CA35BF82ED624AD316014DC2A /* YAPDFKit */;
+			targetProxy = 21EA5B6E3A0DE11FF1E7A5A2116C9E1B /* PBXContainerItemProxy */;
+		};
+		EA5973265CAF9D6FF4E67B89D8D98B2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YRKSpinningProgressIndicator;
+			target = B7C48F9FCC66011EB131DA7623651342 /* YRKSpinningProgressIndicator */;
+			targetProxy = 1ECD809FEBFAE74BB917060F2C383CCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A19FB63739C41598B69E70E229DE0FE /* Release */ = {
+		0284FE0ABE45C2D6A03F13323DAED5BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11EDC2C49BA110993B65866F1D610BC4 /* Pods-PDF Letterhead Lite.release.xcconfig */;
+			baseConfigurationReference = 613C53B4E636C4296F0EA30503349253 /* Pods-PDF Letterhead Pro.debug.xcconfig */;
 			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -566,30 +669,11 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		21DA15F3F6990915DEF6C92EBC754722 /* Release */ = {
+		1C00BB4900B432D764B8231841E424C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB5772F01F512D6131B4E25AAD2BF66F /* YAPDFKit.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/YAPDFKit/YAPDFKit-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		3C85486DA967E6C670AA5BA039F635DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 613C53B4E636C4296F0EA30503349253 /* Pods-PDF Letterhead Pro.debug.xcconfig */;
+			baseConfigurationReference = AEDD8AF221B35778A495DB856E1DB5CA /* Pods-PDF Letterhead Lite.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -639,9 +723,28 @@
 			};
 			name = Release;
 		};
+		73D33B8DF6210814F81415B5971BA9E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41ACA549A6B1C40E5D7A86C4D0BE3F73 /* Pods-PDF Letterhead Pro.release.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		8A208553BE1957716A3EF7C35C6DF6EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 297A7188F8102841725D72911717E79C /* MMGetAppStorePrice.xcconfig */;
+			baseConfigurationReference = 83D6B74B48A8795CEE7E752E5791A723 /* MMGetAppStorePrice.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -658,9 +761,46 @@
 			};
 			name = Release;
 		};
+		A246EA6060BE0BBAF5C091D4C29F5359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AA4F6DC40C3AF0D7A1E8C08C63EA047 /* YAPDFKit.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/YAPDFKit/YAPDFKit-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A4144B6973314D7FF265BED6A332C0B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D7C01C2C7E095C718194BA8D5494395 /* YRKSpinningProgressIndicator.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/YRKSpinningProgressIndicator/YRKSpinningProgressIndicator-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
 		B666CE71DBF7890BA48B62814726A203 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 297A7188F8102841725D72911717E79C /* MMGetAppStorePrice.xcconfig */;
+			baseConfigurationReference = 83D6B74B48A8795CEE7E752E5791A723 /* MMGetAppStorePrice.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -676,9 +816,9 @@
 			};
 			name = Debug;
 		};
-		C85A06902488C4FD31F0D33430630AB8 /* Release */ = {
+		C1F9C777BE5EC6E641AD21217F568809 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41ACA549A6B1C40E5D7A86C4D0BE3F73 /* Pods-PDF Letterhead Pro.release.xcconfig */;
+			baseConfigurationReference = 11EDC2C49BA110993B65866F1D610BC4 /* Pods-PDF Letterhead Lite.release.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -734,9 +874,9 @@
 			};
 			name = Debug;
 		};
-		F163298F24E3A79902BEDB0825DE62C1 /* Debug */ = {
+		DC912DB86F2E1894A0D697BB0C90FF7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB5772F01F512D6131B4E25AAD2BF66F /* YAPDFKit.xcconfig */;
+			baseConfigurationReference = 6AA4F6DC40C3AF0D7A1E8C08C63EA047 /* YAPDFKit.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -752,32 +892,33 @@
 			};
 			name = Debug;
 		};
-		FB6862116C5AC94A6BEA5FB270A866A4 /* Debug */ = {
+		F5C50426906B7DC549A2444315BC6F91 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEDD8AF221B35778A495DB856E1DB5CA /* Pods-PDF Letterhead Lite.debug.xcconfig */;
+			baseConfigurationReference = 2D7C01C2C7E095C718194BA8D5494395 /* YRKSpinningProgressIndicator.xcconfig */;
 			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/YRKSpinningProgressIndicator/YRKSpinningProgressIndicator-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16C974ACF404BC0C770C0033B4B9AA4F /* Build configuration list for PBXNativeTarget "Pods-PDF Letterhead Lite" */ = {
+		02BC3C693CC39334989138920BAA2E9F /* Build configuration list for PBXNativeTarget "YRKSpinningProgressIndicator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB6862116C5AC94A6BEA5FB270A866A4 /* Debug */,
-				0A19FB63739C41598B69E70E229DE0FE /* Release */,
+				A4144B6973314D7FF265BED6A332C0B9 /* Debug */,
+				F5C50426906B7DC549A2444315BC6F91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -791,6 +932,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		49A8D4B109E8D65BF9E032C61E54680E /* Build configuration list for PBXNativeTarget "Pods-PDF Letterhead Lite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C00BB4900B432D764B8231841E424C7 /* Debug */,
+				C1F9C777BE5EC6E641AD21217F568809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83848D48901A7B64AD60C9327E5E7BF6 /* Build configuration list for PBXNativeTarget "MMGetAppStorePrice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -800,20 +950,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2576B1765D0A41F901BDFB884CBC5B6 /* Build configuration list for PBXNativeTarget "Pods-PDF Letterhead Pro" */ = {
+		BCD04E5BBA38B0E402CEEA219B6590FF /* Build configuration list for PBXNativeTarget "YAPDFKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C85486DA967E6C670AA5BA039F635DF /* Debug */,
-				C85A06902488C4FD31F0D33430630AB8 /* Release */,
+				DC912DB86F2E1894A0D697BB0C90FF7D /* Debug */,
+				A246EA6060BE0BBAF5C091D4C29F5359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1F7909E591D89220EBD7A18CC525B46 /* Build configuration list for PBXNativeTarget "YAPDFKit" */ = {
+		DE03CBBC9C0607C806788478F1C4B9D4 /* Build configuration list for PBXNativeTarget "Pods-PDF Letterhead Pro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F163298F24E3A79902BEDB0825DE62C1 /* Debug */,
-				21DA15F3F6990915DEF6C92EBC754722 /* Release */,
+				0284FE0ABE45C2D6A03F13323DAED5BD /* Debug */,
+				73D33B8DF6210814F81415B5971BA9E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

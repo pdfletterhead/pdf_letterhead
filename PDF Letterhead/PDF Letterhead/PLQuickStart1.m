@@ -24,10 +24,17 @@
 
 - (void)windowDidLoad
 {
-    //self.window.backgroundColor = [NSColor whiteColor];
+    
+    [_closeButton setTitle:NSLocalizedString(@"Close", @"Close")];
+
+    NSBundle* myBundle = [NSBundle mainBundle];
+    NSString* myImagePath = [myBundle pathForResource:NSLocalizedString(@"splashscreen-eng", @"splashscreen-eng") ofType:@"png"];
+    NSLog(@"pa: %@",myImagePath);
+    NSImage *splashImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
+    [_featureImage setImage:splashImage];
+    
     if( [[[NSApp delegate] retrievePrice] priceFound]==YES){
         NSString * price = [[[NSApp delegate] retrievePrice] formattedPrice];
-        NSLog(@"pricex = %@", price);
         NSString * buttonTitle = [NSString stringWithFormat:@"%@ (%@)", NSLocalizedString(@"Upgrade", @"Buy now for only $x.xx button"), price];
         [_buyButton setTitle:buttonTitle];
     }

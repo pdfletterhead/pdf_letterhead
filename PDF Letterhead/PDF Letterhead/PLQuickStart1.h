@@ -11,6 +11,9 @@
 @interface PLQuickStart1 : NSWindowController
 
 @property (assign) IBOutlet NSButton *buyButton;
+@property (assign) IBOutlet NSButton *closeButton;
+@property (assign) IBOutlet NSImageView *featureImage;
+
 
 
 @end

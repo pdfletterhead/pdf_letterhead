@@ -43,7 +43,6 @@
 
 @synthesize chooseLetterheadButton, saveLetterheadButton, saveButton3, previewButton3, printButton3, mailButton3;
 
-
 - (void)awakeFromNib {
     [[saveLetterheadButton cell] setKBButtonType:BButtonTypeLight];
     [[saveButton3 cell] setKBButtonType:BButtonTypeDark];
@@ -56,6 +55,7 @@
 {
     
     [self makeOrFindAppSupportDirectory];
+    
     
 #ifdef LITE
     [self disableProFeatures];
@@ -108,6 +108,12 @@
     [self coverControlAction:self];
     [self setupColorSwitch];
     
+    //setup spinner
+
+     [_turboFan setHidden:YES];
+    _turboFan.drawsBackground = NO;
+    _turboFan.color = [NSColor whiteColor];
+    
 #ifdef LITE
     _quickStartWindow = [[PLQuickStart1 alloc] initWithWindowNibName:@"PLQuickStart1"];
     [self doOpenQuickStart];
@@ -116,6 +122,35 @@
     
 }
 
+- (void) startSpinner
+{
+    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        dispatch_async( dispatch_get_main_queue(), ^{
+            
+            [_helpImage setHidden:YES];
+            [[self PDFView] setHidden:YES];
+            [_turboFan setHidden:NO];
+            [_turboFan startAnimation:self];
+            
+        });
+    });
+}
+
+- (void) stopSpinner
+{
+    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        dispatch_async( dispatch_get_main_queue(), ^{
+            
+        });
+    });
+    
+    [_turboFan setHidden:YES];
+    [[self PDFView] setHidden:NO];
+    [_turboFan stopAnimation:self];
+    [_helpImage setHidden:NO];
+}
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
@@ -155,6 +190,8 @@
 
 - (IBAction)doDelForContentDoc:(id)sender {
     [_sourcedoc setImage:nil];
+    
+    [self stopSpinner];
     [self renderPDF];
 }
 
@@ -451,7 +488,6 @@
             cvrimage = NULL;
             NSBundle* myBundle = [NSBundle mainBundle];
             NSString* myImagePath = [myBundle pathForResource:@"white" ofType:@"pdf"];
-            
             cvrimage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
         }
         
