@@ -141,21 +141,7 @@
         {
             if ([ext isEqual:@"pdf"]){
                 
-
-                //DETECT WHITE BG
-                NSData *fileData = [NSData dataWithContentsOfFile:[files lastObject]];
-                PLTransparencyUtils* trUtils = [[PLTransparencyUtils alloc] initWithData:fileData];
-                if([trUtils documentHasWhiteBackgrounds])
-                {
-                    [trUtils cleanDocumentFromWhiteBackgrounds];
-                    NSString *pathToPDF = [[[[NSApp delegate] applicationFilesDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf",@"transparentSource"]] path];
-                    [trUtils writeNewDocToFile:pathToPDF];
-                    self.sourcefilepath = pathToPDF;
-                }
-                else
-                {
-                    self.sourcefilepath = [files lastObject];
-                }
+                self.sourcefilepath = [files lastObject];
                 
                 [[NSApp delegate] setSourceFileName: [[[[files lastObject] lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"]];
                 

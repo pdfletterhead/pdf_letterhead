@@ -11,6 +11,7 @@
 #import "PLTableRowView.h"
 
 #include "PLProfileEditWindow.h"
+#import "PLTransparencyUtils.h"
 
 
 @interface PLAppDelegate()
@@ -68,21 +69,21 @@
     [[printButton3 cell] setKBButtonType:BButtonTypeDark];
     [[mailButton3 cell] setKBButtonType:BButtonTypeDark];
     [self setupLocalizedElements];
+    
+#ifdef LITE
+    [self disableProFeatures];
+    
+    _retrievePrice = [[MMGetAppStorePrice alloc] initWithAppId:@1075794517];
+    
+    [self moveInterfaceElements];
+#endif
+    
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     
     [self makeOrFindAppSupportDirectory];
-    
-    
-#ifdef LITE
-    [self disableProFeatures];
-    
-    _retrievePrice = [[MMGetAppStorePrice alloc] initWithAppId:@1075794517];
-
-    [self moveInterfaceElements];
-#endif
     
     _isSetContent = NO;
     
@@ -201,6 +202,10 @@
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
     if ([[[filename pathExtension] lowercaseString] isEqual:@"pdf"]){
+        
+        [_sourcedoc setSourcefilepath:filename];
+        self.sourceFileName = [[[filename lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"];
+        
         [_sourcedoc setPdfFilepath:filename];
         [self startSpinner];
         [self renderPDF];
@@ -260,6 +265,8 @@
         {
             if ([ext isEqual:@"pdf"]){
                 
+                [_sourcedoc setSourcefilepath:tvarFilename];
+                self.sourceFileName = [[[tvarFilename  lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"];
                 [theView setPdfFilepath:tvarFilename];
                 [self startSpinner];
                 [self renderPDF];
@@ -487,6 +494,8 @@
     //Render PDF
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
+
+        
         PDFDocument *document = [self renderDocument];
             
         //Set PDFView
@@ -556,6 +565,7 @@
         
         sourceimage = [_sourcedoc image];
         NSString *filePath;
+        NSString *filePath2;
         
         if(![_sourcedoc getFilepath])
         {
@@ -581,7 +591,34 @@
             filePath = [_sourcedoc getFilepath];
         }
         
-        PDFDocument * sourcePDF = [[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:filePath]];
+
+        
+        @try {
+            NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+            PLTransparencyUtils* trUtils = [[PLTransparencyUtils alloc] initWithData:fileData];
+            if([trUtils documentHasWhiteBackgrounds])
+            {
+                [trUtils cleanDocumentFromWhiteBackgrounds];
+                NSString *pathToPDF = [[[[NSApp delegate] applicationFilesDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf",@"transparentSource"]] path];
+                [trUtils writeNewDocToFile:pathToPDF];
+                [_sourcedoc setSourcefilepath:pathToPDF];
+                filePath2 = [pathToPDF copy];
+            }
+        }
+        @catch (NSException * e) {
+            NSLog(@"Cannot open PDF for fixing transparency: %@", e);
+        }
+        @finally {
+//            NSLog(@"end try/catch");
+        }
+        
+        if(!filePath2)
+        {
+            filePath2 = [filePath copy];
+        }
+
+//        NSLog(@"path: %@", filePath2);
+        PDFDocument * sourcePDF = [[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:filePath2]];
         NSUInteger pagescount = [sourcePDF pageCount];
         
         for (int y = 0; y < pagescount; y++) {
