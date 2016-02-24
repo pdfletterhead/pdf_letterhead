@@ -737,7 +737,7 @@
     }
     else {
 
-        NSString *tmpName =[NSString stringWithFormat:@"%@.pdf" ,[[[_sourcedoc getFilepath] lastPathComponent] stringByDeletingPathExtension]];
+        NSString *tmpName =[NSString stringWithFormat:@"%@.pdf" ,sourceFileName];
         newFileName = [ [_tmpDirectoryURL path] stringByAppendingPathComponent:tmpName];
     }
 
