@@ -4,15 +4,14 @@
 # use_frameworks!
 
 target 'PDF Letterhead Lite' do
-  pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
-  #pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
-  pod 'YRKSpinningProgressIndicator'
-
   pod 'MMGetAppStorePrice', :git => 'https://github.com/mipmip/MMGetAppStorePrice.git'
+  pod 'YRKSpinningProgressIndicator'
+  #pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
+  pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
 end
 
 target 'PDF Letterhead Pro' do
-  pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
   pod 'YRKSpinningProgressIndicator'
-  #pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
+  #pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
+  pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
 end

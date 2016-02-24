@@ -1,6 +1,6 @@
 {
   "name": "YAPDFKit",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": "Yet another PDF Kit for parsing and modifying PDF's.",
   "description": "Yet another PDF Kit is a independent PDF Kit written in objective-c for\nparsing and manipulating PDF's. YAPDFKit is completely independant of Apple's\nPDFKit.",
   "homepage": "https://github.com/mipmip/YAPDFKit",

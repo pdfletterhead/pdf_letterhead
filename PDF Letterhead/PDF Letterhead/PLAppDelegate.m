@@ -540,7 +540,6 @@
     
     if(_coverEnabled){
         
-        
         cvrimage = [_coverbackgrounddoc image];
         if (!cvrimage) {
             cvrimage = NULL;

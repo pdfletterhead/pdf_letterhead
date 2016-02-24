@@ -1,1 +1,1 @@
-../../../YAPDFKit/YAPDFKit/YPAttribute.h
+../../../../../../../../Pods/YAPDFKit/YAPDFKit/YPAttribute.h
