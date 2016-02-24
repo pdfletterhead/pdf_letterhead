@@ -1,0 +1,131 @@
+/* Add Image */
+"Add Image" = "Afbeelding toevoegen";
+
+/* Add PDF */
+"Add PDF" = "PDF Toevoegen";
+
+/* Delete Letterhead message */
+"Are you sure you want to delete this letterhead?" = "Weet u zeker dat u dit briefpapier wilt verwijderen?";
+
+/* Background */
+"Background" = "Achtergrond";
+
+/* Cancel button
+   Cancel button title */
+"Cancel" = "Annuleren";
+
+/* Choose a letterhead */
+"Choose a letterhead" = "Kies briefpapier";
+
+/* Close */
+"Close" = "Sluiten";
+
+/* Quit without saves error question message */
+"Could not save changes while quitting. Quit anyway?" = "Aanpassingen konden niet worden opgeslagen. Toch afsluiten?";
+
+/* Cover label drawer */
+"Cover" = "Voorpagina";
+
+/* Cover page */
+"Cover page" = "Voorpagina";
+
+/* Delete Letterhead warning */
+"Deleted letterheads cannot be restored." = "Verwijderd briefpapier kan niet worden hersteld.";
+
+/* Cover control action Drop */
+"Drop background image here" = "Sleep briefpapier";
+
+/* Cover control action
+   Drop background images here */
+"Drop background images here" = "Sleep briefpapier";
+
+/* Drop content PDF here */
+"Drop content PDF here" = "Sleep PDF met inhoud";
+
+/* Drop cover background here */
+"Drop cover background here" = "Sleep achtergrond voorpagina";
+
+/* Drop following background here */
+"Drop following background here" = "Sleep achtergrond volgpagina’s";
+
+/* E-Mail */
+"E-Mail" = "E-Mail";
+
+/* Edit Letterhead */
+"Edit Letterhead" = "Briefpapier bewerken";
+
+/* Create new Letterhead Message */
+"Enter a name for the new letterhead" = "Voer een naam in voor uw nieuwe briefpapier";
+
+/* Following */
+"Following" = "Volgpagina's";
+
+/* Library Empty */
+"Library Empty" = "Bibliotheek leeg";
+
+/* MANAGE LETTERHEADS */
+"MANAGE LETTERHEADS" = "BRIEFPAPIER BEHEREN";
+
+/* Mail share error title */
+"Mail application could not be reached" = "Mail application kon niet worden gevonden";
+
+/* Mail share error description */
+"Make sure that the application is correctly configured for sharing" = "Zorg er voor dat de applicatie correct is geconfigureerd voor delen";
+
+/* Subject for Email */
+"My PDF" = "Mijn pdf";
+
+/* OK button */
+"OK" = "OK";
+
+/* Preview */
+"Preview" = "Voorbeeld";
+
+/* Print */
+"Print" = "Afdrukken";
+
+/* Quit anyway button title */
+"Quit anyway" = "Toch afsluiten";
+
+/* Quit without saves error question info */
+"Quitting now will lose any changes you have made since the last successful save" = "Als u nu afsluit verliest u alle vorige aanpassingen";
+
+/* Remove Image */
+"Remove Image" = "Afbeelding verwijderen";
+
+/* Remove PDF */
+"Remove PDF" = "PDF verwijderen";
+
+/* Save */
+"Save" = "Opslaan";
+
+/* Save new letterhead */
+"Save new letterhead" = "Nieuw briefpapier opslaan";
+
+/* Library Empty\n\nSave your first letterhead */
+"Save your first letterhead" = "Uw eerste briefpapier opslaan";
+
+/* Title */
+"Title" = "Naam";
+
+/* Default name new Letterhead */
+"Untitled Letterhead" = "Nieuw briefpapier";
+
+/* Buy now for only $x.xx button */
+"Upgrade" = "Upgrade";
+
+/* Zoom in */
+"Zoom in" = "Inzoomen";
+
+/* Zoom out */
+"Zoom out" = "Uitzoomen";
+
+/* bghelp.eng */
+"bghelp-eng" = "bghelp-nl";
+
+/* splashscreen-eng */
+"splashscreen-eng" = "splashscreen-nl";
+
+/* bghelp.eng */
+"upgradebutton-eng" = "upgradebutton-nl";
+
