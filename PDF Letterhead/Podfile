@@ -6,12 +6,12 @@
 target 'PDF Letterhead Lite' do
   pod 'MMGetAppStorePrice', :git => 'https://github.com/mipmip/MMGetAppStorePrice.git'
   pod 'YRKSpinningProgressIndicator'
-  #pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
-  pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
+  pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
+  #pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
 end
 
 target 'PDF Letterhead Pro' do
   pod 'YRKSpinningProgressIndicator'
-  #pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
-  pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
+  pod 'YAPDFKit', :git => 'https://github.com/mipmip/YAPDFKit.git'
+  #pod 'YAPDFKit', :path => '/Users/pim/RnD/Pods/YAPDFKit'
 end

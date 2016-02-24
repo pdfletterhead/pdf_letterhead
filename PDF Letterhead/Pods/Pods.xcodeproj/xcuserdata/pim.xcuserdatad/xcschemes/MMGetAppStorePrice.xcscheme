@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '839BACE013098B88619E50E5'
+               BlueprintIdentifier = '046209C7C2AED053EBB20409'
                BlueprintName = 'MMGetAppStorePrice'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libMMGetAppStorePrice.a'>

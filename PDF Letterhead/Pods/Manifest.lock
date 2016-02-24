@@ -5,19 +5,22 @@ PODS:
 
 DEPENDENCIES:
   - MMGetAppStorePrice (from `https://github.com/mipmip/MMGetAppStorePrice.git`)
-  - YAPDFKit (from `/Users/pim/RnD/Pods/YAPDFKit`)
+  - YAPDFKit (from `https://github.com/mipmip/YAPDFKit.git`)
   - YRKSpinningProgressIndicator
 
 EXTERNAL SOURCES:
   MMGetAppStorePrice:
     :git: https://github.com/mipmip/MMGetAppStorePrice.git
   YAPDFKit:
-    :path: "/Users/pim/RnD/Pods/YAPDFKit"
+    :git: https://github.com/mipmip/YAPDFKit.git
 
 CHECKOUT OPTIONS:
   MMGetAppStorePrice:
     :commit: c10b97d04f2bb09be3aa5dd4831ca2140e5f4c81
     :git: https://github.com/mipmip/MMGetAppStorePrice.git
+  YAPDFKit:
+    :commit: 6ca47c0fb8b95009b750a5ab4522caefa44add54
+    :git: https://github.com/mipmip/YAPDFKit.git
 
 SPEC CHECKSUMS:
   MMGetAppStorePrice: f9d27d73944680ef24e1f9075844676a5346ec66

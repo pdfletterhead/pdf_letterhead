@@ -61,7 +61,6 @@ const char* strblock(const char* p, int(^func)(char ch))
         buffer[data.length] = 0;
         NSData *dataWithNull = [NSData dataWithBytes:buffer length:data.length + 1];
         free(buffer);
-        NSLog(@"reset");
 
         [self parseData:dataWithNull];
         [self linkObjectsWithContents];
@@ -222,12 +221,10 @@ const char* strblock(const char* p, int(^func)(char ch))
 
 - (enum ParserStates)handleInPDFCommentState:(NSData*)data idx:(NSUInteger*)idx
 {
+    const char *rawData = (const char*)[data bytes];
     NSUInteger i = *idx;
 
-    const char *rawData = (const char*)[data bytes];
-
     NSUInteger endOfCommentIdx = i;
-    NSLog(@"%s\n\n,%li", rawData, endOfCommentIdx);
     while (rawData[endOfCommentIdx] != '\r' && rawData[endOfCommentIdx] != '\n' && endOfCommentIdx < data.length) {
         ++endOfCommentIdx;
     }
@@ -235,10 +232,8 @@ const char* strblock(const char* p, int(^func)(char ch))
     memcpy(buffer, &rawData[i], (endOfCommentIdx - i) + 1);
     buffer[endOfCommentIdx - i] = 0;
     NSString* comment = [NSString stringWithCString:buffer encoding:NSASCIIStringEncoding];
-//    NSString* comment = [NSString stringWithCString:buffer encoding:NSASCIIStringEncoding];
     i = endOfCommentIdx;
 
-    //NSDictionary *dict = [NSDictionary dictionaryWithObject:comment forKey:@"comment"];
     [comments addObject:comment];
 
     *idx = i;
