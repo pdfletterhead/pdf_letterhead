@@ -320,7 +320,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" id="948">
-                                <rect key="frame" x="120" y="89" width="80" height="20"/>
+                                <rect key="frame" x="120" y="89" width="88" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Following" id="949">
                                     <font key="font" metaFont="systemMedium" size="10"/>
@@ -409,7 +409,7 @@
                                 </connections>
                             </imageView>
                             <textField verticalHuggingPriority="750" id="983">
-                                <rect key="frame" x="32" y="20" width="151" height="26"/>
+                                <rect key="frame" x="13" y="20" width="191" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop content PDF here" id="984">
                                     <font key="font" metaFont="systemLight" size="14"/>
@@ -603,7 +603,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <subviews>
                             <button verticalHuggingPriority="750" id="866" customClass="KBButton">
-                                <rect key="frame" x="10" y="12" width="100" height="25"/>
+                                <rect key="frame" x="15" y="12" width="150" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" title=" Zoom out" bezelStyle="shadowlessSquare" image="mag" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="867">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -614,7 +614,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" id="863" customClass="KBButton">
-                                <rect key="frame" x="118" y="12" width="100" height="25"/>
+                                <rect key="frame" x="172" y="12" width="150" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" title="  Zoom in" bezelStyle="shadowlessSquare" image="mag" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="864">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -625,7 +625,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" id="1013" customClass="KBButton">
-                                <rect key="frame" x="227" y="12" width="100" height="25"/>
+                                <rect key="frame" x="330" y="12" width="150" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" title="  Print" bezelStyle="shadowlessSquare" image="print" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1020">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -636,7 +636,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" id="872" customClass="KBButton">
-                                <rect key="frame" x="522" y="12" width="100" height="23"/>
+                                <rect key="frame" x="522" y="12" width="100" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" title="  Close" bezelStyle="shadowlessSquare" image="NSStopProgressFreestandingTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="873">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

@@ -14,6 +14,10 @@
 		3E2AFF0616A5F8B3006D2CB0 /* PLQuickStart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2AFF0416A5F8B3006D2CB0 /* PLQuickStart1.m */; };
 		3E3C6E051628C2EF000DEB08 /* PLMainWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */; };
 		3E51688418591F4B007E2F3C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E51688318591F4B007E2F3C /* WebKit.framework */; };
+		3E5AFCFE1C7DB8660033F113 /* upgradebutton-de.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E5AFCFD1C7DB8660033F113 /* upgradebutton-de.png */; };
+		3E5AFD001C7DB8720033F113 /* bghelp-de.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E5AFCFF1C7DB8720033F113 /* bghelp-de.png */; };
+		3E5AFD011C7DB8A50033F113 /* bghelp-de.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E5AFCFF1C7DB8720033F113 /* bghelp-de.png */; };
+		3E5AFD031C7DB9050033F113 /* splashscreen-de.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E5AFD021C7DB9050033F113 /* splashscreen-de.png */; };
 		3E601B191C7231E00086FB5A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E601B181C7231E00086FB5A /* libz.1.dylib */; };
 		3E601B1A1C7231F30086FB5A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E601B181C7231E00086FB5A /* libz.1.dylib */; };
 		3E67446A1679448400D99390 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E6744681679448400D99390 /* printer.png */; };
@@ -147,6 +151,9 @@
 		3E3C6E031628C2EF000DEB08 /* PLMainWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLMainWindowView.h; sourceTree = "<group>"; };
 		3E3C6E041628C2EF000DEB08 /* PLMainWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLMainWindowView.m; sourceTree = "<group>"; };
 		3E51688318591F4B007E2F3C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3E5AFCFD1C7DB8660033F113 /* upgradebutton-de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upgradebutton-de.png"; sourceTree = "<group>"; };
+		3E5AFCFF1C7DB8720033F113 /* bghelp-de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bghelp-de.png"; sourceTree = "<group>"; };
+		3E5AFD021C7DB9050033F113 /* splashscreen-de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashscreen-de.png"; sourceTree = "<group>"; };
 		3E601B181C7231E00086FB5A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		3E6744681679448400D99390 /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
 		3E67446D16794BE400D99390 /* saveicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveicon.png; sourceTree = "<group>"; };
@@ -474,6 +481,7 @@
 			children = (
 				791574E41C4924FA006B1FC8 /* splashscreen-nl.png */,
 				791574E71C4924FA006B1FC8 /* splashscreen-eng.png */,
+				3E5AFD021C7DB9050033F113 /* splashscreen-de.png */,
 			);
 			name = "upgrade splash screens";
 			sourceTree = "<group>";
@@ -483,6 +491,7 @@
 			children = (
 				791574E51C4924FA006B1FC8 /* bghelp-eng.png */,
 				791574E61C4924FA006B1FC8 /* bghelp-nl.png */,
+				3E5AFCFF1C7DB8720033F113 /* bghelp-de.png */,
 			);
 			name = "Background help screens";
 			sourceTree = "<group>";
@@ -490,6 +499,7 @@
 		3E7849331C4D01C400A01DCF /* Upgrade buttons */ = {
 			isa = PBXGroup;
 			children = (
+				3E5AFCFD1C7DB8660033F113 /* upgradebutton-de.png */,
 				791574E81C4924FA006B1FC8 /* upgradebutton-eng.png */,
 				791574E91C4924FA006B1FC8 /* upgradebutton-nl.png */,
 			);
@@ -667,8 +677,10 @@
 				79527ABB1C4559D50030D6F9 /* pencilgray.png in Resources */,
 				3EF7E6BB16089C21008EA1B1 /* white.pdf in Resources */,
 				3EF7E6BE16089EFA008EA1B1 /* FAQ.rtf in Resources */,
+				3E5AFCFE1C7DB8660033F113 /* upgradebutton-de.png in Resources */,
 				3E2770451677E464002DD3DE /* bgdrop.png in Resources */,
 				791500841C44E9400007ABDC /* drawerinicon.png in Resources */,
+				3E5AFD031C7DB9050033F113 /* splashscreen-de.png in Resources */,
 				791574ED1C4924FA006B1FC8 /* splashscreen-eng.png in Resources */,
 				3E2770461677E464002DD3DE /* coverdrop.png in Resources */,
 				796BD8F71C4D1FB40071AE90 /* Localizable.strings in Resources */,
@@ -677,6 +689,7 @@
 				3E67446A1679448400D99390 /* printer.png in Resources */,
 				3E728F961C7CB3FF001FC453 /* FaqView.xib in Resources */,
 				3E67446E16794BE400D99390 /* saveicon.png in Resources */,
+				3E5AFD001C7DB8720033F113 /* bghelp-de.png in Resources */,
 				791574EC1C4924FA006B1FC8 /* bghelp-nl.png in Resources */,
 				791574EE1C4924FA006B1FC8 /* upgradebutton-eng.png in Resources */,
 				7928A3071C3D4D52006BA593 /* mag.png in Resources */,
@@ -707,6 +720,7 @@
 				79527ABC1C4559D50030D6F9 /* pencilgray.png in Resources */,
 				79726EEC1C16ED6E003B85D2 /* white.pdf in Resources */,
 				79726EED1C16ED6E003B85D2 /* FAQ.rtf in Resources */,
+				3E5AFD011C7DB8A50033F113 /* bghelp-de.png in Resources */,
 				7928A3131C3D4FC9006BA593 /* pencil.png in Resources */,
 				791574F31C4924FF006B1FC8 /* splashscreen-eng.png in Resources */,
 				791500861C44E9430007ABDC /* drawerinicon.png in Resources */,

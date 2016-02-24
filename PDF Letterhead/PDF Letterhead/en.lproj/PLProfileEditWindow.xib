@@ -43,9 +43,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="06O-Ed-Rpd">
-                                <rect key="frame" x="13" y="16" width="164" height="16"/>
+                                <rect key="frame" x="13" y="16" width="164" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop cover background here" id="QNF-g2-vyi">
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Drop cover background here" id="QNF-g2-vyi">
                                     <font key="font" metaFont="systemLight" size="11"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -66,9 +66,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="eol-5a-vEA">
-                                <rect key="frame" x="-4" y="15" width="198" height="17"/>
+                                <rect key="frame" x="-4" y="15" width="198" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop following background here" id="cMU-MC-Pwv">
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Drop following background here" id="cMU-MC-Pwv">
                                     <font key="font" metaFont="systemLight" size="11"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

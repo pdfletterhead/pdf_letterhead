@@ -25,7 +25,11 @@
 "Deleted letterheads cannot be restored." = "Entfernte Briefköpfe können nicht wiederhergestellt werden.";
 
 /* Cover control action Drop */
-"Drop background image here" = "Briefpapier hier einfügen";
+"Drop background image here" = "Briefkopf hier einfügen";
+
+/* Cover control action
+   Drop background images here */
+"Drop background images here" = "Briefköpfe hier einfügen";
 
 /* Drop content PDF here */
 "Drop content PDF here" = "Inhalt PDF hier einfügen";
@@ -68,6 +72,9 @@
 
 /* Save new letterhead */
 "Save new letterhead" = "Neuen Briefkopf speichern";
+
+/* Library Empty\n\nSave your first letterhead */
+"Save your first letterhead" = "Speichern Sie Ihre erste Briefkopf";
 
 /* Title */
 "Title" = "Name";
