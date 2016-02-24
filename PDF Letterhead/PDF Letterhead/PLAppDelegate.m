@@ -185,42 +185,17 @@
 
 - (void) startSpinner
 {
-//    NSLog(@"start");
-//   if(!_spinnerIsRunning) { }
-    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        dispatch_async( dispatch_get_main_queue(), ^{
-            
-    //        _spinnerIsRunning = YES;
-            [_helpImage setHidden:YES];
-            [[self PDFView] setHidden:YES];
-            [_turboFan setHidden:NO];
-            [_turboFan startAnimation:self];
-            
-        });
-    });
-    
-    
+    [_helpImage setHidden:YES];
+    [[self PDFView] setHidden:YES];
+    [_turboFan setHidden:NO];
+    [_turboFan startAnimation:self];
 }
 
 - (void) stopSpinner
 {
-//    NSLog(@"stop");
-
     [_turboFan setHidden:YES];
-    [[self PDFView] setHidden:NO];
     [_turboFan stopAnimation:self];
     [_helpImage setHidden:NO];
-/*    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        dispatch_async( dispatch_get_main_queue(), ^{
-            
-
-//            _spinnerIsRunning = NO;
-            
-        });
-    });
-*/
 }
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
@@ -261,7 +236,6 @@
 - (IBAction)doDelForContentDoc:(id)sender {
     [_sourcedoc setImage:nil];
     
-    [self stopSpinner];
     [self renderPDF];
 }
 
@@ -513,8 +487,6 @@
         //Set PDFView
         dispatch_async( dispatch_get_main_queue(), ^{
             
-     //       [self startSpinner];
-        
             [[self PDFView] setDocument:document];
             [[self previewView] setDocument:document];
             _letterheadPDF = document;
@@ -534,14 +506,14 @@
                 [previewButton3 setHidden:YES];
             }
             
-    //        [self stopSpinner];
+            [self stopSpinner];
             
         });
     });
 }
 
 -(PDFDocument*)renderDocument {
-    
+        
     NSImage			*bgimage;
     NSImage			*cvrimage;
     NSImage			*sourceimage;

@@ -164,9 +164,7 @@
                 if (ok) {
                     [(PLAppDelegate *)[NSApp delegate] renderPDF];
                 }
-                
-                [[NSApp delegate] stopSpinner];
-                
+                                
                 return YES;
                 
             } else {
