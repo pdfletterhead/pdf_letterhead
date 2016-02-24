@@ -202,6 +202,7 @@
 {
     if ([[[filename pathExtension] lowercaseString] isEqual:@"pdf"]){
         [_sourcedoc setPdfFilepath:filename];
+        [self startSpinner];
         [self renderPDF];
 
         return YES;
@@ -225,17 +226,19 @@
 
 - (IBAction)doDelForCover:(id)sender {
     [_coverbackgrounddoc setImage:nil];
+    [self startSpinner];
     [self renderPDF];
 }
 
 - (IBAction)doDelForBG:(id)sender {
     [_backgrounddoc setImage:nil];
+    [self startSpinner];
     [self renderPDF];
 }
 
 - (IBAction)doDelForContentDoc:(id)sender {
     [_sourcedoc setImage:nil];
-    
+    [self startSpinner];
     [self renderPDF];
 }
 
@@ -258,6 +261,7 @@
             if ([ext isEqual:@"pdf"]){
                 
                 [theView setPdfFilepath:tvarFilename];
+                [self startSpinner];
                 [self renderPDF];
             }
             else {
@@ -270,6 +274,7 @@
             if ([validImageExtensions containsObject:ext])
             {
                 [theView setPdfFilepath:tvarFilename];
+                [self startSpinner];
                 [self renderPDF];
             }
             else {
@@ -700,7 +705,7 @@
         [_backgrounddoc setNeedsDisplay:YES];
 
     }
-    
+    [self startSpinner];
     [self renderPDF];
 }
 
@@ -902,6 +907,8 @@
     }
     
     [self checkSegment];
+    
+    [self startSpinner];
     [self renderPDF];
 }
 
