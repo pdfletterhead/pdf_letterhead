@@ -154,6 +154,10 @@
 		3E5AFCFD1C7DB8660033F113 /* upgradebutton-de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upgradebutton-de.png"; sourceTree = "<group>"; };
 		3E5AFCFF1C7DB8720033F113 /* bghelp-de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bghelp-de.png"; sourceTree = "<group>"; };
 		3E5AFD021C7DB9050033F113 /* splashscreen-de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashscreen-de.png"; sourceTree = "<group>"; };
+		3E5AFD041C7DC2480033F113 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3E5AFD051C7DC24D0033F113 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3E5AFD061C7DC8D90033F113 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/PLProfileEditWindow.xib; sourceTree = "<group>"; };
+		3E5AFD071C7DC8DB0033F113 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/PLProfileEditWindow.xib; sourceTree = "<group>"; };
 		3E601B181C7231E00086FB5A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		3E6744681679448400D99390 /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
 		3E67446D16794BE400D99390 /* saveicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveicon.png; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 			children = (
 				3E9850B51BF4E29900D7ABAB /* PLFAQWindowController.h */,
 				3E9850B61BF4E29900D7ABAB /* PLFAQWindowController.m */,
+				3E728F951C7CB3FF001FC453 /* FaqView.xib */,
 			);
 			name = FAQWindow;
 			sourceTree = "<group>";
@@ -420,7 +425,6 @@
 				3E6835D71607C90400DDFB82 /* PLAppDelegate.h */,
 				3E6835D81607C90400DDFB82 /* PLAppDelegate.m */,
 				3E6835DA1607C90400DDFB82 /* MainMenu.xib */,
-				3E728F951C7CB3FF001FC453 /* FaqView.xib */,
 				3E6835CC1607C90400DDFB82 /* Supporting Files */,
 			);
 			path = "PDF Letterhead";
@@ -954,6 +958,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				3E6835DB1607C90400DDFB82 /* en */,
+				3E5AFD041C7DC2480033F113 /* nl */,
+				3E5AFD051C7DC24D0033F113 /* de */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -962,6 +968,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				7967FB3A1C47A99100EC2C73 /* en */,
+				3E5AFD061C7DC8D90033F113 /* nl */,
+				3E5AFD071C7DC8DB0033F113 /* de */,
 			);
 			name = PLProfileEditWindow.xib;
 			sourceTree = "<group>";

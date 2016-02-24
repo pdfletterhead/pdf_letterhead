@@ -105,13 +105,13 @@
         </window>
         <menu autoenablesItems="NO" id="WZ2-43-pFp" userLabel="Menu cover">
             <items>
-                <menuItem title="Add Image" id="wPD-Ne-QFs">
+                <menuItem title="Bild hinzufügen" id="wPD-Ne-QFs">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doAddCover:" target="-1" id="2wx-Kn-YIi"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Remove Image" id="TeH-Mw-ycX">
+                <menuItem title="Bild löschen" id="TeH-Mw-ycX">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doDelCover:" target="-1" id="Je1-MT-Khs"/>
@@ -122,13 +122,13 @@
         </menu>
         <menu autoenablesItems="NO" id="F3R-cb-Q2v" userLabel="Menu bg">
             <items>
-                <menuItem title="Add Image" id="4Y7-Zp-QBS">
+                <menuItem title="Bild hinzufügen" id="4Y7-Zp-QBS">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doAddBg:" target="-1" id="46c-yH-Xtt"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Remove Image" id="8e9-mJ-ffD">
+                <menuItem title="Bild löschen" id="8e9-mJ-ffD">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="doDelBg:" target="-1" id="9Ba-AV-RBa"/>
