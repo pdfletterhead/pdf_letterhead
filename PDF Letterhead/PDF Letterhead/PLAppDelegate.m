@@ -152,7 +152,7 @@
     [_ChooseLetterheadLabel setStringValue: NSLocalizedString(@"Choose a letterhead", @"Choose a letterhead")];
     [_coverLabelInDrawer setStringValue: NSLocalizedString(@"Cover", @"Cover label drawer")];
     [_followingLabelInDrawer setStringValue: NSLocalizedString(@"Following", @"Following")];
-    [_coverbackgrounddocText setStringValue: NSLocalizedString(@"Background", @"Background")];
+    [_coverbackgrounddocText setStringValue: NSLocalizedString(@"Cover", @"Cover")];
     [_coverImageLabel setStringValue: NSLocalizedString(@"Cover page", @"Cover page")];
     [_backgrounddocText setStringValue: NSLocalizedString(@"Cover page", @"Cover page")];
     [_dropDescription setStringValue: NSLocalizedString(@"Drop background images here", @"Drop background images here")];
