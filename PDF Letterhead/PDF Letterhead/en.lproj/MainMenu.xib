@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1070" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
-        <plugIn identifier="com.apple.pdfkit.ibplugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.pdfkit.ibplugin" version="11201"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -338,19 +339,13 @@
                                     <outlet property="menu" destination="824" id="831"/>
                                 </connections>
                             </imageView>
-                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="LGH-1e-jAu">
+                            <box verticalHuggingPriority="750" boxType="separator" id="LGH-1e-jAu">
                                 <rect key="frame" x="0.0" y="226" width="214" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
                             </box>
-                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="hZ6-nf-SGY">
+                            <box verticalHuggingPriority="750" boxType="separator" id="hZ6-nf-SGY">
                                 <rect key="frame" x="0.0" y="42" width="214" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
                             </box>
                             <textField verticalHuggingPriority="750" id="795">
                                 <rect key="frame" x="36" y="237" width="82" height="20"/>
@@ -499,12 +494,9 @@
                             <action selector="openProfileDrawer:" target="494" id="aue-DZ-bIo"/>
                         </connections>
                     </button>
-                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="X0v-Az-JTo">
+                    <box verticalHuggingPriority="750" boxType="separator" id="X0v-Az-JTo">
                         <rect key="frame" x="0.0" y="25" width="251" height="5"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <font key="titleFont" metaFont="system"/>
                     </box>
                     <button hidden="YES" id="Ufh-uv-EKj">
                         <rect key="frame" x="-2" y="28" width="208" height="35"/>
@@ -588,7 +580,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="633" height="706"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <pdfView autoresizesSubviews="NO" wantsLayer="YES" id="861">
+                    <pdfView autoresizesSubviews="NO" id="861">
                         <rect key="frame" x="0.0" y="0.0" width="633" height="662"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </pdfView>
@@ -708,6 +700,7 @@
                 </items>
             </menu>
         </menuItem>
+        <userDefaultsController representsSharedInstance="YES" id="7zO-5e-Zo9"/>
         <customView canDrawConcurrently="YES" id="vW8-G5-9Eg" userLabel="Drawer Content View">
             <rect key="frame" x="0.0" y="0.0" width="180" height="626"/>
             <autoresizingMask key="autoresizingMask"/>
@@ -731,10 +724,10 @@
                     <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="gaH-zx-D8Q">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="522"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView identifier="tableview" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="160" rowSizeStyle="automatic" viewBased="YES" id="uE2-5U-Fka">
-                                <rect key="frame" x="0.0" y="0.0" width="180" height="0.0"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="522"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -876,19 +869,13 @@
                         </textField>
                     </subviews>
                 </customView>
-                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="OdQ-dp-hxm">
+                <box verticalHuggingPriority="750" boxType="separator" id="OdQ-dp-hxm">
                     <rect key="frame" x="0.0" y="571" width="180" height="5"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <font key="titleFont" metaFont="system"/>
                 </box>
-                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="8lJ-AR-di4">
+                <box verticalHuggingPriority="750" boxType="separator" id="8lJ-AR-di4">
                     <rect key="frame" x="0.0" y="50" width="180" height="5"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <font key="titleFont" metaFont="system"/>
                 </box>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X7M-no-WSH">
                     <rect key="frame" x="13" y="587" width="152" height="19"/>
@@ -902,7 +889,6 @@
             </subviews>
             <point key="canvasLocation" x="254" y="742"/>
         </customView>
-        <userDefaultsController representsSharedInstance="YES" id="7zO-5e-Zo9"/>
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>

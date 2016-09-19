@@ -13,7 +13,6 @@
 #include "PLProfileEditWindow.h"
 #import "PLTransparencyUtils.h"
 
-
 @interface PLAppDelegate()
 
 @property (strong) IBOutlet NSTableView *drawerTableView;
@@ -25,7 +24,7 @@
 @property (weak) IBOutlet NSBox *saveNewLetterheadLine;
 @property (weak) IBOutlet NSButton *upgradeToProButton;
 @property (weak) IBOutlet NSSegmentedControl *segmentedControl;
-@property (weak) IBOutlet PDFView *PDFView;
+@property (assign) IBOutlet PDFView *PDFView;
 @property (weak) IBOutlet NSTextField *dropDescription;
 @property (weak) IBOutlet NSView *noItemsView;
 
@@ -87,8 +86,9 @@
     
     _isSetContent = NO;
     
-    [[self PDFView] setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
-
+    //[[self PDFView] setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
+    [_PDFView setBackgroundColor:[NSColor colorWithDeviceRed: 51.0/255.0 green: 51.0/255.0 blue: 51.0/255.0 alpha: 1.0]];
+    
     //Temp folder creation
     NSError *tmpFileCreateError;
     _tmpDirectoryURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:[[NSProcessInfo processInfo] globallyUniqueString]] isDirectory:YES];
@@ -187,7 +187,9 @@
 - (void) startSpinner
 {
     [_helpImage setHidden:YES];
-    [[self PDFView] setHidden:YES];
+    //[[self PDFView] setHidden:YES];
+    [_PDFView setHidden:YES];
+
     [_turboFan setHidden:NO];
     [_turboFan startAnimation:self];
 }
@@ -490,40 +492,41 @@
 }
 
 -(void)renderPDF {
+   
+    PDFDocument *document = [self renderDocument];
+    _letterheadPDF = document;
     
-    //Render PDF
-    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    if([_sourcedoc image]){
+        [_PDFView setHidden:NO];
         
+        NSString * newFileName;
+        newFileName = [[_tmpDirectoryURL path] stringByAppendingPathComponent: @"between.pdf" ];
+        NSURL * tmpBetweenUrl = [NSURL fileURLWithPath:newFileName isDirectory:NO];
+        [_letterheadPDF writeToURL:tmpBetweenUrl];
+        
+        PDFDocument *pdfDoc = [[PDFDocument alloc] initWithURL:tmpBetweenUrl];
+        
+        [_PDFView setDocument:pdfDoc];
+        [[self previewView] setDocument:pdfDoc];
+        
+        [mailButton3 setHidden:NO];
+        [saveButton3 setHidden:NO];
+        [printButton3 setHidden:NO];
+        [previewButton3 setHidden:NO];
+    }
+    else
+    {
+        [_PDFView setHidden:YES];
+        [mailButton3 setHidden:YES];
+        [saveButton3 setHidden:YES];
+        [printButton3 setHidden:YES];
+        [previewButton3 setHidden:YES];
+    }
+    
+    [self stopSpinner];
 
-        
-        PDFDocument *document = [self renderDocument];
-            
-        //Set PDFView
-        dispatch_async( dispatch_get_main_queue(), ^{
-            
-            [[self PDFView] setDocument:document];
-            [[self previewView] setDocument:document];
-            _letterheadPDF = document;
-            if([_sourcedoc image]){
-                [[self PDFView] setHidden:NO];
-                [mailButton3 setHidden:NO];
-                [saveButton3 setHidden:NO];
-                [printButton3 setHidden:NO];
-                [previewButton3 setHidden:NO];
-            }
-            else
-            {
-                [[self PDFView] setHidden:YES];
-                [mailButton3 setHidden:YES];
-                [saveButton3 setHidden:YES];
-                [printButton3 setHidden:YES];
-                [previewButton3 setHidden:YES];
-            }
-            
-            [self stopSpinner];
-            
-        });
-    });
+
+
 }
 
 -(PDFDocument*)renderDocument {
@@ -598,7 +601,8 @@
             if([trUtils documentHasWhiteBackgrounds])
             {
                 [trUtils cleanDocumentFromWhiteBackgrounds];
-                NSString *pathToPDF = [[[[NSApp delegate] applicationFilesDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf",@"transparentSource"]] path];
+                
+                NSString *pathToPDF = [[[self applicationFilesDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.pdf",@"transparentSource"]] path];
                 [trUtils writeNewDocToFile:pathToPDF];
                 [_sourcedoc setSourcefilepath:pathToPDF];
                 filePath2 = [pathToPDF copy];
@@ -808,14 +812,21 @@
         [alert setMessageText:NSLocalizedString(@"Mail application could not be reached", @"Mail share error title")];
         [alert setInformativeText:NSLocalizedString(@"Make sure that the application is correctly configured for sharing", @"Mail share error description")];
         [alert setAlertStyle:NSWarningAlertStyle];
-        
     }
 }
 
-
 - (IBAction)savePrint: (id) sender{
     NSPrintInfo *info = [NSPrintInfo sharedPrintInfo];
-    [_PDFView printWithInfo:info autoRotate:YES pageScaling:YES];
+    NSString * newFileName;
+    newFileName = [[_tmpDirectoryURL path] stringByAppendingPathComponent: @"between.pdf" ];
+    PDFView *vDoc = [[PDFView alloc] init];
+    PDFDocument *pdfDoc = [[PDFDocument alloc] initWithURL:[NSURL fileURLWithPath:newFileName]];
+    [vDoc setDocument:pdfDoc];
+    NSWindow *wnd = [[NSWindow alloc] init];
+    [wnd setContentSize:vDoc.frame.size];
+    [wnd setContentView:vDoc];
+    //[vDoc printWithInfo:info autoRotate:YES  pageScaling:YES];
+    [vDoc printWithInfo:info autoRotate:YES];
 }
 
 - (void)checkProfiles {

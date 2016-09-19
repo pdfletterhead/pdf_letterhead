@@ -26,5 +26,8 @@ typedef enum {
     NSColor *_color;
     BButtonType kbButtonType;
 }
+
+- (void) setKBButtonType:(BButtonType)type;
+
 @end
 

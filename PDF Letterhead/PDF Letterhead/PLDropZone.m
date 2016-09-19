@@ -115,13 +115,16 @@
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
 {
-    
+
+    PLAppDelegate *delegate = [[NSApplication sharedApplication] delegate ];
+
     if([[self identifier] isEqualToString:@"sourceDropArea"])
     {
-        [[NSApp delegate] startSpinner];
+        //[[[NSApplication sharedApplication] delegate] startSpinner];
+        [delegate startSpinner];
     }
     
-    PLAppDelegate *delegate = [[NSApplication sharedApplication] delegate ];
+    //PLAppDelegate *delegate = [[NSApplication sharedApplication] delegate ];
     NSPasteboard *pboard = [sender draggingPasteboard];
 
     [self dropAreaFadeOut];
@@ -143,7 +146,9 @@
                 
                 self.sourcefilepath = [files lastObject];
                 
-                [[NSApp delegate] setSourceFileName: [[[[files lastObject] lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"]];
+//                [[NSApp delegate] setSourceFileName: [[[[files lastObject] lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"]];
+                [delegate setSourceFileName: [[[[files lastObject] lastPathComponent] stringByDeletingPathExtension] stringByAppendingString:@".pdf"]];
+
                 
                 BOOL ok = [self setPdfFilepath:[self sourcefilepath]];
                 

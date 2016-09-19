@@ -27,8 +27,6 @@ static void fitRectInRect (NSRect *srcRect, NSRect destRect);
     return NSMakeRect(0.0, 0.0, mainPDFSize.width, mainPDFSize.height);
 }
 
-
-
 - (void) drawWithBox: (PDFDisplayBox) box
 {
 	NSRect		sourceRect;

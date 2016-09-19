@@ -32,8 +32,10 @@
     NSImage *splashImage = [[NSImage alloc] initWithContentsOfFile: myImagePath];
     [_featureImage setImage:splashImage];
     
-    if( [[[NSApp delegate] retrievePrice] priceFound]==YES){
-        NSString * price = [[[NSApp delegate] retrievePrice] formattedPrice];
+    PLAppDelegate *delegate = [NSApp delegate];
+    
+    if( [[delegate retrievePrice] priceFound]==YES){
+        NSString * price = [[delegate retrievePrice] formattedPrice];
         NSString * buttonTitle = [NSString stringWithFormat:@"%@ (%@)", NSLocalizedString(@"Upgrade", @"Buy now for only $x.xx button"), price];
         [_buyButton setTitle:buttonTitle];
     }
