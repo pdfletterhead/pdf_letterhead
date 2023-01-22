@@ -1,9 +1,9 @@
 PDF Letterhead
 ==============
 
-## Hoe te compileren?
+## How to compile?
 
-Draai eerst ```pod install``` of ```pod update```
+First run ```pod install``` or ```pod update```
 
 ![image](http://picdrop.t3lab.com/TimHxzdhJQ.jpg)
 
