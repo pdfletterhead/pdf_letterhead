@@ -5,5 +5,4 @@ PDF Letterhead
 
 First run ```pod install``` or ```pod update```
 
-![image](http://picdrop.t3lab.com/TimHxzdhJQ.jpg)
-
+![image](https://pdfletterhead.net/img/Screen-4.png)
